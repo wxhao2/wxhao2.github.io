@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="wxhao">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="JavaSE之方法"/>
+  <meta property="og:description" content="站点描述" />
+  <meta property="og:site_name" content="标题"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://blog.wxhaoo.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="标题" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>标题</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">JavaSE之方法</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/levblanc">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:levblanc@163.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By wxhao</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2013-06-19</span>
+            <span class="time">17:38:07</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/基础知识/">#基础知识</a> <a class="tag" href="/tags/java/">#java</a> <a class="tag" href="/tags/JAVASE/">#JAVASE</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h3 id="方法概述和格式说明"><a href="#方法概述和格式说明" class="headerlink" title="方法概述和格式说明"></a>方法概述和格式说明</h3><ul>
+<li>A:为什么要有方法<ul>
+<li>提高代码的复用性 </li>
+</ul>
+</li>
+<li>B:什么是方法<ul>
+<li>完成特定功能的代码块。 </li>
+</ul>
+</li>
+<li>C:方法的格式</li>
+<li><pre><code>修饰符 返回值类型 方法名(参数类型 参数名1,参数类型 参数名2...) {
+    方法体语句;
+    return 返回值; 
+} 
+</code></pre></li>
+<li>D:方法的格式说明<ul>
+<li>修饰符：目前就用 public static。后面我们再详细的讲解其他的修饰符。</li>
+<li>返回值类型：就是功能结果的数据类型。</li>
+<li>方法名：符合命名规则即可。方便我们的调用。</li>
+<li>参数：<ul>
+<li>实际参数：就是实际参与运算的。</li>
+<li>形式参数；就是方法定义上的，用于接收实际参数的。</li>
+</ul>
+</li>
+<li>参数类型：就是参数的数据类型</li>
+<li>参数名：就是变量名</li>
+<li>方法体语句：就是完成功能的代码。</li>
+<li>return：结束方法的。</li>
+<li>返回值：就是功能的结果，由return带给调用者。 </li>
+</ul>
+</li>
+</ul>
+<h3 id="方法之求和案例及其调用"><a href="#方法之求和案例及其调用" class="headerlink" title="方法之求和案例及其调用"></a>方法之求和案例及其调用</h3><ul>
+<li>A:如何写一个方法<ul>
+<li>1,明确返回值类型</li>
+<li>2,明确参数列表 </li>
+</ul>
+</li>
+<li>B:代码演示<ul>
+<li>需求：求两个数据之和的案例</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		/*int a = 10;</div><div class="line">		int b = 20;</div><div class="line">		int sum = a + b;</div><div class="line">		System.out.println(sum);</div><div class="line"></div><div class="line">		int c = 30;</div><div class="line">		int d = 40;</div><div class="line">		int sum2 = c + d;</div><div class="line">		System.out.println(sum2);*/</div><div class="line"></div><div class="line">		int sum = add(10,20);</div><div class="line">		System.out.println(sum);</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	求两个整数的和</div><div class="line">	1,整数的和结果应该还是整数</div><div class="line">	2,有两个未知内容参与运算</div><div class="line"></div><div class="line">	如何写方法</div><div class="line">	1,明确返回值类型</div><div class="line">	2,明确参数列表</div><div class="line"></div><div class="line">	* 修饰符：目前就用 public static。后面我们再详细的讲解其他的修饰符。</div><div class="line">		* 返回值类型：就是功能结果的数据类型。</div><div class="line">		* 方法名：符合命名规则即可。方便我们的调用。</div><div class="line">		* 参数：</div><div class="line">			* 实际参数：就是实际参与运算的。</div><div class="line">			* 形式参数；就是方法定义上的，用于接收实际参数的。</div><div class="line">		* 参数类型：就是参数的数据类型</div><div class="line">		* 参数名：就是变量名</div><div class="line">		* 方法体语句：就是完成功能的代码。</div><div class="line">		* return：结束方法的。</div><div class="line">		* 返回值：就是功能的结果，由return带给调用者。</div><div class="line">	*/</div><div class="line">	public static int add(int a,int b) &#123;			//int a = 10,int b = 20</div><div class="line">		int sum = a + b;</div><div class="line">		return sum;									//如果有返回值必须用return语句带回</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>C:方法调用图解</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">	    int sum = add(10,20);//1.调用add,把 10和20分别传递给a和b</div><div class="line">	    //5.讲方法返回值返回给sum</div><div class="line">		System.out.println(sum);</div><div class="line">		</div><div class="line">		//盘子 = 炒菜(地沟油,苏丹红,镉大米,烂白菜);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public static int add(int a,int b) &#123;//2.赋值a=10,b=20			</div><div class="line">		int sum = a + b;//3.执行语句</div><div class="line">		return sum;//4.通过return 将sum结果返回</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">/* 厨师 有 炒菜功能</div><div class="line">	盘子 炒菜(油,调料,米,菜) &#123;</div><div class="line">		炒菜的动作</div><div class="line">		return 一盘菜;</div><div class="line">	&#125;</div><div class="line">	*/</div></pre></td></tr></table></figure>
+<h3 id="方法的注意事项"><a href="#方法的注意事项" class="headerlink" title="方法的注意事项"></a>方法的注意事项</h3><ul>
+<li>A:方法调用(有具体返回值)<ul>
+<li>a:单独调用,一般来说没有意义，所以不推荐。</li>
+<li>b:输出调用,但是不够好。因为我们可能需要针对结果进行进一步的操作。</li>
+<li>c:赋值调用,推荐方案。</li>
+</ul>
+</li>
+<li>B:注意事项<ul>
+<li>a:方法不调用不执行</li>
+<li>b:方法与方法是平级关系，不能<strong>嵌套定义</strong></li>
+<li>c:方法定义的时候参数之间用逗号隔开</li>
+<li>d:方法调用的时候不用在传递数据类型</li>
+<li>e:如果方法有明确的返回值，一定要有return带回一个值</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">add(30,40);//有返回值方法的单独调用,没有意义</div><div class="line">System.out.println(add(30,40));//这样调用是可以,but如果需要用这个结果不推荐这样调用</div></pre></td></tr></table></figure>
+<h3 id="方法的练习1"><a href="#方法的练习1" class="headerlink" title="方法的练习1"></a>方法的练习1</h3><ul>
+<li><p>需求A：键盘录入两个数据，返回两个数中的较大值</p>
+</li>
+<li><p>需求B：键盘录入两个数据，比较两个数是否相等     </p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">import java.util.Scanner;</div><div class="line">class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);				//创建键盘录入对象</div><div class="line">		System.out.println(&quot;请输入第一个整数:&quot;);</div><div class="line">		int x = sc.nextInt();								//将键盘录入的整数存储在x中</div><div class="line">		System.out.println(&quot;请输入第二个整数:&quot;);</div><div class="line">		int y = sc.nextInt();								//将键盘录入的整数存储在y中</div><div class="line"></div><div class="line">		int max = getMax(x,y);</div><div class="line">		System.out.println(max);</div><div class="line"></div><div class="line">		boolean b = isEquals(x,y);</div><div class="line">		System.out.println(b);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	返回连个整数的较大值</div><div class="line">	1,明确返回值类型 int</div><div class="line">	2,明确参数列表 int a,int b</div><div class="line">	*/</div><div class="line">	public static int getMax(int a,int b) &#123;</div><div class="line">		return a &gt; b ? a : b;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	判断两个整数是否相等</div><div class="line">	1,明确返回值类型 boolean</div><div class="line">	2,明确参数列表 int a,int b</div><div class="line">	*/</div><div class="line">	public static boolean isEquals(int a,int b) &#123;		//isEquals 是否相等</div><div class="line">		return a == b;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="方法之输出星形及其调用"><a href="#方法之输出星形及其调用" class="headerlink" title="方法之输出星形及其调用"></a>方法之输出星形及其调用</h3><ul>
+<li>A:代码演示<ul>
+<li>需求：根据键盘录入的行数和列数，在控制台输出星形</li>
+</ul>
+</li>
+<li>B:方法调用：(无返回值,void)<ul>
+<li>单独调用</li>
+<li>输出调用(错误)</li>
+<li>赋值调用(错误)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">import java.util.Scanner;</div><div class="line">class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);			//创建键盘录入对象</div><div class="line">		System.out.println(&quot;请输入行数:&quot;);</div><div class="line">		int row = sc.nextInt();							//将键盘录入的行数存储在row中</div><div class="line">		System.out.println(&quot;请输入列数:&quot;);</div><div class="line">		int column = sc.nextInt();						//将键盘录入的列数存储在column中</div><div class="line">		</div><div class="line">		//System.out.println(print(row,column));		//错误: 此处不允许使用 &apos;空&apos; 类型,返回值是void的方法不能输出调用</div><div class="line">		//返回值是void的方法只能单独调用</div><div class="line">		print(row,column);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	在控制台输出矩形星形</div><div class="line">	1,明确返回值类型,经分析没有具体的返回值类型,void</div><div class="line">	2,明确参数列表int a,int b</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static void print(int a,int b) &#123;</div><div class="line">		for (int i = 1;i &lt;= a ;i++ ) &#123;					//行数</div><div class="line">			for (int j = 1;j &lt;= b ;j++ ) &#123;				//列数</div><div class="line">				System.out.print(&quot;*&quot;);</div><div class="line">			&#125;</div><div class="line">			System.out.println();</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		//return ;										//如果返回值类型是void,return可以省略,即使省略系统也会默认给加上,形式是return;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="方法的练习2"><a href="#方法的练习2" class="headerlink" title="方法的练习2"></a>方法的练习2</h3><ul>
+<li>需求：根据键盘录入的数据输出对应的乘法表</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">import java.util.Scanner;</div><div class="line">class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);		//创建键盘录入对象</div><div class="line">		System.out.println(&quot;请录入一个整数,范围在1-9之间&quot;);</div><div class="line">		int num = sc.nextInt();						//将键盘录入的整数存储在num中</div><div class="line">		print99(num);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	打印99乘法表</div><div class="line">	1,返回值类型void</div><div class="line">	2,参数列表,int a</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static void print99(int a) &#123;</div><div class="line">		for (int i = 1;i &lt;= a ;i++ ) &#123;					//行数</div><div class="line">			for (int j = 1;j &lt;= i ;j++ ) &#123;				//列数</div><div class="line">				System.out.print(j + &quot;*&quot; + i + &quot;=&quot; + (i * j) + &quot;\t&quot; );</div><div class="line">			&#125;</div><div class="line">			System.out.println();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="方法重载概述和基本使用"><a href="#方法重载概述和基本使用" class="headerlink" title="方法重载概述和基本使用"></a>方法重载概述和基本使用</h3><ul>
+<li>A:方法重载概述<ul>
+<li>求和案例<ul>
+<li>2个整数</li>
+<li>3个整数</li>
+<li>4个整数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>B:方法重载：</p>
+<ul>
+<li><p>在同一个类中，方法名相同，参数列表不同。与返回值类型无关。</p>
+</li>
+<li><p>参数列表不同：</p>
+<ul>
+<li>A:参数个数不同</li>
+<li>B:参数类型不同</li>
+<li>C:参数的顺序不同(算重载,但是在开发中不用)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line">重载:方法名相同,参数列表不同,与返回值类型无关</div><div class="line">重载的分类</div><div class="line">1,参数个数不同</div><div class="line">2,参数类型不同</div><div class="line">	顺序不同</div><div class="line">*/</div><div class="line">class Demo4_Overload &#123;						//overload重载</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		double sum1 = add(10,20.1);</div><div class="line">		System.out.println(sum1);</div><div class="line"></div><div class="line">		int sum2 = add(10,20,30);</div><div class="line">		System.out.println(sum2);</div><div class="line"></div><div class="line">		double sum3 = add(12.3,13);</div><div class="line">		System.out.println(sum3);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	求两个整数的和</div><div class="line">	1,返回值类型int</div><div class="line">	2,参数列表 int a,int b</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static double add(int a,double b) &#123;</div><div class="line">		return a + b;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	求三个整数的和</div><div class="line">	1,返回值类型int</div><div class="line">	2,参数列表 int a,int b,int c</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static int add(int a,int b,int c) &#123;</div><div class="line">		return a + b + c;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	求两个小数的和</div><div class="line">	1,返回值类型double</div><div class="line">	2,参数列表 double a,double b</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static double add(double a,int b) &#123;</div><div class="line">		return a + b;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="方法重载练习比较数据是否相等"><a href="#方法重载练习比较数据是否相等" class="headerlink" title="方法重载练习比较数据是否相等"></a>方法重载练习比较数据是否相等</h3><ul>
+<li>需求：比较两个数据是否相等。</li>
+<li>参数类型分别为两个int类型，两个double类型，并在main方法中进行测试</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">class Test_Overload &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		boolean b1 = isEquals(10,10);</div><div class="line">		System.out.println(b1);</div><div class="line"></div><div class="line">		boolean b2 = isEquals(10.5,10.5);</div><div class="line">		System.out.println(b2);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	比较两个数据是否相等</div><div class="line">	1,返回值类型boolean</div><div class="line">	2,参数列表int a,int b</div><div class="line">	*/</div><div class="line">	public static boolean isEquals(int a,int b) &#123;</div><div class="line">		return a == b;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	比较两个数据是否相等</div><div class="line">	1,返回值类型boolean</div><div class="line">	2,参数列表double a,double b</div><div class="line">	*/</div><div class="line">	public static boolean isEquals(double a,double b) &#123;</div><div class="line">		return a == b;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

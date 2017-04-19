@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="wxhao">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="Object类"/>
+  <meta property="og:description" content="站点描述" />
+  <meta property="og:site_name" content="标题"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://blog.wxhaoo.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="标题" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>标题</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Object类</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/levblanc">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:levblanc@163.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By wxhao</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2013-07-25</span>
+            <span class="time">17:38:07</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/基础知识/">#基础知识</a> <a class="tag" href="/tags/java/">#java</a> <a class="tag" href="/tags/JAVASE/">#JAVASE</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h3 id="API概述"><a href="#API概述" class="headerlink" title="API概述"></a>API概述</h3><ul>
+<li>A:API(Application Programming Interface) <ul>
+<li>应用程序编程接口</li>
+</ul>
+</li>
+<li>B:Java API<ul>
+<li>就是Java提供给我们使用的类，这些类将底层的实现封装了起来，</li>
+<li>我们不需要关心这些类是如何实现的，只需要学习这些类如何使用。</li>
+</ul>
+</li>
+</ul>
+<h3 id="Object类的概述"><a href="#Object类的概述" class="headerlink" title="Object类的概述"></a>Object类的概述</h3><ul>
+<li>A:Object类概述<ul>
+<li>类层次结构的根类</li>
+<li>所有类都直接或者间接的继承自该类</li>
+</ul>
+</li>
+<li>B:构造方法<ul>
+<li>public Object()</li>
+<li>回想面向对象中为什么说：</li>
+<li>子类的构造方法默认访问的是父类的无参构造方法</li>
+</ul>
+</li>
+</ul>
+<h3 id="Object类的hashCode-方法"><a href="#Object类的hashCode-方法" class="headerlink" title="Object类的hashCode()方法"></a>Object类的hashCode()方法</h3><ul>
+<li>A:案例演示<ul>
+<li>public int hashCode()</li>
+<li>a:返回该对象的哈希码值。默认情况下，该方法会根据对象的地址来计算。</li>
+<li>b:不同对象的，hashCode()一般来说不会相同。但是，同一个对象的hashCode()值肯定相同。</li>
+</ul>
+</li>
+</ul>
+<h3 id="Object类的getClass-方法-在反射的时候掌握"><a href="#Object类的getClass-方法-在反射的时候掌握" class="headerlink" title="Object类的getClass()方法(在反射的时候掌握)"></a>Object类的getClass()方法(在反射的时候掌握)</h3><ul>
+<li>A:案例演示<ul>
+<li>public final Class getClass()</li>
+<li>a:返回此 Object 的运行时类。</li>
+<li>b:可以通过Class类中的一个方法，获取对象的真实类的全名称。    <ul>
+<li>public String getName()</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Object类的toString-方法"><a href="#Object类的toString-方法" class="headerlink" title="Object类的toString()方法"></a>Object类的toString()方法</h3><ul>
+<li><p>A:案例演示</p>
+<ul>
+<li>public String toString()</li>
+<li><p>a:返回该对象的字符串表示。</p>
+<ul>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public Stirng toString() &#123;</div><div class="line">	return name + &quot;,&quot; + age;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>b:它的值等于： </p>
+<ul>
+<li>getClass().getName() + “@” + Integer.toHexString(hashCode()) </li>
+</ul>
+</li>
+<li>c:由于默认情况下的数据对我们来说没有意义，一般建议重写该方法。</li>
+</ul>
+</li>
+<li>B:最终版<ul>
+<li>自动生成</li>
+</ul>
+</li>
+</ul>
+<h3 id="Object类的equals-方法"><a href="#Object类的equals-方法" class="headerlink" title="Object类的equals()方法"></a>Object类的equals()方法</h3><ul>
+<li>A:案例演示<ul>
+<li>a:指示其他某个对象是否与此对象“相等”。 </li>
+<li>b:默认情况下比较的是对象的引用是否相同。</li>
+<li>c:由于比较对象的引用没有意义，一般建议重写该方法。</li>
+</ul>
+</li>
+</ul>
+<h3 id="号和equals方法的区别"><a href="#号和equals方法的区别" class="headerlink" title="==号和equals方法的区别"></a>==号和equals方法的区别</h3><ul>
+<li>==是一个比较运算符号,既可以比较基本数据类型,也可以比较引用数据类型,基本数据类型比较的是值,引用数据类型比较的是地址值</li>
+<li>equals方法是一个方法,只能比较引用数据类型,所有的对象都会继承Object类中的方法,如果没有重写Object类中的equals方法,equals方法和==号比较引用数据类型无区别,重写后的equals方法比较的是对象中的属性</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

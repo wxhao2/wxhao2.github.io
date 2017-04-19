@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="wxhao">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="抽象类与接口"/>
+  <meta property="og:description" content="站点描述" />
+  <meta property="og:site_name" content="标题"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://blog.wxhaoo.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="标题" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>标题</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">抽象类与接口</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/levblanc">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:levblanc@163.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By wxhao</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2013-07-17</span>
+            <span class="time">17:38:07</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/基础知识/">#基础知识</a> <a class="tag" href="/tags/java/">#java</a> <a class="tag" href="/tags/JAVASE/">#JAVASE</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h3 id="抽象类的概述及其特点"><a href="#抽象类的概述及其特点" class="headerlink" title="抽象类的概述及其特点"></a>抽象类的概述及其特点</h3><ul>
+<li>抽象类概述<ul>
+<li>抽象就是看不懂的</li>
+</ul>
+</li>
+<li>抽象类特点<ul>
+<li>抽象类和抽象方法必须用abstract关键字修饰<ul>
+<li>abstract class 类名 {}</li>
+<li>public abstract void 方法名();</li>
+</ul>
+</li>
+<li>抽象类不一定有抽象方法,有抽象方法的类一定是抽象类或者接口</li>
+<li>抽象类不能实例化,抽象类如何实例化呢<ul>
+<li>按照多态的方式,由具体的子类实例化,其实这也是多态的一种,抽象类多态</li>
+</ul>
+</li>
+<li>抽象类的子类<ul>
+<li>要么是抽象类</li>
+<li>要么重写抽象类中的所有抽象方法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>代码演示</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">public class Demo1_Abstract &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//Animal a= Animal(); //Animal是抽象的,无法实例化</div><div class="line">		Animal a= new Cat(); //父类引用子类对象</div><div class="line">		a.eat();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">abstract class Animal&#123;//抽象类</div><div class="line">	public abstract void eat();//抽象方法</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Cat extends Animal&#123;</div><div class="line">	public void eat() &#123;</div><div class="line">		System.out.println(&quot;猫吃鱼&quot;);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="抽象类的成员特点"><a href="#抽象类的成员特点" class="headerlink" title="抽象类的成员特点"></a>抽象类的成员特点</h3><ul>
+<li>抽象类的成员特点<ul>
+<li>成员变量:既可以是变量,也可以是常量</li>
+<li>abstract是否可以修饰成员变量<ul>
+<li>不能修饰成员变量</li>
+</ul>
+</li>
+<li>构造方法:有<ul>
+<li>用于子类访问父类数据的初始化</li>
+</ul>
+</li>
+<li>成员方法:既可以是抽象的,也可以是非抽象的</li>
+</ul>
+</li>
+<li>代码演示抽象类的特点<ul>
+<li>抽象方法,强制要求子类做的事情</li>
+<li>非抽象方法,子类继承的事情,提高代码复用性</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">public class Demo2_Abstract &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">abstract class Demo&#123;</div><div class="line">	int num = 10;</div><div class="line">	final int num2=20;</div><div class="line">	</div><div class="line">	public Demo()&#123;&#125;</div><div class="line">	</div><div class="line">	public void print()&#123;</div><div class="line">		System.out.println(&quot;111&quot;);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public abstract void method();</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Test extends Demo&#123;</div><div class="line">	public void method() &#123;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="抽象类中的面试题"><a href="#抽象类中的面试题" class="headerlink" title="抽象类中的面试题"></a>抽象类中的面试题</h3><ol>
+<li>一个抽象类如果没有抽象方法,可以不可以定义为抽象类?<ul>
+<li>可以,这么做目的只有一个,就是不让其它的创建本类对象,交给子类完成 </li>
+</ul>
+</li>
+<li>abstract不能和哪些关键字共存<ul>
+<li>static 可以被类名调用,但类名.抽象方法没有意义<ul>
+<li>abstract 方法没有方法体</li>
+</ul>
+</li>
+<li>final 不让子类重写<ul>
+<li>abstract 强制子类重写</li>
+</ul>
+</li>
+<li>private 修饰不让子类访问,所以他俩是矛盾的<ul>
+<li>abstract 为了让子类看到,并强制子类重写</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="接口的概述及其特点"><a href="#接口的概述及其特点" class="headerlink" title="接口的概述及其特点"></a>接口的概述及其特点</h3><ul>
+<li><p>接口概述</p>
+<ul>
+<li>从狭义的角度讲就是java中的interface</li>
+<li>从广义的角度讲对外提供规则的都是接口</li>
+</ul>
+</li>
+<li><p>接口特点</p>
+<ul>
+<li>接口用关键字interface表示<ul>
+<li>interface 接口名{}</li>
+</ul>
+</li>
+<li>类实现接口用implements表示<ul>
+<li>class 类名 implements 接口名{}</li>
+</ul>
+</li>
+<li>接口不能实例化<ul>
+<li>接口如何实例化?</li>
+<li>按照多态的方式来实例化</li>
+</ul>
+</li>
+<li>接口的子类<ul>
+<li>可以是抽象类,但是意义不大</li>
+<li>可以是具体类,要重写接口中的所有抽象方法(推荐方案)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>代码演示</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">public class Demo1_Interface &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//Inter i=new Inter(); 接口不能被实例化,因为调用抽象方法没有意义</div><div class="line">		Inter i =new Demo();</div><div class="line">		i.print();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">interface Inter&#123;</div><div class="line">	public abstract void print(); //接口中的方法都是抽象的</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Demo implements Inter&#123;</div><div class="line">	public void print() &#123;</div><div class="line">		System.out.println(&quot;print&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="接口成员特点"><a href="#接口成员特点" class="headerlink" title="接口成员特点"></a>接口成员特点</h3><ul>
+<li>成员变量:只能是常量,冰倩是静态的并公共的<ul>
+<li>默认修饰符:public static final</li>
+<li>建议:自己手动给出</li>
+</ul>
+</li>
+<li>构造方法:接口没有构造方法</li>
+<li>成员方法: 只能是抽象方法<ul>
+<li>默认修饰符:public abstract</li>
+<li>建议:自己手动给出</li>
+</ul>
+</li>
+<li>代码演示</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">public class Demo2_Interface &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Demo d=new Demo();</div><div class="line">		d.print();</div><div class="line">		System.out.println(Inter.num);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">interface Inter&#123;</div><div class="line">	static final int num = 10; //默认加public static final修饰符 </div><div class="line">	//public Inter()&#123;&#125; //没有构造方法</div><div class="line">	</div><div class="line">	void print(); //默认public abstract</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Demo /*extends Object */implements Inter &#123;//默认继承Object类</div><div class="line">	public void print() &#123;</div><div class="line">		System.out.println(num);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="类与类-类与接口-接口与接口的关系"><a href="#类与类-类与接口-接口与接口的关系" class="headerlink" title="类与类,类与接口,接口与接口的关系"></a>类与类,类与接口,接口与接口的关系</h3><ul>
+<li>类与类,类与接口,接口与接口的关系<ul>
+<li>类与类:<ul>
+<li>继承关系,只能单继承,不能多层继承</li>
+</ul>
+</li>
+<li>类与接口<ul>
+<li>实现关系,可以 单实现,也可以多实现</li>
+<li>并且还可以在继承一个类的同事实现多个接口</li>
+</ul>
+</li>
+<li>接口与接口<ul>
+<li>继承关系,可以单继承,也可以多继承</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">interface InterA&#123;</div><div class="line">	void printA();</div><div class="line">&#125;</div><div class="line"></div><div class="line">interface InterB&#123;</div><div class="line">	void printB(); </div><div class="line">&#125;</div><div class="line"></div><div class="line">interface InterC extends InterA,InterB&#123;//可以多继承</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Demo implements InterA ,InterB &#123;//多接口用,(逗号)分割</div><div class="line"></div><div class="line">	public void printA() &#123;</div><div class="line">		System.out.println(&quot;printA&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void printB() &#123;</div><div class="line">		System.out.println(&quot;printB&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="类与类-类与接口-接口与接口的区别"><a href="#类与类-类与接口-接口与接口的区别" class="headerlink" title="类与类,类与接口,接口与接口的区别"></a>类与类,类与接口,接口与接口的区别</h3><ul>
+<li><p>成员区别</p>
+<ul>
+<li>抽象类:<ul>
+<li>成员变量:可以变量,也可以常量</li>
+<li>构造方法:有</li>
+<li>成员方法:可以抽象,也可以非抽象</li>
+</ul>
+</li>
+<li>接口:<ul>
+<li>成员变量:只可以常量</li>
+<li>成员方法:只可以抽象</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>关系区别</p>
+<ul>
+<li>类与类:<ul>
+<li>继承,单继承</li>
+</ul>
+</li>
+<li>类与接口<ul>
+<li>实现,单实现,多实现</li>
+</ul>
+</li>
+<li>接口与接口<ul>
+<li>继承,单继承,多继承</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>设计理念区别</p>
+<ul>
+<li>抽象类 被继承体现的是”is a”的关系,抽象类中定义的是该继承体系的共性功能</li>
+<li>接口 被实现体现的是:”like a”的关系.接口中定义的是该继承体系的扩展功能</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

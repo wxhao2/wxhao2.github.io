@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="wxhao">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="JavaSE之Scanner键盘录入"/>
+  <meta property="og:description" content="站点描述" />
+  <meta property="og:site_name" content="标题"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://blog.wxhaoo.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="标题" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>标题</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">JavaSE之Scanner键盘录入</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/levblanc">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:levblanc@163.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By wxhao</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2013-06-14</span>
+            <span class="time">17:38:07</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/基础知识/">#基础知识</a> <a class="tag" href="/tags/java/">#java</a> <a class="tag" href="/tags/JAVASE/">#JAVASE</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h3 id="键盘录入的基本格式讲解"><a href="#键盘录入的基本格式讲解" class="headerlink" title="键盘录入的基本格式讲解"></a>键盘录入的基本格式讲解</h3><ul>
+<li>A:为什么要使用键盘录入数据<ul>
+<li>a:为了让程序的数据更符合开发的数据</li>
+<li>b:让程序更灵活一下</li>
+</ul>
+</li>
+<li>B:如何实现键盘录入呢?<ul>
+<li>先照格式来。</li>
+<li>a:导包<ul>
+<li>格式：<ul>
+<li>import java.util.Scanner; </li>
+</ul>
+</li>
+<li>位置：<ul>
+<li>在class上面。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>b:创建键盘录入对象<ul>
+<li>格式：<ul>
+<li>Scanner sc = new Scanner(System.in);</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>c:通过对象获取数据    <ul>
+<li>格式：<ul>
+<li>int x = sc.nextInt();</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>C:代码演示<ul>
+<li>键盘录入1个整数，并输出到控制台。</li>
+<li>键盘录入2个整数，并输出到控制台。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">import java.util.Scanner;</div><div class="line">class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		/*Scanner sc = new Scanner(System.in);//创建键盘录入对象</div><div class="line">		System.out.println(&quot;请输入一个整数:&quot;);</div><div class="line">		int x = sc.nextInt();//将键盘录入的数据存储在x中</div><div class="line">		System.out.println(x);*/</div><div class="line"></div><div class="line">		//录入两个整数</div><div class="line">		Scanner sc = new Scanner(System.in);//创建键盘录入对象</div><div class="line">		System.out.println(&quot;请输入第一个整数:&quot;);</div><div class="line">		int x = sc.nextInt();//将键盘录入的数据存储在x中</div><div class="line">		System.out.println(x);</div><div class="line"></div><div class="line">		System.out.println(&quot;请输入第二个整数:&quot;);</div><div class="line">		int y = sc.nextInt();//将键盘录入的数据存储在y中</div><div class="line">		System.out.println(y);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="键盘录入的练习"><a href="#键盘录入的练习" class="headerlink" title="键盘录入的练习"></a>键盘录入的练习</h3><h6 id="练习1"><a href="#练习1" class="headerlink" title="练习1"></a>练习1</h6><ul>
+<li>A:代码演示<ul>
+<li>键盘录入练习：键盘录入两个数据，并对这两个数据求和，输出其结果</li>
+</ul>
+</li>
+<li>B:代码演示<ul>
+<li>键盘录入练习：键盘录入两个数据，获取这两个数据中的最大值</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">import java.util.Scanner;//导入包中的类Scanner</div><div class="line">class Test &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);//创建键盘录入对象</div><div class="line">		</div><div class="line">		//键盘录入练习：键盘录入两个数据，并对这两个数据求和，输出其结果</div><div class="line">		/*System.out.println(&quot;请输入第一个整数:&quot;);</div><div class="line">		int x = sc.nextInt();//将键盘录入的数据存储在x中</div><div class="line">		System.out.println(&quot;请输入第二个整数:&quot;);</div><div class="line">		int y = sc.nextInt();//将键盘录入的数据存储在y中</div><div class="line">		int sum = x + y;</div><div class="line">		System.out.println(sum);*/</div><div class="line"></div><div class="line">		//键盘录入练习：键盘录入两个数据，获取这两个数据中的最大值</div><div class="line">		System.out.println(&quot;请输入第一个整数:&quot;);</div><div class="line">		int x = sc.nextInt();//将键盘录入的数据存储在x中</div><div class="line">		System.out.println(&quot;请输入第二个整数:&quot;);</div><div class="line">		int y = sc.nextInt();//将键盘录入的数据存储在y中</div><div class="line"></div><div class="line">		int max = (x &gt; y) ? x : y;//获取x和y中的最大值</div><div class="line">		System.out.println(&quot;max = &quot; + max);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h6 id="练习2"><a href="#练习2" class="headerlink" title="练习2"></a>练习2</h6><ul>
+<li>键盘录入练习：键盘录入两个数据，比较这两个数据是否相等</li>
+<li>键盘录入练习：键盘录入三个数据，获取这三个数据中的最大值</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">import java.util.Scanner;//导包</div><div class="line">class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);//创建键盘录入对象</div><div class="line"></div><div class="line">		//键盘录入练习：键盘录入两个数据，比较这两个数据是否相等</div><div class="line">		/*System.out.println(&quot;请输入第一个整数:&quot;);</div><div class="line">		int x = sc.nextInt();//将键盘录入的数据存储在x中</div><div class="line">		System.out.println(&quot;请输入第二个整数:&quot;);</div><div class="line">		int y = sc.nextInt();//将键盘录入的数据存储在y中</div><div class="line"></div><div class="line">		//boolean b = (x == y)? true : false;</div><div class="line">		boolean b = (x == y);</div><div class="line">		System.out.println(b);*/</div><div class="line"></div><div class="line">		//键盘录入练习：键盘录入三个数据，获取这三个数据中的最大值</div><div class="line">		System.out.println(&quot;请输入第一个整数:&quot;);</div><div class="line">		int x = sc.nextInt();//将键盘录入的数据存储在x中</div><div class="line">		System.out.println(&quot;请输入第二个整数:&quot;);</div><div class="line">		int y = sc.nextInt();//将键盘录入的数据存储在y中</div><div class="line">		System.out.println(&quot;请输入第三个整数:&quot;);</div><div class="line">		int z = sc.nextInt();//将键盘录入的数据存储在y中</div><div class="line"></div><div class="line">		//定义临时变量记录住比较出前两个变量中的最大值</div><div class="line">		int temp = (x &gt; y) ? x : y;</div><div class="line">		//将比较后的结果与第三个变量中的值比较,比较出三个数中的最大值</div><div class="line">		int max = (temp &gt; z) ? temp : z;</div><div class="line">		System.out.println(max);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

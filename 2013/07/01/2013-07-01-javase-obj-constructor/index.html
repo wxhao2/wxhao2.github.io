@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="wxhao">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="构造方法和面向对象练习"/>
+  <meta property="og:description" content="站点描述" />
+  <meta property="og:site_name" content="标题"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://blog.wxhaoo.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="标题" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>标题</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">构造方法和面向对象练习</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/levblanc">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:levblanc@163.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By wxhao</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2013-07-01</span>
+            <span class="time">17:38:07</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/基础知识/">#基础知识</a> <a class="tag" href="/tags/java/">#java</a> <a class="tag" href="/tags/JAVASE/">#JAVASE</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h3 id="构造方法Constructor概述和格式"><a href="#构造方法Constructor概述和格式" class="headerlink" title="构造方法Constructor概述和格式"></a>构造方法Constructor概述和格式</h3><ul>
+<li>A:构造方法概述和作用<ul>
+<li>给对象的数据(属性)进行初始化</li>
+</ul>
+</li>
+<li>B:构造方法格式特点<ul>
+<li>a:方法名与类名相同(大小也要与类名一致)</li>
+<li>b:没有返回值类型，连void都没有</li>
+<li>c:没有具体的返回值return;</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">class Demo1_Constructor &#123;						//Constructor构造</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Person p = new Person();				//在一创建对象的时候,系统就帮我调用了构造方法</div><div class="line">		//p.Person();							//构造方法不能用对象调用</div><div class="line">		p.show();</div><div class="line"></div><div class="line">		Person p2 = new Person();				//再次创建对象</div><div class="line">	</div><div class="line">		p2.show();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Person &#123;</div><div class="line">	private String name;</div><div class="line">	private int age;</div><div class="line"></div><div class="line">	//构造方法</div><div class="line">	public Person() &#123;</div><div class="line">		//System.out.println(&quot;Hello World!&quot;);</div><div class="line">		//return;								//构造方法也是有return语句的,格式是return;</div><div class="line">		name = &quot;张三&quot;;</div><div class="line">		age = 23;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void show() &#123;</div><div class="line">		System.out.println(name + &quot;...&quot; + age);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="构造方法的重载及注意事项"><a href="#构造方法的重载及注意事项" class="headerlink" title="构造方法的重载及注意事项"></a>构造方法的重载及注意事项</h3><ul>
+<li>A:案例演示<ul>
+<li>构造方法的重载</li>
+<li>重载:方法名相同,与返回值类型无关(构造方法没有返回值),只看参数列表</li>
+</ul>
+</li>
+<li>B:构造方法注意事项<ul>
+<li>a:如果我们没有给出构造方法，系统将自动提供一个无参构造方法。</li>
+<li>b:如果我们给出了构造方法，系统将不再提供默认的无参构造方法。<ul>
+<li>注意：这个时候，如果我们还想使用无参构造方法，就必须自己给出。建议永远自己给出无参构造方法</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">class Demo2_Person &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Person p1 = new Person();</div><div class="line">		p1.show();</div><div class="line"></div><div class="line">		System.out.println(&quot;---------------------&quot;);</div><div class="line"></div><div class="line">		Person p2 = new Person(&quot;张三&quot;,23);</div><div class="line">		p2.show();</div><div class="line"></div><div class="line">		System.out.println(&quot;---------------------&quot;);</div><div class="line"></div><div class="line">		Person p3 = new Person(&quot;李四&quot;,24);</div><div class="line">		p3.show();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Person &#123;</div><div class="line">	private String name;			//姓名</div><div class="line">	private int age;				//年龄</div><div class="line"></div><div class="line">	public Person() &#123;				//空参构造</div><div class="line">		System.out.println(&quot;空参的构造&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public Person(String name,int age) &#123;</div><div class="line">		this.name = name;</div><div class="line">		this.age = age;</div><div class="line">		System.out.println(&quot;有参的构造&quot;);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public void show() &#123;</div><div class="line">		System.out.println(name + &quot;...&quot; + age);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="给成员变量赋值的两种方式的区别"><a href="#给成员变量赋值的两种方式的区别" class="headerlink" title="给成员变量赋值的两种方式的区别"></a>给成员变量赋值的两种方式的区别</h3><ul>
+<li>A:setXxx()方法<ul>
+<li>修改属性值 </li>
+</ul>
+</li>
+<li>B:构造方法<ul>
+<li>给对象中属性进行初始化 </li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">class Demo3_Person &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Person p1 = new Person(&quot;张三&quot;,23);</div><div class="line">		//p1 = new Person(&quot;张天一&quot;,23);	//这种方式看运行结果貌似是改名了,其实是将原对象变成垃圾</div><div class="line">		System.out.println(p1.getName() + &quot;...&quot; + p1.getAge());</div><div class="line"></div><div class="line">		System.out.println(&quot;--------------------&quot;);</div><div class="line">		Person p2 = new Person();		//空参构造创建对象</div><div class="line">		p2.setName(&quot;李四&quot;);</div><div class="line">		p2.setAge(24);</div><div class="line"></div><div class="line">		p2.setName(&quot;李鬼&quot;);</div><div class="line">		System.out.println(p2.getName() + &quot;...&quot; + p2.getAge());</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">/*</div><div class="line">构造方法</div><div class="line">	给属性进行初始化</div><div class="line">setXxx方法</div><div class="line">	修改属性值</div><div class="line">	这两种方式,在开发中用setXxx更多一些,因为比较灵活</div><div class="line">*/</div><div class="line">class Person &#123;</div><div class="line">	private String name;				//姓名</div><div class="line">	private int age;					//年龄</div><div class="line"></div><div class="line">	public Person() &#123;					//空参构造</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public Person(String name,int age) &#123;//有参构造</div><div class="line">		this.name = name;</div><div class="line">		this.age = age;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public void setName(String name) &#123;	//设置姓名</div><div class="line">		this.name = name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public String getName() &#123;			//获取姓名</div><div class="line">		return name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setAge(int age) &#123;		//设置年龄</div><div class="line">		this.age = age;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public int getAge() &#123;				//获取年龄</div><div class="line">		return age;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="学生类的代码及测试"><a href="#学生类的代码及测试" class="headerlink" title="学生类的代码及测试"></a>学生类的代码及测试</h3><ul>
+<li>A:案例演示<ul>
+<li>学生类：<ul>
+<li>成员变量：<ul>
+<li>name，age</li>
+</ul>
+</li>
+<li>构造方法：<ul>
+<li>无参，带两个参</li>
+</ul>
+</li>
+<li>成员方法：<ul>
+<li>getXxx()/setXxx()</li>
+<li>show()：输出该类的所有成员变量值</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>B:给成员变量赋值：</p>
+<ul>
+<li>a:setXxx()方法</li>
+<li>b:构造方法</li>
+</ul>
+</li>
+<li><p>C:输出成员变量值的方式：</p>
+<ul>
+<li>a:通过getXxx()分别获取然后拼接</li>
+<li>b:通过调用show()方法搞定</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">class Student &#123;</div><div class="line">	private String name;							//姓名</div><div class="line">	private int age;								//年龄</div><div class="line"></div><div class="line">	public Student()&#123;&#125;								//空参构造</div><div class="line"></div><div class="line">	public Student(String name,int age) &#123;			//有参构造</div><div class="line">		this.name = name;</div><div class="line">		this.age = age;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setName(String name) &#123;				//设置姓名</div><div class="line">		this.name = name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public String getName() &#123;						//获取姓名</div><div class="line">		return name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setAge(int age) &#123;					//设置年龄</div><div class="line">		this.age = age;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public int getAge() &#123;							//获取年龄</div><div class="line">		return age;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void show() &#123;</div><div class="line">		System.out.println(&quot;我的姓名是:&quot; + name +  &quot;,我的年龄是:&quot; +  age);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="手机类的代码及测试"><a href="#手机类的代码及测试" class="headerlink" title="手机类的代码及测试"></a>手机类的代码及测试</h3><ul>
+<li>A:案例演示<ul>
+<li>模仿学生类，完成手机类代码</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line">class Demo5_Phone &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Phone p1 = new Phone();</div><div class="line">		p1.setBrand(&quot;苹果&quot;);</div><div class="line">		p1.setPrice(1500);</div><div class="line">		System.out.println(p1.getBrand() + &quot;...&quot; + p1.getPrice());</div><div class="line"></div><div class="line">		Phone p2 = new Phone(&quot;小米&quot;,98);</div><div class="line">		p2.show();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">/*</div><div class="line">手机类:</div><div class="line">	成员变量:</div><div class="line">		品牌brand,价格price</div><div class="line">	构造方法</div><div class="line">		无参,有参</div><div class="line">	成员方法</div><div class="line">		setXxx和getXxx</div><div class="line">		show</div><div class="line">*/</div><div class="line">class Phone &#123;</div><div class="line">	private String brand;						//品牌</div><div class="line">	private int price;							//价格</div><div class="line"></div><div class="line">	public Phone()&#123;&#125;							//空参构造</div><div class="line"></div><div class="line">	public Phone(String brand,int price) &#123;		//有参构造</div><div class="line">		this.brand = brand;</div><div class="line">		this.price = price;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setBrand(String brand) &#123;		//设置品牌</div><div class="line">		this.brand = brand;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public String getBrand() &#123;					//获取品牌</div><div class="line">		return brand;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setPrice(int price) &#123;			//设置价格</div><div class="line">		this.price = price;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public int getPrice() &#123;						//获取价格</div><div class="line">		return price;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void show() &#123;</div><div class="line">		System.out.println(brand + &quot;...&quot; + price);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="创建一个对象的步骤"><a href="#创建一个对象的步骤" class="headerlink" title="创建一个对象的步骤"></a>创建一个对象的步骤</h3><ul>
+<li>A:画图演示<ul>
+<li>画图说明一个对象的创建过程做了哪些事情?</li>
+<li>Student s = new Student();</li>
+<li>1,Student.class加载进内存</li>
+<li>2,声明一个Student类型引用s</li>
+<li>3,在堆内存创建对象,</li>
+<li>4,给对象中属性默认初始化值</li>
+<li>5,属性进行显示初始化</li>
+<li>6,构造方法进栈,对对象中的属性赋值,构造方法弹栈</li>
+<li>7,将对象的地址值赋值给s</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">class Demo1_Student &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Student s = new Student();</div><div class="line">		s.show();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Student &#123;</div><div class="line">	private String name = &quot;张三&quot;;</div><div class="line">	private int age = 23;</div><div class="line"></div><div class="line">	public Student() &#123;</div><div class="line">		name = &quot;李四&quot;;</div><div class="line">		age = 24;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void show() &#123;</div><div class="line">		System.out.println(name + &quot;...&quot; + age);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://wxhao2.duapp.com/blog/post-in/20130701/cjdxdbz.png" alt="创建对象的步骤"></p>
+<h3 id="长方形案例练习"><a href="#长方形案例练习" class="headerlink" title="长方形案例练习"></a>长方形案例练习</h3><ul>
+<li>A:案例演示<ul>
+<li>需求：<ul>
+<li>定义一个长方形类,定义 求周长和面积的方法，</li>
+<li>然后定义一个测试类进行测试。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">class Test1_Rectangle &#123;							//Rectangle矩形</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Rectangle r = new Rectangle(10,20);</div><div class="line">		System.out.println(r.getLength());		//周长</div><div class="line">		System.out.println(r.getArea());		//面积</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">/** </div><div class="line">		成员变量:</div><div class="line">			宽width,高high</div><div class="line">		空参有参构造</div><div class="line">		成员方法:</div><div class="line">			setXxx和getXxx</div><div class="line">			求周长:getLength()</div><div class="line">			求面积:getArea()</div><div class="line">*/</div><div class="line">class Rectangle &#123;</div><div class="line">	private int width;				//宽</div><div class="line">	private int high;				//高</div><div class="line"></div><div class="line">	public Rectangle()&#123;&#125;			//空参构造</div><div class="line"></div><div class="line">	public Rectangle(int width,int high) &#123;</div><div class="line">		this.width = width;			//有参构造</div><div class="line">		this.high = high;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setWidth(int width) &#123;//设置宽</div><div class="line">		this.width = width;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public int getWidth() &#123;			//获取宽</div><div class="line">		return width;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setHigh(int high) &#123;	//设置高</div><div class="line">		this.high = high;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public int getHigh() &#123;			//获取高</div><div class="line">		return high;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public int getLength() &#123;		//获取周长</div><div class="line">		return 2 * (width + high);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public int getArea() &#123;			//获取面积</div><div class="line">		return width * high;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="员工类案例练习"><a href="#员工类案例练习" class="headerlink" title="员工类案例练习"></a>员工类案例练习</h3><ul>
+<li>A:案例演示<ul>
+<li>需求：定义一个员工类Employee</li>
+<li>自己分析出几个成员，然后给出成员变量<ul>
+<li>姓名name,工号id,工资salary </li>
+</ul>
+</li>
+<li>构造方法，<ul>
+<li>空参和有参的</li>
+</ul>
+</li>
+<li>getXxx()setXxx()方法，</li>
+<li>以及一个显示所有成员信息的方法。并测试。<ul>
+<li>work </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">class Test2_Employee &#123;						//employee员工</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Employee e = new Employee(&quot;令狐冲&quot;,&quot;9527&quot;,20000);</div><div class="line">		e.work();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Employee &#123;</div><div class="line">	private String name;					//姓名</div><div class="line">	private String id;						//工号</div><div class="line">	private double salary;					//工资</div><div class="line"></div><div class="line">	public Employee() &#123;&#125;					//空参构造</div><div class="line"></div><div class="line">	public Employee(String name, String id, double salary) &#123;//有参构造</div><div class="line">		this.name = name;</div><div class="line">		this.id = id;</div><div class="line">		this.salary = salary;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setName(String name) &#123;		//设置姓名</div><div class="line">		this.name = name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public String getName() &#123;				//获取姓名</div><div class="line">		return name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setId(String id) &#123;			//设置id</div><div class="line">		this.id = id;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public String getId() &#123;					//获取id</div><div class="line">		return id;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setSalary(double salary) &#123;	//设置工资</div><div class="line">		this.salary = salary;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public double getSalary() &#123;				//获取工资</div><div class="line">		return salary;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void work() &#123;</div><div class="line">		System.out.println(&quot;我的姓名是:&quot; + name + &quot;,我的工号是:&quot; + id + &quot;,我的工资是:&quot; + salary </div><div class="line">			+ &quot;,我的工作内容是敲代码&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

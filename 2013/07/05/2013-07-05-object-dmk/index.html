@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="wxhao">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="代码块"/>
+  <meta property="og:description" content="站点描述" />
+  <meta property="og:site_name" content="标题"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://blog.wxhaoo.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="标题" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>标题</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">代码块</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/levblanc">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:levblanc@163.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By wxhao</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2013-07-05</span>
+            <span class="time">17:38:07</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/基础知识/">#基础知识</a> <a class="tag" href="/tags/java/">#java</a> <a class="tag" href="/tags/JAVASE/">#JAVASE</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h3 id="代码块的概述和分类-面试的时候会问-开发不用或者很少用"><a href="#代码块的概述和分类-面试的时候会问-开发不用或者很少用" class="headerlink" title="代码块的概述和分类(面试的时候会问,开发不用或者很少用)"></a>代码块的概述和分类(面试的时候会问,开发不用或者很少用)</h3><ul>
+<li>A:代码块概述<ul>
+<li>在Java中，使用{}括起来的代码被称为代码块。</li>
+</ul>
+</li>
+<li>B:代码块分类<ul>
+<li>根据其位置和声明的不同，可以分为局部代码块，构造代码块，静态代码块，同步代码块(多线程讲解)。</li>
+</ul>
+</li>
+<li>C:常见代码块的应用<ul>
+<li>a:局部代码块 <ul>
+<li>在方法中出现；限定变量生命周期，及早释放，提高内存利用率</li>
+</ul>
+</li>
+<li>b:构造代码块 (初始化块)<ul>
+<li>在类中方法外出现；多个构造方法方法中相同的代码存放到一起，每次调用构造都执行，并且在构造方法前执行</li>
+</ul>
+</li>
+<li>c:静态代码块 <ul>
+<li>在类中方法外出现，并加上static修饰；用于给类进行初始化，在加载的时候就执行，并且只执行一次。</li>
+<li>一般用于加载驱动</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line">class Demo1_Code &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		&#123;</div><div class="line">			int x = 10;						//限定变量的声明周期</div><div class="line">			System.out.println(x);</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		Student s1 = new Student();</div><div class="line">		System.out.println(&quot;---------------&quot;);</div><div class="line">		Student s2 = new Student(&quot;张三&quot;,23);</div><div class="line">	</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	static &#123;</div><div class="line">		System.out.println(&quot;我是在主方法类中的静态代码块&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Student &#123;</div><div class="line">	private String name;</div><div class="line">	private int age;</div><div class="line"></div><div class="line">	public Student()&#123;</div><div class="line">		//study();</div><div class="line">		System.out.println(&quot;空参构造&quot;);</div><div class="line">	&#125;					//空参构造</div><div class="line"></div><div class="line">	public Student(String name,int age) &#123;//有参构造</div><div class="line">		//study();</div><div class="line">		this.name = name;</div><div class="line">		this.age = age;</div><div class="line">		System.out.println(&quot;有参构造&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setName(String name) &#123;</div><div class="line">		this.name = name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public String getName() &#123;</div><div class="line">		return name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setAge(int age) &#123;</div><div class="line">		this.age = age;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public int getAge() &#123;</div><div class="line">		return age;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	&#123;											//构造代码块:每创建一次对象就会执行一次,优先于构造函数执行</div><div class="line">		//System.out.println(&quot;构造代码块&quot;);</div><div class="line">		study();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void study() &#123;</div><div class="line">		System.out.println(&quot;学生学习&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	static &#123;									//随着类加载而加载,且只执行一次</div><div class="line">		System.out.println(&quot;我是静态代码块&quot;);	//作用:用来给类进行初始化,一般用来加载驱动</div><div class="line">	&#125;											//静态代码块是优先于主方法执行</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="代码块的面试题"><a href="#代码块的面试题" class="headerlink" title="代码块的面试题"></a>代码块的面试题</h3><ul>
+<li>A:看程序写结果</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">class Student &#123;</div><div class="line">	static &#123;</div><div class="line">		System.out.println(&quot;Student 静态代码块&quot;);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	&#123;</div><div class="line">		System.out.println(&quot;Student 构造代码块&quot;);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public Student() &#123;</div><div class="line">		System.out.println(&quot;Student 构造方法&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Demo2_Student &#123;</div><div class="line">	static &#123;</div><div class="line">		System.out.println(&quot;Demo2_Student静态代码块&quot;);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		System.out.println(&quot;我是main方法&quot;);</div><div class="line">		</div><div class="line">		Student s1 = new Student();</div><div class="line">		Student s2 = new Student();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>顺序<ol>
+<li>Demo2_Student静态代码块</li>
+<li>我是main方法</li>
+<li>Student 静态代码块</li>
+<li>Student 构造代码块</li>
+<li>Student 构造方法</li>
+<li>Student 构造代码块</li>
+<li>Student 构造方法</li>
+</ol>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

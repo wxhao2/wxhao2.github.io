@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="wxhao">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="内部类"/>
+  <meta property="og:description" content="站点描述" />
+  <meta property="og:site_name" content="标题"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://blog.wxhaoo.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="标题" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>标题</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">内部类</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/levblanc">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:levblanc@163.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By wxhao</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2013-07-21</span>
+            <span class="time">17:38:07</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/基础知识/">#基础知识</a> <a class="tag" href="/tags/java/">#java</a> <a class="tag" href="/tags/JAVASE/">#JAVASE</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h3 id="内部类概述和访问特点"><a href="#内部类概述和访问特点" class="headerlink" title="内部类概述和访问特点"></a>内部类概述和访问特点</h3><ul>
+<li>A:内部类概述</li>
+<li>B:内部类访问特点<ul>
+<li>a:内部类可以直接访问外部类的成员，包括私有。</li>
+<li>b:外部类要访问内部类的成员，必须创建对象。</li>
+<li>外部类名.内部类名 对象名 = 外部类对象.内部类对象;</li>
+</ul>
+</li>
+<li>C:案例演示<ul>
+<li>内部类极其访问特点</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">class Demo1_InnerClass &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//Inner i = new Inner();</div><div class="line">		//i.method();</div><div class="line">		//外部类名.内部类名 = 外部类对象.内部类对象</div><div class="line">		Outer.Inner oi = new Outer().new Inner();			//创建内部类对象</div><div class="line">		oi.method();</div><div class="line"></div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Outer &#123;</div><div class="line">	private int num = 10;</div><div class="line">	class Inner &#123;</div><div class="line">		public void method() &#123;</div><div class="line">			System.out.println(num);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="成员内部类私有使用"><a href="#成员内部类私有使用" class="headerlink" title="成员内部类私有使用"></a>成员内部类私有使用</h3><ul>
+<li>private</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">class Demo2_InnerClass &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//Outer.Inner oi = new Outer().new Inner();</div><div class="line">		//oi.method();</div><div class="line"></div><div class="line">		Outer o = new Outer();</div><div class="line">		o.print();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Outer &#123;</div><div class="line">	private int num = 10;</div><div class="line">	private class Inner &#123;</div><div class="line">		public void method() &#123;</div><div class="line">			System.out.println(num);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void print() &#123;</div><div class="line">		Inner i = new Inner();</div><div class="line">		i.method();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="静态成员内部类"><a href="#静态成员内部类" class="headerlink" title="静态成员内部类"></a>静态成员内部类</h3><ul>
+<li>static</li>
+<li>B:成员内部类被静态修饰后的访问方式是:<ul>
+<li>外部类名.内部类名 对象名 = 外部类名.内部类对象;</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">class Demo1_InnerClass &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//外部类名.内部类名 对象名 = 外部类名.内部类对象;</div><div class="line">		Outer.Inner oi = new Outer.Inner();</div><div class="line">		oi.method();</div><div class="line"></div><div class="line">		Outer.Inner2.print();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Outer &#123;</div><div class="line">	static class Inner &#123;</div><div class="line">		public void method() &#123;</div><div class="line">			System.out.println(&quot;method&quot;);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	static class Inner2 &#123;</div><div class="line">		public static void print() &#123;</div><div class="line">			System.out.println(&quot;print&quot;);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="成员内部类的面试题"><a href="#成员内部类的面试题" class="headerlink" title="成员内部类的面试题"></a>成员内部类的面试题</h3><ul>
+<li>A:面试题</li>
+<li><pre><code>要求：使用已知的变量，在控制台输出30，20，10。
+</code></pre></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">class Outer &#123;</div><div class="line">	public int num = 10;</div><div class="line">	class Inner &#123;</div><div class="line">		public int num = 20;</div><div class="line">		public void show() &#123;</div><div class="line">			int num = 30;</div><div class="line">			System.out.println(?);</div><div class="line">			System.out.println(??);</div><div class="line">			System.out.println(???);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">class InnerClassTest &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Outer.Inner oi = new Outer().new Inner();</div><div class="line">		oi.show();</div><div class="line">	&#125;	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">class Test1_InnerClass &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Outer.Inner oi = new Outer().new Inner();</div><div class="line">		oi.show();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">//要求：使用已知的变量，在控制台输出30，20，10。</div><div class="line">//内部类之所以能获取到外部类的成员,是因为他能获取到外部类的引用外部类名.this</div><div class="line">class Outer &#123;</div><div class="line">	public int num = 10;</div><div class="line">	class Inner &#123;</div><div class="line">		public int num = 20;</div><div class="line">		public void show() &#123;</div><div class="line">			int num = 30;</div><div class="line">			System.out.println(num);</div><div class="line">			System.out.println(this.num);</div><div class="line">			System.out.println(Outer.this.num);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="局部内部类访问局部变量的问题"><a href="#局部内部类访问局部变量的问题" class="headerlink" title="局部内部类访问局部变量的问题"></a>局部内部类访问局部变量的问题</h3><ul>
+<li>A:案例演示<ul>
+<li>局部内部类访问局部变量必须用final修饰</li>
+<li>局部内部类在访问他所在方法中的局部变量必须用final修饰,为什么?<br>  因为当调用这个方法时,局部变量如果没有用final修饰,他的生命周期和方法的生命周期是一样的,当方法弹栈,这个局部变量也会消失,那么如果局部内部类对象还没有马上消失想用这个局部变量,就没有了,如果用final修饰会在类加载的时候进入常量池,即使方法弹栈,常量池的常量还在,也可以继续使用<br>  但是jdk1.8取消了这个事情,所以我认为这是个bug</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">class Demo1_InnerClass &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Outer o = new Outer();</div><div class="line">		o.method();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">//局部内部类</div><div class="line">class Outer &#123;</div><div class="line">	public void method() &#123;</div><div class="line">		final int num = 10;</div><div class="line">		class Inner &#123;</div><div class="line">			public void print() &#123;</div><div class="line">				System.out.println(num);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		Inner i = new Inner();</div><div class="line">		i.print();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*public void run() &#123;</div><div class="line">		Inner i = new Inner();				//局部内部类,只能在其所在的方法中访问</div><div class="line">		i.print();</div><div class="line">	&#125;*/</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://wxhao2.duapp.com/blog/post-in/20130721/jbnblnct.png" alt="局部内部类内存图"></p>
+<h3 id="匿名内部类的格式和理解"><a href="#匿名内部类的格式和理解" class="headerlink" title="匿名内部类的格式和理解"></a>匿名内部类的格式和理解</h3><ul>
+<li>A:匿名内部类<ul>
+<li>就是内部类的简化写法。</li>
+</ul>
+</li>
+<li>B:前提：存在一个类或者接口<ul>
+<li>这里的类可以是具体类也可以是抽象类。</li>
+</ul>
+</li>
+<li>C:格式：<pre><code>new 类名或者接口名(){
+    重写方法;
+}
+</code></pre></li>
+<li>D:本质是什么呢?<ul>
+<li>是一个继承了该类或者实现了该接口的子类匿名对象。</li>
+</ul>
+</li>
+<li>E:案例演示<ul>
+<li>按照要求来一个匿名内部类</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">interface Inter &#123;</div><div class="line">	public void print();</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Outer &#123;</div><div class="line">	class Inner implements Inter &#123;</div><div class="line">		public void print() &#123;</div><div class="line">			System.out.println(&quot;print&quot;);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void method()&#123;</div><div class="line">		//Inner i = new Inner();</div><div class="line">		//i.print();</div><div class="line">		//new Inner().print();</div><div class="line">		//Inter i = new Inner();			//父类引用指向子类对象</div><div class="line">		</div><div class="line">		new Inter() &#123;						//实现Inter接口</div><div class="line">			public void print() &#123;			//重写抽象方法</div><div class="line">				System.out.println(&quot;print&quot;);</div><div class="line">			&#125;</div><div class="line">		&#125;.print();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Demo1_NoNameInnerClass &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Outer o = new Outer();</div><div class="line">		o.method();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>###10.14_面向对象(匿名内部类重写多个方法调用)</p>
+<ul>
+<li>A:案例演示<ul>
+<li>匿名内部类的方法调用</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">class Demo2_NoNameInnerClass &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Outer o = new Outer();</div><div class="line">		o.method();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">interface Inter &#123;</div><div class="line">	public void show1();</div><div class="line">	public void show2();</div><div class="line">&#125;</div><div class="line">//匿名内部类只针对重写一个方法时候使用</div><div class="line">class Outer &#123;</div><div class="line">	public void method() &#123;</div><div class="line">		/*new Inter()&#123;</div><div class="line">			public void show1() &#123;</div><div class="line">				System.out.println(&quot;show1&quot;);</div><div class="line">			&#125;</div><div class="line"></div><div class="line">			public void show2() &#123;</div><div class="line">				System.out.println(&quot;show2&quot;);</div><div class="line">			&#125;</div><div class="line">		&#125;.show1();</div><div class="line"></div><div class="line">		new Inter()&#123;</div><div class="line">			public void show1() &#123;</div><div class="line">				System.out.println(&quot;show1&quot;);</div><div class="line">			&#125;</div><div class="line"></div><div class="line">			public void show2() &#123;</div><div class="line">				System.out.println(&quot;show2&quot;);</div><div class="line">			&#125;</div><div class="line">		&#125;.show2();*/</div><div class="line"></div><div class="line">		Inter i = new Inter()&#123;</div><div class="line">			public void show1() &#123;</div><div class="line">				System.out.println(&quot;show1&quot;);</div><div class="line">			&#125;</div><div class="line"></div><div class="line">			public void show2() &#123;</div><div class="line">				System.out.println(&quot;show2&quot;);</div><div class="line">			&#125;</div><div class="line"></div><div class="line">			/*public void show3() &#123;</div><div class="line">				System.out.println(&quot;show3&quot;);</div><div class="line">			&#125;*/</div><div class="line">		&#125;;</div><div class="line"></div><div class="line">		i.show1();</div><div class="line">		i.show2();</div><div class="line">		//i.show3();						//匿名内部类是不能向下转型的,因为没有子类类名</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>###10.15_面向对象(匿名内部类在开发中的应用)</p>
+<ul>
+<li>A:代码如下</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">//这里写抽象类，接口都行</div><div class="line">abstract class Person &#123;</div><div class="line">	public abstract void show();</div><div class="line">&#125;</div><div class="line"></div><div class="line">class PersonDemo &#123;</div><div class="line">	public void method(Person p) &#123;</div><div class="line">		p.show();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class PersonTest &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//如何调用PersonDemo中的method方法呢?</div><div class="line">		PersonDemo pd = new PersonDemo ();</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">class Test1_NoNameInnerClass &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//如何调用PersonDemo中的method方法呢?</div><div class="line">		PersonDemo pd = new PersonDemo ();</div><div class="line">		//pd.method(new Student());</div><div class="line">		pd.method(new Person() &#123;</div><div class="line">			public void show() &#123;</div><div class="line">				System.out.println(&quot;show&quot;);</div><div class="line">			&#125;</div><div class="line">		&#125;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">//这里写抽象类，接口都行</div><div class="line">abstract class Person &#123;</div><div class="line">	public abstract void show();</div><div class="line">&#125;</div><div class="line"></div><div class="line">class PersonDemo &#123;</div><div class="line">	</div><div class="line">	//public void method(Person p) &#123;		//Person p = new Student();		//父类引用指向子类对象</div><div class="line">	/*</div><div class="line">	Person p = new Person()&#123;</div><div class="line">		public void show() &#123;</div><div class="line">			System.out.println(&quot;show&quot;);</div><div class="line">		&#125;</div><div class="line">	&#125;;</div><div class="line">	*/</div><div class="line">	public void method(Person p) &#123;</div><div class="line">		p.show();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Student extends Person &#123;</div><div class="line">	public void show() &#123;</div><div class="line">		System.out.println(&quot;show&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>###10.16_面向对象(匿名内部类的面试题)</p>
+<ul>
+<li>A:面试题</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">按照要求，补齐代码</div><div class="line">interface Inter &#123; void show(); &#125;</div><div class="line">class Outer &#123; //补齐代码 &#125;</div><div class="line">class OuterDemo &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		  Outer.method().show();</div><div class="line">	  &#125;</div><div class="line">&#125;</div><div class="line">要求在控制台输出”HelloWorld”</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">class Test2_NoNameInnerClass &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//Outer.method().show();			//链式编程,每次调用方法后还能继续调用方法,证明调用方法返回的是对象</div><div class="line">		Inter i = Outer.method();</div><div class="line">		i.show();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">//按照要求，补齐代码</div><div class="line">interface Inter &#123; </div><div class="line">	void show(); </div><div class="line">&#125;</div><div class="line"></div><div class="line">class Outer &#123; </div><div class="line">	//补齐代码 </div><div class="line">	public static Inter method() &#123;</div><div class="line">		return new Inter() &#123;</div><div class="line">			public void show() &#123;</div><div class="line">				System.out.println(&quot;show&quot;);</div><div class="line">			&#125;</div><div class="line">		&#125;;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

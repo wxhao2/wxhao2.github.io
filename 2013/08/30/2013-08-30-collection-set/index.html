@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="wxhao">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="Set集合"/>
+  <meta property="og:description" content="站点描述" />
+  <meta property="og:site_name" content="标题"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://blog.wxhaoo.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="标题" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>标题</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Set集合</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/levblanc">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:levblanc@163.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By wxhao</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2013-08-30</span>
+            <span class="time">17:38:06</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/基础知识/">#基础知识</a> <a class="tag" href="/tags/java/">#java</a> <a class="tag" href="/tags/JAVASE/">#JAVASE</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h3 id="HashSet存储字符串并遍历"><a href="#HashSet存储字符串并遍历" class="headerlink" title="HashSet存储字符串并遍历"></a>HashSet存储字符串并遍历</h3><ul>
+<li>A:Set集合概述及特点<ul>
+<li>通过API查看即可</li>
+</ul>
+</li>
+<li>B:案例演示<ul>
+<li>HashSet存储字符串并遍历</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">HashSet&lt;String&gt; hs = new HashSet&lt;&gt;();//创建HashSet对象</div><div class="line">boolean b1 = hs.add(&quot;a&quot;);</div><div class="line">boolean b2 = hs.add(&quot;a&quot;);		//当向set集合中存储重复元素的时候返回为false</div><div class="line">hs.add(&quot;b&quot;);</div><div class="line">hs.add(&quot;c&quot;);</div><div class="line">hs.add(&quot;d&quot;);</div><div class="line">System.out.println(hs);			//HashSet的继承体系中有重写toString方法</div><div class="line">System.out.println(b1);</div><div class="line">System.out.println(b2);</div><div class="line"></div><div class="line">for (String string : hs) &#123;		//只要能用迭代器迭代的,就可以使用增强for循环遍历</div><div class="line">	System.out.println(string);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>Set集合,无索引,不可以重复,无序(存取不一致)</strong></p>
+<h3 id="HashSet存储自定义对象保证元素唯一性"><a href="#HashSet存储自定义对象保证元素唯一性" class="headerlink" title="HashSet存储自定义对象保证元素唯一性"></a>HashSet存储自定义对象保证元素唯一性</h3><ul>
+<li>A:案例演示<ul>
+<li>存储自定义对象，并保证元素唯一性。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">HashSet&lt;Person&gt; hs = new HashSet&lt;&gt;();</div><div class="line">hs.add(new Person(&quot;张三&quot;, 23));</div><div class="line">hs.add(new Person(&quot;张三&quot;, 23));</div><div class="line">hs.add(new Person(&quot;李四&quot;, 23));</div><div class="line">hs.add(new Person(&quot;李四&quot;, 23));</div><div class="line">hs.add(new Person(&quot;王五&quot;, 23));</div><div class="line">hs.add(new Person(&quot;赵六&quot;, 23));</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.bean;</div><div class="line"></div><div class="line">public class Person  &#123;</div><div class="line">	private String name;</div><div class="line">	private int age;</div><div class="line">	public Person() &#123;</div><div class="line">		super();</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	public Person(String name, int age) &#123;</div><div class="line">		super();</div><div class="line">		this.name = name;</div><div class="line">		this.age = age;</div><div class="line">	&#125;</div><div class="line">	public String getName() &#123;</div><div class="line">		return name;</div><div class="line">	&#125;</div><div class="line">	public void setName(String name) &#123;</div><div class="line">		this.name = name;</div><div class="line">	&#125;</div><div class="line">	public int getAge() &#123;</div><div class="line">		return age;</div><div class="line">	&#125;</div><div class="line">	public void setAge(int age) &#123;</div><div class="line">		this.age = age;</div><div class="line">	&#125;</div><div class="line">	@Override</div><div class="line">	public String toString() &#123;</div><div class="line">		return &quot;Person [name=&quot; + name + &quot;, age=&quot; + age + &quot;]&quot;;</div><div class="line">	&#125;</div><div class="line">	@Override</div><div class="line">	public boolean equals(Object obj) &#123;</div><div class="line">		System.out.println(&quot;执行了吗&quot;);</div><div class="line">		Person p = (Person)obj;</div><div class="line">		return this.name.equals(p.name) &amp;&amp; this.age == p.age;</div><div class="line">	&#125;</div><div class="line">	@Override</div><div class="line">	public int hashCode() &#123;</div><div class="line">		return 10;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>重写hashCode()和equals()方法</li>
+<li>先调用hashCode(),如果一样,就会调用<br>equals()进行比较 </li>
+</ul>
+<h3 id="HashSet存储自定义对象保证元素唯一性图解及代码优化"><a href="#HashSet存储自定义对象保证元素唯一性图解及代码优化" class="headerlink" title="HashSet存储自定义对象保证元素唯一性图解及代码优化"></a>HashSet存储自定义对象保证元素唯一性图解及代码优化</h3><ul>
+<li>A:画图演示<ul>
+<li>画图说明比较过程</li>
+</ul>
+</li>
+<li>B:代码优化<ul>
+<li>为了减少比较，优化hashCode()代码写法。</li>
+<li>最终版就是自动生成即可。</li>
+</ul>
+</li>
+</ul>
+<h3 id="HashSet如何保证元素唯一性的原理"><a href="#HashSet如何保证元素唯一性的原理" class="headerlink" title="HashSet如何保证元素唯一性的原理"></a>HashSet如何保证元素唯一性的原理</h3><ul>
+<li>1.HashSet原理<ul>
+<li>我们使用Set集合都是需要去掉重复元素的, 如果在存储的时候逐个equals()比较, 效率较低,哈希算法提高了去重复的效率, 降低了使用equals()方法的次数</li>
+<li>当HashSet调用add()方法存储对象的时候, 先调用对象的hashCode()方法得到一个哈希值, 然后在集合中查找是否有哈希值相同的对象<ul>
+<li>如果没有哈希值相同的对象就直接存入集合</li>
+<li>如果有哈希值相同的对象, 就和哈希值相同的对象逐个进行equals()比较,比较结果为false就存入, true则不存</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>2.将自定义类的对象存入HashSet去重复<ul>
+<li>类中必须重写hashCode()和equals()方法</li>
+<li>hashCode(): 属性相同的对象返回值必须相同, 属性不同的返回值尽量不同(提高效率)</li>
+<li>equals(): 属性相同返回true, 属性不同返回false,返回false的时候存储</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line"> * 为什么是31?</div><div class="line"> * 1. 31是一个质数,质数是能被1和自己本身整除的数</div><div class="line"> * 2. 31这个数既不大也不小</div><div class="line"> * 3. 31这个数好算,2的五次方-1,2向左移动5位</div><div class="line"> */</div><div class="line">@Override</div><div class="line">public int hashCode() &#123;</div><div class="line">    final int prime = 31;</div><div class="line">    int result = 1;</div><div class="line">    result = prime * result + age;</div><div class="line">    result = prime * result + ((name == null) ? 0 : name.hashCode());</div><div class="line">    return result;</div><div class="line">&#125;</div><div class="line">@Override</div><div class="line">public boolean equals(Object obj) &#123;</div><div class="line">    if (this == obj)						//调用的对象和传入的对象是同一个对象</div><div class="line">    	return true;						//直接返回true</div><div class="line">    if (obj == null)						//传入的对象为null</div><div class="line">    	return false;						//返回false</div><div class="line">    if (getClass() != obj.getClass())		//判断两个对象对应的字节码文件是否是同一个字节码</div><div class="line">    	return false;						//如果不是直接返回false</div><div class="line">    Person other = (Person) obj;			//向下转型</div><div class="line">    if (age != other.age)					//调用对象的年龄不等于传入对象的年龄</div><div class="line">    	return false;						//返回false</div><div class="line">    if (name == null) &#123;						//调用对象的姓名为null</div><div class="line">    	if (other.name != null)				//传入对象的姓名不为null</div><div class="line">    		return false;					//返回false</div><div class="line">    &#125; else if (!name.equals(other.name))	//调用对象的姓名不等于传入对象的姓名</div><div class="line">    	return false;						//返回false</div><div class="line">    return true;							//返回true</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="LinkedHashSet的概述和使用"><a href="#LinkedHashSet的概述和使用" class="headerlink" title="LinkedHashSet的概述和使用"></a>LinkedHashSet的概述和使用</h3><ul>
+<li>A:LinkedHashSet的特点</li>
+<li>B:案例演示<ul>
+<li>LinkedHashSet的特点<ul>
+<li>可以保证怎么存就怎么取 </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.set;</div><div class="line"></div><div class="line">import java.util.LinkedHashSet;</div><div class="line"></div><div class="line">public class Demo2_LinkedHashSet &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * @param args</div><div class="line">	 * LinkedHashSet</div><div class="line">	 * 底层是链表实现的,是set集合中唯一一个能保证怎么存就怎么取的集合对象</div><div class="line">	 * 因为是HashSet的子类,所以也是保证元素唯一的,与HashSet的原理一样</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		LinkedHashSet&lt;String&gt; lhs = new LinkedHashSet&lt;&gt;();</div><div class="line">		lhs.add(&quot;a&quot;);</div><div class="line">		lhs.add(&quot;a&quot;);</div><div class="line">		lhs.add(&quot;a&quot;);</div><div class="line">		lhs.add(&quot;a&quot;);</div><div class="line">		lhs.add(&quot;b&quot;);</div><div class="line">		lhs.add(&quot;c&quot;);</div><div class="line">		lhs.add(&quot;d&quot;);</div><div class="line">		</div><div class="line">		System.out.println(lhs);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="产生10个1-20之间的随机数要求随机数不能重复"><a href="#产生10个1-20之间的随机数要求随机数不能重复" class="headerlink" title="产生10个1-20之间的随机数要求随机数不能重复"></a>产生10个1-20之间的随机数要求随机数不能重复</h3><ul>
+<li>A:案例演示<ul>
+<li>需求：编写一个程序，获取10个1至20的随机数，要求随机数不能重复。并把最终的随机数输出到控制台。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 分析:</div><div class="line"> * 1,有Random类创建随机数对象</div><div class="line"> * 2,需要存储10个随机数,而且不能重复,所以我们用HashSet集合</div><div class="line"> * 3,如果HashSet的size是小于10就可以不断的存储,如果大于等于10就停止存储</div><div class="line"> * 4,通过Random类中的nextInt(n)方法获取1到20之间的随机数,并将这些随机数存储在HashSet集合中</div><div class="line"> * 5,遍历HashSet</div><div class="line"> */</div><div class="line">public static void main(String[] args) &#123;</div><div class="line">	//1,有Random类创建随机数对象</div><div class="line">	Random r = new Random();</div><div class="line">	//2,需要存储10个随机数,而且不能重复,所以我们用HashSet集合</div><div class="line">	HashSet&lt;Integer&gt; hs = new HashSet&lt;&gt;();</div><div class="line">	//3,如果HashSet的size是小于10就可以不断的存储,如果大于等于10就停止存储</div><div class="line">	while(hs.size() &lt; 10) &#123;</div><div class="line">		//4,通过Random类中的nextInt(n)方法获取1到20之间的随机数,并将这些随机数存储在HashSet集合中</div><div class="line">		hs.add(r.nextInt(20) + 1);</div><div class="line">	&#125;</div><div class="line">	// 5,遍历HashSet</div><div class="line">	for (Integer integer : hs) &#123;</div><div class="line">		System.out.println(integer);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="17-07-集合框架-练习"><a href="#17-07-集合框架-练习" class="headerlink" title="17.07_集合框架(练习)"></a>17.07_集合框架(练习)</h3><ul>
+<li>使用Scanner从键盘读取一行输入,去掉其中重复字符, 打印出不同的那些字符<ul>
+<li>aaaabbbcccddd</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 分析:</div><div class="line"> * 1,创建Scanner对象</div><div class="line"> * 2,创建HashSet对象,将字符存储,去掉重复</div><div class="line"> * 3,将字符串转换为字符数组,获取每一个字符存储在HashSet集合中,自动去除重复</div><div class="line"> * 4,遍历HashSet,打印每一个字符</div><div class="line"> */</div><div class="line">public static void main(String[] args) &#123;</div><div class="line">	//1,创建Scanner对象</div><div class="line">	Scanner sc = new Scanner(System.in);</div><div class="line">	System.out.println(&quot;请输入一行字符串:&quot;);</div><div class="line">	//2,创建HashSet对象,将字符存储,去掉重复</div><div class="line">	HashSet&lt;Character&gt; hs = new HashSet&lt;&gt;();</div><div class="line">	//3,将字符串转换为字符数组,获取每一个字符存储在HashSet集合中,自动去除重复</div><div class="line">	String line = sc.nextLine();</div><div class="line">	char[] arr = line.toCharArray();</div><div class="line">	</div><div class="line">	for (char c : arr) &#123;							//遍历字符数组</div><div class="line">		hs.add(c);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	//4,遍历HashSet,打印每一个字符</div><div class="line">	</div><div class="line">	for(Character ch : hs) &#123;</div><div class="line">		System.out.print(ch);</div><div class="line">	&#125;</div><div class="line">&#125;			</div><div class="line">```		</div><div class="line">			</div><div class="line">### 17.08_集合框架(练习)</div><div class="line">* 将集合中的重复元素去掉</div></pre></td></tr></table></figure>
+<p>/**</p>
+<ul>
+<li>分析:</li>
+<li>1,创建List集合存储若干个重复元素</li>
+<li>2,单独定义方法去除重复</li>
+<li><p>3,打印一下List集合<br>*/<br>public static void main(String[] args) {<br>//1,创建List集合存储若干个重复元素<br>ArrayList<string> list = new ArrayList&lt;&gt;();<br>list.add(“a”);<br>list.add(“a”);<br>list.add(“a”);<br>list.add(“b”);<br>list.add(“b”);<br>list.add(“b”);<br>list.add(“c”);<br>list.add(“c”);<br>list.add(“c”);<br>list.add(“c”);</string></p>
+<p>//2,单独定义方法去除重复<br>getSingle(list);</p>
+<p>//3,打印一下List集合<br>System.out.println(list);<br>}<br>/*</p>
+</li>
+<li>分析</li>
+<li>去除List集合中的重复元素</li>
+<li>1,创建一个LinkedHashSet集合</li>
+<li>2,将List集合中所有的元素添加到LinkedHashSet集合</li>
+<li>3,将list集合中的元素清除</li>
+<li>4,将LinkedHashSet集合中的元素添加回List集合中<br>*/<br>public static void getSingle(List<string> list) {<br> //1,创建一个LinkedHashSet集合<br> LinkedHashSet<string> lhs = new LinkedHashSet&lt;&gt;();<br> //2,将List集合中所有的元素添加到LinkedHashSet集合<br> lhs.addAll(list);<br> //3,将list集合中的元素清除<br> list.clear();<br> //4,将LinkedHashSet集合中的元素添加回List集合中<br> list.addAll(lhs);<br>}<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### TreeSet存储Integer类型的元素并遍历 </div><div class="line">* A:案例演示</div><div class="line">	* TreeSet存储Integer类型的元素并遍历</div><div class="line"></div><div class="line"> **TreeSet集合是用来对象元素进行排序的,同样他也可以保证元素的唯一**</div></pre></td></tr></table></figure>
+</string></string></li>
+</ul>
+<p>TreeSet<integer> ts = new TreeSet&lt;&gt;();<br>ts.add(3);<br>ts.add(1);<br>ts.add(1);<br>ts.add(2);<br>ts.add(2);<br>ts.add(3);<br>ts.add(3);</integer></p>
+<p>System.out.println(ts);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### TreeSet存储自定义对象 </div><div class="line">* A:案例演示</div><div class="line">	* 存储Person对象</div></pre></td></tr></table></figure></p>
+<p>TreeSet<person> ts = new TreeSet&lt;&gt;();<br>ts.add(new Person(“张三”, 23));<br>ts.add(new Person(“李四”, 13));<br>ts.add(new Person(“周七”, 13));<br>ts.add(new Person(“王五”, 43));<br>ts.add(new Person(“赵六”, 33));</person></p>
+<p>System.out.println(ts);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">需要比较元素大小所以Person类要实现comparable接口</div></pre></td></tr></table></figure></p>
+<p>public int compareTo(Person o) {<br>        return 0;<br>    }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">* 当compareTo方法返回0的时候集合中只有一个元素</div><div class="line">* 当compareTo方法返回正数的时候集合会怎么存就怎么取</div><div class="line">* 当compareTo方法返回负数的时候集合会倒序存储</div><div class="line"></div><div class="line">### TreeSet保证元素唯一和自然排序的原理和图解 </div><div class="line">* A:画图演示</div><div class="line">	* TreeSet保证元素唯一和自然排序的原理和图解</div><div class="line"></div><div class="line">![TreeSet自然排序](&#123;&#123; site.imgwall_url &#125;&#125;/post-in/20130830/treesetzrpx.png)</div></pre></td></tr></table></figure></p>
+<p>@Override<br>//按照年龄排序<br>public int compareTo(Person o) {<br>    int num = this.age - o.age;                //年龄是比较的主要条件<br>    return num == 0 ? this.name.compareTo(o.name) : num;//姓名是比较的次要条件<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### TreeSet存储自定义对象并遍历练习1</div><div class="line">* A:案例演示</div><div class="line">	* TreeSet存储自定义对象并遍历练习1(按照姓名排序)</div></pre></td></tr></table></figure></p>
+<p>@Override<br>//按照姓名排序<br>public int compareTo(Person o) {<br>    int num = this.name.compareTo(o.name);        //姓名是主要条件<br>    return num == 0 ? this.age - o.age : num;    //年龄是次要条件<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### TreeSet存储自定义对象并遍历练习2 </div><div class="line">* A:案例演示</div><div class="line">	* TreeSet存储自定义对象并遍历练习2(按照姓名的长度排序)</div></pre></td></tr></table></figure></p>
+<p>public int compareTo(Person o) {<br>    int length = this.name.length() - o.name.length();                //比较长度为主要条件<br>    int num = length == 0 ? this.name.compareTo(o.name) : length;    //比较内容为次要条件<br>    return num == 0 ? this.age - o.age : num;                        //比较年龄为次要条件<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### TreeSet保证元素唯一和比较器排序的原理及代码实现</div><div class="line">* A:案例演示</div><div class="line">	* TreeSet保证元素唯一和比较器排序的原理及代码实现</div></pre></td></tr></table></figure></p>
+<p>class CompareByLen /<em>extends Object</em>/ implements Comparator<string> {</string></p>
+<pre><code>@Override
+public int compare(String s1, String s2) {        //按照字符串的长度比较
+    int num = s1.length() - s2.length();        //长度为主要条件
+    return num == 0 ? s1.compareTo(s2) : num;    //内容为次要条件
+}
+</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>TreeSet<string> ts = new TreeSet&lt;&gt;(new CompareByLen());        //Comparator c = new CompareByLen();<br>        ts.add(“aaaaaaaa”);<br>        ts.add(“z”);<br>        ts.add(“wc”);<br>        ts.add(“nba”);<br>        ts.add(“cba”);</string></p>
+<pre><code>System.out.println(ts);
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">![TreeSet比较器排序](&#123;&#123; site.imgwall_url &#125;&#125;/post-in/20130830/treesetbjqpaixu.png)</div><div class="line"></div><div class="line">### TreeSet原理 </div><div class="line">* 1.特点</div><div class="line">	* TreeSet是用来排序的, 可以指定一个顺序, 对象存入之后会按照指定的顺序排列</div><div class="line">* 2.使用方式</div><div class="line">	* a.自然顺序(Comparable)</div><div class="line">		* TreeSet类的add()方法中会把存入的对象提升为Comparable类型</div><div class="line">		* 调用对象的compareTo()方法和集合中的对象比较</div><div class="line">		* 根据compareTo()方法返回的结果进行存储</div><div class="line">	* b.比较器顺序(Comparator)</div><div class="line">		* 创建TreeSet的时候可以制定 一个Comparator</div><div class="line">		* 如果传入了Comparator的子类对象, 那么TreeSet就会按照比较器中的顺序排序</div><div class="line">		* add()方法内部会自动调用Comparator接口中compare()方法排序</div><div class="line">		* 调用的对象是compare方法的第一个参数,集合中的对象是compare方法的第二个参数</div><div class="line">	* c.两种方式的区别</div><div class="line">		* TreeSet构造函数什么都不传, 默认按照类中Comparable的顺序(没有就报错ClassCastException)</div><div class="line">		* TreeSet如果传入Comparator, 就优先按照Comparator</div><div class="line"></div><div class="line">### 17.16_集合框架(练习)</div><div class="line">* 在一个集合中存储了无序并且重复的字符串,定义一个方法,让其有序(字典顺序),而且还不能去除重复</div></pre></td></tr></table></figure>
+<p>/**</p>
+<ul>
+<li>分析:</li>
+<li>1,定义一个List集合,并存储重复的无序的字符串</li>
+<li>2,定义方法对其排序保留重复</li>
+<li><p>3,打印List集合<br>*/<br>public static void main(String[] args) {<br> //1,定义一个List集合,并存储重复的无序的字符串<br> ArrayList<string> list = new ArrayList&lt;&gt;();<br> list.add(“aaa”);<br> list.add(“aaa”);<br> list.add(“ccc”);<br> list.add(“ddd”);<br> list.add(“fffffffffff”);<br> list.add(“wxhao”);<br> list.add(“itcast”);<br> list.add(“bbbb”);<br> list.add(“aaa”);<br> list.add(“aaa”);</string></p>
+<p> //2,定义方法对其排序保留重复<br> sort(list);</p>
+<p> //3,打印list<br> System.out.println(list);<br>}</p>
+</li>
+</ul>
+<p>/*</p>
+<ul>
+<li>定义方法,排序并保留重复</li>
+<li>分析:</li>
+<li>1,创建TreeSet集合对象,因为String本身就具备比较功能,但是重复不会保留,所以我们用比较器</li>
+<li>2,将list集合中所有的元素添加到TrreSet集合中,对其排序,保留重复</li>
+<li>3,清空list集合</li>
+<li><p>4,将TreeSet集合中排好序的元素添加到list中<br>*/<br>public static void sort(List<string> list) {<br> //1,创建TreeSet集合对象,因为String本身就具备比较功能,但是重复不会保留,所以我们用比较器<br> TreeSet<string> ts = new TreeSet&lt;&gt;(new Comparator<string>() {</string></string></string></p>
+<pre><code>@Override
+public int compare(String s1, String s2) {
+    int num = s1.compareTo(s2);                    //比较内容为主要条件
+    return num == 0 ? 1 : num;                    //保留重复
+}
+</code></pre><p> });<br> //2,将list集合中所有的元素添加到TrreSet集合中,对其排序,保留重复<br> ts.addAll(list);<br> //3,清空list集合<br> list.clear();<br> //4,将TreeSet集合中排好序的元素添加到list中<br> list.addAll(ts);<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 17.17_集合框架(练习)</div><div class="line">* 从键盘接收一个字符串, 程序对其中所有字符进行排序,例如键盘输入: helloitcast程序打印:acehillostt</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>/**</p>
+<ul>
+<li>分析:</li>
+<li>1,键盘录入字符串,Scanner</li>
+<li>2,将字符串转换为字符数组</li>
+<li>3,定义TreeSet集合,传入比较器对字符排序并保留重复</li>
+<li>4,遍历字符数组,将每一个字符存储在TreeSet集合中</li>
+<li><p>5,遍历TreeSet集合,打印每一个字符<br>*/<br>public static void main(String[] args) {<br> //1,键盘录入字符串,Scanner<br> Scanner sc = new Scanner(System.in);<br> System.out.println(“请输入一个字符串”);<br> String line = sc.nextLine();<br> //2,将字符串转换为字符数组<br> char[] arr = line.toCharArray();<br> //3,定义TreeSet集合,传入比较器对字符排序并保留重复<br> TreeSet<character> ts = new TreeSet&lt;&gt;(new Comparator<character>() {</character></character></p>
+<pre><code>@Override
+public int compare(Character c1, Character c2) {
+    //int num = c1 - c2;                //自动拆箱
+    int num = c1.compareTo(c2);
+    return num == 0 ? 1 : num;
+}
+</code></pre><p> });</p>
+<p> //4,遍历字符数组,将每一个字符存储在TreeSet集合中<br> for(char c : arr) {</p>
+<pre><code>ts.add(c);                            //自动装箱
+</code></pre><p> }</p>
+<p> //5,遍历TreeSet集合,打印每一个字符<br> for(Character c : ts) {</p>
+<pre><code>System.out.print(c);
+</code></pre><p> }<br>}        </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 17.18_集合框架(练习)</div><div class="line">* 程序启动后, 可以从键盘输入接收多个整数, 直到输入quit时结束输入. 把所有输入的整数倒序排列打印.</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>/**</p>
+<ul>
+<li>1,创建Scanner对象,键盘录入</li>
+<li>2,创建TreeSet集合对象,TreeSet集合中传入比较器</li>
+<li>3,无限循环不断接收整数,遇到quit退出,因为退出是quit,所以键盘录入的时候应该都以字符串的形式录入</li>
+<li>4,判断是quit就退出,不是将其转换为Integer,并添加到集合中</li>
+<li><p>5,遍历TreeSet集合并打印每一个元素<br>*/<br>public static void main(String[] args) {<br> //1,创建Scanner对象,键盘录入<br> Scanner sc = new Scanner(System.in);<br> //2,创建TreeSet集合对象,TreeSet集合中传入比较器<br> TreeSet<integer> ts = new TreeSet&lt;&gt;(new Comparator<integer>() {</integer></integer></p>
+<pre><code>@Override
+public int compare(Integer i1, Integer i2) {
+    //int num = i2 - i1;                    //自动拆箱
+    int num = i2.compareTo(i1);
+    return num == 0 ? 1 : num;
+}
+</code></pre><p> });<br> //3,无限循环不断接收整数,遇到quit退出,因为退出是quit,所以键盘录入的时候应该都以字符串的形式录入<br> while(true) {</p>
+<pre><code>String line = sc.nextLine();                //将键盘录入的字符串存储在line中
+if(&quot;quit&quot;.equals(line)) {
+    break;
+}
+//4,判断是quit就退出,不是将其转换为Integer,并添加到集合中
+Integer i = Integer.parseInt(line);
+ts.add(i);
+</code></pre><p> }</p>
+<p> // 5,遍历TreeSet集合并打印每一个元素<br> for (Integer integer : ts) {</p>
+<pre><code>System.out.println(integer);
+</code></pre><p> }<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">###  键盘录入学生信息按照总分排序后输出在控制台 </div><div class="line">* A:案例演示</div><div class="line">	* 需求：键盘录入5个学生信息(姓名,语文成绩,数学成绩,英语成绩),按照总分从高到低输出到控制台。</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>/**</p>
+<ul>
+<li>分析:</li>
+<li>1,定义一个学生类</li>
+<li>成员变量:姓名,语文成绩,数学成绩,英语成绩,总成绩</li>
+<li>成员方法:空参,有参构造,有参构造的参数分别是姓名,语文成绩,数学成绩,英语成绩</li>
+<li>toString方法,在遍历集合中的Student对象打印对象引用的时候会显示属性值</li>
+<li>2,键盘录入需要Scanner,创建键盘录入对象</li>
+<li>3,创建TreeSet集合对象,在TreeSet的构造函数中传入比较器,按照总分比较</li>
+<li>4,录入五个学生,所以以集合中的学生个数为判断条件,如果size是小于5就进行存储</li>
+<li>5,将录入的字符串切割,用逗号切割,会返回一个字符串数组,将字符串数组中从二个元素转换成int数,</li>
+<li>6,将转换后的结果封装成Student对象,将Student添加到TreeSet集合中</li>
+<li><p>7,遍历TreeSet集合打印每一个Student对象<br>*/<br>public static void main(String[] args) {<br> //2,键盘录入需要Scanner,创建键盘录入对象<br> Scanner sc = new Scanner(System.in);<br> System.out.println(“请输入学生成绩格式是:姓名,语文成绩,数学成绩,英语成绩”);<br> //3,创建TreeSet集合对象,在TreeSet的构造函数中传入比较器,按照总分比较<br> TreeSet<student> ts = new TreeSet&lt;&gt;(new Comparator<student>() {</student></student></p>
+<pre><code>@Override
+public int compare(Student s1, Student s2) {
+    int num = s2.getSum() - s1.getSum();
+    return num == 0 ? 1 : num;
+}
+</code></pre><p> });<br> //4,录入五个学生,所以以集合中的学生个数为判断条件,如果size是小于5就进行存储<br> while(ts.size() &lt; 5) {</p>
+<pre><code>//5,将录入的字符串切割,用逗号切割,会返回一个字符串数组,将字符串数组中从二个元素转换成int数,
+String line = sc.nextLine();
+String[] arr = line.split(&quot;,&quot;);
+int chinese = Integer.parseInt(arr[1]);
+int math = Integer.parseInt(arr[2]);
+int english = Integer.parseInt(arr[3]);
+//6,将转换后的结果封装成Student对象,将Student添加到TreeSet集合中
+ts.add(new Student(arr[0], chinese, math, english));
+</code></pre><p> }</p>
+<p> //7,遍历TreeSet集合打印每一个Student对象<br> System.out.println(“排序后的学生信息:”);<br> for (Student s : ts) {</p>
+<pre><code>System.out.println(s);
+</code></pre><p> }<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>package com.wxhao.bean;</p>
+<p>public class Student {<br>    private String name;<br>    private int chinese;<br>    private int math;<br>    private int english;<br>    private int sum;</p>
+<pre><code>public Student() {
+    super();
+
+}
+public Student(String name, int chinese, int math, int english) {
+    super();
+    this.name = name;
+    this.chinese = chinese;
+    this.math = math;
+    this.english = english;
+    this.sum = this.chinese + this.math + this.english;
+}
+public int getSum() {
+    return sum;
+}
+
+public String toString() {
+    return name + &quot;,&quot; + chinese + &quot;,&quot; + math + &quot;,&quot; + english + &quot;,&quot; + sum;
+}
+</code></pre><p>}<br>```</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>1.List<ul>
+<li>a.普通for循环, 使用get()逐个获取</li>
+<li>b.调用iterator()方法得到Iterator, 使用hasNext()和next()方法</li>
+<li>c.增强for循环, 只要可以使用Iterator的类都可以用</li>
+<li>d.Vector集合可以使用Enumeration的hasMoreElements()和nextElement()方法</li>
+</ul>
+</li>
+<li>2.Set<ul>
+<li>a.调用iterator()方法得到Iterator, 使用hasNext()和next()方法</li>
+<li>b.增强for循环, 只要可以使用Iterator的类都可以用</li>
+</ul>
+</li>
+<li>3.普通for循环,迭代器,增强for循环是否可以在遍历的过程中删除 </li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

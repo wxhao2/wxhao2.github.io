@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="wxhao">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="Java语言基础之运算符"/>
+  <meta property="og:description" content="站点描述" />
+  <meta property="og:site_name" content="标题"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://blog.wxhaoo.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="标题" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>标题</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Java语言基础之运算符</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/levblanc">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:levblanc@163.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By wxhao</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2013-06-13</span>
+            <span class="time">17:38:07</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/基础知识/">#基础知识</a> <a class="tag" href="/tags/java/">#java</a> <a class="tag" href="/tags/JAVASE/">#JAVASE</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h3 id="1-算术运算符的基本用法"><a href="#1-算术运算符的基本用法" class="headerlink" title="1.算术运算符的基本用法"></a>1.算术运算符的基本用法</h3><ul>
+<li>A:什么是运算符<ul>
+<li>就是对常量和变量进行操作的符号。</li>
+</ul>
+</li>
+<li>B:运算符的分类<ol>
+<li>算术运算符</li>
+<li>赋值运算符</li>
+<li>比较(关系或条件)运算符</li>
+<li>逻辑运算符</li>
+<li>位运算符</li>
+<li>三目(元)运算符 </li>
+</ol>
+</li>
+<li>C:算数运算符有哪些<ul>
+<li>+,-,*,/,%,++,– </li>
+</ul>
+</li>
+<li>D:注意事项：<ol>
+<li>+号在java中有三种作用,代表正号,做加法运算,字符串的连接符</li>
+<li>整数相除只能得到整数。如果想得到小数，必须把数据变化为浮点数类型</li>
+<li>/获取的是除法操作的商，%获取的是除法操作的余数</li>
+<li>%运算符<ul>
+<li>当左边的绝对值小于右边绝对值时,结果是左边</li>
+<li>当左边的绝对值等于右边或是右边的倍数时,结果是0</li>
+<li>当左边的绝对值大于右边绝对值时,结果是余数</li>
+<li>%运算符结果的符号只和左边有关系,与右边无关</li>
+<li>任何一个正整数%2结果不是0就是1可以用来当作切换条件 </li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Sysout.out.print(10/3);//整数相除结果只能是整数</div><div class="line">Sysout.out.print(10/3.0);//如果想得到小数,把其中一个数变成小数,另一个数在运算时会自动类型提升</div><div class="line">Sysout.out.print(3%5);//</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="2-算术运算符-和–的用法"><a href="#2-算术运算符-和–的用法" class="headerlink" title="2.算术运算符++和–的用法"></a>2.算术运算符++和–的用法</h3><ul>
+<li>A:++,–运算符的作用<ul>
+<li>自加（++）自减（–）运算</li>
+<li>++:自加。对原有的数据进行+1</li>
+<li>–:自减。对原有的数据进行-1</li>
+</ul>
+</li>
+<li>B:代码演示<ul>
+<li>a:单独使用：<ul>
+<li>放在操作数的前面和后面效果一样。(这种用法是我们比较常见的)</li>
+</ul>
+</li>
+<li>b:参与运算使用：<ul>
+<li>放在操作数的前面，先自增或者自减，然后再参与运算。</li>
+<li>放在操作数的后面，先参与运算，再自增或者自减。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">int a = 3;</div><div class="line">//a++;//a=a+1</div><div class="line">//++a;//a=a+1</div><div class="line"></div><div class="line">int b;</div><div class="line">b=a++;</div><div class="line">//当++在变量后面时,会先将值取出来做赋值操作,再自身+1</div><div class="line">sysout(a);//4</div><div class="line">sysout(b);//3</div></pre></td></tr></table></figure>
+<h3 id="3-算术运算符-和–的练习"><a href="#3-算术运算符-和–的练习" class="headerlink" title="3.算术运算符++和–的练习"></a>3.算术运算符++和–的练习</h3><ul>
+<li>A:代码演示<ul>
+<li>请分别计算出a,b,c的值?</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">int a = 10;</div><div class="line">int b = 10;</div><div class="line">int c = 10;</div><div class="line"></div><div class="line">a = b++;//10,b=11		</div><div class="line">c = --a;//9,a=9			</div><div class="line">b = ++a;//10,a=10		</div><div class="line">a = c--;//9,c=8	</div><div class="line">			</div><div class="line">```	</div><div class="line"></div><div class="line">* B:代码演示</div><div class="line">	* 请分别计算出x,y的值?</div></pre></td></tr></table></figure>
+<p>int x = 4;<br>//       4      6     60<br>int y = (x++)+(++x)+(x*10);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">* C:面试题</div><div class="line"> 	* 问哪句会报错,为什么</div></pre></td></tr></table></figure></p>
+<p>byte b = 10;<br>b++;// 底层要得到结果 b=(byte)(b+1)<br>b = b + 1;//自动提升为int<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">### 4.赋值运算符的基本用法</div><div class="line">* A:赋值运算符有哪些</div><div class="line">	* a:基本的赋值运算符：=</div><div class="line">		* 把=右边的数据赋值给左边。</div><div class="line">		</div><div class="line">	* b:扩展的赋值运算符：+=,-=,*=,/=,%=</div><div class="line">		* += 把左边和右边做加法，然后赋值给左边。</div></pre></td></tr></table></figure></p>
+<p>int a=3;//右边常量赋值给左边变量,左边必须是变量</p>
+<p>//3=a//报错</p>
+<p>a+=4;//7,a=a+4</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">### 5.赋值运算符的面试题</div><div class="line">* A:代码演示</div><div class="line">	* 面试题:看下面的程序是否有问题，如果有问题，请指出并说明理由。</div></pre></td></tr></table></figure>
+<p>short s=1;s = s+1;//提升int,损失精度<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>short s=1;s+=1;//2,s=(short)(s+1),底层要得到结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">### 6.关系运算符的基本用法及其注意事项</div><div class="line">* A:关系运算符有哪些(比较运算符,条件运算符)</div><div class="line">	* ==,!=,&gt;,&gt;=,&lt;,&lt;= </div><div class="line">        </div><div class="line">* 注意事项：</div><div class="line">	* 无论你的操作是简单还是复杂，结果是boolean类型。</div><div class="line">	* &quot;==&quot;不能写成&quot;=&quot;。</div><div class="line"></div><div class="line">### 7.逻辑运算符 </div><div class="line">* A:逻辑运算符有哪些</div><div class="line">	* &amp;,|,^,!</div><div class="line">	* &amp;&amp;,|| </div><div class="line">* B:代码演示</div></pre></td></tr></table></figure></p>
+<p>//int x = 10;<br>//5 &lt; x &lt; 15<br>//x &gt; 5 &amp; x &lt; 15</p>
+<p>int a = 10;<br>int b = 20;<br>int c = 30;<br>//逻辑与 &amp; 并且 and 遇 false则false<br>System.out.print(a &lt; b &amp; b &lt;c);//true &amp; true = true<br>System.out.print(a &lt; b &amp; b &lt;c);//true &amp; false = false<br>System.out.print(a &lt; b &amp; b &lt;c);//false &amp; true = false<br>System.out.print(a &lt; b &amp; b &lt;c);//false &amp; false = false</p>
+<p>//逻辑或 或or 遇true则true<br>System.out.print(a &lt; b | b &lt;c);//true | true = true<br>System.out.print(a &lt; b | b &lt;c);//true | false = true<br>System.out.print(a &lt; b | b &lt;c);//false | true = true<br>System.out.print(a &lt; b | b &lt;c);//false | false = false</p>
+<p>//逻辑异或 两边相同为false,两边不同为true<br>System.out.print(a &lt; b ^ b &lt;c);//true ^ true = false<br>System.out.print(a &lt; b ^ b &lt;c);//true ^ false = true<br>System.out.print(a &lt; b ^ b &lt;c);//false ^ true = true<br>System.out.print(a &lt; b ^ b &lt;c);//false ^ false = false</p>
+<p>//逻辑非<br>System.out.print(!true);//false</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">* 逻辑运算符的基本用法</div><div class="line">	</div><div class="line">* 注意事项：</div><div class="line">	* a:逻辑运算符一般用于连接boolean类型的表达式或者值。</div><div class="line">	* b:表达式：就是用运算符把常量或者变量连接起来的符合java语法的式子。</div><div class="line">		* 算术表达式：a + b</div><div class="line">		* 比较表达式：a == b(条件表达式)</div><div class="line">* C:结论：</div><div class="line">* &amp;逻辑与:有false则false。</div><div class="line">* |逻辑或:有true则true。</div><div class="line">* ^逻辑异或:相同为false，不同为true。</div><div class="line">* !逻辑非:非false则true，非true则false。</div><div class="line">	* 特点：偶数个不改变本身。</div><div class="line"></div><div class="line">### 8.逻辑运算符&amp;&amp;和&amp;的区别</div><div class="line">* A:代码演示</div><div class="line">	* &amp;&amp;和&amp;的区别?</div><div class="line">		* a:最终结果一样。</div><div class="line">		* b:&amp;&amp;具有短路效果。左边是false，右边不执行。</div><div class="line">		* 	&amp;是无论左边是false还是true,右边都会执行</div><div class="line">* B:同理||和|的区别?</div><div class="line">    *  最终结果相同</div><div class="line">    *  ||具有短路效果,左边为true,右边不执行</div><div class="line">* C:开发中常用谁?</div><div class="line">	* &amp;&amp;,||,!</div></pre></td></tr></table></figure>
+<p>//最终结果一样<br>System.out.print(a &lt; b &amp;&amp; b &lt;c);//true &amp;&amp; true = true<br>System.out.print(a &lt; b &amp;&amp; b &lt;c);//true &amp;&amp; false = false<br>System.out.print(a &lt; b &amp;&amp; b &lt;c);//false &amp;&amp; true = false<br>System.out.print(a &lt; b &amp;&amp; b &lt;c);//false &amp;&amp; false = false</p>
+<p>//&amp;&amp;具有短路效果。左边是false，右边不执行。<br>int x = 3;<br>int y = 4;<br>System.out.print((++x ==3)&amp; (++y ==4));//false , x=4 ,y=5<br>System.out.print((++x ==3) &amp;&amp; (++y ==4));//false , x=4 ,y=5<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">### 9.位运算符的基本用法</div><div class="line">* A:位运算符有哪些</div><div class="line">	* &amp;,\|,^,~ ,&gt;&gt;,&gt;&gt;&gt;,&lt;&lt;</div><div class="line">* B:代码演示</div><div class="line">	* 位运算符的基本用法1</div><div class="line">	</div><div class="line">	* &amp;, \| ,^,~ 的用法</div><div class="line">	* &amp;:有0则0</div><div class="line">	* \|:有1则1</div><div class="line">	* ^:相同则0，不同则1</div><div class="line">	* ~:按位取反</div></pre></td></tr></table></figure></p>
+<p>/*<br>    110</p>
+<h2 id="amp-011"><a href="#amp-011" class="headerlink" title="&amp;   011"></a>&amp;   011</h2><pre><code>010 = 2
+</code></pre><p>*/<br>System.out.println(6 &amp; 3);//2</p>
+<p>/*<br>    110</p>
+<h2 id="011"><a href="#011" class="headerlink" title="|   011"></a>|   011</h2><pre><code>111 = 7
+</code></pre><p>*/<br>System.out.println(6 | 3);//7</p>
+<p>/*<br>    110</p>
+<h2 id="011-1"><a href="#011-1" class="headerlink" title="^   011"></a>^   011</h2><pre><code>101 = 5
+</code></pre><p>*/<br>System.out.println(6 ^ 3);//5</p>
+<p>/*</p>
+<h2 id="00000000-00000000-00000000-00000110"><a href="#00000000-00000000-00000000-00000110" class="headerlink" title="  00000000 00000000 00000000  00000110 "></a>  00000000 00000000 00000000  00000110 </h2><p>~ 11111111 11111111 11111111<br>11111001 补码</p>
+<ul>
+<li>00000000 00000000 00000000  00000001<br>11111111 11111111 11111111<br>11111000 反码<br>10000000 00000000 00000000  00000111 原码 -7<br>*/<br>System.out.println(~6);//-7<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 10.位异或运算符的特点及面试题</div><div class="line">* A:代码演示</div><div class="line">	* 位异或运算符的特点</div><div class="line"></div><div class="line">	* ^的特点：一个数据对另一个数据位异或两次，该数本身不变。</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>System.out.println(10 ^ 5 ^ 10);//5<br>System.out.println(5 ^ 5 ^ 10);//10<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">	</div><div class="line">* B:面试题：</div><div class="line">	* 请自己实现两个整数变量的交换(不需要定义第三方变量)</div><div class="line">	* 注意：以后讲课的过程中，我没有明确指定数据的类型，默认int类型。</div></pre></td></tr></table></figure></p>
+<p>int x = 10;<br>int y = 5;</p>
+<p>//需要第三方变量,开发推荐用这种<br>int temp = y;<br>x = y;<br>y = temp;</p>
+<p>//不需要定义第三方变量,有弊端,有可能超过int取值返回<br>x = x + y;<br>y = x - y;<br>x = x - y ;</p>
+<p>//不需要定义第三方变量,通过 ^<br>x = x ^ y; // 10 ^ 5<br>y = x ^ y; // 10 ^ 5 ^ 5 = 10<br>x = x ^ y; // 10 ^ 5 ^ 5 =5<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 11.位运算符的基本用法及面试题</div><div class="line">* A:代码演示 \&gt;\&gt;,\&gt;\&gt;\&gt;,\&lt;\&lt;的用法:</div><div class="line">	*  \&lt;\&lt;:左移	左边最高位丢弃，右边补齐0</div><div class="line">	*  \&gt;\&gt;:右移	最高位是0，左边补齐0;最高为是1，左边补齐1</div><div class="line">	*  \&gt;\&gt;\&gt;:无符号右移 无论最高位是0还是1，左边补齐0</div><div class="line">	*  最有效率的算出2 * 8的结果</div></pre></td></tr></table></figure></p>
+<p>//向左移动几位,就是乘以2的几次幂<br>System.out.println(12 &lt;&lt; 1); //24<br>System.out.println(12 &lt;&lt; 2); //48<br>/<em><br>    00000000 00000000 00000000 00001100 12补码<br> (0)000000 00000000 00000000 00011000 24补码<br>(00)000000 00000000 00000000 00110000 48补码
+</em>/</p>
+<p>//向友移动几位,就是除以2的几次幂<br>System.out.println(12 &gt;&gt; 1); //6<br>System.out.println(12 &gt;&gt; 2); //3</p>
+<p>//最有效率的算出2 * 8的结果<br>//计算时会先转二进制码<br>System.out.println(2 &lt;&lt; 3);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 12.三元运算符的基本用法</div><div class="line">* A:三元运算符的格式</div><div class="line">    * 		(关系表达式) ? 表达式1 : 表达式2;</div><div class="line">* B:三元运算符的执行流程 </div><div class="line">* C:代码演示</div><div class="line">	* 获取两个数中的最大值</div></pre></td></tr></table></figure></p>
+<p>int x = 10;<br>int y = 5;<br>int z;<br>z = (x &gt; y) ? x : y;</p>
+<p>System.out.println(“z = “ + z);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 13.三元运算符的练习</div><div class="line"></div><div class="line">* 比较两个整数是否相同</div><div class="line">* 获取三个整数中的最大值</div></pre></td></tr></table></figure></p>
+<p>//比较两个整数是否相同</p>
+<p>int x = 10;<br>int y = 10;</p>
+<p>//boolean b = (x == y) ? true : false;<br>boolean b = (x == y);<br>System.out.println(“b = “ +  b);</p>
+<p>//获取三个整数中的最大值<br>int a = 10;<br>int b = 20;<br>int c = 30;</p>
+<p>//先比较任意两个数的值,找出这两个数中的最大值<br>int temp = (a &gt; b) ? a : b;<br>//用前两个数的最大值与第三个数比较,获取最大值<br>int max = (temp &gt; c) ? temp : c;<br>System.out.println(“max =” + max);<br>```</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

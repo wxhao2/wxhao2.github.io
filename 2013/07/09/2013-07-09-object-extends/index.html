@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="wxhao">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="继承(重点)"/>
+  <meta property="og:description" content="站点描述" />
+  <meta property="og:site_name" content="标题"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://blog.wxhaoo.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="标题" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>标题</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">继承(重点)</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/levblanc">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:levblanc@163.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By wxhao</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2013-07-09</span>
+            <span class="time">17:38:07</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/基础知识/">#基础知识</a> <a class="tag" href="/tags/java/">#java</a> <a class="tag" href="/tags/JAVASE/">#JAVASE</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h3 id="继承案例演示"><a href="#继承案例演示" class="headerlink" title="继承案例演示"></a>继承案例演示</h3><ul>
+<li>A:继承(extends)<ul>
+<li>让类与类之间产生关系,子父类关系 </li>
+</ul>
+</li>
+<li>B:继承案例演示：<ul>
+<li>动物类,猫类,狗类</li>
+<li>定义两个属性(颜色,腿的个数)两个功能(吃饭，睡觉)</li>
+</ul>
+</li>
+<li>C:案例演示<ul>
+<li>使用继承前</li>
+</ul>
+</li>
+<li>D:案例演示<ul>
+<li>使用继承后</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">class Demo1_Extends &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Cat c = new Cat();</div><div class="line">		c.color = &quot;花&quot;;</div><div class="line">		c.leg = 4;</div><div class="line">		c.eat();</div><div class="line">		c.sleep();</div><div class="line"></div><div class="line">		System.out.println(c.leg  + &quot;...&quot; + c.color);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">/*</div><div class="line">* A:继承(extends)</div><div class="line">	* 让类与类之间产生关系,子父类关系 </div><div class="line">* B:继承案例演示：</div><div class="line">	* 动物类,猫类,狗类</div><div class="line">	* 定义两个属性(颜色,腿的个数)两个功能(吃饭，睡觉)</div><div class="line">* C:案例演示</div><div class="line">	* 使用继承前</div><div class="line">* D:案例演示</div><div class="line">	* 使用继承后</div><div class="line">*/</div><div class="line">class Animal &#123;</div><div class="line">	String color;					//动物的颜色</div><div class="line">	int leg;						//动物腿的个数</div><div class="line"></div><div class="line">	public void eat() &#123;				//吃饭的功能</div><div class="line">		System.out.println(&quot;吃饭&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void sleep() &#123;			//睡觉的功能</div><div class="line">		System.out.println(&quot;睡觉&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Cat extends Animal &#123;</div><div class="line">	</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Dog extends Animal &#123;</div><div class="line">	</div><div class="line">&#125;</div><div class="line"></div><div class="line">/*</div><div class="line">extends是继承的意思</div><div class="line">Animal是父类</div><div class="line">Cat和Dog都是子类</div><div class="line">*/</div></pre></td></tr></table></figure>
+<h3 id="继承的好处和弊端"><a href="#继承的好处和弊端" class="headerlink" title="继承的好处和弊端"></a>继承的好处和弊端</h3><ul>
+<li>A:继承的好处<ul>
+<li>a:提高了代码的复用性</li>
+<li>b:提高了代码的维护性</li>
+<li>c:让类与类之间产生了关系，是多态的前提</li>
+</ul>
+</li>
+<li>B:继承的弊端<ul>
+<li>类的耦合性增强了。<ul>
+<li>开发的原则：高内聚，低耦合。</li>
+</ul>
+</li>
+<li>耦合：类与类的关系</li>
+<li>内聚：就是自己完成某件事情的能力</li>
+</ul>
+</li>
+</ul>
+<h3 id="Java中类的继承特点"><a href="#Java中类的继承特点" class="headerlink" title="Java中类的继承特点"></a>Java中类的继承特点</h3><ul>
+<li>A:Java中类的继承特点<ul>
+<li>a:Java只支持单继承，不支持多继承。(一个儿子只能有一个爹)<ul>
+<li>有些语言是支持多继承，格式：extends 类1,类2,…</li>
+</ul>
+</li>
+<li>b:Java支持多层继承(继承体系)</li>
+</ul>
+</li>
+<li>B:案例演示<ul>
+<li>Java中类的继承特点<ul>
+<li>如果想用这个体系的所有功能用最底层的类创建对象</li>
+<li>如果想看这个体系的共性功能,看最顶层的类 </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">class Demo2_Extends &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		DemoC d = new DemoC();</div><div class="line">		d.show();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class DemoA &#123;</div><div class="line">	public void show() &#123;</div><div class="line">		System.out.println(&quot;DemoA&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class DemoB extends DemoA &#123;</div><div class="line">	public void method() &#123;</div><div class="line">		System.out.println(&quot;DemoB&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class DemoC extends DemoB &#123;</div><div class="line">	public void print() &#123;</div><div class="line">		System.out.println(&quot;DemoC&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="继承的注意事项和什么时候使用继承"><a href="#继承的注意事项和什么时候使用继承" class="headerlink" title="继承的注意事项和什么时候使用继承"></a>继承的注意事项和什么时候使用继承</h3><ul>
+<li>A:继承的注意事项<ul>
+<li>a:子类只能继承父类所有非私有的成员(成员方法和成员变量)</li>
+<li>b:子类不能继承父类的构造方法，但是可以通过super(马上讲)关键字去访问父类构造方法。</li>
+<li>c:不要为了部分功能而去继承</li>
+<li>项目经理 姓名 工号 工资 奖金</li>
+<li>程序员    姓名 工号 工资</li>
+</ul>
+</li>
+<li>B:什么时候使用继承<ul>
+<li>继承其实体现的是一种关系：”is a”。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Person</div><div class="line">	Student</div><div class="line">	Teacher</div><div class="line">水果</div><div class="line">	苹果</div><div class="line">	香蕉</div><div class="line">	橘子</div></pre></td></tr></table></figure>
+<blockquote>
+<p>采用假设法。<br>    如果有两个类A,B。只有他们符合A是B的一种，或者B是A的一种，就可以考虑使用继承。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">class Demo3_Extends &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Son s = new Son();</div><div class="line">		s.show();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Father &#123;</div><div class="line">	private String name;</div><div class="line">	private void show() &#123;</div><div class="line">		System.out.println(&quot;Hello World!&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Son extends Father &#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="继承中成员变量的关系"><a href="#继承中成员变量的关系" class="headerlink" title="继承中成员变量的关系"></a>继承中成员变量的关系</h3><ul>
+<li>A:案例演示<ul>
+<li>a:不同名的变量</li>
+<li>b:同名的变量</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">class Demo4_Extends &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Son s = new Son();</div><div class="line">		s.print();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">/*</div><div class="line">* A:案例演示</div><div class="line">	* a:不同名的变量</div><div class="line">	* b:同名的变量</div><div class="line">		子父类出现同名的变量只是在讲课中举例子有,在开发中是不会出现这种情况的</div><div class="line">		子类继承父类就是为了使用父类的成员,那么如果定义了同名的成员变量没有意义了</div><div class="line">*/</div><div class="line"></div><div class="line">class Father &#123;</div><div class="line">	int num1 = 10;</div><div class="line">	int num2 = 30;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Son extends Father &#123;</div><div class="line">	int num2 = 20;</div><div class="line"></div><div class="line">	public void print() &#123;</div><div class="line">		System.out.println(num1);//10	</div><div class="line">		System.out.println(num2);//20,就近原则,子类有就不用父类的了</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="this和super的区别和应用"><a href="#this和super的区别和应用" class="headerlink" title="this和super的区别和应用"></a>this和super的区别和应用</h3><ul>
+<li>A:this和super都代表什么<ul>
+<li>this:代表当前对象的引用,谁来调用我,我就代表谁</li>
+<li>super:代表当前对象父类的引用</li>
+</ul>
+</li>
+<li>B:this和super的使用区别<ul>
+<li>a:调用成员变量<ul>
+<li>this.成员变量 调用本类的成员变量,也可以调用父类的成员变量</li>
+<li>super.成员变量 调用父类的成员变量</li>
+</ul>
+</li>
+<li>b:调用构造方法<ul>
+<li>this(…)    调用本类的构造方法</li>
+<li>super(…)    调用父类的构造方法</li>
+</ul>
+</li>
+<li>c:调用成员方法<ul>
+<li>this.成员方法 调用本类的成员方法,也可以调用父类的方法</li>
+<li>super.成员方法 调用父类的成员方法</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">class Father &#123;</div><div class="line">	int num1 = 10;</div><div class="line">	int num2 = 30;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Son extends Father &#123;</div><div class="line">	int num2 = 20;</div><div class="line"></div><div class="line">	public void print() &#123;</div><div class="line">		System.out.println(this.num1);				//this既可以调用本类的,也可以调用父类的(本类没有的情况下)</div><div class="line">		System.out.println(this.num2);				//就近原则,子类有就不用父类的了</div><div class="line">		System.out.println(super.num2);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="继承中构造方法的关系"><a href="#继承中构造方法的关系" class="headerlink" title="继承中构造方法的关系"></a>继承中构造方法的关系</h3><ul>
+<li>A:案例演示<ul>
+<li>子类中所有的构造方法默认都会访问父类中空参数的构造方法</li>
+</ul>
+</li>
+<li><p>B:为什么呢?</p>
+<ul>
+<li>因为子类会继承父类中的数据，可能还会使用父类的数据。</li>
+<li><p>所以，子类初始化之前，一定要先完成父类数据的初始化。</p>
+</li>
+<li><p>其实：</p>
+<ul>
+<li>每一个构造方法的第一条语句默认都是：super() Object类最顶层的父类。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">class Demo5_Extends &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Son s = new Son();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Father extends Object &#123;</div><div class="line">	public Father() &#123;</div><div class="line">		super();</div><div class="line">		System.out.println(&quot;Father 的构造方法&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Son extends Father &#123;</div><div class="line">	public Son() &#123;</div><div class="line">		super();							//这是一条语句,如果不写,系统会默认加上,用来访问父类中的空参构造</div><div class="line">		System.out.println(&quot;Son 的构造方法&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="继承中构造方法的注意事项"><a href="#继承中构造方法的注意事项" class="headerlink" title="继承中构造方法的注意事项"></a>继承中构造方法的注意事项</h3><ul>
+<li>A:案例演示<ul>
+<li>父类没有无参构造方法,子类怎么办?</li>
+<li>super解决</li>
+<li>this解决</li>
+</ul>
+</li>
+<li>B:注意事项<ul>
+<li>super(…)或者this(….)必须出现在构造方法的第一条语句上</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">class Demo6_Extends &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Son s1 = new Son();</div><div class="line">		System.out.println(s1.getName() + &quot;...&quot; + s1.getAge());</div><div class="line">		System.out.println(&quot;--------------------&quot;);</div><div class="line">		Son s2 = new Son(&quot;张三&quot;,23);</div><div class="line">		System.out.println(s2.getName() + &quot;...&quot; + s2.getAge());</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Father &#123;</div><div class="line">	private String name;			//姓名</div><div class="line">	private int age;				//年龄</div><div class="line"></div><div class="line">	public Father() &#123;				//空参构造</div><div class="line">		System.out.println(&quot;Father 空参构造&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public Father(String name,int age) &#123;	//有参构造</div><div class="line">		this.name = name;</div><div class="line">		this.age = age;</div><div class="line">		System.out.println(&quot;Father 有参构造&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setName(String name) &#123;	//设置姓名</div><div class="line">		this.name = name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public String getName() &#123;			//获取姓名</div><div class="line">		return name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setAge(int age) &#123;		//设置年龄</div><div class="line">		this.age = age;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public int getAge() &#123;				//获取年龄</div><div class="line">		return age;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Son extends Father &#123;</div><div class="line">	public Son() &#123;						//空参构造</div><div class="line">		this(&quot;王五&quot;,25);				//本类中的构造方法</div><div class="line">		//super(&quot;李四&quot;,24);				//调用父类中的构造方法</div><div class="line">		</div><div class="line">		System.out.println(&quot;Son 空参构造&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public Son(String name,int age) &#123;	//有参构造</div><div class="line">		super(name,age);</div><div class="line">		System.out.println(&quot;Son 有参构造&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="继承中的面试题"><a href="#继承中的面试题" class="headerlink" title="继承中的面试题"></a>继承中的面试题</h3><ul>
+<li>A:案例演示</li>
+<li>看程序写结果1</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">class Fu&#123;</div><div class="line">	public int num = 10;</div><div class="line">	public Fu()&#123;</div><div class="line">		System.out.println(&quot;fu&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">class Zi extends Fu&#123;</div><div class="line">	public int num = 20;</div><div class="line">	public Zi()&#123;</div><div class="line">		System.out.println(&quot;zi&quot;);</div><div class="line">	&#125;</div><div class="line">	public void show()&#123;</div><div class="line">		int num = 30;</div><div class="line">		System.out.println(num);</div><div class="line">		System.out.println(this.num);</div><div class="line">		System.out.println(super.num);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">class Test1_Extends &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Zi z = new Zi();</div><div class="line">		z.show();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>输出</p>
+<ol>
+<li>fu</li>
+<li>zi</li>
+<li>30</li>
+<li>20</li>
+<li>10</li>
+</ol>
+</li>
+<li><p>看程序写结果2</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">class Fu &#123;</div><div class="line">	static &#123;</div><div class="line">		System.out.println(&quot;静态代码块Fu&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	&#123;</div><div class="line">		System.out.println(&quot;构造代码块Fu&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public Fu() &#123;</div><div class="line">		System.out.println(&quot;构造方法Fu&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Zi extends Fu &#123;</div><div class="line">	static &#123;</div><div class="line">		System.out.println(&quot;静态代码块Zi&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	&#123;</div><div class="line">		System.out.println(&quot;构造代码块Zi&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public Zi() &#123;</div><div class="line">		System.out.println(&quot;构造方法Zi&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">Zi z = new Zi();</div></pre></td></tr></table></figure>
+<ul>
+<li><p>输出</p>
+<ol>
+<li>静态代码块Fu</li>
+<li>静态代码块Zi</li>
+<li>构造代码块Fu</li>
+<li>构造方法Fu</li>
+<li>构造代码块Zi</li>
+<li>构造方法Zi</li>
+</ol>
+</li>
+<li><p>请执行结果。</p>
+<ol>
+<li>jvm调用了main方法,main进栈</li>
+<li>遇到Zi z = new Zi();会先将Fu.class和Zi.class分别加载进内存,再创建对象,当Fu.class加载进内存<br>父类的静态代码块会随着Fu.class一起加载,当Zi.class加载进内存,子类的静态代码块会随着Zi.class一起加载<br>第一个输出,静态代码块Fu,第二个输出静态代码块Zi</li>
+<li>走Zi类的构造方法,因为java中是分层初始化的,先初始化父类,再初始化子类,所以先走的父类构造,但是在执行<br>父类构造时,发现父类有构造代码块,构造代码块是优先于构造方法执行的所以<br>第三个输出构造代码块Fu,第四个输出构造方法Fu</li>
+<li>Fu类初始化结束,子类初始化,第五个输出的是构造代码块Zi,构造方法Zi</li>
+</ol>
+</li>
+</ul>
+<h3 id="继承中成员方法关系"><a href="#继承中成员方法关系" class="headerlink" title="继承中成员方法关系"></a>继承中成员方法关系</h3><ul>
+<li>A:案例演示<ul>
+<li>a:不同名的方法</li>
+<li>b:同名的方法</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">class Demo7_Extends &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Son s = new Son();</div><div class="line">		s.print();</div><div class="line">		s.method();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">/*</div><div class="line">* a:不同名的方法</div><div class="line">* b:同名的方法</div><div class="line">*/</div><div class="line"></div><div class="line">class Father &#123;</div><div class="line">	public void print() &#123;</div><div class="line">		System.out.println(&quot;Fu print&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Son extends Father &#123;</div><div class="line">	public void method() &#123;</div><div class="line">		System.out.println(&quot;Zi Method&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void print() &#123;</div><div class="line">		super.print();							//super可以调用父类的成员方法</div><div class="line">		System.out.println(&quot;Zi print&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="方法重写概述及其应用"><a href="#方法重写概述及其应用" class="headerlink" title="方法重写概述及其应用"></a>方法重写概述及其应用</h3><ul>
+<li>A:什么是方法重写<ul>
+<li>重写:子父类出现了一模一样的方法(注意:返回值类型可以是子父类,这个我们学完面向对象讲) </li>
+</ul>
+</li>
+<li>B:方法重写的应用：<ul>
+<li>当子类需要父类的功能，而功能主体子类有自己特有内容时，可以重写父类中的方法。这样，即沿袭了父类的功能，又定义了子类特有的内容。</li>
+</ul>
+</li>
+<li>C:案例演示<ul>
+<li>a:定义一个手机类。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">class Demo7_Phone &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Ios8 i = new Ios8();</div><div class="line">		i.siri();</div><div class="line">		i.call();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/*</div><div class="line">B:方法重写的应用：</div><div class="line">	* 当子类需要父类的功能，而功能主体子类有自己特有内容时，可以重写父类中的方法。这样，即沿袭了父类的功能，又定义了子类特有的内容。</div><div class="line">	ios7系统 siri speak English</div><div class="line">	ios8系统 siri 说中文</div><div class="line">*/</div><div class="line"></div><div class="line">class Ios7 &#123;</div><div class="line">	public void call() &#123;</div><div class="line">		System.out.println(&quot;打电话&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void siri() &#123;</div><div class="line">		System.out.println(&quot;speak English&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Ios8 extends Ios7 &#123;</div><div class="line">	public void siri() &#123;</div><div class="line">		System.out.println(&quot;说中文&quot;);</div><div class="line">		super.siri();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="方法重写的注意事项"><a href="#方法重写的注意事项" class="headerlink" title="方法重写的注意事项"></a>方法重写的注意事项</h3><ul>
+<li><p>A:方法重写注意事项</p>
+<ul>
+<li>a:父类中私有方法不能被重写<ul>
+<li>因为父类私有方法子类根本就无法继承</li>
+</ul>
+</li>
+<li>b:子类重写父类方法时，访问权限不能更低<ul>
+<li>最好就一致</li>
+</ul>
+</li>
+<li><p>c:父类静态方法，子类也必须通过静态方法进行重写</p>
+<ul>
+<li>其实这个算不上方法重写，但是现象确实如此，至于为什么算不上方法重写，多态中我会讲解(静态只能覆盖静态)</li>
+</ul>
+</li>
+<li><p>子类重写父类方法的时候，最好声明一模一样。</p>
+</li>
+</ul>
+</li>
+<li>B:案例演示<ul>
+<li>方法重写注意事项</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">class Demo8_双桨 &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		DayOne d = new DayOne();</div><div class="line">		d.泡妞();</div><div class="line">		d.print();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class 双桨 &#123;</div><div class="line">	public void sing() &#123;</div><div class="line">		System.out.println(&quot;唱红歌&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void 泡妞() &#123;</div><div class="line">		System.out.println(&quot;唱红歌搞定林夕合鸟女士&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void print() &#123;</div><div class="line">		System.out.println(&quot;Fu print&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class DayOne extends 双桨 &#123;</div><div class="line">	public void 泡妞() &#123;</div><div class="line">		System.out.println(&quot;霸王硬上弓&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void print() &#123;				//静态只能覆盖静态,其实不算重写,多态时候详细讲解</div><div class="line">		System.out.println(&quot;Zi print&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="面向对象-方法重写的面试题"><a href="#面向对象-方法重写的面试题" class="headerlink" title="面向对象(方法重写的面试题)"></a>面向对象(方法重写的面试题)</h3><ul>
+<li><p>A:方法重写的面试题</p>
+<ul>
+<li>Override和Overload的区别?Overload能改变返回值类型吗?</li>
+<li>overload可以改变返回值类型,只看参数列表</li>
+<li><p>方法重写：子类中出现了和父类中方法声明一模一样的方法。与返回值类型有关,返回值是一致(或者是子父类)的</p>
+</li>
+<li><p>方法重载：本类中出现的方法名一样，参数列表不同的方法。与返回值类型无关。</p>
+</li>
+<li><p>子类对象调用方法的时候：</p>
+<ul>
+<li>先找子类本身，再找父类。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="使用继承前的学生和老师案例"><a href="#使用继承前的学生和老师案例" class="headerlink" title="使用继承前的学生和老师案例"></a>使用继承前的学生和老师案例</h3><ul>
+<li>A:案例演示<ul>
+<li>使用继承前的学生和老师案例</li>
+<li>属性:姓名,年龄</li>
+<li>行为:吃饭</li>
+<li>老师有特有的方法:讲课</li>
+<li>学生有特有的方法:学习</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line">class Test3_Person &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		System.out.println(&quot;Hello World!&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Student &#123;</div><div class="line">	private String name;					//姓名</div><div class="line">	private int age;						//年龄</div><div class="line"></div><div class="line">	public Student() &#123;&#125;						//空参构造</div><div class="line"></div><div class="line">	public Student(String name,int age) &#123;	//有参构造</div><div class="line">		this.name = name;</div><div class="line">		this.age = age;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setName(String name) &#123;		//设置姓名</div><div class="line">		this.name = name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public String getName() &#123;				//获取姓名</div><div class="line">		return name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setAge(int age) &#123;			//设置年龄</div><div class="line">		this.age = age;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public int getAge() &#123;					//获取年龄</div><div class="line">		return age;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void eat() &#123;						//吃饭</div><div class="line">		System.out.println(&quot;学生吃饭&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void study() &#123;					//学习</div><div class="line">		System.out.println(&quot;学生学习&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Teacher &#123;</div><div class="line">	private String name;					//姓名</div><div class="line">	private int age;						//年龄</div><div class="line"></div><div class="line">	public Teacher() &#123;&#125;						//空参构造</div><div class="line"></div><div class="line">	public Teacher(String name,int age) &#123;	//有参构造</div><div class="line">		this.name = name;</div><div class="line">		this.age = age;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setName(String name) &#123;		//设置姓名</div><div class="line">		this.name = name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public String getName() &#123;				//获取姓名</div><div class="line">		return name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setAge(int age) &#123;			//设置年龄</div><div class="line">		this.age = age;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public int getAge() &#123;					//获取年龄</div><div class="line">		return age;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void eat() &#123;						//吃饭</div><div class="line">		System.out.println(&quot;老师吃饭&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void teach() &#123;					//学习</div><div class="line">		System.out.println(&quot;老师讲课&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="使用继承后的学生和老师案例"><a href="#使用继承后的学生和老师案例" class="headerlink" title="使用继承后的学生和老师案例"></a>使用继承后的学生和老师案例</h3><ul>
+<li>A:案例演示<ul>
+<li>使用继承后的学生和老师案例</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div></pre></td><td class="code"><pre><div class="line">class Test4_Person &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Student s1 = new Student();</div><div class="line">		s1.setName(&quot;张三&quot;);</div><div class="line">		s1.setAge(23);</div><div class="line">		System.out.println(s1.getName() + &quot;...&quot; + s1.getAge());</div><div class="line">		s1.eat();</div><div class="line">		s1.study();</div><div class="line"></div><div class="line">		System.out.println(&quot;------------------&quot;);</div><div class="line">		Student s2 = new Student(&quot;李四&quot;,24);</div><div class="line">		System.out.println(s2.getName() + &quot;...&quot; + s2.getAge());</div><div class="line">		s2.eat();</div><div class="line">		s2.study();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">/*</div><div class="line">* 使用继承后的学生和老师案例</div><div class="line">*/</div><div class="line"></div><div class="line">class Person &#123;</div><div class="line">	private String name;					//姓名</div><div class="line">	private int age;						//年龄</div><div class="line"></div><div class="line">	public Person() &#123;&#125;						//空参构造</div><div class="line"></div><div class="line">	public Person(String name,int age) &#123;	//有参构造</div><div class="line">		this.name = name;</div><div class="line">		this.age = age;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setName(String name) &#123;		//设置姓名</div><div class="line">		this.name = name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public String getName() &#123;				//获取姓名</div><div class="line">		return name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setAge(int age) &#123;			//设置年龄</div><div class="line">		this.age = age;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public int getAge() &#123;					//获取年龄</div><div class="line">		return age;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void eat() &#123;						//吃饭</div><div class="line">		System.out.println(name  + &quot;吃饭&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Student extends Person &#123;</div><div class="line">	public Student() &#123;&#125;						//空参构造</div><div class="line"></div><div class="line">	public Student(String name,int age) &#123;</div><div class="line">		super(name,age);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void study() &#123;</div><div class="line">		System.out.println(this.getName() + &quot;学习&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Teacher extends Person &#123;</div><div class="line">	public Teacher() &#123;&#125;						//空参构造</div><div class="line"></div><div class="line">	public Teacher(String name,int age) &#123;</div><div class="line">		super(name,age);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void teach() &#123;</div><div class="line">		System.out.println(this.getName() + &quot;讲课&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="猫狗案例分析-实现及测试"><a href="#猫狗案例分析-实现及测试" class="headerlink" title="猫狗案例分析,实现及测试"></a>猫狗案例分析,实现及测试</h3><ul>
+<li>A:猫狗案例分析</li>
+<li>B:案例演示<ul>
+<li>猫狗案例继承版</li>
+<li>属性:毛的颜色,腿的个数</li>
+<li>行为:吃饭</li>
+<li>猫特有行为:抓老鼠catchMouse</li>
+<li>狗特有行为:看家lookHome</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line">class Test5_Animal &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Cat c1 = new Cat(&quot;花&quot;,4);</div><div class="line">		System.out.println(c1.getColor() + &quot;...&quot; + c1.getLeg());</div><div class="line">		c1.eat();</div><div class="line">		c1.catchMouse();</div><div class="line"></div><div class="line">		Dog d1 = new Dog(&quot;黑&quot;,2);</div><div class="line">		System.out.println(d1.getColor() + &quot;...&quot; + d1.getLeg());</div><div class="line">		d1.eat();</div><div class="line">		d1.lookHome();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Animal &#123;</div><div class="line">	private String color;					//毛的颜色</div><div class="line">	private int leg;						//腿的个数</div><div class="line"></div><div class="line">	public Animal()&#123;&#125;</div><div class="line"></div><div class="line">	public Animal(String color,int leg) &#123;</div><div class="line">		this.color = color;</div><div class="line">		this.leg = leg;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setColor(String color) &#123;	//设置颜色</div><div class="line">		this.color = color;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public String getColor() &#123;				//获取颜色</div><div class="line">		return color;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void setLeg(int leg) &#123;			//设置腿的个数</div><div class="line">		this.leg = leg;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public int getLeg() &#123;					//获取腿的个数</div><div class="line">		return leg;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void eat() &#123;						//吃饭</div><div class="line">		System.out.println(&quot;吃饭&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Cat extends Animal &#123;</div><div class="line">	public Cat() &#123;&#125;							//空参构造</div><div class="line"></div><div class="line">	public Cat(String color,int leg) &#123;		//有参构造</div><div class="line">		super(color,leg);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void eat() &#123;						//吃鱼</div><div class="line">		System.out.println(&quot;猫吃鱼&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void catchMouse() &#123;				//抓老鼠</div><div class="line">		System.out.println(&quot;抓老鼠&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Dog extends Animal &#123;</div><div class="line">	public Dog() &#123;&#125;							//空参构造</div><div class="line"></div><div class="line">	public Dog(String color,int leg) &#123;		//有参构造</div><div class="line">		super(color,leg);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void eat() &#123;						//吃肉</div><div class="line">		System.out.println(&quot;狗吃肉&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void lookHome() &#123;				//看家</div><div class="line">		System.out.println(&quot;看家&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

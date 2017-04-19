@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="wxhao">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="File类练习"/>
+  <meta property="og:description" content="站点描述" />
+  <meta property="og:site_name" content="标题"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://blog.wxhaoo.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="标题" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>标题</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">File类练习</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/levblanc">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:levblanc@163.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By wxhao</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2013-10-10</span>
+            <span class="time">17:38:06</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/基础知识/">#基础知识</a> <a class="tag" href="/tags/java/">#java</a> <a class="tag" href="/tags/JAVASE/">#JAVASE</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h3 id="统计该文件夹大小"><a href="#统计该文件夹大小" class="headerlink" title="统计该文件夹大小"></a>统计该文件夹大小</h3><ul>
+<li>需求:1,从键盘接收一个文件夹路径,统计该文件夹大小</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 从键盘接收一个文件夹路径</div><div class="line"> * 1,创建键盘录入对象</div><div class="line"> * 2,定义一个无限循环</div><div class="line"> * 3,将键盘录入的结果存储并封装成File对象</div><div class="line"> * 4,对File对象判断</div><div class="line"> * 5,将文件夹路径对象返回</div><div class="line"> * </div><div class="line"> * 统计该文件夹大小 </div><div class="line"> * 1,定义一个求和变量</div><div class="line"> * 2,获取该文件夹下所有的文件和文件夹listFiles();</div><div class="line"> * 3,遍历数组</div><div class="line"> * 4,判断是文件就计算大小并累加</div><div class="line"> * 5,判断是文件夹,递归调用</div><div class="line"> */</div><div class="line">public static void main(String[] args) &#123;</div><div class="line">	//File dir = new File(&quot;F:\\day06&quot;);</div><div class="line">	//System.out.println(dir.length());				//直接获取文件夹的结果是0</div><div class="line">	File dir = getDir();</div><div class="line">	System.out.println(getFileLength(dir));</div><div class="line">	</div><div class="line">&#125;</div><div class="line"></div><div class="line">/*</div><div class="line"> * 从键盘接收一个文件夹路径</div><div class="line"> * 1,返回值类型File</div><div class="line"> * 2,参数列表无</div><div class="line"> */</div><div class="line">public static File getDir() &#123;</div><div class="line">	//1,创建键盘录入对象</div><div class="line">	Scanner sc = new Scanner(System.in);</div><div class="line">	System.out.println(&quot;请输入一个文件夹路径:&quot;);</div><div class="line">	//2,定义一个无限循环</div><div class="line">	while(true) &#123;</div><div class="line">		//3,将键盘录入的结果存储并封装成File对象</div><div class="line">		String line = sc.nextLine();</div><div class="line">		File dir = new File(line);</div><div class="line">		//4,对File对象判断</div><div class="line">		if(!dir.exists()) &#123;</div><div class="line">			System.out.println(&quot;您录入的文件夹路径不存在,请输入一个文件夹路径:&quot;);</div><div class="line">		&#125;else if(dir.isFile()) &#123;</div><div class="line">			System.out.println(&quot;您录入的是文件路径,请输入一个文件夹路径:&quot;);</div><div class="line">		&#125;else &#123;</div><div class="line">			//5,将文件夹路径对象返回</div><div class="line">			return dir;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div><div class="line"></div><div class="line">/*</div><div class="line"> * 统计该文件夹大小 </div><div class="line"> * 1,返回值类型long</div><div class="line"> * 2,参数列表File dir</div><div class="line"> */</div><div class="line">public static long getFileLength(File dir) &#123;	//dir = F:\day06\day07</div><div class="line">	//1,定义一个求和变量</div><div class="line">	long len = 0;</div><div class="line">	//2,获取该文件夹下所有的文件和文件夹listFiles();</div><div class="line">	File[] subFiles = dir.listFiles();			//day07 Demo1_Student.class Demo1_Student.java</div><div class="line">	//3,遍历数组</div><div class="line">	for (File subFile : subFiles) &#123;</div><div class="line">		//4,判断是文件就计算大小并累加</div><div class="line">		if(subFile.isFile()) &#123;</div><div class="line">			len = len + subFile.length();</div><div class="line">		//5,判断是文件夹,递归调用</div><div class="line">		&#125;else &#123;</div><div class="line">			len = len + getFileLength(subFile);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return len;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="删除该文件夹"><a href="#删除该文件夹" class="headerlink" title="删除该文件夹"></a>删除该文件夹</h3><ul>
+<li>需求:2,从键盘接收一个文件夹路径,删除该文件夹</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 删除该文件夹</div><div class="line"> * 分析:</div><div class="line"> * 1,获取该文件夹下的所有的文件和文件夹</div><div class="line"> * 2,遍历数组</div><div class="line"> * 3,判断是文件直接删除</div><div class="line"> * 4,如果是文件夹,递归调用</div><div class="line"> * 5,循环结束后,把空文件夹删掉</div><div class="line"> */</div><div class="line">public static void main(String[] args) &#123;</div><div class="line">	File dir = Test1.getDir();					//获取文件夹路径</div><div class="line">	deleteFile(dir);</div><div class="line">&#125;</div><div class="line"></div><div class="line">/*</div><div class="line"> * 删除该文件夹</div><div class="line"> * 1,返回值类型 void</div><div class="line"> * 2,参数列表File dir</div><div class="line"> */</div><div class="line">public static void deleteFile(File dir) &#123;	</div><div class="line">	//1,获取该文件夹下的所有的文件和文件夹</div><div class="line">	File[] subFiles = dir.listFiles();		</div><div class="line">	//2,遍历数组</div><div class="line">	for (File subFile : subFiles) &#123;</div><div class="line">		//3,判断是文件直接删除</div><div class="line">		if(subFile.isFile()) &#123;</div><div class="line">			subFile.delete();</div><div class="line">		//4,如果是文件夹,递归调用</div><div class="line">		&#125;else &#123;</div><div class="line">			deleteFile(subFile);			</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	//5,循环结束后,把空文件夹删掉</div><div class="line">	dir.delete();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="拷贝"><a href="#拷贝" class="headerlink" title="拷贝"></a>拷贝</h3><ul>
+<li>需求:3,从键盘接收两个文件夹路径,把其中一个文件夹中(包含内容)拷贝到另一个文件夹中</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 把其中一个文件夹中(包含内容)拷贝到另一个文件夹中</div><div class="line"> * 分析:</div><div class="line"> * 1,在目标文件夹中创建原文件夹</div><div class="line"> * 2,获取原文件夹中所有的文件和文件夹,存储在File数组中</div><div class="line"> * 3,遍历数组</div><div class="line"> * 4,如果是文件就用io流读写</div><div class="line"> * 5,如果是文件夹就递归调用</div><div class="line"> * @throws IOException </div><div class="line"> */</div><div class="line">public static void main(String[] args) throws IOException &#123;</div><div class="line">	File src = Test1.getDir();</div><div class="line">	File dest = Test1.getDir();</div><div class="line">	if(src.equals(dest)) &#123;</div><div class="line">		System.out.println(&quot;目标文件夹是源文件夹的子文件夹&quot;);</div><div class="line">	&#125;else &#123;</div><div class="line">		copy(src,dest);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">/*</div><div class="line"> * 把其中一个文件夹中(包含内容)拷贝到另一个文件夹中</div><div class="line"> * 1,返回值类型void</div><div class="line"> * 2,参数列表File src,File dest</div><div class="line"> */</div><div class="line">public static void copy(File src, File dest) throws IOException &#123;</div><div class="line">	//1,在目标文件夹中创建原文件夹</div><div class="line">	File newDir = new File(dest, src.getName());</div><div class="line">	newDir.mkdir();</div><div class="line">	//2,获取原文件夹中所有的文件和文件夹,存储在File数组中</div><div class="line">	File[] subFiles = src.listFiles();</div><div class="line">	//3,遍历数组</div><div class="line">	for (File subFile : subFiles) &#123;</div><div class="line">		//4,如果是文件就用io流读写</div><div class="line">		if(subFile.isFile()) &#123;</div><div class="line">			BufferedInputStream bis = new BufferedInputStream(new FileInputStream(subFile));</div><div class="line">			BufferedOutputStream bos = </div><div class="line">					new BufferedOutputStream(new FileOutputStream(new File(newDir,subFile.getName())));</div><div class="line">			</div><div class="line">			int b;</div><div class="line">			while((b = bis.read()) != -1) &#123;</div><div class="line">				bos.write(b);</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">			bis.close();</div><div class="line">			bos.close();</div><div class="line">		//5,如果是文件夹就递归调用</div><div class="line">		&#125;else &#123;</div><div class="line">			copy(subFile,newDir);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="按层级打印"><a href="#按层级打印" class="headerlink" title="按层级打印"></a>按层级打印</h3><ul>
+<li>需求:4,从键盘接收一个文件夹路径,把文件夹中的所有文件以及文件夹的名字按层级打印, 例如:<br>  aaa是文件夹,里面有bbb.txt,ccc.txt,ddd.txt这些文件,有eee这样的文件夹,eee中有fff.txt和ggg.txt,打印出层级来</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">aaa</div><div class="line">	bbb.txt</div><div class="line">	ccc.txt</div><div class="line">	ddd.txt</div><div class="line"></div><div class="line">	eee</div><div class="line">		fff.txt</div><div class="line">		ggg.txt</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 把文件夹中的所有文件以及文件夹的名字按层级打印</div><div class="line"> * 分析:</div><div class="line"> * 1,获取所有文件和文件夹,返回的File数组</div><div class="line"> * 2,遍历数组</div><div class="line"> * 3,无论是文件还是文件夹,都需要直接打印</div><div class="line"> * 4,如果是文件夹,递归调用</div><div class="line"> * 	day07</div><div class="line"> * 		day08</div><div class="line"> * 			xxx.jpg</div><div class="line"> * 			yyy.txt</div><div class="line"> * 		Demo1_Consturctor.class</div><div class="line"> * 		Demo1_Consturctor.java</div><div class="line"> * 	Demo1_Student.class</div><div class="line"> * 	Demo1_Student.java</div><div class="line"> */</div><div class="line">public static void main(String[] args) &#123;</div><div class="line">	File dir = Test1.getDir();				//获取文件夹路径</div><div class="line">	printLev(dir,0);</div><div class="line">&#125;</div><div class="line"></div><div class="line">public static void printLev(File dir,int lev) &#123;</div><div class="line">	//1,把文件夹中的所有文件以及文件夹的名字按层级打印</div><div class="line">	File[] subFiles = dir.listFiles();</div><div class="line">	//2,遍历数组</div><div class="line">	for (File subFile : subFiles) &#123;</div><div class="line">		for(int i = 0; i &lt;= lev; i++) &#123;</div><div class="line">			System.out.print(&quot;\t&quot;);</div><div class="line">		&#125;</div><div class="line">		//3,无论是文件还是文件夹,都需要直接打印</div><div class="line">		System.out.println(subFile);</div><div class="line">		//4,如果是文件夹,递归调用</div><div class="line">		if(subFile.isDirectory()) &#123;</div><div class="line">			//printLev(subFile,lev + 1);</div><div class="line">			printLev(subFile,++lev);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h3><ul>
+<li>不死神兔</li>
+<li>故事得从西元1202年说起，话说有一位意大利青年，名叫斐波那契。</li>
+<li>在他的一部著作中提出了一个有趣的问题：假设一对刚出生的小兔一个月后就能长成大兔，再过一个月就能生下一对小兔，并且此后每个月都生一对小兔，一年内没有发生死亡，</li>
+<li>问：一对刚出生的兔子，一年内繁殖成多少对兔子?</li>
+<li>1 1 2 3 5 8 13</li>
+<li>第一个月一对小兔子 1</li>
+<li>第二个月一对大兔子 1</li>
+<li>第三个月一对大兔子生了一对小兔子 2</li>
+<li>第四个月一对大兔子生了一对小兔子<br>一对小兔子长成大兔子    3</li>
+<li>第五个月两对大兔子生两对小兔子<br>一对小兔子长成大兔子    5</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">* 1 1 2 3 5 8 13 21</div><div class="line">* 1 = fun(1)</div><div class="line">* 1 = fun(2)</div><div class="line">* 2 = fun(1) + fun(2)</div><div class="line">* 3 = fun(2) + fun(3)</div><div class="line"> */</div><div class="line">public static void main(String[] args) &#123;</div><div class="line">	//demo1();</div><div class="line">	System.out.println(fun(8));</div><div class="line">&#125;</div><div class="line"></div><div class="line">public static void demo1() &#123;</div><div class="line">	//用数组做不死神兔</div><div class="line">	int[] arr = new int[8];</div><div class="line">	//数组中第一个元素和第二个元素都为1</div><div class="line">	arr[0] = 1;</div><div class="line">	arr[1] = 1;</div><div class="line">	//遍历数组对其他元素赋值</div><div class="line">	for(int i = 2; i &lt; arr.length; i++) &#123;</div><div class="line">		arr[i] = arr[i - 2] + arr[i - 1];</div><div class="line">	&#125;</div><div class="line">	//如何获取最后一个数</div><div class="line">	System.out.println(arr[arr.length - 1]);</div><div class="line">&#125;</div><div class="line"></div><div class="line">/*</div><div class="line"> * 用递归求斐波那契数列</div><div class="line"> */</div><div class="line">public static int fun(int num) &#123;</div><div class="line">	if(num == 1 || num == 2) &#123;</div><div class="line">		return 1;</div><div class="line">	&#125;else &#123;</div><div class="line">		return fun(num - 2) + fun(num - 1);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="1000的阶乘所有零和尾部零的个数"><a href="#1000的阶乘所有零和尾部零的个数" class="headerlink" title="1000的阶乘所有零和尾部零的个数"></a>1000的阶乘所有零和尾部零的个数</h3><ul>
+<li><p>需求:求出1000的阶乘所有零和尾部零的个数,不用递归做</p>
+</li>
+<li><p>因为1000的阶乘远远超出了int的取值范围,所以要用BigInteger</p>
+</li>
+<li>尾部0</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">BigInteger bi1 = new BigInteger(&quot;1&quot;);</div><div class="line">for(int i = 1; i &lt;= 1000; i++) &#123;</div><div class="line">	BigInteger bi2 = new BigInteger(i+&quot;&quot;);</div><div class="line">	bi1 = bi1.multiply(bi2);	//将bi1与bi2相乘的结果赋值给bi1</div><div class="line">&#125;</div><div class="line">String str = bi1.toString();	//获取字符串表现形式</div><div class="line">int count = 0;</div><div class="line">for(int i = 0; i &lt; str.length(); i++) &#123;</div><div class="line">	if(&apos;0&apos; == str.charAt(i)) &#123;	//如果字符串中出现了0字符</div><div class="line">		count++;				//计数器加1</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">System.out.println(count);</div></pre></td></tr></table></figure>
+<ul>
+<li>尾部零</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">BigInteger bi1 = new BigInteger(&quot;1&quot;);</div><div class="line">for(int i = 1; i &lt;= 1000; i++) &#123;</div><div class="line">	BigInteger bi2 = new BigInteger(i+&quot;&quot;);</div><div class="line">	bi1 = bi1.multiply(bi2);	//将bi1与bi2相乘的结果赋值给bi1</div><div class="line">&#125;</div><div class="line">String str = bi1.toString();	//获取字符串表现形式</div><div class="line">StringBuilder sb = new StringBuilder(str);</div><div class="line">str = sb.reverse().toString();	//翻转字符串 //链式编程</div><div class="line"></div><div class="line">int count = 0;					//定义计数器</div><div class="line">for(int i = 0; i &lt; str.length(); i++) &#123;</div><div class="line">	if(&apos;0&apos; != str.charAt(i)) &#123;</div><div class="line">		break;</div><div class="line">	&#125;else &#123;</div><div class="line">		count++;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">System.out.println(count);</div></pre></td></tr></table></figure>
+<h3 id="1000的阶乘尾部零的个数"><a href="#1000的阶乘尾部零的个数" class="headerlink" title="1000的阶乘尾部零的个数"></a>1000的阶乘尾部零的个数</h3><ul>
+<li>需求:求出1000的阶乘尾部零的个数,用递归做</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * @param args</div><div class="line"> * 需求:求出1000的阶乘尾部零的个数,用递归做</div><div class="line"> * 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100...1000  1000 / 5 = 200</div><div class="line"> * 5 * 5	5 * 5 * 2 	5 * 5 * 3	5 * 5 * 4	5 * 5 * 5	5 * 5 * 6	200 / 5 = 40</div><div class="line"> * 5 * 5 * 5 * 1	5 * 5 * 5 * 2	5 * 5 * 5 * 3	5 * 5 *  5 * 4	5 * 5 *  5 * 5	5 * 5 *  5 * 6	5 * 5 *  5 * 7	5 * 5 *  5 * 8</div><div class="line">																		40 / 5 = 8</div><div class="line">	5 * 5 * 5 * 5														8 / 5 = 1</div><div class="line"> */</div><div class="line">public static void main(String[] args) &#123;</div><div class="line">	System.out.println(fun(1000));</div><div class="line">&#125;</div><div class="line"></div><div class="line">public static int fun(int num) &#123;</div><div class="line">	if(num &gt; 0 &amp;&amp; num &lt; 5) &#123;</div><div class="line">		return 0;</div><div class="line">	&#125;else &#123;</div><div class="line">		return num / 5 + fun(num / 5);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>还可以相乘除以10,给计数器++,个人喜欢这种方法</li>
+</ul>
+<p>23.08_集合练习</p>
+<h3 id="约瑟夫环"><a href="#约瑟夫环" class="headerlink" title="约瑟夫环"></a>约瑟夫环</h3><ul>
+<li>幸运数字</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * @param args</div><div class="line"> * 约瑟夫环</div><div class="line"> * * 幸运数字</div><div class="line"> */</div><div class="line">public static void main(String[] args) &#123;</div><div class="line">	System.out.println(getLucklyNum(8));</div><div class="line">&#125;</div><div class="line"></div><div class="line">/*</div><div class="line"> * 获取幸运数字</div><div class="line"> * 1,返回值类型int</div><div class="line"> * 2,参数列表int num</div><div class="line"> */</div><div class="line">public static int getLucklyNum(int num) &#123;</div><div class="line">	ArrayList&lt;Integer&gt; list = new ArrayList&lt;&gt;();		//创建集合存储1到num的对象</div><div class="line">	for(int i = 1; i &lt;= num; i++) &#123;</div><div class="line">		list.add(i);									//将1到num存储在集合中</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	int count = 1;										//用来数数的,只要是3的倍数就杀人</div><div class="line">	for(int i = 0; list.size() != 1; i++) &#123;				//只要集合中人数超过1,就要不断的杀</div><div class="line">		if(i == list.size()) &#123;							//如果i增长到集合最大的索引+1时</div><div class="line">			i = 0;										//重新归零</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		if(count % 3 == 0) &#123;							//如果是3的倍数</div><div class="line">			list.remove(i--);								//就杀人</div><div class="line">		&#125;</div><div class="line">		count++;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	return list.get(0);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

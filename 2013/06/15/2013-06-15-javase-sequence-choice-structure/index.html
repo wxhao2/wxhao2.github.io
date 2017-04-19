@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="wxhao">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="JavaSE之顺序结构与选择结构"/>
+  <meta property="og:description" content="站点描述" />
+  <meta property="og:site_name" content="标题"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://blog.wxhaoo.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="标题" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>标题</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">JavaSE之顺序结构与选择结构</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/levblanc">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:levblanc@163.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By wxhao</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2013-06-15</span>
+            <span class="time">17:38:07</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/基础知识/">#基础知识</a> <a class="tag" href="/tags/java/">#java</a> <a class="tag" href="/tags/JAVASE/">#JAVASE</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h3 id="顺序结构语句"><a href="#顺序结构语句" class="headerlink" title="顺序结构语句"></a>顺序结构语句</h3><ul>
+<li>A:什么是流程控制语句<ul>
+<li>流程控制语句：可以控制程序的执行流程。</li>
+</ul>
+</li>
+<li>B:流程控制语句的分类<ul>
+<li>顺序结构</li>
+<li>选择结构</li>
+<li>循环结构</li>
+</ul>
+</li>
+<li>C:执行流程：<ul>
+<li>从上往下，依次执行。</li>
+</ul>
+</li>
+<li>D:代码演示</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">System.out.println(&quot;Hello World!11111&quot;);</div><div class="line">System.out.println(&quot;Hello World!3333&quot;);</div><div class="line">System.out.println(&quot;Hello World!22222&quot;);</div><div class="line">System.out.println(&quot;Hello World!44444&quot;);</div></pre></td></tr></table></figure>
+<h3 id="选择结构if语句格式1及其使用"><a href="#选择结构if语句格式1及其使用" class="headerlink" title="选择结构if语句格式1及其使用"></a>选择结构if语句格式1及其使用</h3><ul>
+<li>A:选择结构的分类<ul>
+<li>if语句</li>
+<li>switch语句</li>
+</ul>
+</li>
+<li>B:if语句有几种格式<ul>
+<li>格式1</li>
+<li>格式2</li>
+<li>格式3</li>
+</ul>
+</li>
+<li>C:if语句的格式1</li>
+<li><pre><code>if(比较表达式) {
+    语句体;
+}
+</code></pre></li>
+<li>D:执行流程：<ul>
+<li>先计算比较表达式的值，看其返回值是true还是false。</li>
+<li>如果是true，就执行语句体；</li>
+<li>如果是false，就不执行语句体；</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">int age = 17;</div><div class="line"></div><div class="line">if (age &gt;= 18) &#123;</div><div class="line">	System.out.println(&quot;可以浏览本网站&quot;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">System.out.println(&quot;完了&quot;);</div></pre></td></tr></table></figure>
+<h3 id="选择结构if语句注意事项"><a href="#选择结构if语句注意事项" class="headerlink" title="选择结构if语句注意事项"></a>选择结构if语句注意事项</h3><h6 id="注意事项1"><a href="#注意事项1" class="headerlink" title="注意事项1"></a>注意事项1</h6><ul>
+<li>A:代码演示<ul>
+<li>a:比较表达式无论简单还是复杂，结果必须是boolean类型</li>
+<li>b:if语句控制的语句体如果是一条语句，大括号可以省略；<ul>
+<li>如果是多条语句，就不能省略。建议永远不要省略。</li>
+</ul>
+</li>
+<li>c:一般来说：有左大括号就没有分号，有分号就没有左大括号</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">int age = 17;</div><div class="line"></div><div class="line">if (age &gt;= 18 &amp;&amp; age &lt;= 60) &#123;</div><div class="line">	System.out.println(&quot;可以浏览本网站&quot;);</div><div class="line">	//int x = 10;				是两句话,int x声明是一句,x = 10 赋值是一句</div><div class="line">&#125;</div><div class="line">System.out.println(&quot;完了&quot;);</div></pre></td></tr></table></figure>
+<h6 id="注意事项2"><a href="#注意事项2" class="headerlink" title="注意事项2"></a>注意事项2</h6><ul>
+<li>A:if语句的格式2</li>
+<li><pre><code>if(比较表达式) {
+    语句体1;
+}else {
+    语句体2;
+}
+</code></pre></li>
+<li>B:执行流程：<ul>
+<li>首先计算比较表达式的值，看其返回值是true还是false。</li>
+<li>如果是true，就执行语句体1；</li>
+<li>如果是false，就执行语句体2；</li>
+</ul>
+</li>
+<li><p>C:代码演示</p>
+<ul>
+<li>a:获取两个数据中较大的值</li>
+<li><p>b:判断一个数据是奇数还是偶数,并输出是奇数还是偶数</p>
+</li>
+<li><p>注意事项：else后面是没有比较表达式的，只有if后面有。</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">/*int x = 0;</div><div class="line">if (x == 1) &#123;</div><div class="line">	System.out.println(&quot;男厕所欢迎您&quot;);</div><div class="line">&#125;else &#123;</div><div class="line">	System.out.println(&quot;女厕所欢迎您&quot;);</div><div class="line">&#125;*/</div><div class="line"></div><div class="line">//a:获取两个数据中较大的值</div><div class="line">/*int x = 10;</div><div class="line">int y = 20;</div><div class="line">int z;</div><div class="line"></div><div class="line">if (x &gt; y) &#123;</div><div class="line">	z = x;</div><div class="line">&#125;else &#123;</div><div class="line">	z = y;</div><div class="line">&#125;</div><div class="line"></div><div class="line">System.out.println(z);*/</div><div class="line"></div><div class="line">//b:判断一个数据是奇数还是偶数,并输出是奇数还是偶数</div><div class="line">int num = 11;</div><div class="line">if (num % 2 == 0) &#123;</div><div class="line">	System.out.println(num + &quot;是一个偶数&quot;);</div><div class="line">&#125;else &#123;</div><div class="line">	System.out.println(num + &quot;是一个奇数&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="if语句的格式和三元的相互转换问题"><a href="#if语句的格式和三元的相互转换问题" class="headerlink" title="if语句的格式和三元的相互转换问题"></a>if语句的格式和三元的相互转换问题</h3><ul>
+<li>A:代码演示<ul>
+<li>if语句和三元运算符完成同一个效果</li>
+</ul>
+</li>
+<li><p>B:代码演示</p>
+<ul>
+<li><p>if语句和三元运算符的区别</p>
+</li>
+<li><p>三元运算符实现的，都可以采用if语句实现。反之不成立。</p>
+</li>
+<li><p>什么时候if语句实现不能用三元改进呢?</p>
+<ul>
+<li>当if语句控制的操作是一个输出语句的时候就不能。</li>
+<li>为什么呢?因为三元运算符是一个运算符，运算符操作完毕就应该有一个结果，而不是一个输出。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">int x = 10;</div><div class="line">int y = 20;</div><div class="line">int z;</div><div class="line"></div><div class="line">if (x &gt; y) &#123;</div><div class="line">	//z = x;</div><div class="line">	System.out.println(x + &quot;是最大值&quot;);</div><div class="line">&#125;else &#123;</div><div class="line">	//z = y;</div><div class="line">	System.out.println(y + &quot;是最大值&quot;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">//System.out.println(z);</div><div class="line"></div><div class="line">int a = 20;</div><div class="line">int b = 30;</div><div class="line"></div><div class="line">int c = (a &gt; b)? a : b;</div></pre></td></tr></table></figure>
+<h3 id="选择结构if使用"><a href="#选择结构if使用" class="headerlink" title="选择结构if使用"></a>选择结构if使用</h3><ul>
+<li>A:if语句的格式3：</li>
+<li><pre><code>if(比较表达式1) {
+    语句体1;
+}else if(比较表达式2) {
+    语句体2;
+}else if(比较表达式3) {
+    语句体3;
+}
+...
+else {
+    语句体n+1;
+}
+</code></pre></li>
+<li><p>B:执行流程：</p>
+<ul>
+<li>首先计算比较表达式1看其返回值是true还是false，</li>
+<li>如果是true，就执行语句体1，if语句结束。</li>
+<li><p>如果是false，接着计算比较表达式2看其返回值是true还是false，</p>
+</li>
+<li><p>如果是true，就执行语句体2，if语句结束。</p>
+</li>
+<li><p>如果是false，接着计算比较表达式3看其返回值是true还是false，</p>
+</li>
+<li><p>如果都是false，就执行语句体n+1。</p>
+</li>
+</ul>
+</li>
+<li>C:注意事项:最后一个else可以省略,但是建议不要省略,可以对范围外的错误值提示 </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">int x = 2;</div><div class="line">if (x == 1) &#123;</div><div class="line">	System.out.println(&quot;男厕所欢迎您&quot;);</div><div class="line">&#125;else if (x == 0) &#123;</div><div class="line">	System.out.println(&quot;女厕所欢迎您&quot;);</div><div class="line">&#125;else &#123;</div><div class="line">	System.out.println(&quot;无法识别您的性别&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="选择结构if语句练习"><a href="#选择结构if语句练习" class="headerlink" title="选择结构if语句练习"></a>选择结构if语句练习</h3><ul>
+<li>A:练习1<ul>
+<li>  需求：键盘录入一个成绩，判断并输出成绩的等级。<br>  90-100 优<br>  80-89  良<br>  70-79  中<br>  60-69  及<br>  0-59   差</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">import java.util.Scanner;</div><div class="line">class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);</div><div class="line"></div><div class="line">		//需求：键盘录入一个成绩，判断并输出成绩的等级。</div><div class="line">		System.out.println(&quot;请输入学生成绩范围在1到100之间&quot;);</div><div class="line">		int x = sc.nextInt();</div><div class="line"></div><div class="line">		if (x &gt;= 90 &amp;&amp; x &lt;= 100) &#123;</div><div class="line">			System.out.println(&quot;优&quot;);</div><div class="line">		&#125;else if (x &gt;= 80 &amp;&amp; x &lt;= 89 ) &#123;</div><div class="line">			System.out.println(&quot;良&quot;);</div><div class="line">		&#125;else if (x &gt;= 70 &amp;&amp; x &lt;= 79 ) &#123;</div><div class="line">			System.out.println(&quot;中&quot;);</div><div class="line">		&#125;else if (x &gt;= 60 &amp;&amp; x &lt;= 69 ) &#123;</div><div class="line">			System.out.println(&quot;及&quot;);</div><div class="line">		&#125;else if (x &gt;= 0 &amp;&amp; x &lt;= 59 ) &#123;</div><div class="line">			System.out.println(&quot;差&quot;);</div><div class="line">		&#125;else &#123;</div><div class="line">			System.out.println(&quot;成绩录入错误&quot;);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>B:练习2</p>
+<ul>
+<li><p>需求：</p>
+<ul>
+<li><p>键盘录入x的值，计算出y的并输出。</p>
+</li>
+<li><p>x&gt;=3    y = 2 * x + 1;</p>
+</li>
+<li>-1&lt;x&lt;3    y = 2 * x;</li>
+<li>x&lt;=-1    y = 2 * x - 1;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//需求： 键盘录入x的值，计算出y的并输出</div><div class="line">System.out.println(&quot;请输入一个整数:&quot;);</div><div class="line">int x = sc.nextInt();</div><div class="line">int y = 0;//不初始化,条件不满足时会报错</div><div class="line">if (x &gt;= 3) &#123;</div><div class="line">	y = 2 * x + 1;</div><div class="line">&#125;else if (x &gt; -1 &amp;&amp; x &lt; 3) &#123;</div><div class="line">	y = 2 * x;</div><div class="line">&#125;else if (x &lt;= -1) &#123;</div><div class="line">	y = 2 * x - 1;</div><div class="line">&#125;</div><div class="line">System.out.println(y);</div></pre></td></tr></table></figure>
+<h3 id="选择结构if语句的嵌套使用"><a href="#选择结构if语句的嵌套使用" class="headerlink" title="选择结构if语句的嵌套使用"></a>选择结构if语句的嵌套使用</h3><ul>
+<li>代码演示<ul>
+<li>需求：获取三个数据中的最大值</li>
+<li>if语句的嵌套使用。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">int a = 40;</div><div class="line">int b = 50;</div><div class="line">int c = 30;</div><div class="line"></div><div class="line">if (a &gt; b) &#123;</div><div class="line">	if (a &gt; c) &#123;</div><div class="line">		System.out.println(a + &quot;是最大值&quot;);</div><div class="line">	&#125;else &#123;</div><div class="line">		System.out.println(c + &quot;是最大值&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;else &#123;	//b &gt;= a</div><div class="line">	if (b &gt; c) &#123;</div><div class="line">		System.out.println(b + &quot;是最大值&quot;);</div><div class="line">	&#125;else &#123;</div><div class="line">		System.out.println(c + &quot;是最大值&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="选择结构switch语句的格式及其解释"><a href="#选择结构switch语句的格式及其解释" class="headerlink" title="选择结构switch语句的格式及其解释"></a>选择结构switch语句的格式及其解释</h3><ul>
+<li>A:switch语句的格式</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">switch(表达式) &#123;		</div><div class="line">    case 值1：		</div><div class="line">    语句体1;</div><div class="line">    break;</div><div class="line">    case 值2：</div><div class="line">    语句体2;</div><div class="line">    break;</div><div class="line">   // …</div><div class="line">    default：	</div><div class="line">    语句体n+1;</div><div class="line">    break;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>B:面试题<ul>
+<li>byte可以作为switch的表达式吗?<ul>
+<li>基本数据类型可以接收byte,short,char,int</li>
+</ul>
+</li>
+<li>long可以作为switch的表达式吗?<ul>
+<li>不可以</li>
+</ul>
+</li>
+<li>String可以作为switch的表达式吗?<ul>
+<li>引用数据类型可以接收枚举(JDK1.5)String字符串(JDK1.7)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>C:执行流程<ul>
+<li>先计算表达式的值</li>
+<li>然后和case后面的匹配，如果有就执行对应的语句，否则执行default控制的语句</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">String name = &quot;rose&quot;;</div><div class="line">String gender = &quot;妖&quot;;</div><div class="line">switch (gender) &#123;</div><div class="line">case &quot;男士&quot;:</div><div class="line">	System.out.println(name + &quot;是一位&quot; + gender + &quot;喜欢吃饭睡觉打dota&quot;);</div><div class="line">	break;</div><div class="line">case &quot;女士&quot;:</div><div class="line">	System.out.println(name + &quot;是一位&quot; + gender + &quot;喜欢逛街购物美容&quot;);</div><div class="line">	break;</div><div class="line">default:</div><div class="line">	System.out.println(name + &quot;是一位&quot; + gender + &quot;打雌性激素维持美貌容颜&quot;);</div><div class="line">	break;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="选择结构switch语句的练习"><a href="#选择结构switch语句的练习" class="headerlink" title="选择结构switch语句的练习"></a>选择结构switch语句的练习</h3><ul>
+<li>A:整数(给定一个值,输出对应星期几)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">int week = 1;</div><div class="line">switch (week) &#123;</div><div class="line">case 1:</div><div class="line">	System.out.println(&quot;星期一&quot;);</div><div class="line">	break;</div><div class="line">case 2:</div><div class="line">	System.out.println(&quot;星期二&quot;);</div><div class="line">	break;</div><div class="line">case 3:</div><div class="line">	System.out.println(&quot;星期三&quot;);</div><div class="line">	break;</div><div class="line">case 4:</div><div class="line">	System.out.println(&quot;星期四&quot;);</div><div class="line">	break;</div><div class="line">case 5:</div><div class="line">	System.out.println(&quot;星期五&quot;);</div><div class="line">	break;</div><div class="line">case 6:</div><div class="line">	System.out.println(&quot;星期六&quot;);</div><div class="line">	break;</div><div class="line">case 7:</div><div class="line">	System.out.println(&quot;星期日&quot;);</div><div class="line">	break;</div><div class="line">default:</div><div class="line">	System.out.println(&quot;对不起没有对应的星期&quot;);</div><div class="line">	break;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="选择结构switch语句的注意事项"><a href="#选择结构switch语句的注意事项" class="headerlink" title="选择结构switch语句的注意事项"></a>选择结构switch语句的注意事项</h3><ul>
+<li>A:case后面只能是常量，不能是变量，而且，多个case后面的值不能出现相同的</li>
+<li>B:default可以省略吗?<ul>
+<li>可以省略，但是不建议，因为它的作用是对不正确的情况给出提示。</li>
+<li>特殊情况：<ul>
+<li>case就可以把值固定。</li>
+<li>比如:A,B,C,D</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>C:break可以省略吗?<ul>
+<li>最后一个可以省略,其他最好不要省略</li>
+<li>会出现一个现象：case穿透。</li>
+<li>最终建议不要省略</li>
+</ul>
+</li>
+<li>D:default一定要在最后吗?<ul>
+<li>不是，可以在任意位置。但是建议在最后。</li>
+</ul>
+</li>
+<li>E:switch语句的结束条件<pre><code>* a:遇到break就结束了
+* b:执行到switch的右大括号就结束了
+</code></pre></li>
+</ul>
+<h3 id="选择结构switch语句练习"><a href="#选择结构switch语句练习" class="headerlink" title="选择结构switch语句练习"></a>选择结构switch语句练习</h3><ul>
+<li>A:看程序写结果：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">int x = 2;</div><div class="line">int y = 3;</div><div class="line">switch(x)&#123;</div><div class="line">	default:</div><div class="line">		y++;</div><div class="line">		break;</div><div class="line">	case 3:</div><div class="line">		y++;</div><div class="line">	case 4:</div><div class="line">		y++;</div><div class="line">&#125;</div><div class="line">System.out.println(&quot;y=&quot;+y);//4</div><div class="line">```	</div><div class="line">* B:看程序写结果：</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>int x = 2;<br>int y = 3;<br>switch(x){<br>    default:<br>        y++;<br>    case 3:<br>        y++;<br>    case 4:<br>        y++;<br>}<br>System.out.println(“y=”+y);//6<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 选择结构if语句和switch语句的区别</div><div class="line">* A:总结switch语句和if语句的各自使用场景</div><div class="line">    * 	switch建议判断固定值的时候用</div><div class="line">    * 	if建议判断区间或范围的时候用</div><div class="line">* B:代码演示演示</div><div class="line">	* 分别用switch语句和if语句实现下列需求：</div><div class="line">		* 键盘录入月份，输出对应的季节</div><div class="line">    &gt; 一年有四季</div><div class="line">    3,4,5春季</div><div class="line">	6,7,8夏季</div><div class="line">	9,10,11秋季</div><div class="line">	12,1,2冬季</div></pre></td></tr></table></figure></p>
+<p>import java.util.Scanner;<br>class Test {<br>    public static void main(String[] args) {<br>        Scanner sc = new Scanner(System.in);    //创建键盘录入对象<br>        System.out.println(“请输入月份”);<br>        int month = sc.nextInt();                //将键盘录入的结果存储在month<br>        /<em>switch (month) {<br>        case 3:<br>        case 4:<br>        case 5:<br>            System.out.println(month + “月是春季”);<br>            break;<br>        case 6:<br>        case 7:<br>        case 8:<br>            System.out.println(month + “月是夏季”);<br>            break;<br>        case 9:<br>        case 10:<br>        case 11:<br>            System.out.println(month + “月是秋季”);<br>            break;<br>        case 12:<br>        case 1:<br>        case 2:<br>            System.out.println(month + “月是冬季”);<br>            break;<br>        default:<br>            System.out.println(“对不起没有对应的季节”);<br>        break;<br>        }</em>/</p>
+<pre><code>    //用if语句来完成月份对应季节
+    if (month &gt; 12 || month &lt; 1) {
+        System.out.println(&quot;对不起没有对应的季节&quot;);
+    }else if (month &gt;= 3 &amp;&amp; month &lt;= 5) {
+        System.out.println(month + &quot;月是春季&quot;);
+    }else if (month &gt;= 6 &amp;&amp; month &lt;= 8) {
+        System.out.println(month + &quot;月是夏季&quot;);
+    }else if (month &gt;= 9 &amp;&amp; month &lt;= 11) {
+        System.out.println(month + &quot;月是秋季&quot;);
+    }else {
+        System.out.println(month + &quot;月是冬季&quot;);
+    }
+}
+</code></pre><p>}</p>
+<p>```</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

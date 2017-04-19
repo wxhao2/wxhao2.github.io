@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="wxhao">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="JavaSE之数组及其循环和内存分配"/>
+  <meta property="og:description" content="站点描述" />
+  <meta property="og:site_name" content="标题"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://blog.wxhaoo.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="标题" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>标题</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">JavaSE之数组及其循环和内存分配</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/levblanc">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:levblanc@163.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By wxhao</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2013-06-22</span>
+            <span class="time">17:38:07</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/基础知识/">#基础知识</a> <a class="tag" href="/tags/java/">#java</a> <a class="tag" href="/tags/JAVASE/">#JAVASE</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h3 id="数组概述和定义格式说明"><a href="#数组概述和定义格式说明" class="headerlink" title="数组概述和定义格式说明"></a>数组概述和定义格式说明</h3><ul>
+<li>A:为什么要有数组(容器)<ul>
+<li>为了存储同种数据类型的多个值</li>
+</ul>
+</li>
+<li><p>B:数组概念</p>
+<ul>
+<li>数组是存储同一种数据类型多个元素的集合。也可以看成是一个容器。</li>
+<li>数组既可以存储基本数据类型，也可以存储引用数据类型。</li>
+</ul>
+</li>
+<li><p>C:数组定义格式<br>  数据类型[] 数组名 = new 数据类型[数组的长度];</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//数据类型[] 数组名 = new 数据类型[数组的长度];</div><div class="line">int[] arr = new int[5];				//可以存储五个int类型的数据</div><div class="line"></div><div class="line">/*</div><div class="line">左边:</div><div class="line">int:数据类型</div><div class="line">[]:代表的数组,几个中括号就代表几维数组</div><div class="line">arr:合法的标识符</div><div class="line"></div><div class="line">右边:</div><div class="line">new:创建新的实体或对象</div><div class="line">int:数据类型</div><div class="line">[]:代表的数组</div><div class="line">5:代表数组的长度</div></pre></td></tr></table></figure>
+<h3 id="数组的初始化动态初始化"><a href="#数组的初始化动态初始化" class="headerlink" title="数组的初始化动态初始化"></a>数组的初始化动态初始化</h3><ul>
+<li>A:什么是数组的初始化<ul>
+<li>就是为数组开辟连续的内存空间，并为每个数组元素赋予值 </li>
+</ul>
+</li>
+<li>B:如何对数组进行初始化<ul>
+<li>a:动态初始化 只指定长度，由系统给出初始化值<ul>
+<li>int[] arr = new int[5];     </li>
+</ul>
+</li>
+<li>b:静态初始化 给出初始化值，由系统决定长度    </li>
+</ul>
+</li>
+<li>C:动态初始化的格式：<ul>
+<li>数据类型[] 数组名 = new 数据类型[数组长度];</li>
+</ul>
+</li>
+<li>D:代码演示<ul>
+<li>输出数组名称和数组元素</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">int[] arr = new int[5];//动态初始化,在内存中开辟连续的5块空间</div><div class="line">System.out.println(arr[0]);//系统给出默认初始化值,整数类型的都是0</div><div class="line">arr[0] = 10;</div><div class="line"></div><div class="line">System.out.println(arr[0]);	</div><div class="line"></div><div class="line">System.out.println(arr);//[I@19bb25a</div></pre></td></tr></table></figure>
+<ul>
+<li>整数类型:byte,short,int,long默认初始化值都是0</li>
+<li>浮点类型:float,double默认初始化值都是0.0</li>
+<li>布尔类型:boolean默认初始化值false</li>
+<li><p>字符类型:char默认初始化值’\u0000’</p>
+<ul>
+<li>char在内存中占的两个字节,是16个二进制位</li>
+<li>\u0000,每一个0其实代表的是16进制的0,那么四个0就是代表16个二进制位</li>
+</ul>
+</li>
+<li><p>[I@19bb25a的意思</p>
+<ul>
+<li>[代表是数组,几个就代表几维</li>
+<li>I代表是int类型</li>
+<li>@是固定的</li>
+<li>19bb25a代表的是数组的地址值</li>
+</ul>
+</li>
+</ul>
+<h3 id="Java中的内存分配以及栈和堆的区别"><a href="#Java中的内存分配以及栈和堆的区别" class="headerlink" title="Java中的内存分配以及栈和堆的区别"></a>Java中的内存分配以及栈和堆的区别</h3><ul>
+<li>A:栈<ul>
+<li>存储局部变量 <ul>
+<li>局部变量:定义在方法声明上和方法中的变量</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>B:堆<ul>
+<li>存储new出来的数组或对象 </li>
+</ul>
+</li>
+<li>C:方法区<ul>
+<li>面向对象部分讲解 </li>
+</ul>
+</li>
+<li>D:本地方法区<ul>
+<li>和系统相关 </li>
+</ul>
+</li>
+<li>E:寄存器<ul>
+<li>给CPU使用</li>
+</ul>
+</li>
+</ul>
+<h3 id="数组的内存图解1一个数组"><a href="#数组的内存图解1一个数组" class="headerlink" title="数组的内存图解1一个数组"></a>数组的内存图解1一个数组</h3><ul>
+<li>A:画图演示<ul>
+<li>一个数组</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">int[] arr = new int[3];						//动态初始化,创建3块连续的空间</div><div class="line">System.out.println(arr);</div><div class="line">arr[0] = 10;</div><div class="line">arr[1] = 20;</div><div class="line"></div><div class="line">System.out.println(arr[0]);</div><div class="line">System.out.println(arr[1]);</div></pre></td></tr></table></figure>
+<p><img src="http://wxhao2.duapp.com/blog/post-in/20130622/sznct.png" alt="数组内存图"></p>
+<h3 id="数组的内存图解2二个数组"><a href="#数组的内存图解2二个数组" class="headerlink" title="数组的内存图解2二个数组"></a>数组的内存图解2二个数组</h3><ul>
+<li>A:画图演示<ul>
+<li>二个不同的数组</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">int[] arr1 = new int[3];//创建数组,长度为3</div><div class="line">int[] arr2 = new int[3];//创建数组,长度为3</div><div class="line"></div><div class="line">System.out.println(arr1);//打印数组的地址值</div><div class="line">System.out.println(arr2);</div><div class="line"></div><div class="line">arr1[0] = 10;//给第一个数组中第一个元素赋值</div><div class="line">arr2[1] = 20;//给第二个数组中第二个元素赋值</div><div class="line"></div><div class="line">System.out.println(arr1[0]);</div><div class="line">System.out.println(arr1[1]);</div><div class="line">System.out.println(arr1[2]);</div><div class="line"></div><div class="line">System.out.println(&quot;--------------------------------------&quot;);</div><div class="line"></div><div class="line">System.out.println(arr2[0]);</div><div class="line">System.out.println(arr2[1]);</div><div class="line">System.out.println(arr2[2]);</div></pre></td></tr></table></figure>
+<p><img src="http://wxhao2.duapp.com/blog/post-in/20130622/lgsznct.png" alt="两个数组内存图"></p>
+<h3 id="数组的内存图解3三个引用两个数组"><a href="#数组的内存图解3三个引用两个数组" class="headerlink" title="数组的内存图解3三个引用两个数组"></a>数组的内存图解3三个引用两个数组</h3><ul>
+<li>A:画图演示<ul>
+<li>三个引用，有两个数组的引用指向同一个地址</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">int[] arr1 = new int[3];</div><div class="line">int[] arr2 = new int[5];</div><div class="line">int[] arr3 = arr2;</div><div class="line"></div><div class="line">System.out.println(arr1);</div><div class="line">System.out.println(arr2);</div><div class="line">System.out.println(arr3);</div><div class="line"></div><div class="line">arr1[0] = 10;</div><div class="line">arr1[1] = 20;</div><div class="line"></div><div class="line">arr2[1] = 30;</div><div class="line">arr3[1] = 40;</div><div class="line">arr3[2] = 50;</div><div class="line"></div><div class="line">System.out.println(arr1[0]);</div><div class="line">System.out.println(arr1[1]);</div><div class="line">System.out.println(arr1[2]);</div><div class="line">System.out.println(&quot;-------------------------------&quot;);</div><div class="line">System.out.println(arr2[0]);</div><div class="line">System.out.println(arr2[1]);</div><div class="line">System.out.println(arr2[2]);</div><div class="line">System.out.println(arr2[3]);</div><div class="line">System.out.println(arr2[4]);</div><div class="line">System.out.println(&quot;-------------------------------&quot;);</div><div class="line">System.out.println(arr3[0]);</div><div class="line">System.out.println(arr3[1]);</div><div class="line">System.out.println(arr3[2]);</div><div class="line">System.out.println(arr3[3]);</div><div class="line">System.out.println(arr3[4]);</div></pre></td></tr></table></figure>
+<p><img src="http://wxhao2.duapp.com/blog/post-in/20130622/sgyylgsz.png" alt="三个引用两个数组"></p>
+<h3 id="数组的初始化静态初始化及内存图"><a href="#数组的初始化静态初始化及内存图" class="headerlink" title="数组的初始化静态初始化及内存图"></a>数组的初始化静态初始化及内存图</h3><ul>
+<li>A:静态初始化的格式：<ul>
+<li>格式：数据类型[] 数组名 = new 数据类型[]{元素1,元素2,…};</li>
+<li>简化格式：<ul>
+<li>数据类型[] 数组名 = {元素1,元素2,…};</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>B:案例演示<ul>
+<li>对数组的解释</li>
+<li>输出数组名称和数组元素</li>
+</ul>
+</li>
+<li>C:画图演示<ul>
+<li>一个数组</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//数据类型[] 数组名 = new 数据类型[]&#123;元素1,元素2,…&#125;;</div><div class="line">//int[] arr = new int[5]&#123;11,22,33,44,55&#125;;	//不允许动静结合</div><div class="line">int[] arr2 = &#123;11,22,33,44,55&#125;;			//静态初始化的简写形式</div><div class="line"></div><div class="line">//int[] arr;								//声明数组引用</div><div class="line">//arr = new int[]&#123;11,22,33,44,55&#125;;</div><div class="line"></div><div class="line">//int[] arr2;</div><div class="line">//arr2 = &#123;11,22,33,44,55&#125;;				//简写形式声明和赋值在同一行</div><div class="line"></div><div class="line">System.out.println(arr2);</div><div class="line">System.out.println(arr2[4]);</div></pre></td></tr></table></figure>
+<p><img src="http://wxhao2.duapp.com/blog/post-in/20130622/szjtcsh.png" alt="数组的静态初始化"></p>
+<p>都会默认初始化为0在赋值</p>
+<h3 id="数组操作的两个常见小问题越界和空指针"><a href="#数组操作的两个常见小问题越界和空指针" class="headerlink" title="数组操作的两个常见小问题越界和空指针"></a>数组操作的两个常见小问题越界和空指针</h3><ul>
+<li>A:案例演示<ul>
+<li>a:ArrayIndexOutOfBoundsException:数组索引越界异常<ul>
+<li>原因：你访问了不存在的索引。</li>
+</ul>
+</li>
+<li>b:NullPointerException:空指针异常<ul>
+<li>原因：数组已经不在指向堆内存了。而你还用数组名去访问元素。</li>
+<li>int[] arr = {1,2,3};</li>
+<li>arr = null;</li>
+<li>System.out.println(arr[0]);</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">int[] arr = new int[5];//0x0011</div><div class="line">//System.out.println(arr[-1]);//当访问数组中不存在的索引,会出现索引越界异常</div><div class="line"></div><div class="line">arr = null;</div><div class="line">System.out.println(arr[0]);	//当数组引用赋值为null,再去调用数组中的元素就会出现空指针异常</div></pre></td></tr></table></figure>
+<h3 id="数组的操作1遍历"><a href="#数组的操作1遍历" class="headerlink" title="数组的操作1遍历"></a>数组的操作1遍历</h3><ul>
+<li>A:案例演示<ul>
+<li>数组遍历：就是依次输出数组中的每一个元素。</li>
+<li>数组的属性:arr.length数组的长度</li>
+<li>数组的最大索引:arr.length - 1;</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">class Demo_Array &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] arr = &#123;11,22,33,44,55&#125;;</div><div class="line"></div><div class="line">		/*System.out.println(arr[0]);</div><div class="line">		System.out.println(arr[1]);</div><div class="line">		System.out.println(arr[2]);</div><div class="line">		System.out.println(arr[3]);</div><div class="line">		System.out.println(arr[4]);*/</div><div class="line">		</div><div class="line">		for (int i = 0;i &lt; 5 ;i++ ) &#123;</div><div class="line">			System.out.println(arr[i]);</div><div class="line">		&#125;</div><div class="line">		System.out.println(&quot;---------------&quot;);</div><div class="line">		//arr.length 代表的是数组的长度</div><div class="line">		System.out.println(arr.length);</div><div class="line">		for (int i = 0;i &lt; arr.length ;i++ ) &#123;</div><div class="line">			System.out.println(arr[i]);</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		int[] arr2 = &#123;3,4,5&#125;;</div><div class="line">		print(arr2);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	数组的遍历</div><div class="line">	1,返回值类型void</div><div class="line">	2,参数列表int[] arr</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static void print(int[] arr) &#123;</div><div class="line">		for (int i = 0;i &lt; arr.length ;i++ ) &#123;</div><div class="line">			System.out.print(arr[i] + &quot; &quot;);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="数组的操作2获取最值"><a href="#数组的操作2获取最值" class="headerlink" title="数组的操作2获取最值"></a>数组的操作2获取最值</h3><ul>
+<li>A:案例演示<ul>
+<li>数组获取最值(获取数组中的最大值最小值)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">class Demo_Array &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] arr = &#123;33,77,22,44,55&#125;;</div><div class="line">		int max = getMax(arr);</div><div class="line">		System.out.println(max);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	获取数组中最大值</div><div class="line">	1,返回值类型int</div><div class="line">	2,参数列表int[] arr</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static int getMax(int[] arr) &#123;</div><div class="line">		int max = arr[0];</div><div class="line">		for (int i = 1;i &lt; arr.length ;i++ ) &#123;//从数组的第二个元素开始遍历</div><div class="line">			if (max &lt; arr[i]) &#123;//如果max记录的值小于的数组中的元素</div><div class="line">				max = arr[i];//max记录住较大的</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		return max;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="数组的操作3反转"><a href="#数组的操作3反转" class="headerlink" title="数组的操作3反转"></a>数组的操作3反转</h3><ul>
+<li>A:案例演示<ul>
+<li>数组元素反转(就是把元素对调)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">class Demo_Array &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] arr = &#123;11,22,33,44,55&#125;;</div><div class="line">		reverseArray(arr);</div><div class="line">		print(arr);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	数组元素反转</div><div class="line">	1,明确返回值类型void</div><div class="line">	2,明确参数列表int[] arr</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static void reverseArray(int[] arr) &#123;</div><div class="line">		for (int i = 0;i &lt; arr.length / 2 ; i++) &#123;</div><div class="line">			//arr[0]和arr[arr.length-1-0]交换</div><div class="line">			//arr[1]和arr[arr.length-1-1]交换</div><div class="line">			//arr[2]和arr[arr.lentth-1-2]</div><div class="line">			//...</div><div class="line"></div><div class="line">			int temp = arr[i];</div><div class="line">			arr[i] = arr[arr.length-1-i];</div><div class="line">			arr[arr.length-1-i] = temp;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	数组遍历</div><div class="line">	1,明确返回值类型void</div><div class="line">	2,明确参数列表int[] arr</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static void print(int[] arr) &#123;</div><div class="line">		for (int i = 0;i &lt; arr.length ;i++ ) &#123;				//遍历数组中的每一个元素</div><div class="line">			System.out.print(arr[i] + &quot; &quot;);					//打印在控制台</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="数组的操作4查表法"><a href="#数组的操作4查表法" class="headerlink" title="数组的操作4查表法"></a>数组的操作4查表法</h3><ul>
+<li>A:案例演示<ul>
+<li>数组查表法(根据键盘录入索引,查找对应星期)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">import java.util.Scanner;</div><div class="line">class Demo_Array &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);</div><div class="line">		System.out.println(&quot;请输入对应的星期范围在1-7&quot;);</div><div class="line">		int week = sc.nextInt();</div><div class="line"></div><div class="line">		System.out.println(&quot;星期&quot; + getWeek(week));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	根据索引返回对应的星期</div><div class="line">	1,返回值类型char</div><div class="line">	2,参数列表int week</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static char getWeek(int week) &#123;</div><div class="line">		char[] arr = &#123;&apos; &apos;,&apos;一&apos;,&apos;二&apos;,&apos;三&apos;,&apos;四&apos;,&apos;五&apos;,&apos;六&apos;,&apos;日&apos;&#125;;		//定义了一张星期表</div><div class="line">		return arr[week];											//通过索引获取表中的元素</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<h3 id="数组的操作5基本查找"><a href="#数组的操作5基本查找" class="headerlink" title="数组的操作5基本查找"></a>数组的操作5基本查找</h3><ul>
+<li>A:案例演示<ul>
+<li>数组元素查找(查找指定元素第一次在数组中出现的索引)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">class Demo_Array &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] arr = &#123;11,22,33,44,55,66,77&#125;;</div><div class="line">		int index = getIndex(arr,88);</div><div class="line">		System.out.println(index);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	查找元素索引</div><div class="line">	1,返回值类型int</div><div class="line">	2,明确参数列表,int[] arr,int value</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static int getIndex(int[] arr,int value) &#123;</div><div class="line">		for (int i = 0;i &lt; arr.length ;i++ ) &#123;				//数组的遍历</div><div class="line">			if (arr[i] == value) &#123;							//如果数组中的元素与查找的元素匹配</div><div class="line">				return i;</div><div class="line">			&#125;</div><div class="line"></div><div class="line">		&#125;</div><div class="line">		return -1;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

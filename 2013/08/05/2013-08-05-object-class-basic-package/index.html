@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="wxhao">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="基本包装类"/>
+  <meta property="og:description" content="站点描述" />
+  <meta property="og:site_name" content="标题"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://blog.wxhaoo.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="标题" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>标题</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">基本包装类</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/levblanc">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:levblanc@163.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By wxhao</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2013-08-05</span>
+            <span class="time">17:38:07</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/基础知识/">#基础知识</a> <a class="tag" href="/tags/java/">#java</a> <a class="tag" href="/tags/JAVASE/">#JAVASE</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h3 id="Integer类的概述和构造方法"><a href="#Integer类的概述和构造方法" class="headerlink" title="Integer类的概述和构造方法"></a>Integer类的概述和构造方法</h3><ul>
+<li><p>A:Integer类概述</p>
+<ul>
+<li><p>通过JDK提供的API，查看Integer类的说明</p>
+</li>
+<li><p>Integer 类在对象中包装了一个基本类型 int 的值,</p>
+</li>
+<li>该类提供了多个方法，能在 int 类型和 String 类型之间互相转换，</li>
+<li>还提供了处理 int 类型时非常有用的其他一些常量和方法</li>
+</ul>
+</li>
+<li>B:构造方法<ul>
+<li>public Integer(int value)</li>
+<li>public Integer(String s)</li>
+</ul>
+</li>
+<li>C:案例演示<ul>
+<li>使用构造方法创建对象</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.wrapclass;</div><div class="line"></div><div class="line">public class Demo2_Integer &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		System.out.println(Integer.MAX_VALUE);</div><div class="line">		System.out.println(Integer.MIN_VALUE);</div><div class="line">		</div><div class="line">		Integer i1 = new Integer(100);</div><div class="line">		System.out.println(i1);</div><div class="line">		</div><div class="line">		//Integer i2 = new Integer(&quot;abc&quot;);//java.lang.NumberFormatException数字格式异常</div><div class="line">		//System.out.println(i2);		//因为abc不是数字字符串,所以转换会报错</div><div class="line">		</div><div class="line">		Integer i3 = new Integer(&quot;100&quot;);</div><div class="line">		System.out.println(i3);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="String和int类型的相互转换"><a href="#String和int类型的相互转换" class="headerlink" title="String和int类型的相互转换"></a>String和int类型的相互转换</h3><ul>
+<li>A:int – String<ul>
+<li>a:和””进行拼接</li>
+<li>b:public static String valueOf(int i)</li>
+<li>c:int – Integer – String(Integer类的toString方法())</li>
+<li>d:public static String toString(int i)(Integer类的静态方法)</li>
+</ul>
+</li>
+<li>B:String – int<ul>
+<li>a:String – Integer – int</li>
+<li>public static int parseInt(String s)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.wrapclass;</div><div class="line"></div><div class="line">public class Demo3_Integer &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">		基本数据类型包装类有八种,其中七种都有parseXxx的方法,可以将这七种的字符串表现形式转换成基本数据类型</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		</div><div class="line">		//demo1();</div><div class="line">		String s1 = &quot;true&quot;;</div><div class="line">		boolean b = Boolean.parseBoolean(s1);</div><div class="line">		System.out.println(b);</div><div class="line">		</div><div class="line">		//String s2 = &quot;abc&quot;;</div><div class="line">		//char c = Character.p		//char的包装类Character中没有pareseXxx的方法</div><div class="line">									//字符串到字符的转换通过toCharArray()就可以把字符串转换为字符数组</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo1() &#123;</div><div class="line">		//int ----&gt; String int转换成String</div><div class="line">		int i = 100;</div><div class="line">		String s1 = i + &quot;&quot;;			//推荐用</div><div class="line">		String s2 = String.valueOf(i);//推荐用</div><div class="line">		</div><div class="line">		Integer i2 = new Integer(i);</div><div class="line">		String s3 = i2.toString();</div><div class="line">		</div><div class="line">		String s4 = Integer.toString(i);</div><div class="line">		System.out.println(s1);</div><div class="line">		</div><div class="line">		//String----&gt; int String 转换int</div><div class="line">		String s = &quot;200&quot;;</div><div class="line">		Integer i3 = new Integer(s);</div><div class="line">		int i4 = i3.intValue();		//将Integer转换成了int数</div><div class="line">		</div><div class="line">		int i5 = Integer.parseInt(s);//将String转换为int,推荐用这种</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="JDK5的新特性自动装箱和拆箱"><a href="#JDK5的新特性自动装箱和拆箱" class="headerlink" title="JDK5的新特性自动装箱和拆箱"></a>JDK5的新特性自动装箱和拆箱</h3><ul>
+<li>A:JDK5的新特性<ul>
+<li>自动装箱：把基本类型转换为包装类类型</li>
+<li>自动拆箱：把包装类类型转换为基本类型</li>
+</ul>
+</li>
+<li><p>B:案例演示</p>
+<ul>
+<li><p>JDK5的新特性自动装箱和拆箱</p>
+</li>
+<li><p>Integer ii = 100;</p>
+</li>
+<li>ii += 200;</li>
+</ul>
+</li>
+<li>C:注意事项<ul>
+<li>在使用时，Integer  x = null;代码就会出现NullPointerException。</li>
+<li>建议先判断是否为null，然后再使用。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.wrapclass;</div><div class="line"></div><div class="line">public class Demo4_JDK5 &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">//		int x = 100;</div><div class="line">//		Integer i1 = new Integer(x);//将基本数据类型包装成对象,手动装箱</div><div class="line">//		</div><div class="line">//		int y = i1.intValue();		//将对象转换为基本数据类型,手动拆箱</div><div class="line">		</div><div class="line">		Integer i2 = 100;			//自动装箱,把基本数据类型转换成对象</div><div class="line">		int z = i2 + 200;			//自动拆箱,把对象转换为基本数据类型</div><div class="line">		System.out.println(z);</div><div class="line">		</div><div class="line">		Integer i3 = null;</div><div class="line">		int a = i3 + 100;			//底层用i3调用intValue,但是i3是null,null调用方法就会出现</div><div class="line">		System.out.println(a);		//空指针异常java.lang.NullPointerException</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Integer的面试题"><a href="#Integer的面试题" class="headerlink" title="Integer的面试题"></a>Integer的面试题</h3><ul>
+<li>A:Integer的面试题</li>
+<li><pre><code>看程序写结果
+</code></pre></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">Integer i1 = new Integer(97);</div><div class="line">Integer i2 = new Integer(97);</div><div class="line">System.out.println(i1 == i2);</div><div class="line">System.out.println(i1.equals(i2));</div><div class="line">System.out.println(&quot;-----------&quot;);</div><div class="line">	</div><div class="line">Integer i3 = new Integer(197);</div><div class="line">Integer i4 = new Integer(197);</div><div class="line">System.out.println(i3 == i4);</div><div class="line">System.out.println(i3.equals(i4));</div><div class="line">System.out.println(&quot;-----------&quot;);</div><div class="line">	</div><div class="line">Integer i5 = 97;</div><div class="line">Integer i6 = 97;</div><div class="line">System.out.println(i5 == i6);</div><div class="line">System.out.println(i5.equals(i6));</div><div class="line">System.out.println(&quot;-----------&quot;);</div><div class="line">	</div><div class="line">Integer i7 = 197;</div><div class="line">Integer i8 = 197;</div><div class="line">System.out.println(i7 == i8);</div><div class="line">System.out.println(i7.equals(i8));</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.wrapclass;</div><div class="line"></div><div class="line">public class Demo5_Integer &#123;</div><div class="line">	/**</div><div class="line">	 * @param args</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Integer i1 = new Integer(97);</div><div class="line">		Integer i2 = new Integer(97);</div><div class="line">		System.out.println(i1 == i2);	  //false</div><div class="line">		System.out.println(i1.equals(i2));//true</div><div class="line">		System.out.println(&quot;-----------&quot;);</div><div class="line">	</div><div class="line">		Integer i3 = new Integer(197);</div><div class="line">		Integer i4 = new Integer(197);</div><div class="line">		System.out.println(i3 == i4);		//false</div><div class="line">		System.out.println(i3.equals(i4));	//true</div><div class="line">		System.out.println(&quot;-----------&quot;);</div><div class="line">	</div><div class="line">		Integer i5 = 127;</div><div class="line">		Integer i6 = 127;</div><div class="line">		System.out.println(i5 == i6);	  //true</div><div class="line">		System.out.println(i5.equals(i6));//true</div><div class="line">		System.out.println(&quot;-----------&quot;);</div><div class="line">	</div><div class="line">		Integer i7 = 128;</div><div class="line">		Integer i8 = 128;</div><div class="line">		System.out.println(i7 == i8);</div><div class="line">		System.out.println(i7.equals(i8));//true</div><div class="line">		</div><div class="line">		/*</div><div class="line">		 * -128到127是byte的取值范围,如果在这个取值范围内,自动装箱就不会新创建对象,而是从常量池中获取</div><div class="line">		 * 如果超过了byte取值范围就会再新创建对象</div><div class="line">		 * </div><div class="line">		 * public static Integer valueOf(int i) &#123;</div><div class="line">		        assert IntegerCache.high &gt;= 127;</div><div class="line">		        if (i &gt;= IntegerCache.low &amp;&amp; i &lt;= IntegerCache.high)			//i&gt;= -128 &amp;&amp; i &lt;= 127</div><div class="line">		            return IntegerCache.cache[i + (-IntegerCache.low)];</div><div class="line">		        return new Integer(i);</div><div class="line">		    &#125;</div><div class="line">		 */</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

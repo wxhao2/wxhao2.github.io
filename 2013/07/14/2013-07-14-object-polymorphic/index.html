@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="wxhao">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="多态(重点)"/>
+  <meta property="og:description" content="站点描述" />
+  <meta property="og:site_name" content="标题"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://blog.wxhaoo.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="标题" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>标题</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">多态(重点)</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/levblanc">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:levblanc@163.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By wxhao</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2013-07-14</span>
+            <span class="time">17:38:07</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/基础知识/">#基础知识</a> <a class="tag" href="/tags/java/">#java</a> <a class="tag" href="/tags/JAVASE/">#JAVASE</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h3 id="多态的概述及其代码体现"><a href="#多态的概述及其代码体现" class="headerlink" title="多态的概述及其代码体现"></a>多态的概述及其代码体现</h3><ul>
+<li>多态(polymorphic)概述<ul>
+<li>事物存在的多种形态</li>
+</ul>
+</li>
+<li>多态的前提<ol>
+<li>要的是有继承关系</li>
+<li>要有方法重写</li>
+<li>要有父类引用指向子类对象</li>
+</ol>
+</li>
+<li>代码体现多态    </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">public class Demo_polymorphic &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Cat c=new Cat();</div><div class="line">		c.eat();</div><div class="line">		</div><div class="line">		Animal a=new Cat();//父类引用指向子类对象</div><div class="line">		a.eat();//猫吃鱼</div><div class="line">		</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line">class Animal&#123;</div><div class="line">    public void eat()&#123;</div><div class="line">    	System.out.println(&quot;动物吃饭&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Cat extends Animal&#123;</div><div class="line">	public void eat()&#123;</div><div class="line">		System.out.println(&quot;猫吃鱼&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="多态中的成员访问特点"><a href="#多态中的成员访问特点" class="headerlink" title="多态中的成员访问特点"></a>多态中的成员访问特点</h3><ul>
+<li>a:成员变量(左边子类,右边父类)<ul>
+<li>编译看左边,运行看左边</li>
+</ul>
+</li>
+<li>b:成员方法<ul>
+<li>编译看左边,运行看右边,动态绑定</li>
+</ul>
+</li>
+<li>c:静态方法<ul>
+<li>编译看左边,运行看左边</li>
+<li>静态和类相关,算不上重写,所以,访问还是左边的</li>
+</ul>
+</li>
+<li><p>总结:只有非静态的成员方法,编译看左边,运行看右边</p>
+</li>
+<li><p>代码演示</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">public class Demo_polymorphic2 &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Father f=new Son();</div><div class="line">		System.out.println(f.num);</div><div class="line">		</div><div class="line">		Son s=new Son();</div><div class="line">		System.out.println(s.num);</div><div class="line">		</div><div class="line">		f.print();//Son</div><div class="line">		</div><div class="line">		//Father.method()</div><div class="line">		f.method();//method static Father</div><div class="line">		</div><div class="line">		Son.method();//method static Son</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">class Father&#123;</div><div class="line">	int num = 10;</div><div class="line">	 public void print()&#123;</div><div class="line">    	System.out.println(&quot;Father&quot;);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    public static void method()&#123;</div><div class="line">    	System.out.println(&quot;method static Father&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Son extends Father&#123;</div><div class="line">	int num = 20;</div><div class="line">	 public void print()&#123;</div><div class="line">    	System.out.println(&quot;Son&quot;);</div><div class="line">    &#125;</div><div class="line">     public static void method()&#123;</div><div class="line">    	System.out.println(&quot;method static Son&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://wxhao2.duapp.com/blog/post-in/20130714/dtzdcyfwtd.png" alt="多态中的成员访问特点"></p>
+<p><img src="http://wxhao2.duapp.com/blog/post-in/20130714/cyff.png" alt="多态中的成员访问特点成员方法"></p>
+<h3 id="面向对象-超人的故事"><a href="#面向对象-超人的故事" class="headerlink" title="面向对象(超人的故事)"></a>面向对象(超人的故事)</h3><ul>
+<li>代码演示</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">public class Demo3_SuperMan &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Person p=new SuperMan();//父类引用指向子类对象,超人伪装成人</div><div class="line">		System.out.println(p.name);//谈生意不能说自己是超人,而说自己的人名</div><div class="line">		p.谈生意();//动作是超人做的,所以谈的是几个亿的大单子</div><div class="line">		</div><div class="line">		//假如有人要跳楼,超人要去救人</div><div class="line">		//p.fly();//现在是普通人不能去救人</div><div class="line">		</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">class Person &#123;</div><div class="line">	String name = &quot;John&quot;;</div><div class="line">	public void 谈生意()&#123;</div><div class="line">		System.out.println(&quot;谈生意&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class SuperMan extends Person&#123;</div><div class="line">	</div><div class="line">	String name = &quot;SuperMan&quot;;</div><div class="line">	public void 谈生意()&#123;</div><div class="line">		System.out.println(&quot;谈几个亿的大生意&quot;);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public void fly()&#123;</div><div class="line">		System.out.println(&quot;飞出去救人&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="多态中向上转型和向下转型"><a href="#多态中向上转型和向下转型" class="headerlink" title="多态中向上转型和向下转型"></a>多态中向上转型和向下转型</h3><ul>
+<li>父类引用指向子类对象就是向上转型,就像超人伪装成了人</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Person p=new SuperMan();//向上转型</div></pre></td></tr></table></figure>
+<ul>
+<li>向下转型(必须先有向上转型才有向下转型)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SuperMan sm = (SuperMan)p;//向下转型</div><div class="line">sm.fly();//现在就可以飞出去救人</div></pre></td></tr></table></figure>
+<p><img src="http://wxhao2.duapp.com/blog/post-in/20130714/xszxhxxzx.png" alt="向上转型和向下转型"></p>
+<h3 id="多态的好处和弊端"><a href="#多态的好处和弊端" class="headerlink" title="多态的好处和弊端"></a>多态的好处和弊端</h3><ul>
+<li>多态的好处<ol>
+<li>提高了代码的维护性(继承保证)</li>
+<li>提高了代码的扩展性(由多态保证)</li>
+</ol>
+</li>
+<li>代码演示<ol>
+<li>多态的好处</li>
+<li>可以当做形式参数,可以接受任意子对象</li>
+</ol>
+</li>
+<li>多态的弊端<ul>
+<li>不能使用子类特有属性和行为</li>
+</ul>
+</li>
+<li><p>关键字 instanceof 判断前边的引用是否是后边的数据类型</p>
+<ul>
+<li>代码演示</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">public class Demo4_Animal &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		method(new Cat());</div><div class="line">		//method(new Dog());</div><div class="line">		method(new Dog());</div><div class="line">		</div><div class="line">//		Animal a=new Cat();//开发的时候很少在创建对象的时候用父类引用指向子类对象,直接创建子类对象更方便,可以使用子类中的特有属性和行为</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	//Cat c= new Dog();狗是一只猫,这是错误的</div><div class="line">	/*public static void method(Cat c)&#123;</div><div class="line">		c.eat();</div><div class="line">	&#125;</div><div class="line">	public static void method(Dog d)&#123;</div><div class="line">		d.eat();</div><div class="line">	&#125;*/</div><div class="line">	</div><div class="line">	public static void method(Animal a)&#123;//当作参数的时候用多态最好,因为拓展性强</div><div class="line">		</div><div class="line">//		a.catchMouse();</div><div class="line">		</div><div class="line">		//关键字 instanceof 判断前边的引用是否是后边的数据类型</div><div class="line">		if(a instanceof Cat)&#123;</div><div class="line">			Cat c=(Cat)a;</div><div class="line">			c.eat();</div><div class="line">			c.catchMouse();</div><div class="line">		&#125;else if(a instanceof Cat)&#123;</div><div class="line">			Dog d=(Dog)a;</div><div class="line">			d.eat();</div><div class="line">			d.lookHome();;</div><div class="line">		&#125;else&#123;</div><div class="line">			a.eat();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">class Animal&#123;</div><div class="line">    public void eat()&#123;</div><div class="line">    	System.out.println(&quot;动物吃饭&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Cat extends Animal&#123;</div><div class="line">	public void eat()&#123;</div><div class="line">		System.out.println(&quot;猫吃鱼&quot;);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public void catchMouse()&#123;</div><div class="line">		System.out.println(&quot;抓老鼠&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Dog extends Animal&#123;</div><div class="line">	public void eat()&#123;</div><div class="line">		System.out.println(&quot;狗吃肉&quot;);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public void lookHome()&#123;</div><div class="line">		System.out.println(&quot;看家&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

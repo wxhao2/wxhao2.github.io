@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="wxhao">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="反射"/>
+  <meta property="og:description" content="站点描述" />
+  <meta property="og:site_name" content="标题"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://blog.wxhaoo.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="标题" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>标题</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">反射</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/levblanc">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:levblanc@163.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By wxhao</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2013-10-31</span>
+            <span class="time">17:38:06</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/基础知识/">#基础知识</a> <a class="tag" href="/tags/java/">#java</a> <a class="tag" href="/tags/JAVASE/">#JAVASE</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h3 id="类的加载概述和加载时机"><a href="#类的加载概述和加载时机" class="headerlink" title="类的加载概述和加载时机"></a>类的加载概述和加载时机</h3><ul>
+<li><p>A:类的加载概述</p>
+<ul>
+<li>当程序要使用某个类时，如果该类还未被加载到内存中，则系统会通过加载，连接，初始化三步来实现对这个类进行初始化。</li>
+<li>加载 <ul>
+<li>就是指将class文件读入内存，并为之创建一个Class对象。任何类被使用时系统都会建立一个Class对象。</li>
+</ul>
+</li>
+<li><p>连接</p>
+<ul>
+<li>验证 是否有正确的内部结构，并和其他类协调一致</li>
+<li>准备 负责为类的静态成员分配内存，并设置默认初始化值</li>
+<li>解析 将类的二进制数据中的符号引用替换为直接引用</li>
+</ul>
+</li>
+<li><p>初始化 就是我们以前讲过的初始化步骤</p>
+</li>
+</ul>
+</li>
+<li>B:加载时机<ul>
+<li>创建类的实例</li>
+<li>访问类的静态变量，或者为静态变量赋值</li>
+<li>调用类的静态方法</li>
+<li>使用反射方式来强制创建某个类或接口对应的java.lang.Class对象</li>
+<li>初始化某个类的子类</li>
+<li>直接使用java.exe命令来运行某个主类</li>
+</ul>
+</li>
+</ul>
+<h3 id="类加载器的概述和分类"><a href="#类加载器的概述和分类" class="headerlink" title="类加载器的概述和分类"></a>类加载器的概述和分类</h3><ul>
+<li>A:类加载器的概述<ul>
+<li>负责将.class文件加载到内存中，并为之生成对应的Class对象。虽然我们不需要关心类加载机制，但是了解这个机制我们就能更好的理解程序的运行。</li>
+</ul>
+</li>
+<li>B:类加载器的分类<ul>
+<li>Bootstrap ClassLoader 根类加载器</li>
+<li>Extension ClassLoader 扩展类加载器</li>
+<li>Sysetm ClassLoader 系统类加载器</li>
+</ul>
+</li>
+<li>C:类加载器的作用<ul>
+<li>Bootstrap ClassLoader 根类加载器<ul>
+<li>也被称为引导类加载器，负责Java核心类的加载</li>
+<li>比如System,String等。在JDK中JRE的lib目录下rt.jar文件中</li>
+</ul>
+</li>
+<li>Extension ClassLoader 扩展类加载器<ul>
+<li>负责JRE的扩展目录中jar包的加载。</li>
+<li>在JDK中JRE的lib目录下ext目录</li>
+</ul>
+</li>
+<li>Sysetm ClassLoader 系统类加载器<ul>
+<li>负责在JVM启动时加载来自java命令的class文件，以及classpath环境变量所指定的jar包和类路径</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="反射概述"><a href="#反射概述" class="headerlink" title="反射概述"></a>反射概述</h3><ul>
+<li><p>A:反射概述</p>
+<ul>
+<li>JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；</li>
+<li>对于任意一个对象，都能够调用它的任意一个方法和属性；</li>
+<li>这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。</li>
+<li>要想解剖一个类,必须先要获取到该类的字节码文件对象。</li>
+<li>而解剖使用的就是Class类中的方法，所以先要获取到每一个字节码文件对应的Class类型的对象。</li>
+</ul>
+</li>
+<li><p>B:三种方式</p>
+<ul>
+<li>a:Object类的getClass()方法,判断两个对象是否是同一个字节码文件</li>
+<li>b:静态属性class,锁对象</li>
+<li>c:Class类中静态方法forName(),读取配置文件</li>
+</ul>
+</li>
+<li>C:案例演示<ul>
+<li>获取class文件对象的三种方式</li>
+</ul>
+</li>
+</ul>
+<p><img src="!--￼22--&gt;/post-in/20131031/fsdsgjd.png" alt="反射的三个阶段"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Class clazz1 = Class.forName(&quot;com.wxhao.bean.Person&quot;);</div><div class="line">Class clazz2 = Person.class;</div><div class="line"></div><div class="line">Person p = new Person();</div><div class="line">Class clazz3 = p.getClass();</div><div class="line"></div><div class="line">System.out.println(clazz1 == clazz2);</div><div class="line">System.out.println(clazz2 == clazz3);</div></pre></td></tr></table></figure>
+<h3 id="Class-forName-读取配置文件举例"><a href="#Class-forName-读取配置文件举例" class="headerlink" title="Class.forName()读取配置文件举例"></a>Class.forName()读取配置文件举例</h3><ul>
+<li>榨汁机(Juicer)榨汁的案例</li>
+<li>分别有水果(Fruit)苹果(Apple)香蕉(Banana)桔子(Orange)榨汁(squeeze)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">public class Demo2_Reflect &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * 榨汁机(Juicer)榨汁的案例</div><div class="line">	 * 分别有水果(Fruit)苹果(Apple)香蕉(Banana)桔子(Orange)榨汁(squeeze)</div><div class="line">	 * @throws Exception </div><div class="line">	 */</div><div class="line">	public static void main(String[] args) throws Exception &#123;</div><div class="line">		/*Juicer j = new Juicer();</div><div class="line">		//j.run(new Apple());</div><div class="line">		j.run(new Orange());*/</div><div class="line">		BufferedReader br = new BufferedReader(new FileReader(&quot;config.properties&quot;));	//创建输入流对象,关联配置文件</div><div class="line">		Class&lt;?&gt; clazz = Class.forName(br.readLine());									//读取配置文件一行内容,获取该类的字节码对象</div><div class="line">		Fruit f = (Fruit) clazz.newInstance();											//通过字节码对象创建实例对象</div><div class="line">		Juicer j = new Juicer();</div><div class="line">		j.run(f);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">interface Fruit &#123;</div><div class="line">	public void squeeze();</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Apple implements Fruit &#123;</div><div class="line">	public void squeeze() &#123;</div><div class="line">		System.out.println(&quot;榨出一杯苹果汁儿&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Orange implements Fruit &#123;</div><div class="line">	public void squeeze() &#123;</div><div class="line">		System.out.println(&quot;榨出一杯桔子汁儿&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Juicer &#123;</div><div class="line">	public void run(Fruit f) &#123;</div><div class="line">		f.squeeze();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="通过反射获取带参构造方法并使用"><a href="#通过反射获取带参构造方法并使用" class="headerlink" title="通过反射获取带参构造方法并使用　"></a>通过反射获取带参构造方法并使用　</h3><ul>
+<li>Constructor<ul>
+<li>Class类的newInstance()方法是使用该类无参的构造函数创建对象, 如果一个类没有无参的构造函数, 就不能这样创建了,可以调用Class类的getConstructor(String.class,int.class)方法获取一个指定的构造函数然后再调用Constructor类的newInstance(“张三”,20)方法创建对象</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Class clazz = Class.forName(&quot;com.wxhao.bean.Person&quot;);</div><div class="line">//Person p = (Person) clazz.newInstance();				通过无餐构造创建对象</div><div class="line">//System.out.println(p);</div><div class="line">Constructor c = clazz.getConstructor(String.class,int.class);	//获取有参构造</div><div class="line">Person p = (Person) c.newInstance(&quot;张三&quot;,23);						//通过有参构造创建对象</div><div class="line">System.out.println(p);</div></pre></td></tr></table></figure>
+<h3 id="通过反射获取成员变量并使用"><a href="#通过反射获取成员变量并使用" class="headerlink" title="通过反射获取成员变量并使用"></a>通过反射获取成员变量并使用</h3><ul>
+<li>Field<ul>
+<li>Class.getField(String)方法可以获取类中的指定字段(可见的), 如果是私有的可以用getDeclaedField(“name”)方法获取,通过set(obj, “李四”)方法可以设置指定对象上该字段的值, 如果是私有的需要先调用setAccessible(true)设置访问权限,用获取的指定的字段调用get(obj)可以获取指定对象中该字段的值</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Class clazz = Class.forName(&quot;com.heima.bean.Person&quot;);</div><div class="line">Constructor c = clazz.getConstructor(String.class,int.class);//获取有参构造</div><div class="line">Person p = (Person) c.newInstance(&quot;张三&quot;,23);		//通过有参构造创建对象</div><div class="line"></div><div class="line">//Field f = clazz.getField(&quot;name&quot;);				//获取姓名字段</div><div class="line">//f.set(p, &quot;李四&quot;);								//修改姓名的值</div><div class="line">Field f = clazz.getDeclaredField(&quot;name&quot;);		//暴力反射获取字段</div><div class="line">f.setAccessible(true);							//去除私有权限</div><div class="line">f.set(p, &quot;李四&quot;);	</div><div class="line"></div><div class="line">System.out.println(p);</div></pre></td></tr></table></figure>
+<h3 id="通过反射获取方法并使用"><a href="#通过反射获取方法并使用" class="headerlink" title="通过反射获取方法并使用"></a>通过反射获取方法并使用</h3><ul>
+<li>Method<ul>
+<li>Class.getMethod(String, Class…) 和 Class.getDeclaredMethod(String, Class…)方法可以获取类中的指定方法,调用invoke(Object, Object…)可以调用该方法,Class.getMethod(“eat”) invoke(obj) Class.getMethod(“eat”,int.class) invoke(obj,10)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">Class clazz = Class.forName(&quot;com.wxhao.bean.Person&quot;);</div><div class="line">Constructor c = clazz.getConstructor(String.class,int.class);//获取有参构造</div><div class="line">Person p = (Person) c.newInstance(&quot;张三&quot;,23);					//通过有参构造创建对象</div><div class="line"></div><div class="line">Method m = clazz.getMethod(&quot;eat&quot;);							//获取eat方法</div><div class="line">m.invoke(p);</div><div class="line"></div><div class="line">Method m2 = clazz.getMethod(&quot;eat&quot;, int.class);				//获取有参的eat方法</div><div class="line">m2.invoke(p, 10);</div></pre></td></tr></table></figure>
+<h3 id="通过反射越过泛型检查"><a href="#通过反射越过泛型检查" class="headerlink" title="通过反射越过泛型检查"></a>通过反射越过泛型检查</h3><ul>
+<li>A:案例演示<ul>
+<li>ArrayList<integer>的一个对象，在这个集合中添加一个字符串数据，如何实现呢？</integer></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * ArrayList&lt;Integer&gt;的一个对象，在这个集合中添加一个字符串数据，如何实现呢？</div><div class="line"> * 泛型只在编译期有效,在运行期会被擦除掉</div><div class="line"> */</div><div class="line">public static void main(String[] args) throws Exception &#123;</div><div class="line">	ArrayList&lt;Integer&gt; list = new ArrayList&lt;&gt;();</div><div class="line">	list.add(111);</div><div class="line">	list.add(222);</div><div class="line">	</div><div class="line">	Class clazz = Class.forName(&quot;java.util.ArrayList&quot;);	//获取字节码对象</div><div class="line">	Method m = clazz.getMethod(&quot;add&quot;, Object.class);	//获取add方法</div><div class="line">	m.invoke(list, &quot;abc&quot;);</div><div class="line">	</div><div class="line">	System.out.println(list);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="通过反射写一个通用的设置某个对象的某个属性为指定的值"><a href="#通过反射写一个通用的设置某个对象的某个属性为指定的值" class="headerlink" title="通过反射写一个通用的设置某个对象的某个属性为指定的值"></a>通过反射写一个通用的设置某个对象的某个属性为指定的值</h3><ul>
+<li>A:案例演示<ul>
+<li>public void setProperty(Object obj, String propertyName, Object value){}，此方法可将obj对象中名为propertyName的属性的值设置为value。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public class Tool &#123;</div><div class="line">	//此方法可将obj对象中名为propertyName的属性的值设置为value。</div><div class="line">	public static void setProperty(Object obj, String propertyName, Object value) throws Exception &#123;</div><div class="line">		Class clazz = obj.getClass();					//获取字节码对象</div><div class="line">		Field f = clazz.getDeclaredField(propertyName);	//暴力反射获取字段</div><div class="line">		f.setAccessible(true);							//去除权限</div><div class="line">		f.set(obj, value);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Main方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Student s = new Student(&quot;张三&quot;, 23);</div><div class="line">System.out.println(s);</div><div class="line"></div><div class="line">Tool t = new Tool();</div><div class="line">Tool.setProperty(s, &quot;name&quot;, &quot;李四&quot;);</div><div class="line">System.out.println(s);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="反射-练习"><a href="#反射-练习" class="headerlink" title="反射(练习)"></a>反射(练习)</h3><ul>
+<li>已知一个类，定义如下： <ul>
+<li>package cn.wxhao.blog;</li>
+<li>public class DemoClass {<br> public void run() {<pre><code>System.out.println(&quot;welcome to my blog!&quot;);
+</code></pre> }<br>}</li>
+<li>(1) 写一个Properties格式的配置文件，配置类的完整名称。 </li>
+<li>(2) 写一个程序，读取这个Properties配置文件，获得类的完整名称并加载这个类，用反射的方式运行run方法。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">BufferedReader br = new BufferedReader(new FileReader(&quot;xxx.properties&quot;));	//创建输入流关联xxx.properties</div><div class="line">Class clazz = Class.forName(br.readLine());									//读取配置文件中类名,获取字节码对象</div><div class="line"></div><div class="line">DemoClass dc = (DemoClass) clazz.newInstance();								//通过字节码对象创建对象</div><div class="line">dc.run();</div></pre></td></tr></table></figure>
+<h3 id="动态代理的概述和实现"><a href="#动态代理的概述和实现" class="headerlink" title="动态代理的概述和实现"></a>动态代理的概述和实现</h3><ul>
+<li><p>A:动态代理概述</p>
+<ul>
+<li>代理：本来应该自己做的事情，请了别人来做，被请的人就是代理对象。</li>
+<li>举例：春节回家买票让人代买</li>
+<li><p>动态代理：在程序运行过程中产生的这个对象,而程序运行过程中产生对象其实就是我们刚才反射讲解的内容，所以，动态代理其实就是通过反射来生成一个代理</p>
+</li>
+<li><p>在Java中java.lang.reflect包下提供了一个Proxy类和一个InvocationHandler接口，通过使用这个类和接口就可以生成动态代理对象。JDK提供的代理只能针对接口做代理。我们有更强大的代理cglib，Proxy类中的方法创建动态代理类对象</p>
+</li>
+<li>public static Object newProxyInstance(ClassLoader loader,Class&lt;?&gt;[] interfaces,InvocationHandler h)</li>
+<li>最终会调用InvocationHandler的方法</li>
+<li>InvocationHandler Object invoke(Object proxy,Method method,Object[] args)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.动态代理;</div><div class="line"></div><div class="line">import java.lang.reflect.InvocationHandler;</div><div class="line">import java.lang.reflect.Method;</div><div class="line"></div><div class="line">public class MyInvocationHandler implements InvocationHandler &#123;</div><div class="line">	private Object target;</div><div class="line">	</div><div class="line">	public MyInvocationHandler(Object target) &#123;</div><div class="line">		this.target = target;</div><div class="line">	&#125;</div><div class="line">	@Override</div><div class="line">	public Object invoke(Object proxy, Method method, Object[] args)</div><div class="line">			throws Throwable &#123;</div><div class="line">		System.out.println(&quot;权限校验&quot;);</div><div class="line">		method.invoke(target, args);					//执行被代理target对象的方法</div><div class="line">		System.out.println(&quot;日志记录&quot;);</div><div class="line">		return null;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.动态代理;</div><div class="line"></div><div class="line">public interface User &#123;</div><div class="line">	public void add();</div><div class="line">	</div><div class="line">	public void delete();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.动态代理;</div><div class="line"></div><div class="line">public class UserImp implements User &#123;</div><div class="line"></div><div class="line">	@Override</div><div class="line">	public void add() &#123;</div><div class="line">		//System.out.println(&quot;权限校验&quot;);</div><div class="line">		System.out.println(&quot;添加功能&quot;);</div><div class="line">		//System.out.println(&quot;日志记录&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	@Override</div><div class="line">	public void delete() &#123;</div><div class="line">		//System.out.println(&quot;权限校验&quot;);</div><div class="line">		System.out.println(&quot;删除功能&quot;);</div><div class="line">		//System.out.println(&quot;日志记录&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">MyInvocationHandler m = new MyInvocationHandler(ui);</div><div class="line">User u = (User)Proxy.newProxyInstance(ui.getClass().getClassLoader(), ui.getClass().getInterfaces(), m);</div><div class="line">u.add();</div><div class="line">u.delete();</div></pre></td></tr></table></figure>
+<h3 id="27-12-设计模式-模版-Template-设计模式概述和使用"><a href="#27-12-设计模式-模版-Template-设计模式概述和使用" class="headerlink" title="27.12_设计模式(模版(Template)设计模式概述和使用)"></a>27.12_设计模式(模版(Template)设计模式概述和使用)</h3><ul>
+<li>A:模版设计模式概述<ul>
+<li>模版方法模式就是定义一个算法的骨架，而将具体的算法延迟到子类中来实现</li>
+</ul>
+</li>
+<li>B:优点和缺点<ul>
+<li>a:优点<ul>
+<li>使用模版方法模式，在定义算法骨架的同时，可以很灵活的实现具体的算法，满足用户灵活多变的需求</li>
+</ul>
+</li>
+<li>b:缺点<ul>
+<li>如果算法骨架有修改的话，则需要修改抽象类</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.模版方法设计模式;</div><div class="line"></div><div class="line">public class Demo1_Template &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		/*long start = System.currentTimeMillis();</div><div class="line">		for(int i = 0; i &lt; 1000000; i++) &#123;</div><div class="line">			System.out.println(&quot;x&quot;);</div><div class="line">		&#125;</div><div class="line">		long end = System.currentTimeMillis();</div><div class="line">		System.out.println(end - start);*/</div><div class="line">		Demo d = new Demo();</div><div class="line">		System.out.println(d.getTime());</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">abstract class GetTime &#123;</div><div class="line">	public final long getTime() &#123;</div><div class="line">		long start = System.currentTimeMillis();</div><div class="line">		code();</div><div class="line">		long end = System.currentTimeMillis();</div><div class="line">		return end - start;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public abstract void code();</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Demo extends GetTime &#123;</div><div class="line"></div><div class="line">	@Override</div><div class="line">	public void code() &#123;</div><div class="line">		int i = 0;</div><div class="line">		while(i &lt; 100000) &#123;</div><div class="line">			System.out.println(&quot;x&quot;);</div><div class="line">			i++;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>1,装饰<br>2,单例<br>3,简单工厂<br>4,工厂方法<br>5,适配器<br>6,模版</p>
+<h3 id="JDK5新特性-自己实现枚举类"><a href="#JDK5新特性-自己实现枚举类" class="headerlink" title="JDK5新特性(自己实现枚举类)"></a>JDK5新特性(自己实现枚举类)</h3><ul>
+<li>A:枚举概述<ul>
+<li>是指将变量的值一一列出来,变量的值只限于列举出来的值的范围内。举例：一周只有7天，一年只有12个月等。</li>
+</ul>
+</li>
+<li>B:回想单例设计模式：单例类是一个类只有一个实例<ul>
+<li>那么多例类就是一个类有多个实例，但不是无限个数的实例，而是有限个数的实例。这才能是枚举类。</li>
+</ul>
+</li>
+<li>C:案例演示<ul>
+<li>自己实现枚举类</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.枚举;</div><div class="line"></div><div class="line">public abstract class Week3 &#123;</div><div class="line">	</div><div class="line">	public static final Week3 MON = new Week3(&quot;星期一&quot;) &#123;</div><div class="line">		public void show() &#123;</div><div class="line">			System.out.println(&quot;星期一&quot;);</div><div class="line">		&#125;</div><div class="line">	&#125;;</div><div class="line">	public static final Week3 TUE = new Week3(&quot;星期二&quot;)&#123;</div><div class="line">		public void show() &#123;</div><div class="line">			System.out.println(&quot;星期二&quot;);</div><div class="line">		&#125;</div><div class="line">	&#125;;</div><div class="line">	public static final Week3 WED = new Week3(&quot;星期三&quot;)&#123;</div><div class="line">		public void show() &#123;</div><div class="line">			System.out.println(&quot;星期三&quot;);</div><div class="line">		&#125;</div><div class="line">	&#125;;</div><div class="line">	</div><div class="line">	private String name;</div><div class="line">	private Week3(String name)&#123;</div><div class="line">		this.name = name;</div><div class="line">	&#125;						//私有构造,不让其他类创建本类对象</div><div class="line">	public String getName() &#123;</div><div class="line">		return name;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public abstract void show();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>1,自动拆装箱<br>2,泛型<br>3,可变参数<br>4,静态导入<br>5,增强for循环<br>6,互斥锁<br>7,枚举</p>
+<h3 id="JDK5新特性-通过enum实现枚举类"><a href="#JDK5新特性-通过enum实现枚举类" class="headerlink" title="JDK5新特性(通过enum实现枚举类)"></a>JDK5新特性(通过enum实现枚举类)</h3><ul>
+<li>A:案例演示<ul>
+<li>通过enum实现枚举类</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.枚举2;</div><div class="line"></div><div class="line">public enum Week3 &#123;</div><div class="line">	MON(&quot;星期一&quot;)&#123;</div><div class="line">		public void show() &#123;</div><div class="line">			System.out.println(&quot;星期一&quot;);</div><div class="line">		&#125;</div><div class="line">	&#125;,TUE(&quot;星期二&quot;)&#123;</div><div class="line">		public void show() &#123;</div><div class="line">			System.out.println(&quot;星期二&quot;);</div><div class="line">		&#125;</div><div class="line">	&#125;,WED(&quot;星期三&quot;)&#123;</div><div class="line">		public void show() &#123;</div><div class="line">			System.out.println(&quot;星期三&quot;);</div><div class="line">		&#125;</div><div class="line">	&#125;;</div><div class="line">	</div><div class="line">	private String name;</div><div class="line">	private Week3(String name) &#123;</div><div class="line">		this.name = name;</div><div class="line">	&#125;</div><div class="line">	public String getName() &#123;</div><div class="line">		return name;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public abstract void show();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">Week3 mon = Week3.TUE;</div><div class="line">switch (mon) &#123;</div><div class="line">case MON:</div><div class="line">	System.out.println(&quot;星期一&quot;);</div><div class="line">	break;</div><div class="line">case TUE:</div><div class="line">	System.out.println(&quot;星期二&quot;);</div><div class="line">	break;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="JDK5新特性-枚举的注意事项"><a href="#JDK5新特性-枚举的注意事项" class="headerlink" title="JDK5新特性(枚举的注意事项)"></a>JDK5新特性(枚举的注意事项)</h3><ul>
+<li>A:案例演示<ul>
+<li>定义枚举类要用关键字enum</li>
+<li>所有枚举类都是Enum的子类</li>
+<li>枚举类的第一行上必须是枚举项，最后一个枚举项后的分号是可以省略的，但是如果枚举类有其他的东西，这个分号就不能省略。建议不要省略</li>
+<li>枚举类可以有构造器，但必须是private的，它默认的也是private的。</li>
+<li>枚举类也可以有抽象方法，但是枚举项必须重写该方法</li>
+<li>枚举在switch语句中的使用</li>
+</ul>
+</li>
+</ul>
+<h3 id="JDK5新特性-枚举类的常见方法"><a href="#JDK5新特性-枚举类的常见方法" class="headerlink" title="JDK5新特性(枚举类的常见方法)"></a>JDK5新特性(枚举类的常见方法)</h3><ul>
+<li>A:枚举类的常见方法<ul>
+<li>int ordinal()</li>
+<li>int compareTo(E o)</li>
+<li>String name()</li>
+<li>String toString()</li>
+<li><t> T valueOf(Class<t> type,String name)</t></t></li>
+<li>values() </li>
+<li>此方法虽然在JDK文档中查找不到，但每个枚举类都具有该方法，它遍历枚举类的所有枚举值非常方便</li>
+</ul>
+</li>
+<li>B:案例演示<ul>
+<li>枚举类的常见方法</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Week2 mon = Week2.MON;</div><div class="line">Week2 tue = Week2.TUE;</div><div class="line">Week2 wed = Week2.WED;</div><div class="line"></div><div class="line">/*System.out.println(mon.ordinal());	//枚举项都是有编号的</div><div class="line">System.out.println(tue.ordinal());</div><div class="line">System.out.println(wed.ordinal());</div><div class="line"></div><div class="line">System.out.println(mon.compareTo(tue));	//比较的是编号</div><div class="line">System.out.println(mon.compareTo(wed));*/</div><div class="line"></div><div class="line">System.out.println(mon.name()); 		//获取实例名称</div><div class="line">System.out.println(mon.toString()); 	//调用重写之后的toString方法</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//		Week2 mon = Week2.valueOf(Week2.class, &quot;MON&quot;);		//通过字节码对象获取枚举项</div><div class="line">//		System.out.println(mon);</div><div class="line"></div><div class="line">Week2[] arr = Week2.values();</div><div class="line">for (Week2 week2 : arr) &#123;</div><div class="line">	System.out.println(week2);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="JDK7新特性-JDK7的六个新特性回顾和讲解"><a href="#JDK7新特性-JDK7的六个新特性回顾和讲解" class="headerlink" title="JDK7新特性(JDK7的六个新特性回顾和讲解)"></a>JDK7新特性(JDK7的六个新特性回顾和讲解)</h3><ul>
+<li>A:二进制字面量</li>
+<li>B:数字字面量可以出现下划线</li>
+<li>C:switch 语句可以用字符串</li>
+<li>D:泛型简化,菱形泛型</li>
+<li>E:异常的多个catch合并,每个异常用或|</li>
+<li>F:try-with-resources 语句</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">System.out.println(0b110);//6</div><div class="line">System.out.println(100_000);//100000</div></pre></td></tr></table></figure>
+<h3 id="JDK8新特性-JDK8的新特性"><a href="#JDK8新特性-JDK8的新特性" class="headerlink" title="JDK8新特性(JDK8的新特性)"></a>JDK8新特性(JDK8的新特性)</h3><ul>
+<li>接口中可以定义有方法体的方法,如果是非静态,必须用default修饰    </li>
+<li>如果是静态的就不用了</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">class Test &#123;</div><div class="line">	public void run() &#123;</div><div class="line">		final int x = 10;</div><div class="line">		class Inner &#123;</div><div class="line">			public void method() &#123;</div><div class="line">				System.out.println(x);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		Inner i = new Inner();</div><div class="line">		i.method();</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<pre><code>局部内部类在访问他所在方法中的局部变量必须用final修饰,为什么?
+因为当调用这个方法时,局部变量如果没有用final修饰,他的生命周期和方法的生命周期是一样的,当方法弹栈,这个局部变量也会消失,那么如果局部内部类对象还没有马上消失想用这个局部变量,就没有了,如果用final修饰会在类加载的时候进入常量池,即使方法弹栈,常量池的常量还在,也可以继续使用
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">class Demo1 &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		/*Demo d = new Demo();</div><div class="line">		d.print();</div><div class="line"></div><div class="line">		Inter.method();*/</div><div class="line"></div><div class="line">		Demo d = new Demo();</div><div class="line">		d.run();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">interface Inter &#123;</div><div class="line">	public default void print() &#123;</div><div class="line">		System.out.println(&quot;Hello World&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void method() &#123;</div><div class="line">		System.out.println(&quot;static method&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Demo implements Inter &#123;</div><div class="line">	public void run() &#123;</div><div class="line">		int num = 10;							//JDK8,前面的final可以省略</div><div class="line">		class Inner &#123;</div><div class="line">			public void fun() &#123;</div><div class="line">				System.out.println(num);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		Inner i = new Inner();</div><div class="line">		i.fun();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

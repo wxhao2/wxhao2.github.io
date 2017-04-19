@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="wxhao">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="面向对象思想及其内存分配"/>
+  <meta property="og:description" content="站点描述" />
+  <meta property="og:site_name" content="标题"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://blog.wxhaoo.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="标题" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>标题</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">面向对象思想及其内存分配</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/levblanc">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:levblanc@163.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By wxhao</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2013-06-26</span>
+            <span class="time">17:38:07</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/基础知识/">#基础知识</a> <a class="tag" href="/tags/java/">#java</a> <a class="tag" href="/tags/JAVASE/">#JAVASE</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h3 id="面向对象思想概述"><a href="#面向对象思想概述" class="headerlink" title="面向对象思想概述"></a>面向对象思想概述</h3><ul>
+<li>A:面向过程思想概述<ul>
+<li>第一步</li>
+<li>第二步 </li>
+</ul>
+</li>
+<li>B:面向对象思想概述<ul>
+<li>找对象(第一步,第二步) </li>
+</ul>
+</li>
+<li>C:举例<ul>
+<li>买煎饼果子</li>
+<li>洗衣服 </li>
+</ul>
+</li>
+</ul>
+<p><img src="http://wxhao2.duapp.com/blog/post-in/20130626/mjbgz.png" alt="买煎饼果子"></p>
+<ul>
+<li>D:面向对象思想特点<ul>
+<li>a:是一种更符合我们思想习惯的思想</li>
+<li>b:可以将复杂的事情简单化</li>
+<li>c:将我们从执行者变成了指挥者<ul>
+<li>角色发生了转换</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>E:面向对象开发<ul>
+<li>就是不断的创建对象，使用对象，指挥对象做事情。</li>
+</ul>
+</li>
+<li>F:面向对象设计<ul>
+<li>其实就是在管理和维护对象之间的关系。</li>
+</ul>
+</li>
+<li>G:面向对象特征<ul>
+<li>封装(encapsulation)</li>
+<li>继承(inheritance)</li>
+<li>多态(polymorphism)</li>
+</ul>
+</li>
+</ul>
+<h3 id="类与对象概述"><a href="#类与对象概述" class="headerlink" title="类与对象概述"></a>类与对象概述</h3><ul>
+<li>A:我们学习编程是为了什么<ul>
+<li>为了把我们日常生活中实物用学习语言描述出来</li>
+</ul>
+</li>
+<li>B:我们如何描述现实世界事物<ul>
+<li>属性    就是该事物的描述信息(事物身上的名词)</li>
+<li>行为    就是该事物能够做什么(事物身上的动词)</li>
+</ul>
+</li>
+<li>C:Java中最基本的单位是类,Java中用class描述事物也是如此<ul>
+<li>成员变量    就是事物的属性</li>
+<li>成员方法    就是事物的行为</li>
+</ul>
+</li>
+<li>D:定义类其实就是定义类的成员(成员变量和成员方法)<ul>
+<li>a:成员变量    和以前定义变量是一样的，只不过位置发生了改变。在类中，方法外。</li>
+<li>b:成员方法    和以前定义方法是一样的，只不过把static去掉，后面在详细讲解static的作用。</li>
+</ul>
+</li>
+<li>E:类和对象的概念<ul>
+<li>a:类：是一组相关的属性和行为的集合</li>
+<li>b:对象：是该类事物的具体体现</li>
+<li>c:举例：<ul>
+<li>类     学生</li>
+<li>对象    具体的某个学生就是一个对象</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="学生类的定义"><a href="#学生类的定义" class="headerlink" title="学生类的定义"></a>学生类的定义</h3><ul>
+<li>A:学生事物</li>
+<li>B:学生类</li>
+<li>C:代码演示<ul>
+<li>属性:姓名,年龄,性别</li>
+<li>行为:学习,睡觉</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">class Student &#123;</div><div class="line">	String name;						//姓名</div><div class="line">	int age;							//年龄</div><div class="line">	String gender;						//性别</div><div class="line"></div><div class="line">	public void study() &#123;				//定义学习的方法</div><div class="line">		System.out.println(&quot;学生学习&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void sleep() &#123;				//定义睡觉的方法</div><div class="line">		System.out.println(&quot;学生睡觉&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="手机类的定义"><a href="#手机类的定义" class="headerlink" title="手机类的定义"></a>手机类的定义</h3><ul>
+<li>模仿学生类，让学生自己完成<ul>
+<li>属性:品牌(brand)价格(price)</li>
+<li>行为:打电话(call),发信息(sendMessage)玩游戏(playGame)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">class Phone &#123;</div><div class="line">	String brand;					//品牌</div><div class="line">	int price;						//价格</div><div class="line"></div><div class="line">	public void call() &#123;			//打电话</div><div class="line">		System.out.println(&quot;打电话&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void sendMessage() &#123;		//发信息</div><div class="line">		System.out.println(&quot;发信息&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void playGame() &#123;		//玩游戏</div><div class="line">		System.out.println(&quot;玩游戏&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="学生类的使用"><a href="#学生类的使用" class="headerlink" title="学生类的使用"></a>学生类的使用</h3><ul>
+<li>A:文件名问题<ul>
+<li>在一个java文件中写两个类：一个基本的类，一个测试类。</li>
+<li>建议：文件名称和测试类名称一致。</li>
+</ul>
+</li>
+<li>B:如何使用对象?<ul>
+<li>创建对象并使用</li>
+<li>格式：类名 对象名 = new 类名();</li>
+</ul>
+</li>
+<li>D:如何使用成员变量呢?<ul>
+<li>对象名.变量名</li>
+</ul>
+</li>
+<li>E:如何使用成员方法呢?<ul>
+<li>对象名.方法名(…)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">class Demo_Student &#123;//测试类</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//创建对象的格式:类名 对象名 = new 类名();</div><div class="line">		//对象名:其实就是合法的标识符,如果是一个单词所有字母小写,如果是多个单词,从第二个单词开始首字母大写</div><div class="line">		Student s = new Student();</div><div class="line">		//* D:如何使用成员变量呢?</div><div class="line">		//* 对象名.变量名</div><div class="line">		s.name = &quot;张三&quot;;</div><div class="line">		s.age = 23;</div><div class="line"></div><div class="line">		System.out.println(s.name + &quot;...&quot; + s.age);</div><div class="line">		//* E:如何使用成员方法呢?</div><div class="line">		//* 对象名.方法名(...)</div><div class="line">		s.study();</div><div class="line">		s.sleep();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="手机类的使用"><a href="#手机类的使用" class="headerlink" title="手机类的使用"></a>手机类的使用</h3><ul>
+<li>A:学生自己完成<ul>
+<li>模仿学生类，让学生自己完成</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">class Demo_Phone &#123;//测试类</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//创建对象</div><div class="line">		Phone p = new Phone();</div><div class="line">		//调用对象中的属性并赋值</div><div class="line">		p.brand = &quot;锤子&quot;;</div><div class="line">		p.price = 998;</div><div class="line"></div><div class="line">		System.out.println(p.brand + &quot;...&quot;  + p.price);</div><div class="line"></div><div class="line">		//调用成员方法</div><div class="line">		p.call();</div><div class="line">		p.sendMessage();</div><div class="line">		p.playGame();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="一个对象的内存图"><a href="#一个对象的内存图" class="headerlink" title="一个对象的内存图"></a>一个对象的内存图</h3><ul>
+<li>A:画图演示<ul>
+<li>一个对象</li>
+</ul>
+</li>
+<li>按上节所述,↓java文件应该起名为Demo_Car.java</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">class Demo_Car &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Car c1 = new Car();				//创建对象</div><div class="line"></div><div class="line">		//调用属性并赋值</div><div class="line">		c1.color = &quot;red&quot;;				//为车的颜色赋值</div><div class="line">		c1.num = 8;						//为车的轮胎数赋值</div><div class="line"></div><div class="line">		//调用行为</div><div class="line">		c1.run();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">class Car &#123;</div><div class="line">	//成员变量</div><div class="line">	String color;						//车的颜色</div><div class="line">	int num;							//车的轮胎数</div><div class="line"></div><div class="line">	public void run() &#123;					//车运行</div><div class="line">		System.out.println(color + &quot;...&quot; + num);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://wxhao2.duapp.com/blog/post-in/20130626/ygdxnct.png" alt="一个对象的内存图"></p>
+<h3 id="二个对象的内存图"><a href="#二个对象的内存图" class="headerlink" title="二个对象的内存图"></a>二个对象的内存图</h3><ul>
+<li>A:画图演示<ul>
+<li>二个不同的对象</li>
+</ul>
+</li>
+<li>在上方main方法中增加如下代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Car c2 = new Car();				//创建对象</div><div class="line">c2.color = &quot;black&quot;;				//为车的颜色赋值</div><div class="line">c2.num = 4;						//为车的轮胎数赋值</div><div class="line">c2.run();</div><div class="line"></div><div class="line">//c2 = null;						//用null把原来的地址值覆盖掉了</div><div class="line"></div><div class="line">//c2.run();						//c2里面记录的是null,所以报出空指针异常</div></pre></td></tr></table></figure>
+<p><img src="http://wxhao2.duapp.com/blog/post-in/20130626/lgdxnct.png" alt="两个对象的内存图"></p>
+<ul>
+<li>如果没有任何引用指向该对象,那么该对象就会变成垃圾,java中有完善的垃圾回收机制,会在不定时进行回收</li>
+</ul>
+<h3 id="三个引用两个对象的内存图"><a href="#三个引用两个对象的内存图" class="headerlink" title="三个引用两个对象的内存图"></a>三个引用两个对象的内存图</h3><ul>
+<li>A:画图演示<ul>
+<li>三个引用，有两个对象的引用指向同一个地址</li>
+</ul>
+</li>
+<li>在上方main方法中增加如下代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Car c3 = c2;</div><div class="line">c3.run();</div></pre></td></tr></table></figure>
+<p><img src="http://wxhao2.duapp.com/blog/post-in/20130626/sgyylgnct.png" alt="三个引用两个对象内存图"></p>
+<h3 id="成员变量和局部变量的区别"><a href="#成员变量和局部变量的区别" class="headerlink" title="成员变量和局部变量的区别"></a>成员变量和局部变量的区别</h3><ul>
+<li>A:在类中的位置不同<ul>
+<li>成员变量：在类中方法外</li>
+<li>局部变量：在方法定义中或者方法声明上</li>
+</ul>
+</li>
+<li>B:在内存中的位置不同<ul>
+<li>成员变量：在堆内存(成员变量属于对象,对象进堆内存)</li>
+<li>局部变量：在栈内存(局部变量属于方法,方法进栈内存)</li>
+</ul>
+</li>
+<li>C:生命周期不同<ul>
+<li>成员变量：随着对象的创建而存在，随着对象的消失而消失</li>
+<li>局部变量：随着方法的调用而存在，随着方法的调用完毕而消失</li>
+</ul>
+</li>
+<li><p>D:初始化值不同</p>
+<ul>
+<li>成员变量：有默认初始化值</li>
+<li>局部变量：没有默认初始化值，必须定义，赋值，然后才能使用。</li>
+</ul>
+</li>
+<li><p>注意事项：</p>
+<ul>
+<li>局部变量名称可以和成员变量名称一样，在方法中使用的时候，采用的是就近原则。</li>
+<li>基本数据类型变量包括哪些:byte,short,int,long,float,double,boolean,char</li>
+<li>引用数据类型变量包括哪些:数组,类,接口,枚举</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">class Demo2_Person &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Person p = new Person();</div><div class="line">		p.speak();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Person &#123;</div><div class="line">	String name;						//成员变量</div><div class="line">	int num;</div><div class="line"></div><div class="line">	public void speak() &#123;</div><div class="line">		int num = 10;						//x和num都是局部变量</div><div class="line">		System.out.println(name);</div><div class="line">	</div><div class="line">		System.out.println(num);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="思考题Java中的参数传递问题及图解"><a href="#思考题Java中的参数传递问题及图解" class="headerlink" title="思考题Java中的参数传递问题及图解"></a>思考题Java中的参数传递问题及图解</h3><ul>
+<li>A:案例演示</li>
+<li>看程序写结果，并画内存图解释</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line">基本数据类型的值传递,不改变原值,因为调用后就会弹栈,局部变量随之消失</div><div class="line">引用数据类型的值传递,改变原值,因为即使方法弹栈,但是堆内存数组对象还在,可以通过地址继续访问</div><div class="line"></div><div class="line">*/</div><div class="line">class Test_Array &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		/*int a = 10;</div><div class="line">		int b = 20;</div><div class="line">		System.out.println(&quot;a:&quot;+a+&quot;,b:&quot;+b);			//a = 10,b = 20</div><div class="line">		change(a,b);</div><div class="line">		System.out.println(&quot;a:&quot;+a+&quot;,b:&quot;+b);			//?*/</div><div class="line"></div><div class="line">		int[] arr = &#123;1,2,3,4,5&#125;;</div><div class="line">		change(arr);</div><div class="line">		System.out.println(arr[1]);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void change(int a,int b) &#123;		//a = 10, b= 20</div><div class="line">		System.out.println(&quot;a:&quot;+a+&quot;,b:&quot;+b);			//a = 10,b = 20</div><div class="line">		a = b;										//a = 20</div><div class="line">		b = a + b;									//b = 40</div><div class="line">		System.out.println(&quot;a:&quot;+a+&quot;,b:&quot;+b);			//a = 20, b = 40</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void change(int[] arr) &#123;			//1,4,3,8,5</div><div class="line">		for(int x=0; x&lt;arr.length; x++) &#123;</div><div class="line">			if(arr[x]%2==0) &#123;</div><div class="line">				arr[x]*=2;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://wxhao2.duapp.com/blog/post-in/20130626/jbsjlxdzcd.png" alt="基本数据类型的值传递"></p>
+<p><img src="http://wxhao2.duapp.com/blog/post-in/20130626/yysjlxdzcd.png" alt="引用数据类型的值传递"></p>
+<ul>
+<li>Java中到底是传值还是传址<ol>
+<li>既是传值,也是传地址,基本数据类型传递的值,引用数据类型传递的地址</li>
+<li>java中只有传值,因为地址值也是值(出去面试都说这种,支持者是高斯林(java之父))</li>
+</ol>
+</li>
+</ul>
+<p><a href="http://pan.baidu.com/s/1mh5pf9Q" target="_blank" rel="external">java虚拟机详解.docx百度云链接</a></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="wxhao">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="IO流1"/>
+  <meta property="og:description" content="站点描述" />
+  <meta property="og:site_name" content="标题"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://blog.wxhaoo.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="标题" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>标题</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">IO流1</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/levblanc">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:levblanc@163.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By wxhao</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2013-09-19</span>
+            <span class="time">17:38:06</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/基础知识/">#基础知识</a> <a class="tag" href="/tags/java/">#java</a> <a class="tag" href="/tags/JAVASE/">#JAVASE</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h3 id="IO流概述及其分类"><a href="#IO流概述及其分类" class="headerlink" title="IO流概述及其分类"></a>IO流概述及其分类</h3><ul>
+<li>1.概念<ul>
+<li>IO流用来处理设备之间的数据传输</li>
+<li>Java对数据的操作是通过流的方式</li>
+<li>Java用于操作流的类都在IO包中</li>
+<li>流按流向分为两种：输入流，输出流。</li>
+<li>流按操作类型分为两种：<ul>
+<li>字节流 : 字节流可以操作任何数据,因为在计算机中任何数据都是以字节的形式存储的</li>
+<li>字符流 : 字符流只能操作纯字符数据，比较方便。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>2.IO流常用父类<ul>
+<li>字节流的抽象父类：<ul>
+<li>InputStream </li>
+<li>OutputStream</li>
+</ul>
+</li>
+<li>字符流的抽象父类：<ul>
+<li>Reader </li>
+<li>Writer        </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>3.IO程序书写<ul>
+<li>使用前，导入IO包中的类</li>
+<li>使用时，进行IO异常处理</li>
+<li>使用后，释放资源</li>
+</ul>
+</li>
+</ul>
+<h3 id="FileInputStream"><a href="#FileInputStream" class="headerlink" title="FileInputStream"></a>FileInputStream</h3><ul>
+<li>read()一次读取一个字节<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">FileInputStream fis = new FileInputStream(&quot;aaa.txt&quot;);	//创建一个文件输入流对象,并关联aaa.txt</div><div class="line">int b;													//定义变量,记录每次读到的字节</div><div class="line">while((b = fis.read()) != -1) &#123;							//将每次读到的字节赋值给b并判断是否是-1</div><div class="line">	System.out.println(b);								//打印每一个字节</div><div class="line">&#125;</div><div class="line">		</div><div class="line">		fis.close();//关闭流释放资源</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="read-方法返回值为什么是int"><a href="#read-方法返回值为什么是int" class="headerlink" title="read()方法返回值为什么是int"></a>read()方法返回值为什么是int</h3><ul>
+<li>read()方法读取的是一个字节,为什么返回是int,而不是byte</li>
+<li><pre><code>因为字节输入流可以操作任意类型的文件,比如图片音频等,这些文件底层都是以二进制形式的存储的,如果每次读取都返回byte,有可能在读到中间的时候遇到111111111
+那么这11111111是byte类型的-1,我们的程序是遇到-1就会停止不读了,后面的数据就读不到了,所以在读取的时候用int类型接收,如果11111111会在其前面补上
+24个0凑足4个字节,那么byte类型的-1就变成int类型的255了这样可以保证整个数据读完,而结束标记的-1就是int类型
+</code></pre></li>
+</ul>
+<h3 id="FileOutputStream"><a href="#FileOutputStream" class="headerlink" title="FileOutputStream"></a>FileOutputStream</h3><ul>
+<li>write()一次写出一个字节</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">FileOutputStream fos = new FileOutputStream(&quot;bbb.txt&quot;);	//如果没有bbb.txt,会创建出一个</div><div class="line">//fos.write(97);						//虽然写出的是一个int数,但是在写出的时候会将前面的24个0去掉,所以写出的一个byte</div><div class="line">fos.write(98);</div><div class="line">fos.write(99);</div><div class="line">fos.close();</div></pre></td></tr></table></figure>
+<h3 id="FileOutputStream追加"><a href="#FileOutputStream追加" class="headerlink" title="FileOutputStream追加"></a>FileOutputStream追加</h3><ul>
+<li>FileOutputStream的构造方法写出数据如何实现数据的追加写入</li>
+<li>FileOutputStream在创建对象的时候是如果没有这个文件会帮我创建出来</li>
+<li>如果有这个文件就会先将文件清空</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">FileOutputStream fos = new FileOutputStream(&quot;bbb.txt&quot;,true);	//如果没有bbb.txt,会创建出一个</div><div class="line">//fos.write(97);						//虽然写出的是一个int数,但是在写出的时候会将前面的24个0去掉,所以写出的一个byte</div><div class="line">fos.write(98);</div><div class="line">fos.write(99);</div><div class="line">fos.close();</div></pre></td></tr></table></figure>
+<h3 id="拷贝图片"><a href="#拷贝图片" class="headerlink" title="拷贝图片"></a>拷贝图片</h3><ul>
+<li>FileInputStream读取</li>
+<li>FileOutputStream写出</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">FileInputStream fis = new FileInputStream(&quot;嘿嘿.jpg&quot;);		//创建输入流对象,关联双元.jpg</div><div class="line">FileOutputStream fos = new FileOutputStream(&quot;copy.jpg&quot;);	//创建输出流对象,关联copy.jpg</div><div class="line"></div><div class="line">int b;</div><div class="line">while((b = fis.read()) != -1) &#123;								//在不断的读取每一个字节</div><div class="line">	fos.write(b);											//将每一个字节写出</div><div class="line">&#125;</div><div class="line"></div><div class="line">fis.close();												//关流释放资源</div><div class="line">fos.close();</div></pre></td></tr></table></figure>
+<p>拷贝大文件,效率低</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">FileInputStream fis = new FileInputStream(&quot;致青春.mp3&quot;);	//创建输入流对象,关联致青春.mp3</div><div class="line">FileOutputStream fos = new FileOutputStream(&quot;copy.mp3&quot;);//创建输出流对象,关联copy.mp3</div><div class="line"></div><div class="line">int b;</div><div class="line">while((b = fis.read()) != -1) &#123;</div><div class="line">	fos.write(b);</div><div class="line">&#125;</div><div class="line"></div><div class="line">fis.close();</div><div class="line">fos.close();</div><div class="line">```	</div><div class="line"></div><div class="line">### 拷贝音频文件画原理图 </div><div class="line">* A:案例演示</div><div class="line">	* 字节流一次读写一个字节复制音频</div><div class="line">* 弊端:效率太低</div><div class="line"></div><div class="line">![字节输入输出流](&#123;&#123; site.imgwall_url &#125;&#125;/post-in/20130919/zjsrscl.png)</div><div class="line"></div><div class="line">### 字节数组拷贝之available()方法 </div><div class="line">* A:案例演示</div><div class="line">	* int read(byte[] b):一次读取一个字节数组</div><div class="line">	* write(byte[] b):一次写出一个字节数组</div><div class="line">	* available()获取读的文件所有的字节个数</div><div class="line">* 弊端:有可能会内存溢出 </div><div class="line"></div><div class="line">```	</div><div class="line">FileInputStream fis = new FileInputStream(&quot;致青春.mp3&quot;);</div><div class="line">FileOutputStream fos = new FileOutputStream(&quot;copy.mp3&quot;);</div><div class="line">byte[] arr = new byte[fis.available()];					//根据文件大小做一个字节数组</div><div class="line">fis.read(arr);											//将文件上的所有字节读取到数组中</div><div class="line">fos.write(arr);											//将数组中的所有字节一次写到了文件上</div><div class="line">fis.close();</div><div class="line">fos.close();</div></pre></td></tr></table></figure>
+<h3 id="定义小数组"><a href="#定义小数组" class="headerlink" title="定义小数组"></a>定义小数组</h3><ul>
+<li>write(byte[] b)</li>
+<li>write(byte[] b, int off, int len)写出有效的字节个数</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">FileInputStream fis = new FileInputStream(&quot;xxx.txt&quot;);</div><div class="line">byte[] arr = new byte[2];</div><div class="line">int a = fis.read(arr);						//将文件上的字节读取到字节数组中</div><div class="line"></div><div class="line">System.out.println(a);						//读到的有效字节个数</div><div class="line">for (byte b : arr) &#123;						//第一次获取到文件上的a和b</div><div class="line">	System.out.println(b);</div><div class="line">&#125;</div><div class="line">System.out.println(&quot;-----------------------&quot;);</div><div class="line">int c = fis.read(arr);</div><div class="line">System.out.println(c);</div><div class="line">for (byte b : arr) &#123;</div><div class="line">	System.out.println(b);</div><div class="line">&#125;</div><div class="line">fis.close();</div></pre></td></tr></table></figure>
+<p>会多写一些值,原因是到最后的字节数组可能不是刚好长度为2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">FileInputStream fis = new FileInputStream(&quot;xxx.txt&quot;);</div><div class="line">FileOutputStream fos = new FileOutputStream(&quot;yyy.txt&quot;);</div><div class="line"></div><div class="line">byte[] arr = new byte[2];</div><div class="line">int len;</div><div class="line">while((len = fis.read(arr)) != -1) &#123;</div><div class="line">	fos.write(arr,0,len);</div><div class="line">&#125;</div><div class="line"></div><div class="line">fis.close();</div><div class="line">fos.close();</div></pre></td></tr></table></figure>
+<h3 id="定义小数组的标准格式"><a href="#定义小数组的标准格式" class="headerlink" title="定义小数组的标准格式"></a>定义小数组的标准格式</h3><ul>
+<li>A:案例演示<ul>
+<li>字节流一次读写一个字节数组复制图片和视频</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">FileInputStream fis = new FileInputStream(&quot;致青春.mp3&quot;);</div><div class="line">FileOutputStream fos = new FileOutputStream(&quot;copy.mp3&quot;);</div><div class="line">int len;</div><div class="line">byte[] arr = new byte[1024 * 8];					//自定义字节数组</div><div class="line"></div><div class="line">while((len = fis.read(arr)) != -1) &#123;//如果忘记加arr,返回的就不是读取的字节个数,而是字节的码表值</div><div class="line">	//fos.write(arr);</div><div class="line">	fos.write(arr, 0, len);							//写出字节数组写出有效个字节个数</div><div class="line">&#125;</div><div class="line"></div><div class="line">fis.close();</div><div class="line">fos.close();</div><div class="line">```		</div><div class="line">		</div><div class="line">### BufferedInputStream和BufferOutputStream拷贝 </div><div class="line">* A:缓冲思想</div><div class="line">	* 字节流一次读写一个数组的速度明显比一次读写一个字节的速度快很多，</div><div class="line">	* 这是加入了数组这样的缓冲区效果，java本身在设计的时候，</div><div class="line">	* 也考虑到了这样的设计思想(装饰设计模式后面讲解)，所以提供了字节缓冲区流</div><div class="line">* B.BufferedInputStream</div><div class="line">	* BufferedInputStream内置了一个缓冲区(数组)</div><div class="line">	* 从BufferedInputStream中读取一个字节时</div><div class="line">	* BufferedInputStream会一次性从文件中读取8192个, 存在缓冲区中, 返回给程序一个</div><div class="line">	* 程序再次读取时, 就不用找文件了, 直接从缓冲区中获取</div><div class="line">	* 直到缓冲区中所有的都被使用过, 才重新从文件中读取8192个</div><div class="line">* C.BufferedOutputStream</div><div class="line">	* BufferedOutputStream也内置了一个缓冲区(数组)</div><div class="line">	* 程序向流中写出字节时, 不会直接写到文件, 先写到缓冲区中</div><div class="line">	* 直到缓冲区写满, BufferedOutputStream才会把缓冲区中的数据一次性写到文件里</div><div class="line">* D.拷贝的代码</div></pre></td></tr></table></figure>
+<p>FileInputStream fis = new FileInputStream(“致青春.mp3”);            //创建文件输入流对象,关联致青春.mp3<br>BufferedInputStream bis = new BufferedInputStream(fis);            //创建缓冲区对fis装饰<br>FileOutputStream fos = new FileOutputStream(“copy.mp3”);        //创建输出流对象,关联copy.mp3<br>BufferedOutputStream bos = new BufferedOutputStream(fos);        //创建缓冲区对fos装饰</p>
+<p>int b;<br>while((b = bis.read()) != -1) {<br>    bos.write(b);<br>}</p>
+<p>bis.close();                        //只关装饰后的对象即可<br>bos.close();<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">	 </div><div class="line">* E.小数组的读写和带Buffered的读取哪个更快?</div><div class="line">	* 定义小数组如果是8192个字节大小和Buffered比较的话</div><div class="line">	* 定义小数组会略胜一筹,因为读和写操作的是同一个数组</div><div class="line">	* 而Buffered操作的是两个数组</div><div class="line"></div><div class="line">![带缓冲区的拷贝](&#123;&#123; site.imgwall_url &#125;&#125;/post-in/20130919/dhcqdkb.png)</div><div class="line"></div><div class="line">### flush和close方法的区别 </div><div class="line">* flush()方法</div><div class="line">	* 用来刷新缓冲区的,刷新后可以再次写出 </div><div class="line">* close()方法</div><div class="line">	* 用来关闭流释放资源的的,如果是带缓冲区的流对象的close()方法,不但会关闭流,还会再关闭流之前刷新缓冲区,关闭后不能再写出 </div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">### 字节流读写中文</div><div class="line">* 字节流读取中文的问题</div><div class="line">	* 字节流在读中文的时候有可能会读到半个中文,造成乱码 </div><div class="line">* 字节流写出中文的问题</div><div class="line">	* 字节流直接操作的字节,所以写出中文必须将字符串转换成字节数组 </div><div class="line">	* 写出回车换行 write(&quot;\r\n&quot;.getBytes());</div></pre></td></tr></table></figure></p>
+<p>FileInputStream fis = new FileInputStream(“yyy.txt”);<br>byte[] arr = new byte[4];<br>int len;<br>while((len = fis.read(arr)) != -1) {<br>    System.out.println(new String(arr,0,len));<br>}<br>//可能乱码<br>fis.close();<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>FileOutputStream fos = new FileOutputStream(“zzz.txt”);<br>fos.write(“我读书少,你不要骗我”.getBytes());<br>fos.write(“\r\n”.getBytes());<br>fos.close();<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 流的标准处理异常代码1.6版本及其以前 </div><div class="line">* try finally嵌套</div></pre></td></tr></table></figure></p>
+<p>FileInputStream fis = null;<br>FileOutputStream fos = null;<br>try {<br>    fis = new FileInputStream(“aaa.txt”);<br>    fos = new FileOutputStream(“bbb.txt”);<br>    int b;<br>    while((b = fis.read()) != -1) {<br>        fos.write(b);<br>    }<br>} finally {<br>    try {<br>        if(fis != null)<br>            fis.close();<br>    }finally {  //try fianlly的嵌套目的是能关一个尽量关一个<br>        if(fos != null)<br>            fos.close();<br>    }<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 流的标准处理异常代码1.7版本 </div><div class="line">* try close</div></pre></td></tr></table></figure></p>
+<p>try(<br>    FileInputStream fis = new FileInputStream(“aaa.txt”);<br>    FileOutputStream fos = new FileOutputStream(“bbb.txt”);<br>    MyClose mc = new MyClose();<br>){<br>    int b;<br>    while((b = fis.read()) != -1) {<br>        fos.write(b);<br>    }<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">* 原理</div><div class="line">	* 在try()中创建的流对象必须实现了AutoCloseable这个接口,如果实现了,在try后面的&#123;&#125;(读写代码)执行后就会自动调用,流对象的close方法将流关掉</div></pre></td></tr></table></figure>
+<p>try(<br>    FileInputStream fis = new FileInputStream(“xxx.txt”);<br>    FileOutputStream fos = new FileOutputStream(“yyy.txt”);<br>    MyClose mc = new MyClose();<br>){<br>    int b;<br>    while((b = fis.read()) != -1) {<br>        fos.write(b);<br>    }<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>class MyClose implements AutoCloseable {<br>    public void close() {<br>        System.out.println(“我关了”);<br>    }<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 图片加密 </div><div class="line">* 给图片加密</div><div class="line">* 将写出的字节异或上一个数,这个数就是密钥,解密的时候再次异或就可以了</div></pre></td></tr></table></figure></p>
+<p>BufferedInputStream bis = new BufferedInputStream(new FileInputStream(“a.jpg”));<br>BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(“b.jpg”));</p>
+<p>int b;<br>while((b = bis.read()) != -1) {<br>    bos.write(b ^ 123);<br>}</p>
+<p>bis.close();<br>bos.close();<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 拷贝文件 </div><div class="line">* 在控制台录入文件的路径,将文件拷贝到当前项目下</div></pre></td></tr></table></figure></p>
+<p>/**</p>
+<ul>
+<li>分析:</li>
+<li>1,定义方法对键盘录入的路径进行判断,如果是文件就返回</li>
+<li>2,在主方法中接收该文件</li>
+<li>3,读和写该文件</li>
+<li><p>@throws IOException<br>*/<br>public static void main(String[] args) throws IOException {<br> File file = getFile();                    //获取文件<br> BufferedInputStream  bis = new BufferedInputStream(new FileInputStream(file));<br> BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file.getName()));</p>
+<p> int b;<br> while((b = bis.read()) != -1) {</p>
+<pre><code>bos.write(b);
+</code></pre><p> }</p>
+<p> bis.close();<br> bos.close();<br>}</p>
+</li>
+</ul>
+<p>/*</p>
+<ul>
+<li>定义一个方法获取键盘录入的文件路径,并封装成File对象返回</li>
+<li>1,返回值类型File</li>
+<li>2,参数列表无<br>*/<br>public static File getFile() {<br> Scanner sc = new Scanner(System.in);                //创建键盘录入对象<br> System.out.println(“请输入一个文件的路径:”);<br> while(true) {<pre><code>String line = sc.nextLine();                    //接收键盘录入的路径
+File file = new File(line);                        //封装成File对象,并对其进行判断
+if(!file.exists()) {
+    System.out.println(&quot;您录入的文件路径不存在,请重新录入:&quot;);
+}else if(file.isDirectory()) {
+    System.out.println(&quot;您录入的是文件夹路径,请重新录入:&quot;);
+}else {
+    return file;
+}
+</code></pre> }<br>}<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 录入数据拷贝到文件 </div><div class="line">* 将键盘录入的数据拷贝到当前项目下的text.txt文件中,键盘录入数据当遇到quit时就退出</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>/**</p>
+<ul>
+<li>分析:</li>
+<li>1,创建键盘录入对象</li>
+<li>2,创建输出流对象,关联text.txt文件</li>
+<li>3,定义无限循环</li>
+<li>4,遇到quit退出循环</li>
+<li>5,如果不quit,就将内容写出</li>
+<li>6,关闭流</li>
+<li>@throws IOException<br>*/<br>public static void main(String[] args) throws IOException {<br> //1,创建键盘录入对象<br> Scanner sc = new Scanner(System.in);<br> //2,创建输出流对象,关联text.txt文件<br> FileOutputStream fos = new FileOutputStream(“text.txt”);<br> System.out.println(“请输入数据:”);<br> //3,定义无限循环<br> while(true) {<pre><code>String line = sc.nextLine();    //将键盘录入的数据存储在line中
+//4,遇到quit退出循环
+if(&quot;quit&quot;.equals(line)) {
+    break;
+}
+//5,如果不quit,就将内容写出
+fos.write(line.getBytes());        //字符串写出必须转换成字节数组
+fos.write(&quot;\r\n&quot;.getBytes());
+</code></pre> }<br> //6,关闭流<br> fos.close();<br>}<br>```</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

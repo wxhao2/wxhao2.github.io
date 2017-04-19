@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="wxhao">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="正则表达式"/>
+  <meta property="og:description" content="站点描述" />
+  <meta property="og:site_name" content="标题"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://blog.wxhaoo.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="标题" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>标题</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">正则表达式</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/levblanc">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:levblanc@163.com">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By wxhao</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2013-08-09</span>
+            <span class="time">17:38:07</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/基础知识/">#基础知识</a> <a class="tag" href="/tags/java/">#java</a> <a class="tag" href="/tags/JAVASE/">#JAVASE</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h3 id="正则表达式的概述和简单使用"><a href="#正则表达式的概述和简单使用" class="headerlink" title="正则表达式的概述和简单使用"></a>正则表达式的概述和简单使用</h3><ul>
+<li>A:正则表达式<ul>
+<li>是指一个用来描述或者匹配一系列符合某个语法规则的字符串的单个字符串。其实就是一种规则。有自己特殊的应用。</li>
+<li>作用:比如注册邮箱,邮箱有用户名和密码,一般会对其限制长度,这个限制长度的事情就是正则表达式做的</li>
+</ul>
+</li>
+<li><p>B:案例演示</p>
+<ul>
+<li><p>需求：校验qq号码.</p>
+<ul>
+<li>1:要求必须是5-15位数字</li>
+<li>2:0不能开头</li>
+<li>3:必须都是数字</li>
+</ul>
+</li>
+<li><p>a:非正则表达式实现</p>
+</li>
+<li>b:正则表达式实现</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.regex;</div><div class="line"></div><div class="line">public class Demo1_Regex &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		System.out.println(checkQQ(&quot;012345&quot;));</div><div class="line">		System.out.println(checkQQ(&quot;a1b345&quot;));</div><div class="line">		System.out.println(checkQQ(&quot;123456&quot;));</div><div class="line">		System.out.println(checkQQ(&quot;1234567890987654321&quot;));</div><div class="line">		</div><div class="line">		String regex = &quot;[1-9]\\d&#123;4,14&#125;&quot;;</div><div class="line">		System.out.println(&quot;2553868&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;012345&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;2553868abc&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	/*</div><div class="line">	 * 需求：校验qq号码.</div><div class="line">	 * 1:要求必须是5-15位数字</div><div class="line">	 * 2:0不能开头</div><div class="line">	 * 3:必须都是数字</div><div class="line">	 * 校验qq</div><div class="line">	 * 1,明确返回值类型boolean</div><div class="line">	 * 2,明确参数列表String qq</div><div class="line">	 */</div><div class="line">	public static boolean checkQQ(String qq) &#123;</div><div class="line">		boolean flag = true;					//如果校验qq不符合要求就把flag置为false,如果符合要求直接返回</div><div class="line">		</div><div class="line">		if(qq.length() &gt;= 5 &amp;&amp; qq.length() &lt;= 15) &#123;</div><div class="line">			if(!qq.startsWith(&quot;0&quot;)) &#123;</div><div class="line">				char[] arr = qq.toCharArray();	//将字符串转换成字符数组</div><div class="line">				for (int i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">					char ch = arr[i];			//记录每一个字符</div><div class="line">					if(!(ch &gt;= &apos;0&apos; &amp;&amp; ch &lt;= &apos;9&apos;)) &#123;</div><div class="line">						flag = false;			//不是数字</div><div class="line">						break;</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;else &#123;</div><div class="line">				flag = false;					//以0开头,不符合qq标准</div><div class="line">			&#125;</div><div class="line">		&#125;else &#123;</div><div class="line">			flag = false;						//长度不符合</div><div class="line">		&#125;</div><div class="line">		return flag;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="字符类演示"><a href="#字符类演示" class="headerlink" title="字符类演示"></a>字符类演示</h3><ul>
+<li>A:字符类<ul>
+<li>[]单个字符</li>
+<li>[abc] a、b 或 c（简单类） </li>
+<li>[^abc] 任何字符，除了 a、b 或 c（否定） </li>
+<li>[a-zA-Z] a到 z 或 A到 Z，两头的字母包括在内（范围） </li>
+<li>[0-9] 0到9的字符都包括</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.regex;</div><div class="line"></div><div class="line">public class Demo2_Regex &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * [abc] a、b 或 c（简单类） </div><div class="line">		[^abc] 任何字符，除了 a、b 或 c（否定） </div><div class="line">		[a-zA-Z] a 到 z 或 A 到 Z，两头的字母包括在内（范围） </div><div class="line">		[a-d[m-p]] a 到 d 或 m 到 p：[a-dm-p]（并集） </div><div class="line">		[a-z&amp;&amp;[def]] d、e 或 f（交集） </div><div class="line">		[a-z&amp;&amp;[^bc]] a 到 z，除了 b 和 c：[ad-z]（减去） </div><div class="line">		[a-z&amp;&amp;[^m-p]] a 到 z，而非 m 到 p：[a-lq-z]（减去） </div><div class="line"></div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		//demo2();</div><div class="line">		//demo3();</div><div class="line">		//demo4();</div><div class="line">		//demo5();</div><div class="line">		//demo6();</div><div class="line">		String regex = &quot;[a-z&amp;&amp;[^m-p]]&quot;;</div><div class="line">		System.out.println(&quot;m&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;z&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;n&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo6() &#123;</div><div class="line">		String regex = &quot;[a-z&amp;&amp;[^bc]]&quot;;</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;b&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;1&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo5() &#123;</div><div class="line">		String regex = &quot;[a-z&amp;&amp;[def]]&quot;;						//取交集</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;d&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo4() &#123;</div><div class="line">		String regex = &quot;[a-d[m-p]]&quot;;</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;m&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;n&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo3() &#123;</div><div class="line">		String regex = &quot;[a-zA-Z]&quot;;</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;A&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;z&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;Z&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;1&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;%&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo2() &#123;</div><div class="line">		String regex = &quot;[^abc]&quot;;</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;b&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;c&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;d&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;1&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;%&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;10&quot;.matches(regex));		//10代表1字符和0字符,不是单个字符</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo1() &#123;</div><div class="line">		String regex = &quot;[abc]&quot;;					//[]代表单个字符</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;b&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;c&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;d&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;1&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;%&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="预定义字符类演示"><a href="#预定义字符类演示" class="headerlink" title="预定义字符类演示"></a>预定义字符类演示</h3><ul>
+<li>A:预定义字符类<ul>
+<li>. 任何字符。</li>
+<li>\d 数字：[0-9]</li>
+<li>\w 单词字符：[a-zA-Z_0-9]</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.regex;</div><div class="line"></div><div class="line">public class Demo3_Regex &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * 	. 任何字符</div><div class="line">		\d 数字：[0-9] </div><div class="line">		\D 非数字： [^0-9] </div><div class="line">		\s 空白字符：[ \t\n\x0B\f\r] </div><div class="line">		\S 非空白字符：[^\s] </div><div class="line">		\w 单词字符：[a-zA-Z_0-9] </div><div class="line">		\W 非单词字符：[^\w] </div><div class="line"></div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		//demo2();</div><div class="line">		//demo3();</div><div class="line">		//demo4();</div><div class="line">		//demo5();</div><div class="line">		//demo6();</div><div class="line">		String regex = &quot;\\W&quot;;</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;z&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;_&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;%&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo6() &#123;</div><div class="line">		String regex = &quot;\\w&quot;;</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;z&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;_&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;%&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo5() &#123;</div><div class="line">		String regex = &quot;\\S&quot;;</div><div class="line">		System.out.println(&quot; &quot;.matches(regex));</div><div class="line">		System.out.println(&quot;	&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo4() &#123;</div><div class="line">		String regex = &quot;\\s&quot;;</div><div class="line">		System.out.println(&quot; &quot;.matches(regex));</div><div class="line">		System.out.println(&quot;	&quot;.matches(regex)); 				//一个tab键</div><div class="line">		System.out.println(&quot;    &quot;.matches(regex)); 				//四个空格</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo3() &#123;</div><div class="line">		String regex = &quot;\\D&quot;;</div><div class="line">		System.out.println(&quot;0&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;9&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo2() &#123;</div><div class="line">		String regex = &quot;\\d&quot;;					//\代表转义字符,如果想表示\d的话,需要\\d</div><div class="line">		System.out.println(&quot;0&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;9&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo1() &#123;</div><div class="line">		String regex = &quot;..&quot;;</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;ab&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="数量词"><a href="#数量词" class="headerlink" title="数量词"></a>数量词</h3><ul>
+<li>A:Greedy 数量词 <ul>
+<li>X? X，一次或一次也没有</li>
+<li>X* X，零次或多次</li>
+<li>X+ X，一次或多次</li>
+<li>X{n} X，恰好 n 次 </li>
+<li>X{n,} X，至少 n 次 </li>
+<li>X{n,m} X，至少 n 次，但是不超过 m 次 </li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.regex;</div><div class="line"></div><div class="line">public class Demo4_Regex &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * Greedy 数量词 </div><div class="line">		X? X，一次或一次也没有 </div><div class="line">		X* X，零次或多次 </div><div class="line">		X+ X，一次或多次 </div><div class="line">		X&#123;n&#125; X，恰好 n 次 </div><div class="line">		X&#123;n,&#125; X，至少 n 次 </div><div class="line">		X&#123;n,m&#125; X，至少 n 次，但是不超过 m 次 </div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		//demo2();</div><div class="line">		//demo3();</div><div class="line">		//demo4();</div><div class="line">		//demo5();</div><div class="line">		String regex = &quot;[abc]&#123;5,15&#125;&quot;;</div><div class="line">		System.out.println(&quot;abcba&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;abcbaabcabbabab&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;abcb&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;abcbaabaabcbaaba&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo5() &#123;</div><div class="line">		String regex = &quot;[abc]&#123;5,&#125;&quot;;</div><div class="line">		System.out.println(&quot;abcba&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;abcbaabcabbabab&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;abcb&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;abcbaaba&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo4() &#123;</div><div class="line">		String regex = &quot;[abc]&#123;5&#125;&quot;;</div><div class="line">		System.out.println(&quot;abcba&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;abcbaabcabbabab&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;abcb&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;abcbaaba&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo3() &#123;</div><div class="line">		String regex = &quot;[abc]+&quot;;</div><div class="line">		System.out.println(&quot;&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;aaaaabbbbccccc&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo2() &#123;</div><div class="line">		String regex = &quot;[abc]*&quot;;</div><div class="line">		System.out.println(&quot;&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;abc&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo1() &#123;</div><div class="line">		String regex = &quot;[abc]?&quot;;</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;b&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;c&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;d&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="正则表达式的分割功能"><a href="#正则表达式的分割功能" class="headerlink" title="正则表达式的分割功能"></a>正则表达式的分割功能</h3><ul>
+<li>A:正则表达式的分割功能<ul>
+<li>String类的功能：public String[] split(String regex)</li>
+</ul>
+</li>
+<li>B:案例演示<ul>
+<li>正则表达式的分割功能</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.regex;</div><div class="line"></div><div class="line">public class Demo5_Split &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		String s = &quot;金三胖.郭美美.李dayone&quot;;</div><div class="line">		String[] arr = s.split(&quot;\\.&quot;);				//通过正则表达式切割字符串</div><div class="line">		</div><div class="line">		for (int i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">			System.out.println(arr[i]);</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		System.out.println(&quot;11111111111111111&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="把给定字符串中的数字排序"><a href="#把给定字符串中的数字排序" class="headerlink" title="把给定字符串中的数字排序"></a>把给定字符串中的数字排序</h3><ul>
+<li>A:案例演示<ul>
+<li>需求：我有如下一个字符串:”91 27 46 38 50”，请写代码实现最终输出结果是：”27 38 46 50 91”</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.test;</div><div class="line"></div><div class="line">import java.util.Arrays;</div><div class="line"></div><div class="line">public class Test1 &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * 分析:</div><div class="line">	 * 1,将字符串切割成字符串数组</div><div class="line">	 * 2,将字符串转换成数字并将其存储在一个等长度的int数组中</div><div class="line">	 * 3,排序</div><div class="line">	 * 4,将排序后的结果遍历并拼接成一个字符串</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		String s = &quot;91 27 46 38 50&quot;;</div><div class="line">		//1,将字符串切割成字符串数组</div><div class="line">		String[] sArr = s.split(&quot; &quot;);</div><div class="line">		//2,将字符串转换成数字并将其存储在一个等长度的int数组中</div><div class="line">		int[] arr = new int[sArr.length];</div><div class="line">		for (int i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">			arr[i] = Integer.parseInt(sArr[i]); 	//将数字字符串转换成数字</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		//3,排序</div><div class="line">		Arrays.sort(arr);</div><div class="line">		</div><div class="line">		//4,将排序后的结果遍历并拼接成一个字符串27 38 46 50 91</div><div class="line">		/*String str = &quot;&quot;;</div><div class="line">		for (int i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">			if(i == arr.length - 1) &#123;</div><div class="line">				str = str + arr[i];				//27 38 46 50 91</div><div class="line">			&#125;else &#123;</div><div class="line">				str = str + arr[i] + &quot; &quot;;		//27 38 46 50 </div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		System.out.println(str);*/</div><div class="line">		</div><div class="line">		StringBuilder sb = new StringBuilder();</div><div class="line">		for (int i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">			if(i == arr.length - 1) &#123;</div><div class="line">				sb.append(arr[i]);</div><div class="line">			&#125;else &#123;</div><div class="line">				sb.append(arr[i] + &quot; &quot;);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		System.out.println(sb);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="正则表达式的替换功能"><a href="#正则表达式的替换功能" class="headerlink" title="正则表达式的替换功能"></a>正则表达式的替换功能</h3><ul>
+<li>A:正则表达式的替换功能<ul>
+<li>String类的功能：public String replaceAll(String regex,String replacement)</li>
+</ul>
+</li>
+<li>B:案例演示<ul>
+<li>正则表达式的替换功能</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.regex;</div><div class="line"></div><div class="line">public class Demo6_ReplaceAll &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * * A:正则表达式的替换功能</div><div class="line">	 * String类的功能：public String replaceAll(String regex,String replacement)</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		String s = &quot;wo111ai222wxhao&quot;;</div><div class="line">		String regex = &quot;\\d&quot;;			//\\d代表的是任意数字</div><div class="line">		</div><div class="line">		String s2 = s.replaceAll(regex, &quot;&quot;);</div><div class="line">		System.out.println(s2);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="正则表达式的分组功能"><a href="#正则表达式的分组功能" class="headerlink" title="正则表达式的分组功能"></a>正则表达式的分组功能</h3><ul>
+<li>A:正则表达式的分组功能<ul>
+<li>捕获组可以通过从左到右计算其开括号来编号。例如，在表达式 ((A)(B(C))) 中，存在四个这样的组： </li>
+</ul>
+</li>
+<li><pre><code>1     ((A)(B(C))) 
+2     (A 
+3     (B(C)) 
+4     (C) 
+
+组零始终代表整个表达式。
+</code></pre><p>B:案例演示<br>  a:切割</p>
+<pre><code>需求：请按照叠词切割： &quot;sdqqfgkkkhjppppkl&quot;;
+</code></pre><p>  b:替换</p>
+<pre><code>需求：我我....我...我.要...要要...要学....学学..学.编..编编.编.程.程.程..程
+将字符串还原成:“我要学编程”。
+</code></pre></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.regex;</div><div class="line"></div><div class="line">public class Demo7_Regex &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		//demo2();</div><div class="line">		</div><div class="line">		/*</div><div class="line">		 * 需求：我我....我...我.要...要要...要学....学学..学.编..编编.编.程.程.程..程</div><div class="line">				将字符串还原成:“我要学编程”。</div><div class="line">		 */</div><div class="line">		String s = &quot;我我....我...我.要...要要...要学....学学..学.编..编编.编.程.程.程..程&quot;;</div><div class="line">		String s2 = s.replaceAll(&quot;\\.+&quot;, &quot;&quot;);</div><div class="line">		String s3 = s2.replaceAll(&quot;(.)\\1+&quot;, &quot;$1&quot;);	//$1代表第一组中的内容</div><div class="line">		System.out.println(s3);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo2() &#123;</div><div class="line">		//需求：请按照叠词切割： &quot;sdqqfgkkkhjppppkl&quot;;</div><div class="line">		String s = &quot;sdqqfgkkkhjppppkl&quot;;</div><div class="line">		String regex = &quot;(.)\\1+&quot;;					//+代表第一组出现一次到多次</div><div class="line">		String[] arr = s.split(regex);</div><div class="line">		</div><div class="line">		for (int i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">			System.out.println(arr[i]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo1() &#123;</div><div class="line">		//叠词 快快乐乐,高高兴兴</div><div class="line">		/*String regex = &quot;(.)\\1(.)\\2&quot;;					//\\1代表第一组又出现一次	\\2代表第二组又出现一次</div><div class="line">		System.out.println(&quot;快快乐乐&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;快乐乐乐&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;高高兴兴&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;死啦死啦&quot;.matches(regex));*/</div><div class="line">		</div><div class="line">		//叠词 死啦死啦,高兴高兴</div><div class="line">		String regex2 = &quot;(..)\\1&quot;;</div><div class="line">		System.out.println(&quot;死啦死啦&quot;.matches(regex2));</div><div class="line">		System.out.println(&quot;高兴高兴&quot;.matches(regex2));</div><div class="line">		System.out.println(&quot;快快乐乐&quot;.matches(regex2));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Pattern和Matcher的概述"><a href="#Pattern和Matcher的概述" class="headerlink" title="Pattern和Matcher的概述"></a>Pattern和Matcher的概述</h3><ul>
+<li>A:Pattern和Matcher的概述</li>
+<li><p>B:模式和匹配器的典型调用顺序</p>
+<ul>
+<li><p>通过JDK提供的API，查看Pattern类的说明</p>
+</li>
+<li><p>典型的调用顺序是 </p>
+</li>
+<li>Pattern p = Pattern.compile(“a*b”);</li>
+<li>Matcher m = p.matcher(“aaaaab”);</li>
+<li>boolean b = m.matches();</li>
+</ul>
+</li>
+</ul>
+<h3 id="正则表达式的获取功能"><a href="#正则表达式的获取功能" class="headerlink" title="正则表达式的获取功能"></a>正则表达式的获取功能</h3><ul>
+<li>A:正则表达式的获取功能<ul>
+<li>Pattern和Matcher的结合使用</li>
+</ul>
+</li>
+<li>B:案例演示<ul>
+<li>需求：把一个字符串中的手机号码获取出来</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.regex;</div><div class="line"></div><div class="line">import java.util.regex.Matcher;</div><div class="line">import java.util.regex.Pattern;</div><div class="line"></div><div class="line">public class Demo8_Pattern &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * Pattern p = Pattern.compile(&quot;a*b&quot;);</div><div class="line">		 Matcher m = p.matcher(&quot;aaaaab&quot;);</div><div class="line">		 boolean b = m.matches();</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		String s = &quot;我的手机是18988888888,我曾用过18987654321,还用过18812345678&quot;;</div><div class="line">		String regex = &quot;1[3578]\\d&#123;9&#125;&quot;;</div><div class="line">		</div><div class="line">		</div><div class="line">		Pattern p = Pattern.compile(regex);</div><div class="line">		Matcher m = p.matcher(s);</div><div class="line">		</div><div class="line">		/*boolean b1 = m.find();</div><div class="line">		System.out.println(b1);</div><div class="line">		System.out.println(m.group());</div><div class="line">		</div><div class="line">		boolean b2 = m.find();</div><div class="line">		System.out.println(b2);</div><div class="line">		System.out.println(m.group());*/</div><div class="line">		</div><div class="line">		while(m.find())</div><div class="line">			System.out.println(m.group());</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo1() &#123;</div><div class="line">		Pattern p = Pattern.compile(&quot;a*b&quot;);	//获取到正则表达式</div><div class="line">		Matcher m = p.matcher(&quot;aaaaab&quot;);	//获取匹配器</div><div class="line">		boolean b = m.matches();			//看是否能匹配,匹配就返回true</div><div class="line">		</div><div class="line">		System.out.println(b);</div><div class="line">		</div><div class="line">		System.out.println(&quot;aaaaab&quot;.matches(&quot;a*b&quot;)); //与上面的结果一样</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.util;</div><div class="line"></div><div class="line">public class RegexUtil &#123;</div><div class="line">	/**</div><div class="line">	 * 条件字符</div><div class="line">	 * a-z A-Z 0-9</div><div class="line">	 * </div><div class="line">	 * </div><div class="line">	 * 预定义字符</div><div class="line">	 * . 任何字符</div><div class="line">	 * \d 数字：[0-9]</div><div class="line">	 * \D 数字：[0-9]</div><div class="line">	 * \s 空白字符: [ \t\n\x0B\f\r]</div><div class="line">	 * \S 非空白字符: [^\s]</div><div class="line">	 * \w 单词字符：[a-zA-Z_0-9]</div><div class="line">	 * \W 非单词字符：[^\w]</div><div class="line">	 * </div><div class="line">	 * 逻辑字符</div><div class="line">	 * []   &amp;&amp;   ||   ^</div><div class="line">	 */</div><div class="line">	</div><div class="line">	/**</div><div class="line">	 *  数量词    跟在 条件字符后面</div><div class="line">		条件字符 ? 一次或一次也没有  如:[abc]?</div><div class="line">		条件字符 * 零次或多次 </div><div class="line">		条件字符 + 一次或多次 </div><div class="line">		条件字符 &#123;n&#125; 恰好 n 次 </div><div class="line">		条件字符 &#123;n,&#125; 至少 n 次 </div><div class="line">		条件字符 &#123;n,m&#125; 至少 n 次，但是不超过 m 次 </div><div class="line">	 */</div><div class="line">	</div><div class="line">	/**分组</div><div class="line">	 * (.)\\1(.)\\2    	xxyy</div><div class="line">	 * (.)\\1+ 			.出现一次以上  1代表再来一次  +代表出现一次或多次</div><div class="line">	 * (..)\\1   		xyxy</div><div class="line">	 * </div><div class="line">	 * $1 第一组的东西</div><div class="line">	 * $2 第二组的东西</div><div class="line">	 */</div><div class="line">	</div><div class="line">	/**</div><div class="line">	 * 纯数字</div><div class="line">	 */</div><div class="line">	public static final String PURE_NUMBER=&quot;[1-9]&quot;;</div><div class="line">	/**</div><div class="line">	 * 纯字母</div><div class="line">	 */</div><div class="line">	public static final String PURE_LETTER=&quot;[a-z]&quot;;</div><div class="line">	</div><div class="line">	public static boolean check(String str , String regex)&#123;</div><div class="line">		boolean flag=true;</div><div class="line">		if(str!=null&amp;&amp;!str.isEmpty())&#123;</div><div class="line">			return str.matches(regex);</div><div class="line">		&#125;</div><div class="line">		return flag;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		String xx=&quot;oxs&quot;;</div><div class="line">		System.out.println(xx.matches(&quot;&quot;));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
