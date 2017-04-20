@@ -1,459 +1,1256 @@
 <!DOCTYPE html>
 <html>
-  <!-- Html Head Tag-->
-  <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="wxhao">
-  <!-- Open Graph Data -->
-  <meta property="og:title" content="标题"/>
-  <meta property="og:description" content="站点描述" />
-  <meta property="og:site_name" content="标题"/>
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="http://blog.wxhaoo.comundefined"/>
+<head>
+  <meta charset="utf-8">
   
-    <link rel="alternate" href="/atom.xml" title="标题" type="application/atom+xml">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://blog.wxhaoo.com">
+  <title>吴嘉图的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="不知道怎么描述">
+<meta property="og:type" content="website">
+<meta property="og:title" content="吴嘉图的博客">
+<meta property="og:url" content="http://blog.wxhaoo.com/page/4/index.html">
+<meta property="og:site_name" content="吴嘉图的博客">
+<meta property="og:description" content="不知道怎么描述">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="吴嘉图的博客">
+<meta name="twitter:description" content="不知道怎么描述">
+  
+    <link rel="alternative" href="/atom.xml" title="吴嘉图的博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-
-  <!-- Site Title -->
-  <title>标题</title>
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="/./main.05aabf.css">
+  <style type="text/css">
   
-  <link rel="stylesheet" href="/css/style.light.css">
+    #container.show {
+      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+    }
+  </style>
+  
 
-  <!-- Google Analytics -->
   
 
 </head>
 
-  <body>
-    <!-- Page Header -->
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      
+<div class="overlay" style="background: url(&#39;/assets/bdp.gif&#39;)"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="/assets/head.png" class="js-avatar">
+		</a>
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Infinite Good</a></h1>
+		</hgroup>
+		
+		<p class="header-subtitle">一枚天真无邪善良纯真的程序员欧巴</p>
+		
 
-
-<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="page-title with-background-image">
-          <p class="title">标题</p>
-          <p class="subtitle">副标题</p>
-        </div>
-        <div class="site-menu with-background-image">
-          <ul>
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/">随笔</a></li>
+	        
+				<li><a href="http://blog4manager.duapp.com/html/register1.html">图床</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+    		
+    			
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">博客索引</a>
+    			
             
-              <li>
-                <a href="/">
-                  
-                  Home
-                  
-                </a>
-              </li>
+    			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			
             
-              <li>
-                <a href="/archives">
-                  
-                  Archives
-                  
-                </a>
-              </li>
+    			
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
             
-              <li>
-                <a href="https://github.com/levblanc">
-                  
-                  Github
-                  
-                </a>
-              </li>
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/wxhao2" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/wxhao911" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+					<a class="qq" target="_blank" href="/627760565" title="qq"><i class="icon-qq"></i></a>
+		        
+					<a class="mail" target="_blank" href="mailto:wxhao911@gmail.com" title="mail"><i class="icon-mail"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      
+<nav id="mobile-nav">
+  	<div class="overlay js-overlay" style="background: url(&#39;/assets/bdp.gif&#39;)"></div>
+	<div class="btnctn js-mobile-btnctn">
+  		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
+	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/assets/head.png" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author js-header-author">Infinite Good</h1>
+			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>一枚天真无邪善良纯真的程序员欧巴<i class="icon icon-quo-right"></i></p>
+			
+			
+			
+				
+			
+				
+			
+				
+			
+			
+			
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/wxhao2" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/wxhao911" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+						<a class="qq" target="_blank" href="/627760565" title="qq"><i class="icon-qq"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:wxhao911@gmail.com" title="mail"><i class="icon-mail"></i></a>
+			        
+				</div>
+			</nav>
+
+			<nav class="header-menu js-header-menu">
+				<ul style="width: 70%">
+				
+				
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/">随笔</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="http://blog4manager.duapp.com/html/register1.html">图床</a></li>
+		        
+				</ul>
+			</nav>
+		</header>				
+	</div>
+	<div class="mobile-mask" style="display:none" q-show="isShow"></div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
             
-              <li>
-                <a href="mailto:levblanc@163.com">
-                  
-                  Email
-                  
-                </a>
-              </li>
-            
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
+  
+    <article id="post-2013-08-05-object-class-basic-package" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/08/05/2013-08-05-object-class-basic-package/">基本包装类</a>
+    </h1>
+  
 
-
-<!-- Home Page Post List -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-10 col-md-10 col-md-offset-1">
+        
+        <a href="/2013/08/05/2013-08-05-object-class-basic-package/" class="archive-article-date">
+  	<time datetime="2013-08-04T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-08-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
       
-        <div class="post-item-wrapper">
-  <a href="/2013/07/03/2013-07-03-javase-obj-static-jvm/" class="post-title">
-      static详解
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2013-07-03</div>
-      <div class="categories">
-        
-          Uncategorized
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo">暂无文章摘要</div>
-    <!-- Post Tags -->
-    <div class="tags">
+        <h3 id="Integer类的概述和构造方法"><a href="#Integer类的概述和构造方法" class="headerlink" title="Integer类的概述和构造方法"></a>Integer类的概述和构造方法</h3><ul>
+<li><p>A:Integer类概述</p>
+<ul>
+<li><p>通过JDK提供的API，查看Integer类的说明</p>
+</li>
+<li><p>Integer 类在对象中包装了一个基本类型 int 的值,</p>
+</li>
+<li>该类提供了多个方法，能在 int 类型和 String 类型之间互相转换，</li>
+<li>还提供了处理 int 类型时非常有用的其他一些常量和方法</li>
+</ul>
+</li>
+<li>B:构造方法<ul>
+<li>public Integer(int value)</li>
+<li>public Integer(String s)</li>
+</ul>
+</li>
+<li>C:案例演示<ul>
+<li>使用构造方法创建对象</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.wrapclass;</div><div class="line"></div><div class="line">public class Demo2_Integer &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		System.out.println(Integer.MAX_VALUE);</div><div class="line">		System.out.println(Integer.MIN_VALUE);</div><div class="line">		</div><div class="line">		Integer i1 = new Integer(100);</div><div class="line">		System.out.println(i1);</div><div class="line">		</div><div class="line">		//Integer i2 = new Integer(&quot;abc&quot;);//java.lang.NumberFormatException数字格式异常</div><div class="line">		//System.out.println(i2);		//因为abc不是数字字符串,所以转换会报错</div><div class="line">		</div><div class="line">		Integer i3 = new Integer(&quot;100&quot;);</div><div class="line">		System.out.println(i3);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="String和int类型的相互转换"><a href="#String和int类型的相互转换" class="headerlink" title="String和int类型的相互转换"></a>String和int类型的相互转换</h3><ul>
+<li>A:int – String<ul>
+<li>a:和””进行拼接</li>
+<li>b:public static String valueOf(int i)</li>
+<li>c:int – Integer – String(Integer类的toString方法())</li>
+<li>d:public static String toString(int i)(Integer类的静态方法)</li>
+</ul>
+</li>
+<li>B:String – int<ul>
+<li>a:String – Integer – int</li>
+<li>public static int parseInt(String s)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.wrapclass;</div><div class="line"></div><div class="line">public class Demo3_Integer &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">		基本数据类型包装类有八种,其中七种都有parseXxx的方法,可以将这七种的字符串表现形式转换成基本数据类型</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		</div><div class="line">		//demo1();</div><div class="line">		String s1 = &quot;true&quot;;</div><div class="line">		boolean b = Boolean.parseBoolean(s1);</div><div class="line">		System.out.println(b);</div><div class="line">		</div><div class="line">		//String s2 = &quot;abc&quot;;</div><div class="line">		//char c = Character.p		//char的包装类Character中没有pareseXxx的方法</div><div class="line">									//字符串到字符的转换通过toCharArray()就可以把字符串转换为字符数组</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo1() &#123;</div><div class="line">		//int ----&gt; String int转换成String</div><div class="line">		int i = 100;</div><div class="line">		String s1 = i + &quot;&quot;;			//推荐用</div><div class="line">		String s2 = String.valueOf(i);//推荐用</div><div class="line">		</div><div class="line">		Integer i2 = new Integer(i);</div><div class="line">		String s3 = i2.toString();</div><div class="line">		</div><div class="line">		String s4 = Integer.toString(i);</div><div class="line">		System.out.println(s1);</div><div class="line">		</div><div class="line">		//String----&gt; int String 转换int</div><div class="line">		String s = &quot;200&quot;;</div><div class="line">		Integer i3 = new Integer(s);</div><div class="line">		int i4 = i3.intValue();		//将Integer转换成了int数</div><div class="line">		</div><div class="line">		int i5 = Integer.parseInt(s);//将String转换为int,推荐用这种</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="JDK5的新特性自动装箱和拆箱"><a href="#JDK5的新特性自动装箱和拆箱" class="headerlink" title="JDK5的新特性自动装箱和拆箱"></a>JDK5的新特性自动装箱和拆箱</h3><ul>
+<li>A:JDK5的新特性<ul>
+<li>自动装箱：把基本类型转换为包装类类型</li>
+<li>自动拆箱：把包装类类型转换为基本类型</li>
+</ul>
+</li>
+<li><p>B:案例演示</p>
+<ul>
+<li><p>JDK5的新特性自动装箱和拆箱</p>
+</li>
+<li><p>Integer ii = 100;</p>
+</li>
+<li>ii += 200;</li>
+</ul>
+</li>
+<li>C:注意事项<ul>
+<li>在使用时，Integer  x = null;代码就会出现NullPointerException。</li>
+<li>建议先判断是否为null，然后再使用。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.wrapclass;</div><div class="line"></div><div class="line">public class Demo4_JDK5 &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">//		int x = 100;</div><div class="line">//		Integer i1 = new Integer(x);//将基本数据类型包装成对象,手动装箱</div><div class="line">//		</div><div class="line">//		int y = i1.intValue();		//将对象转换为基本数据类型,手动拆箱</div><div class="line">		</div><div class="line">		Integer i2 = 100;			//自动装箱,把基本数据类型转换成对象</div><div class="line">		int z = i2 + 200;			//自动拆箱,把对象转换为基本数据类型</div><div class="line">		System.out.println(z);</div><div class="line">		</div><div class="line">		Integer i3 = null;</div><div class="line">		int a = i3 + 100;			//底层用i3调用intValue,但是i3是null,null调用方法就会出现</div><div class="line">		System.out.println(a);		//空指针异常java.lang.NullPointerException</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Integer的面试题"><a href="#Integer的面试题" class="headerlink" title="Integer的面试题"></a>Integer的面试题</h3><ul>
+<li>A:Integer的面试题</li>
+<li><pre><code>看程序写结果
+</code></pre></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">Integer i1 = new Integer(97);</div><div class="line">Integer i2 = new Integer(97);</div><div class="line">System.out.println(i1 == i2);</div><div class="line">System.out.println(i1.equals(i2));</div><div class="line">System.out.println(&quot;-----------&quot;);</div><div class="line">	</div><div class="line">Integer i3 = new Integer(197);</div><div class="line">Integer i4 = new Integer(197);</div><div class="line">System.out.println(i3 == i4);</div><div class="line">System.out.println(i3.equals(i4));</div><div class="line">System.out.println(&quot;-----------&quot;);</div><div class="line">	</div><div class="line">Integer i5 = 97;</div><div class="line">Integer i6 = 97;</div><div class="line">System.out.println(i5 == i6);</div><div class="line">System.out.println(i5.equals(i6));</div><div class="line">System.out.println(&quot;-----------&quot;);</div><div class="line">	</div><div class="line">Integer i7 = 197;</div><div class="line">Integer i8 = 197;</div><div class="line">System.out.println(i7 == i8);</div><div class="line">System.out.println(i7.equals(i8));</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.wrapclass;</div><div class="line"></div><div class="line">public class Demo5_Integer &#123;</div><div class="line">	/**</div><div class="line">	 * @param args</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Integer i1 = new Integer(97);</div><div class="line">		Integer i2 = new Integer(97);</div><div class="line">		System.out.println(i1 == i2);	  //false</div><div class="line">		System.out.println(i1.equals(i2));//true</div><div class="line">		System.out.println(&quot;-----------&quot;);</div><div class="line">	</div><div class="line">		Integer i3 = new Integer(197);</div><div class="line">		Integer i4 = new Integer(197);</div><div class="line">		System.out.println(i3 == i4);		//false</div><div class="line">		System.out.println(i3.equals(i4));	//true</div><div class="line">		System.out.println(&quot;-----------&quot;);</div><div class="line">	</div><div class="line">		Integer i5 = 127;</div><div class="line">		Integer i6 = 127;</div><div class="line">		System.out.println(i5 == i6);	  //true</div><div class="line">		System.out.println(i5.equals(i6));//true</div><div class="line">		System.out.println(&quot;-----------&quot;);</div><div class="line">	</div><div class="line">		Integer i7 = 128;</div><div class="line">		Integer i8 = 128;</div><div class="line">		System.out.println(i7 == i8);</div><div class="line">		System.out.println(i7.equals(i8));//true</div><div class="line">		</div><div class="line">		/*</div><div class="line">		 * -128到127是byte的取值范围,如果在这个取值范围内,自动装箱就不会新创建对象,而是从常量池中获取</div><div class="line">		 * 如果超过了byte取值范围就会再新创建对象</div><div class="line">		 * </div><div class="line">		 * public static Integer valueOf(int i) &#123;</div><div class="line">		        assert IntegerCache.high &gt;= 127;</div><div class="line">		        if (i &gt;= IntegerCache.low &amp;&amp; i &lt;= IntegerCache.high)			//i&gt;= -128 &amp;&amp; i &lt;= 127</div><div class="line">		            return IntegerCache.cache[i + (-IntegerCache.low)];</div><div class="line">		        return new Integer(i);</div><div class="line">		    &#125;</div><div class="line">		 */</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
-        
-
-<a class="tag" href="/tags/基础知识/">基础知识</a> <a class="tag" href="/tags/java/">java</a> <a class="tag" href="/tags/JAVASE/">JAVASE</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2013/07/01/2013-07-01-javase-obj-constructor/" class="post-title">
-      构造方法和面向对象练习
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2013-07-01</div>
-      <div class="categories">
-        
-          Uncategorized
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo">暂无文章摘要</div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/基础知识/">基础知识</a> <a class="tag" href="/tags/java/">java</a> <a class="tag" href="/tags/JAVASE/">JAVASE</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2013/06/28/2013-06-28-javase-obj-special-jvm/" class="post-title">
-      面向对象的特点及其使用
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2013-06-28</div>
-      <div class="categories">
-        
-          Uncategorized
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo">暂无文章摘要</div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/基础知识/">基础知识</a> <a class="tag" href="/tags/java/">java</a> <a class="tag" href="/tags/JAVASE/">JAVASE</a>
-
 
       
     </div>
-  </div>
-</div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">基础知识</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JAVASE</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
       
-        <div class="post-item-wrapper">
-  <a href="/2013/06/26/2013-06-26-javase-obj-jvm/" class="post-title">
-      面向对象思想及其内存分配
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2013-06-26</div>
-      <div class="categories">
-        
-          Uncategorized
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo">暂无文章摘要</div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/基础知识/">基础知识</a> <a class="tag" href="/tags/java/">java</a> <a class="tag" href="/tags/JAVASE/">JAVASE</a>
-
 
       
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2013/06/24/2013-06-24-markdown-exception-cache/" class="post-title">
-      markdown异常记录
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2013-06-24</div>
-      <div class="categories">
-        
-          Uncategorized
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo">暂无文章摘要</div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/markdown/">markdown</a> <a class="tag" href="/tags/exception/">exception</a> <a class="tag" href="/tags/jekyll/">jekyll</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2013/06/23/2013-06-23-javase-method-array2-jvm/" class="post-title">
-      JavaSE之二维数组及内存分配
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2013-06-23</div>
-      <div class="categories">
-        
-          Uncategorized
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo">暂无文章摘要</div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/基础知识/">基础知识</a> <a class="tag" href="/tags/java/">java</a> <a class="tag" href="/tags/JAVASE/">JAVASE</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2013/06/22/2013-06-22-javase-method-array-jvm/" class="post-title">
-      JavaSE之数组及其循环和内存分配
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2013-06-22</div>
-      <div class="categories">
-        
-          Uncategorized
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo">暂无文章摘要</div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/基础知识/">基础知识</a> <a class="tag" href="/tags/java/">java</a> <a class="tag" href="/tags/JAVASE/">JAVASE</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2013/06/19/2013-06-19-javase-method-structure/" class="post-title">
-      JavaSE之方法
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2013-06-19</div>
-      <div class="categories">
-        
-          Uncategorized
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo">暂无文章摘要</div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/基础知识/">基础知识</a> <a class="tag" href="/tags/java/">java</a> <a class="tag" href="/tags/JAVASE/">JAVASE</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2013/06/17/2013-06-17-javase-loop-structure/" class="post-title">
-      JavaSE之循环结构及控制跳转
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2013-06-17</div>
-      <div class="categories">
-        
-          Uncategorized
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo">暂无文章摘要</div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/基础知识/">基础知识</a> <a class="tag" href="/tags/java/">java</a> <a class="tag" href="/tags/JAVASE/">JAVASE</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2013/06/15/2013-06-15-javase-sequence-choice-structure/" class="post-title">
-      JavaSE之顺序结构与选择结构
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2013-06-15</div>
-      <div class="categories">
-        
-          Uncategorized
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo">暂无文章摘要</div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/基础知识/">基础知识</a> <a class="tag" href="/tags/java/">java</a> <a class="tag" href="/tags/JAVASE/">JAVASE</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-    </div>
-  </div>
-</div>
-
-<!-- Pagination -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-10 col-md-10 col-md-offset-1">
-      <ul class="pagination">
-          
-              <li class="previous">
-                <a href="/page/3/">
-                  <span class="symbol-left">&lt;</span>
-                  <span>上一页</span>
-                </a>
-              </li>
-          
-          
-            <li class="next">
-              <a href="/page/5/">
-                <span>下一页</span>
-                <span class="symbol-right">&gt;</span>
-              </a>
-            </li>
-          
-      </ul>
-    </div>
-  </div>
-</div>
-
-
-
-    <!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <p class="copyright text-muted">
-          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
-          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
-        <p class="copyright text-muted">
-          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2013/08/05/2013-08-05-object-class-basic-package/">展开全文 >></a>
         </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-2013-08-03-object-class-array" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/08/03/2013-08-03-object-class-array/">数组基本原理</a>
+    </h1>
+  
+
+        
+        <a href="/2013/08/03/2013-08-03-object-class-array/" class="archive-article-date">
+  	<time datetime="2013-08-02T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-08-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="数组排序"><a href="#数组排序" class="headerlink" title="数组排序"></a>数组排序</h3><h4 id="数组高级冒泡排序"><a href="#数组高级冒泡排序" class="headerlink" title="数组高级冒泡排序"></a>数组高级冒泡排序</h4><h5 id="原理图解"><a href="#原理图解" class="headerlink" title="原理图解"></a>原理图解</h5><ul>
+<li>A:画图演示<ul>
+<li><img src="http://wxhao2.duapp.com/blog/post-in/20130803/mppx.png" alt="冒泡排序"></li>
+</ul>
+</li>
+<li><pre><code>需求：
+    数组元素：{24, 69, 80, 57, 13}
+    请对数组元素进行排序。
+
+    冒泡排序
+        相邻元素两两比较，大的往后放，第一次完毕，最大值出现在了最大索引处
+</code></pre></li>
+</ul>
+<h5 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h5><ul>
+<li>A:代码演示<ul>
+<li>数组高级冒泡排序代码</li>
+</ul>
+</li>
+</ul>
+<h4 id="数组高级选择排序"><a href="#数组高级选择排序" class="headerlink" title="数组高级选择排序"></a>数组高级选择排序</h4><h5 id="原理图解-1"><a href="#原理图解-1" class="headerlink" title="原理图解"></a>原理图解</h5><ul>
+<li><p>A:画图演示</p>
+<ul>
+<li><p>需求：</p>
+<ul>
+<li>数组元素：{24, 69, 80, 57, 13}</li>
+<li><p>请对数组元素进行排序。</p>
+</li>
+<li><p>选择排序</p>
+<ul>
+<li>从0索引开始，依次和后面元素比较，小的往前放，第一次完毕，最小值出现在了最小索引处</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="http://wxhao2.duapp.com/blog/post-in/20130803/xzpx.png" alt="选择排序"></p>
+<h5 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现"></a>代码实现</h5><ul>
+<li>A:案例演示<ul>
+<li>数组高级选择排序代码</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.array;</div><div class="line"></div><div class="line">public class Demo1_Array &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] arr = &#123;24, 69, 80, 57, 13&#125;;</div><div class="line">		bubbleSort(arr);</div><div class="line">		//selectSort(arr);</div><div class="line">		print(arr);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	/*</div><div class="line">	 * 冒泡排序</div><div class="line">	 * 1,返回值类型,void</div><div class="line">	 * 2,参数列表,int[] arr</div><div class="line">	 * </div><div class="line">	 * 	第一次:arr[0]与arr[1],arr[1]与arr[2],arr[2]与arr[3],arr[3]与arr[4]比较4次</div><div class="line">		第二次:arr[0]与arr[1],arr[1]与arr[2],arr[2]与arr[3]比较3次</div><div class="line">		第三次:arr[0]与arr[1],arr[1]与arr[2]比较2次</div><div class="line">		第四次:arr[0]与arr[1]比较1次</div><div class="line">	 */</div><div class="line">	</div><div class="line">	public static void bubbleSort(int[] arr) &#123;</div><div class="line">		for (int i = 0; i &lt; arr.length - 1; i++) &#123;				//外循环只需要比较arr.length-1次就可以了</div><div class="line">			for (int j = 0; j &lt; arr.length - 1 - i; j++) &#123;		//-1为了防止索引越界,-i为了提高效率</div><div class="line">				if(arr[j] &gt; arr[j+1]) &#123;</div><div class="line">					/*int temp = arr[j];</div><div class="line">					arr[j] = arr[j + 1];</div><div class="line">					arr[j+1] = temp;*/</div><div class="line">					swap(arr,j,j+1);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	/*</div><div class="line">	 * 打印数组</div><div class="line">	 * 1,返回值类型void</div><div class="line">	 * 2,参数列表int[]arr</div><div class="line">	 */</div><div class="line">	</div><div class="line">	public static void print(int[] arr) &#123;</div><div class="line">		for (int i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">			System.out.print(arr[i] + &quot; &quot;);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	/*</div><div class="line">	 * 选择排序</div><div class="line">	 * 1,返回值类型void</div><div class="line">	 * 2,参数列表int[] arr</div><div class="line">	 * </div><div class="line">	 * 	第一次:arr[0]分别与arr[1-4]比较,比较4次</div><div class="line">		第二次:arr[1]分别与arr[2-4]比较,比较3次</div><div class="line">		第三次:arr[2]分别与arr[3-4]比较,比较2次</div><div class="line">		第四次:arr[3]与arr[4]比较,比较1次</div><div class="line">	 */</div><div class="line">	</div><div class="line">	public static void selectSort(int[] arr) &#123;</div><div class="line">		for (int i = 0; i &lt; arr.length - 1; i++) &#123;				//只需要比较arr.length-1次</div><div class="line">			for (int j = i + 1; j &lt; arr.length; j++) &#123;</div><div class="line">				if(arr[i] &gt; arr[j]) &#123;</div><div class="line">					/*int temp = arr[i];</div><div class="line">					arr[i] = arr[j];</div><div class="line">					arr[j] = temp;*/</div><div class="line">					swap(arr,i,j);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	/*</div><div class="line">	 * 换位操作</div><div class="line">	 * 1,返回值类型,void</div><div class="line">	 * 2,参数列表int[] arr.int i,int j</div><div class="line">	 * </div><div class="line">	 * 如果某个方法,只针对本类使用,不想让其他类使用就可以定义成私有的</div><div class="line">	 */</div><div class="line">	</div><div class="line">	private static void swap(int[] arr,int i,int j) &#123;</div><div class="line">		int temp = arr[i];</div><div class="line">		arr[i] = arr[j];</div><div class="line">		arr[j] = temp;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="数组高级二分查找原理图解"><a href="#数组高级二分查找原理图解" class="headerlink" title="数组高级二分查找原理图解"></a>数组高级二分查找原理图解</h3><ul>
+<li>A:画图演示<ul>
+<li>二分查找  </li>
+<li>前提：数组元素有序</li>
+</ul>
+</li>
+</ul>
+<p><img src="http://wxhao2.duapp.com/blog/post-in/20130803/efcz.png" alt="二分查找"></p>
+<h3 id="数组高级二分查找代码实现及注意事项"><a href="#数组高级二分查找代码实现及注意事项" class="headerlink" title="数组高级二分查找代码实现及注意事项"></a>数组高级二分查找代码实现及注意事项</h3><ul>
+<li>A:案例演示<ul>
+<li>数组高级二分查找代码</li>
+</ul>
+</li>
+<li>B:注意事项<ul>
+<li>如果数组无序，就不能使用二分查找。<ul>
+<li>因为如果你排序了，但是你排序的时候已经改变了我最原始的元素索引。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.array;</div><div class="line"></div><div class="line">public class Demo2_Array &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] arr = &#123;11,22,33,44,55,66,77&#125;;</div><div class="line">		System.out.println(getIndex(arr, 22));</div><div class="line">		System.out.println(getIndex(arr, 66));</div><div class="line">		System.out.println(getIndex(arr, 88));</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	/*</div><div class="line">	 * 二分查找</div><div class="line">	 * 1,返回值类型,int</div><div class="line">	 * 2,参数列表int[] arr,int value</div><div class="line">	 */</div><div class="line">	</div><div class="line">	public static int getIndex(int[] arr, int value) &#123;</div><div class="line">		int min = 0;</div><div class="line">		int max = arr.length - 1;</div><div class="line">		int mid = (min + max) / 2;</div><div class="line">		</div><div class="line">		while(arr[mid] != value) &#123;					//当中间值不等于要找的值,就开始循环查找</div><div class="line">			if(arr[mid] &lt; value) &#123;					//当中间值小于了要找的值</div><div class="line">				min = mid + 1;						//最小的索引改变</div><div class="line">			&#125;else if (arr[mid] &gt; value)&#123;			//当中间值大于了要找的值</div><div class="line">				max = mid - 1;						//最大的索引改变</div><div class="line">			&#125;</div><div class="line">			</div><div class="line">			mid = (min + max) / 2;					//无论最大还是最小改变,中间索引都会随之改变</div><div class="line">			</div><div class="line">			if(min &gt; max) &#123;							//如果最小索引大于了最大索引,就没有查找的可能性了</div><div class="line">				return -1;							//返回-1</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		return mid;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Arrays类的概述和方法使用"><a href="#Arrays类的概述和方法使用" class="headerlink" title="Arrays类的概述和方法使用"></a>Arrays类的概述和方法使用</h3><ul>
+<li>A:Arrays类概述<ul>
+<li>针对数组进行操作的工具类。</li>
+<li>提供了排序，查找等功能。</li>
+</ul>
+</li>
+<li>B:成员方法<ul>
+<li>public static String toString(int[] a)</li>
+<li>public static void sort(int[] a)</li>
+<li>public static int binarySearch(int[] a,int key)</li>
+</ul>
+</li>
+</ul>
+<h3 id="基本类型包装类的概述"><a href="#基本类型包装类的概述" class="headerlink" title="基本类型包装类的概述"></a>基本类型包装类的概述</h3><ul>
+<li>A:为什么会有基本类型包装类<ul>
+<li>将基本数据类型封装成对象的好处在于可以在对象中定义更多的功能方法操作该数据。</li>
+</ul>
+</li>
+<li>B:常用操作<ul>
+<li>常用的操作之一：用于基本数据类型与字符串之间的转换。</li>
+</ul>
+</li>
+<li>C:基本类型和包装类的对应<ul>
+<li>基本数据类型  -   包装类</li>
+<li>byte     -        Byte</li>
+<li>short    -        Short</li>
+<li>int        -        Integer</li>
+<li>long    -        Long</li>
+<li>float    -        Float</li>
+<li>double    -        Double</li>
+<li>char    -        Character</li>
+<li>boolean    -        Boolean</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.wrapclass;</div><div class="line"></div><div class="line">public class Demo1_Integer &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		System.out.println(Integer.toBinaryString(60));//2进制</div><div class="line">		System.out.println(Integer.toOctalString(60));//8进制</div><div class="line">		System.out.println(Integer.toHexString(60));//16进制</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">基础知识</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JAVASE</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2013/08/03/2013-08-03-object-class-array/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-2013-08-01-object-class-stringbuffer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/08/01/2013-08-01-object-class-stringbuffer/">StringBuffer类与StringBuilder类</a>
+    </h1>
+  
+
+        
+        <a href="/2013/08/01/2013-08-01-object-class-stringbuffer/" class="archive-article-date">
+  	<time datetime="2013-07-31T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-08-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="StringBuffer类的概述"><a href="#StringBuffer类的概述" class="headerlink" title="StringBuffer类的概述"></a>StringBuffer类的概述</h3><ul>
+<li>A:StringBuffer类概述<ul>
+<li>通过JDK提供的API，查看StringBuffer类的说明</li>
+<li>线程安全的可变字符序列 </li>
+</ul>
+</li>
+<li>B:StringBuffer和String的区别<ul>
+<li>String是一个不可变的字符序列</li>
+<li>StringBuffer是一个可变的字符序列 </li>
+</ul>
+</li>
+</ul>
+<h3 id="StringBuffer类的构造方法"><a href="#StringBuffer类的构造方法" class="headerlink" title="StringBuffer类的构造方法"></a>StringBuffer类的构造方法</h3><ul>
+<li>A:StringBuffer的构造方法：<ul>
+<li>public StringBuffer():无参构造方法</li>
+<li>public StringBuffer(int capacity):指定容量的字符串缓冲区对象</li>
+<li>public StringBuffer(String str):指定字符串内容的字符串缓冲区对象</li>
+</ul>
+</li>
+<li>B:StringBuffer的方法：<ul>
+<li>public int capacity()：返回当前容量。    理论值(不掌握)</li>
+<li>public int length():返回长度（字符数）。 实际值</li>
+</ul>
+</li>
+<li>C:代码演示<ul>
+<li>构造方法和长度方法的使用</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.stringbuffer;</div><div class="line"></div><div class="line">public class Demo1_StringBuffer &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		StringBuffer sb = new StringBuffer();</div><div class="line">		System.out.println(sb.length());		//容器中的字符个数,实际值</div><div class="line">		System.out.println(sb.capacity());		//容器的初始容量,理论值</div><div class="line">		</div><div class="line">		StringBuffer sb2 = new StringBuffer(10);</div><div class="line">		System.out.println(sb2.length());</div><div class="line">		System.out.println(sb2.capacity());</div><div class="line">		</div><div class="line">		StringBuffer sb3 = new StringBuffer(&quot;heima&quot;);</div><div class="line">		System.out.println(sb3.length());		//实际字符的个数</div><div class="line">		System.out.println(sb3.capacity());		//字符串的length + 初始容量</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="StringBuffer的添加功能"><a href="#StringBuffer的添加功能" class="headerlink" title="StringBuffer的添加功能"></a>StringBuffer的添加功能</h3><ul>
+<li>A:StringBuffer的添加功能<ul>
+<li>public StringBuffer append(String str):<ul>
+<li>可以把任意类型数据添加到字符串缓冲区里面,并返回字符串缓冲区本身</li>
+</ul>
+</li>
+<li>public StringBuffer insert(int offset,String str):<ul>
+<li>在指定位置把任意类型的数据插入到字符串缓冲区里面,并返回字符串缓冲区本身</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.stringbuffer;</div><div class="line"></div><div class="line">public class Demo2_StringBuffer &#123;</div><div class="line">	/*</div><div class="line">		StringBuffer是字符串缓冲区,当new的时候是在堆内存创建了一个对象,底层是一个长度为16的字符数组</div><div class="line">		当调用添加的方法时,不会再重新创建对象,在不断向原缓冲区添加字符</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		StringBuffer sb = new StringBuffer(&quot;1234&quot;);</div><div class="line">		sb.insert(3, &quot;wxhao&quot;);//在指定位置添加元素,如果没有指定位置的索引就会报索引越界异常</div><div class="line">		</div><div class="line">		System.out.println(sb);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo1() &#123;</div><div class="line">		StringBuffer sb = new StringBuffer();</div><div class="line">		StringBuffer sb2 = sb.append(true);</div><div class="line">		StringBuffer sb3 = sb.append(&quot;wxhao&quot;);</div><div class="line">		StringBuffer sb4 = sb.append(100);</div><div class="line">		</div><div class="line">		</div><div class="line">		System.out.println(sb.toString());//StringBuffer类中重写了toString方法,显示的是对象中的属性值</div><div class="line">		System.out.println(sb2.toString());</div><div class="line">		System.out.println(sb3.toString());</div><div class="line">		System.out.println(sb4.toString());</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>StringBuffer是字符串缓冲区,当new的时候是在堆内存创建了一个对象,底层是一个长度为16的字符数组<br>        当调用添加的方法时,不会再重新创建对象,在不断向原缓冲区添加字符</strong></p>
+<h3 id="StringBuffer的删除功能"><a href="#StringBuffer的删除功能" class="headerlink" title="StringBuffer的删除功能"></a>StringBuffer的删除功能</h3><ul>
+<li>A:StringBuffer的删除功能<ul>
+<li>public StringBuffer deleteCharAt(int index):<ul>
+<li>删除指定位置的字符，并返回本身</li>
+</ul>
+</li>
+<li>public StringBuffer delete(int start,int end):<ul>
+<li>删除从指定位置开始指定位置结束的内容，并返回本身</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.stringbuffer;</div><div class="line"></div><div class="line">public class Demo3_StringBuffer &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		StringBuffer sb = new StringBuffer();</div><div class="line">		//sb.deleteCharAt(5);//当缓冲区中这个索引上没有元素的时候就会报StringIndexOutOfBoundsException</div><div class="line">		sb.append(&quot;wxhao&quot;);</div><div class="line">		//sb.deleteCharAt(4);//根据索引删除掉索引位置上对应的字符</div><div class="line">		//sb.delete(0, 2);	//删除的时候是包含头,不包含尾</div><div class="line">		//System.out.println(sb);</div><div class="line">		//sb.delete(0, sb.length());//清空缓冲区</div><div class="line">		//System.out.println(sb);</div><div class="line">		</div><div class="line">		sb = new StringBuffer();//不要用这种方式清空缓冲区,原来的会变成垃圾,浪费内存</div><div class="line">		System.out.println(sb);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="StringBuffer的替换和反转功能"><a href="#StringBuffer的替换和反转功能" class="headerlink" title="StringBuffer的替换和反转功能"></a>StringBuffer的替换和反转功能</h3><ul>
+<li>A:StringBuffer的替换功能<ul>
+<li>public StringBuffer replace(int start,int end,String str):<ul>
+<li>从start开始到end用str替换</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>B:StringBuffer的反转功能<ul>
+<li>public StringBuffer reverse():<ul>
+<li>字符串反转</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.stringbuffer;</div><div class="line"></div><div class="line">public class Demo4_StringBufferMethod &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		StringBuffer sb = new StringBuffer(&quot;我爱总复习&quot;);</div><div class="line">		//sb.replace(0, 3, &quot;bai&quot;);					//替换</div><div class="line">		//System.out.println(sb);</div><div class="line">		</div><div class="line">		sb.reverse();</div><div class="line">		System.out.println(sb);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="StringBuffer的截取功能及注意事项"><a href="#StringBuffer的截取功能及注意事项" class="headerlink" title="StringBuffer的截取功能及注意事项"></a>StringBuffer的截取功能及注意事项</h3><ul>
+<li>A:StringBuffer的截取功能<ul>
+<li>public String substring(int start):<ul>
+<li>从指定位置截取到末尾</li>
+</ul>
+</li>
+<li>public String substring(int start,int end):<ul>
+<li>截取从指定位置开始到结束位置，包括开始位置，不包括结束位置</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>B:注意事项<ul>
+<li>注意:返回值类型不再是StringBuffer本身</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.stringbuffer;</div><div class="line"></div><div class="line">public class Demo5_StringBufferMethod &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		StringBuffer sb = new StringBuffer(&quot;woaiwxhao&quot;);</div><div class="line">		//String str = sb.substring(4);</div><div class="line">		//System.out.println(str);//wxhao</div><div class="line">		</div><div class="line">		//System.out.println(sb);//woaiwxhao</div><div class="line">		</div><div class="line">		String str3 = sb.substring(4, 7);</div><div class="line">		System.out.println(str3);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="StringBuffer和String的相互转换"><a href="#StringBuffer和String的相互转换" class="headerlink" title="StringBuffer和String的相互转换"></a>StringBuffer和String的相互转换</h3><ul>
+<li>A:String – StringBuffer<ul>
+<li>a:通过构造方法</li>
+<li>b:通过append()方法</li>
+</ul>
+</li>
+<li>B:StringBuffer – String<ul>
+<li>a:通过构造方法</li>
+<li>b:通过toString()方法</li>
+<li>c:通过subString(0,length);</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.stringbuffer;</div><div class="line"></div><div class="line">public class Demo6_StringBuffer &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		StringBuffer sb = new StringBuffer(&quot;wxhao&quot;);</div><div class="line">		</div><div class="line">		String s1 = new String(sb);//通过构造将StringBuffer转换为String</div><div class="line">		System.out.println(s1);</div><div class="line">		</div><div class="line">		String s2 = sb.toString();//通过toString方法将StringBuffer转换为String</div><div class="line">		System.out.println(s2);</div><div class="line">		</div><div class="line">		String s3 = sb.substring(0, sb.length());//通过截取子字符串将StringBuffer转换为String</div><div class="line">		System.out.println(s3);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo1() &#123;</div><div class="line">		StringBuffer sb1 = new StringBuffer(&quot;wxhao&quot;);//通过构造方法将字符串转换为StringBuffer对象</div><div class="line">		System.out.println(sb1);</div><div class="line">		</div><div class="line">		StringBuffer sb2 = new StringBuffer();</div><div class="line">		sb2.append(&quot;wxhao&quot;);	//通过append方法将字符串转换为StringBuffer对象</div><div class="line">		System.out.println(sb2);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="把数组转成字符串"><a href="#把数组转成字符串" class="headerlink" title="把数组转成字符串"></a>把数组转成字符串</h3><ul>
+<li>A:代码演示<ul>
+<li>需求：把数组中的数据按照指定个格式拼接成一个字符串</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">举例：</div><div class="line">int[] arr = &#123;1,2,3&#125;;	</div><div class="line">输出结果：</div><div class="line">&quot;[1, 2, 3]&quot;</div><div class="line">用StringBuffer的功能实现</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.test;</div><div class="line"></div><div class="line">public class Test1 &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] arr = &#123;1,2,3&#125;;</div><div class="line">		System.out.println(arrayToString(arr));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	 * 将数组转换为字符串</div><div class="line">	 * 1,返回值类型String</div><div class="line">	 * 2,参数列表int[]</div><div class="line">	 * </div><div class="line">	 * arrayToString 将数组转换为字符串</div><div class="line">	 * array2String		2与to的发音一样就用2替换了to,后来演变成了一种书写习惯</div><div class="line">	 * dom4j  domForJ</div><div class="line">	 */</div><div class="line">	</div><div class="line">	public static String arrayToString(int[] arr) &#123;</div><div class="line">		StringBuffer sb = new StringBuffer();//创建字符串缓冲区对象</div><div class="line">		sb.append(&quot;[&quot;);	//将[添加到缓冲区</div><div class="line">		</div><div class="line">		</div><div class="line">		//&#123;1,2,3&#125;</div><div class="line">		for (int i = 0; i &lt; arr.length; i++) &#123;//遍历数组</div><div class="line">			//sb.append(arr[i] + &quot;, &quot;);//这样做没有]</div><div class="line">			if(i == arr.length - 1) &#123;</div><div class="line">				sb.append(arr[i]).append(&quot;]&quot;);//[1, 2, 3]</div><div class="line">			&#125;else &#123;</div><div class="line">				sb.append(arr[i]).append(&quot;, &quot;);//[1, 2,</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		return sb.toString();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="字符串反转"><a href="#字符串反转" class="headerlink" title="字符串反转"></a>字符串反转</h3><ul>
+<li>A:案例演示</li>
+<li><pre><code>需求：把字符串反转
+    举例：键盘录入&quot;abc&quot;        
+    输出结果：&quot;cba&quot;
+
+用StringBuffer的功能实现    
+</code></pre></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.test;</div><div class="line"></div><div class="line">import java.util.Scanner;</div><div class="line"></div><div class="line">public class Test2 &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);//创建键盘录入对象</div><div class="line">		String line = sc.nextLine();//将键盘录入的字符串存储在line中</div><div class="line">		</div><div class="line">		/*StringBuffer sb = new StringBuffer(line);	//将字符串转换为StringBuffer对象</div><div class="line">		sb.reverse();	//将缓冲区的内容反转</div><div class="line">		</div><div class="line">		System.out.println(sb.toString());*/</div><div class="line">		</div><div class="line">		System.out.println(revString(line));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	 * 将字符串反转</div><div class="line">	 * 1,返回值类型String</div><div class="line">	 * 2,参数列表String line</div><div class="line">	 */</div><div class="line">	</div><div class="line">	public static String revString(String line) &#123;</div><div class="line">		StringBuffer sb = new StringBuffer(line);//将字符串转换为StringBuffer对象</div><div class="line">		sb.reverse();	//将缓冲区的内容反转</div><div class="line">		</div><div class="line">		return sb.toString();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="StringBuffer和StringBuilder的区别"><a href="#StringBuffer和StringBuilder的区别" class="headerlink" title="StringBuffer和StringBuilder的区别"></a>StringBuffer和StringBuilder的区别</h3><ul>
+<li>A:StringBuilder的概述<ul>
+<li>通过查看API了解一下StringBuilder类</li>
+</ul>
+</li>
+<li><p>B:面试题</p>
+<ul>
+<li>String,StringBuffer,StringBuilder的区别</li>
+<li>StringBuffer和StringBuilder的区别</li>
+<li>StringBuffer是jdk1.0版本的,是线程安全的,效率低</li>
+<li><p>StringBuilder是jdk1.5版本的,是线程不安全的,效率高</p>
+</li>
+<li><p>String和StringBuffer,StringBuilder的区别</p>
+</li>
+<li>String是一个不可变的字符序列</li>
+<li>StringBuffer,StringBuilder是可变的字符序列</li>
+</ul>
+</li>
+</ul>
+<h3 id="String和StringBuffer分别作为参数传递"><a href="#String和StringBuffer分别作为参数传递" class="headerlink" title="String和StringBuffer分别作为参数传递"></a>String和StringBuffer分别作为参数传递</h3><ul>
+<li>A:形式参数问题<ul>
+<li>String作为参数传递</li>
+<li>StringBuffer作为参数传递 </li>
+</ul>
+</li>
+<li>B:案例演示<ul>
+<li>String和StringBuffer分别作为参数传递问题</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.stringbuffer;</div><div class="line"></div><div class="line">public class Demo7_StringBuffer &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	基本数据类型的值传递,不改变其值</div><div class="line">	引用数据类型的值传递,改变其值</div><div class="line">	</div><div class="line">	String类虽然是引用数据类型,但是他当作参数传递时和基本数据类型是一样的</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		String s = &quot;wxhao&quot;;</div><div class="line">		System.out.println(s);</div><div class="line">		change(s);</div><div class="line">		System.out.println(s);</div><div class="line">		</div><div class="line">		</div><div class="line">		System.out.println(&quot;---------------------&quot;);</div><div class="line">		StringBuffer sb = new StringBuffer();</div><div class="line">		sb.append(&quot;wxhao&quot;);</div><div class="line">		System.out.println(sb);</div><div class="line">		change(sb);</div><div class="line">		System.out.println(sb);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void change(StringBuffer sb) &#123;</div><div class="line">		sb.append(&quot;itcast&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void change(String s) &#123;</div><div class="line">		s += &quot;itcast&quot;;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">基础知识</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JAVASE</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2013/08/01/2013-08-01-object-class-stringbuffer/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-2013-07-30-object-class-string" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/07/30/2013-07-30-object-class-string/">String类</a>
+    </h1>
+  
+
+        
+        <a href="/2013/07/30/2013-07-30-object-class-string/" class="archive-article-date">
+  	<time datetime="2013-07-29T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-07-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="String类的概述"><a href="#String类的概述" class="headerlink" title="String类的概述"></a>String类的概述</h3><ul>
+<li><p>String类的概述</p>
+<ul>
+<li><p>通过JDK提供的API,查看String类的说明</p>
+</li>
+<li><p>可以看到这样两句话</p>
+<ul>
+<li>字符串字面值”abc”也可以看成一个字符串对象</li>
+<li>字符串是常量,一旦被赋值,就不能被改变</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.string;</div><div class="line"></div><div class="line">public class Demo1_String &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		String str = &quot;abc&quot;; 	//&quot;abc&quot;可以看诚意个字符串对象</div><div class="line">		str = &quot;def&quot;;			//当把&quot;def&quot;复制给str,原来的&quot;abc&quot;就变成了垃圾</div><div class="line">		System.out.println(str);//String类重写toString房里返回的是该对象本身</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="String类的构造方法"><a href="#String类的构造方法" class="headerlink" title="String类的构造方法"></a>String类的构造方法</h3><ul>
+<li>常见构造方法<ul>
+<li>public String();空构造</li>
+<li>public String(byte[] bytes);把字节数组转成字符串</li>
+<li>public String(byte[] bytes,int index,int length);把字节数组转成一部分字符串</li>
+<li>public String(char[] value);把字符数组转成字符串</li>
+<li>public String(char[] value,int index,int count);把字符数组转成一部分字符串</li>
+<li>public String(String original);把字符串常量值转成字符串</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.string;</div><div class="line"></div><div class="line">public class Demo2_String &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		String s = new String();</div><div class="line">		System.out.println(s);//空白</div><div class="line">		</div><div class="line">		byte[] arr1 = &#123;97, 98 ,99&#125;;</div><div class="line">		String s1 = new String(arr1);//解码,奖计算机读得懂得转成我们读得懂得</div><div class="line">		System.out.println(s1);//默认项目解码(GBK),</div><div class="line">		</div><div class="line">		byte[] arr2 = &#123;97, 98 ,99,100,101,102&#125;;</div><div class="line">		String s2 = new String(arr2,2,3);</div><div class="line">		System.out.println(s2);</div><div class="line">		</div><div class="line">		char[] arr3 = &#123;&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;,&apos;e&apos;&#125;;</div><div class="line">		String s3 = new String(arr3);</div><div class="line">		System.out.println(s3);</div><div class="line">		</div><div class="line">		String s4 = new String(arr2,2,3);</div><div class="line">		System.out.println(s4);</div><div class="line">		</div><div class="line">		String s5=new String (&quot;wxhao&quot;);</div><div class="line">		System.out.println(s5);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="String类的常见面试题"><a href="#String类的常见面试题" class="headerlink" title="String类的常见面试题"></a>String类的常见面试题</h3><ol>
+<li><p>判断定义为String类型的s1和s2是否相等</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">String s1 = &quot; abc&quot;;</div><div class="line">String s2 = &quot; abc&quot;;</div><div class="line">System.out.println(s1==s2);//true</div><div class="line">System.out.println(s1.equals(s2));//true</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>![String面试题1图解](http://wxhao2.duapp.com/blog/post-in/20130730/strmst1.png)
+</code></pre><ol>
+<li><p>下面这句话在内存中传建几个对象</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">String s1 = new String(&quot;abc&quot;);</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>![String面试题2图解](http://wxhao2.duapp.com/blog/post-in/20130730/strmst2.png)
+</code></pre><ol>
+<li><p>判断定义为String类型的s1和s2是否相等</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">String s1 = new String(&quot;abc&quot;);</div><div class="line">String s2 = &quot;abc&quot;;</div><div class="line">System.out.println(s1==s2);</div><div class="line">System.out.println(s1.equals(s2));</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>判断定义为String类型的s1和s2是否相等</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">String s1 = &quot;a&quot;+&quot;b&quot;+&quot;c&quot;;</div><div class="line">String s2 = &quot; abc&quot;;</div><div class="line">System.out.println(s1==s2);</div><div class="line">System.out.println(s1.equals(s2));</div></pre></td></tr></table></figure>
+</li>
+<li><p>判断定义为String类型的s1和s2是否相等</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">String s1 = &quot;ab&quot;;</div><div class="line">String s2 = &quot;abc&quot;;</div><div class="line">String s3 = s1+&quot;c&quot;;</div><div class="line">System.out.println(s3==s2);</div><div class="line">System.out.println(s3.equals(s2));</div></pre></td></tr></table></figure>
+<p> <img src="http://wxhao2.duapp.com/blog/post-in/20130730/strmst5.png" alt="String面试题5图解"></p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.string;</div><div class="line"></div><div class="line">public class Demo3_String &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		//demo2();</div><div class="line">		//demo3();</div><div class="line">		//demo4();</div><div class="line">		String s1 = &quot;ab&quot;;</div><div class="line">	    String s2 = &quot;abc&quot;;</div><div class="line">	    String s3 = s1+&quot;c&quot;;</div><div class="line">	    System.out.println(s3==s2);//false</div><div class="line">	    System.out.println(s3.equals(s2));//true</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo4() &#123;</div><div class="line">		String s1 = &quot;a&quot;+&quot;b&quot;+&quot;c&quot;;//常量优化</div><div class="line">	    String s2 = &quot;abc&quot;;</div><div class="line">	    System.out.println(s1==s2);//true</div><div class="line">	    System.out.println(s1.equals(s2));//true</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo3() &#123;</div><div class="line">		String s1 = new String(&quot;abc&quot;);</div><div class="line">	    String s2 = &quot;abc&quot;;</div><div class="line">	    System.out.println(s1==s2);//false</div><div class="line">	    System.out.println(s1.equals(s2));//true</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo2() &#123;</div><div class="line">		// 创建了两个对象,一个在常量池中,一个在堆内存中</div><div class="line">		String s1 = new String(&quot;abc&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo1() &#123;</div><div class="line">		String s1 = &quot; abc&quot;;</div><div class="line">		String s2 = &quot; abc&quot;;</div><div class="line">		System.out.println(s1 == s2);</div><div class="line">		System.out.println(s1.equals(s2));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="String类的判断功能"><a href="#String类的判断功能" class="headerlink" title="String类的判断功能"></a>String类的判断功能</h3><ul>
+<li>boolean equals(Object obj);比较字符串的内容是否相容,区分大小写</li>
+<li>boolean equalsIngnoreCase(String str);比较字符串的内容是否相容,忽略大小写</li>
+<li>boolean contains(String str);判断大字符串中是否包含小字符串</li>
+<li>boolean startsWith(String str);判断字符串是否以某个指定的字符串开头</li>
+<li>boolean endsWith(String str);判断字符串是否以某个指定的字符串结尾</li>
+<li>boolean isEmpty(String str);判断字符串是否为空</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.string;</div><div class="line"></div><div class="line">public class Demo4_String &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">//		demo1();</div><div class="line">//		demo2();</div><div class="line">		String s1 = &quot;wxhao&quot;;</div><div class="line">		String s2 = &quot;&quot;;</div><div class="line">		String s3 = null;</div><div class="line">		</div><div class="line">		System.out.println(s1.isEmpty());</div><div class="line">		System.out.println(s2.isEmpty());</div><div class="line">		//System.out.println(s3.isEmpty());//空对象,并不是空字符串</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo2() &#123;</div><div class="line">		String s1 = &quot;我是wxhao,嘿嘿&quot;;</div><div class="line">		String s2 = &quot;wxhao&quot;;</div><div class="line">		String s3 = &quot;sb&quot;;</div><div class="line">		String s4 = &quot;我是&quot;;</div><div class="line">		String s5 = &quot;嘿嘿&quot;;</div><div class="line"></div><div class="line">		System.out.println(s1.concat(s2));// 判断是否包含字符串</div><div class="line">		System.out.println(s1.concat(s3));</div><div class="line">		System.out.println(&quot;---------&quot;);</div><div class="line">		</div><div class="line">		System.out.println(s1.startsWith(s4));//判断是否以传入字符串开头</div><div class="line">		System.out.println(s1.startsWith(s5));</div><div class="line">		System.out.println(&quot;---------&quot;);</div><div class="line">		</div><div class="line">		System.out.println(s1.endsWith(s4));//判断是否以传入字符串结尾</div><div class="line">		System.out.println(s1.endsWith(s5));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo1() &#123;</div><div class="line">		String s1 = &quot;wxhao&quot;;</div><div class="line">		String s2 = &quot;wxhao&quot;;</div><div class="line">		String s3 = &quot;Wxhao&quot;;</div><div class="line"></div><div class="line">		System.out.println(s1.equals(s2));</div><div class="line">		System.out.println(s1.equals(s3));</div><div class="line">		System.out.println(&quot;------------&quot;);</div><div class="line"></div><div class="line">		System.out.println(s1.equalsIgnoreCase(s2));</div><div class="line">		System.out.println(s1.equalsIgnoreCase(s3));</div><div class="line">		System.out.println(&quot;------------&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="模拟用户登录"><a href="#模拟用户登录" class="headerlink" title="模拟用户登录"></a>模拟用户登录</h3><ul>
+<li>需求:摸你登录,给三次机会,并提示还有几次</li>
+<li>用户名和密码都是admin</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.test;</div><div class="line"></div><div class="line">import java.util.Scanner;</div><div class="line"></div><div class="line">public class Test1 &#123;</div><div class="line"></div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		</div><div class="line">		Scanner sc = new Scanner(System.in);</div><div class="line">		</div><div class="line">		final String USERNAME= &quot;admin&quot;;</div><div class="line">		final String PASSWORD= &quot;admin&quot;;</div><div class="line">		</div><div class="line">		String usernameIn=null;</div><div class="line">		String passwordIn=null;</div><div class="line">		</div><div class="line">		for(int i = 0 ; i &lt; 3 ; i++)&#123;</div><div class="line">			System.out.println(&quot;请输入用户名:&quot;);</div><div class="line">			usernameIn = sc.nextLine();</div><div class="line">			System.out.println(&quot;请输入密码:&quot;);</div><div class="line">			passwordIn = sc.nextLine();</div><div class="line">			if(USERNAME.equals(usernameIn)&amp;&amp;PASSWORD.equals(passwordIn))&#123;</div><div class="line">				System.out.println(&quot;登录成功&quot;);</div><div class="line">				break;</div><div class="line">			&#125;else&#123;</div><div class="line">				System.out.println(&quot;登录失败&quot;);</div><div class="line">				if(i==2)&#123;</div><div class="line">					System.out.println(&quot;你的错误次数已到到上限,请明天再来&quot;);</div><div class="line">				&#125;else&#123;</div><div class="line">					System.out.println(&quot;还有&quot;+(2-i)+&quot;次机会&quot;);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="String类的获取功能"><a href="#String类的获取功能" class="headerlink" title="String类的获取功能"></a>String类的获取功能</h3><ul>
+<li>int length();获取字符串长度</li>
+<li>char charAt(int index);获取指定索引位置的字符</li>
+<li>int indexOf(int ch);返回指定字符在此字符串中第一次出现处的索引</li>
+<li>int indexOf(String str);返回指定字符在此字符串中第一次出现处的索引</li>
+<li>int indexOf(int ch ,int fromIndex);返回指定字符在此字符串中从指定位置后第一次出现处的索引</li>
+<li>int indexOf(String str,int fromIndex);返回指定字符在此字符串中从指定位置后第一次出现处的索引</li>
+<li>lastIndexOf</li>
+<li>String substring(int start);从指定位置开始截取字符串,默认到尾数</li>
+<li>String substring(int start,int end);从指定位置开始到指定位置结束截取字符串</li>
+</ul>
+<h3 id="字符串的遍历"><a href="#字符串的遍历" class="headerlink" title="字符串的遍历"></a>字符串的遍历</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.test;</div><div class="line"></div><div class="line">public class Test2 &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		String s= &quot;wxhao&quot;;</div><div class="line">		for (int i = 0; i &lt; s.length(); i++) &#123;</div><div class="line">			char c=s.charAt(i);//通过索引获取每一个字符</div><div class="line">			System.out.println(c);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="统计不同类型字符个数"><a href="#统计不同类型字符个数" class="headerlink" title="统计不同类型字符个数"></a>统计不同类型字符个数</h3><ul>
+<li>需求:统计一个字符串中大写字母字符,小写字母字符,数字字符出现的次数,其他字符出现的次数</li>
+<li>ABCDEabcd123456!@#$%^</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.test;</div><div class="line"></div><div class="line">public class Test3 &#123;</div><div class="line">	/**</div><div class="line">	 * 分析:字符串是由字符组成的,而字符的值都是有范围的 通过范围来判断是否包含该字符</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		String s = &quot;ABCDEabcd123456!@#$%^&quot;;</div><div class="line">		int big = 0;</div><div class="line">		int small = 0;</div><div class="line">		int num = 0;</div><div class="line">		int other = 0;</div><div class="line">		for (int i = 0; i &lt; s.length(); i++) &#123;</div><div class="line">			char c = s.charAt(i);</div><div class="line">			if (c &gt;= &apos;A&apos; &amp;&amp; c &lt;= &apos;Z&apos;) &#123;</div><div class="line">				big++;</div><div class="line">			&#125; else if (c &gt;= &apos;a&apos; &amp;&amp; c &lt;= &apos;z&apos;) &#123;</div><div class="line">				small++;</div><div class="line">			&#125; else if (c &gt;= &apos;0&apos; &amp;&amp; c &lt;= &apos;9&apos;) &#123;</div><div class="line">				num++;</div><div class="line">			&#125; else &#123;</div><div class="line">				other++;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		System.out.println(big);</div><div class="line">		System.out.println(small);</div><div class="line">		System.out.println(num);</div><div class="line">		System.out.println(other);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="String类的转换功能"><a href="#String类的转换功能" class="headerlink" title="String类的转换功能"></a>String类的转换功能</h3><ul>
+<li>String的转换功能:<ul>
+<li>byte[] getBytes();把字符串转换为字节数组</li>
+<li>GBK码表一个中文代表两个字节,第一个字节为负数</li>
+<li>char[] toCharArray();把字符串转换为字符数组</li>
+<li>static String valueOf(char[] chs);吧字符数组专程字符串</li>
+<li>static String valueOf(int i);把int类型的数据转成字符串<ul>
+<li>注意:String 类的valueOf可以把任意类型的数据转成字符串</li>
+</ul>
+</li>
+<li>String toLowerCase();把字符串转成小写</li>
+<li>String toUpperCase();把字符串转成大写</li>
+<li>String concat(String str);把字符串拼接</li>
+</ul>
+</li>
+</ul>
+<h3 id="按需求转换字符"><a href="#按需求转换字符" class="headerlink" title="按需求转换字符"></a>按需求转换字符</h3><ul>
+<li>需求<ul>
+<li>把一个字符串的首字母转成大写,其余为小写</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.test;</div><div class="line"></div><div class="line">public class Test4 &#123;</div><div class="line">	/**</div><div class="line">	 * 链式编程:只要保证每次调用完成方法返回的是对象,就可以继续调用</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		String s = &quot;woshiYIGEDASHUAIBI&quot;;</div><div class="line">		String str = s.substring(0, 1).toUpperCase().concat(s.substring(1).toLowerCase());</div><div class="line">		System.out.println(str);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="String-类的其他功能"><a href="#String-类的其他功能" class="headerlink" title="String 类的其他功能"></a>String 类的其他功能</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.string;</div><div class="line"></div><div class="line">public class Demo7_StringMethod &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line"></div><div class="line">		String s1 = &quot;a&quot;;</div><div class="line">		String s2 = &quot;aaaa&quot;;</div><div class="line"></div><div class="line">		int num = s1.compareTo(s2);// 码表值比较</div><div class="line">		System.out.println(num);</div><div class="line"></div><div class="line">		String s3 = &quot;吴&quot;;</div><div class="line">		String s4 = &quot;浩&quot;;</div><div class="line"></div><div class="line">		int num2 = s3.compareTo(s4);</div><div class="line">		System.out.println(num2);</div><div class="line"></div><div class="line">		System.out.println(&apos;吴&apos; + 0);// 查找的是Unicode码表值</div><div class="line">		System.out.println(&apos;浩&apos; + 0);</div><div class="line"></div><div class="line">		</div><div class="line">		String s5=&quot;wxhao&quot;;</div><div class="line">		String s6=&quot;WXHAO&quot;;</div><div class="line">		</div><div class="line">		int num3=s5.compareTo(s6);</div><div class="line">		System.out.println(num3);</div><div class="line">		int num4=s5.compareToIgnoreCase(s6);</div><div class="line">		System.out.println(num4);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="字符串反转"><a href="#字符串反转" class="headerlink" title="字符串反转"></a>字符串反转</h3><ul>
+<li>举例:输入”abc”,输出”cba”</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.test;</div><div class="line"></div><div class="line">import java.util.Scanner;</div><div class="line"></div><div class="line">public class Test6 &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc=new Scanner(System.in);</div><div class="line">		String str=sc.nextLine();</div><div class="line">		char[] cs=str.toCharArray();</div><div class="line">		int length=cs.length;</div><div class="line">		char[] newCs=new char[length];</div><div class="line">		for (int i = 0; i &lt; length; i++) &#123;</div><div class="line">			newCs[length-i-1]=cs[i];</div><div class="line">		&#125;</div><div class="line">		System.out.println(String.valueOf(newCs));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="在大串中查找小串出现的次数代码实现"><a href="#在大串中查找小串出现的次数代码实现" class="headerlink" title="在大串中查找小串出现的次数代码实现"></a>在大串中查找小串出现的次数代码实现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.test;</div><div class="line"></div><div class="line">public class Test7_String &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		String s=&quot;woshiwxhao,woailyy,hahaah,wxhao,lyyheihh lyy&quot;;</div><div class="line">		String value=&quot;lyy&quot;;</div><div class="line">		int count=0;</div><div class="line">		int i=-1;</div><div class="line">		do &#123;</div><div class="line">			i=s.indexOf(value);</div><div class="line">			s=s.substring(i+value.length());</div><div class="line">//			System.out.println(i);</div><div class="line">//			System.out.println(s);</div><div class="line">			count++;</div><div class="line">		&#125; while (i&gt;-1&amp;&amp;!s.isEmpty());</div><div class="line">		System.out.println(count);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">基础知识</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JAVASE</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2013/07/30/2013-07-30-object-class-string/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-2013-07-27-object-class-scanner" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2013/07/27/2013-07-27-object-class-scanner/">Scanner</a>
+    </h1>
+  
+
+        
+        <a href="/2013/07/27/2013-07-27-object-class-scanner/" class="archive-article-date">
+  	<time datetime="2013-07-26T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2013-07-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Scanner的概述和方法介绍"><a href="#Scanner的概述和方法介绍" class="headerlink" title="Scanner的概述和方法介绍"></a>Scanner的概述和方法介绍</h3><ul>
+<li><p>scanner的构造方法原理</p>
+<ul>
+<li>scanner(inputstream source)</li>
+<li>system类下有一个静态的字段<ul>
+<li>public static final inputstream in:标准的输入流,对应着键盘录入</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>一般方法</p>
+<ul>
+<li>hashNextXxx() 判断是否还有下一个输入项,其中Xxx可以是Int,Double等,如果需要判断是否包含下一个字符串,则可以省略Xxx</li>
+<li>nextXxx() 获取下一个输入项,Xxx的含义和上个方法中的相同,默认情况下,scanner用空格,回车等作分隔符</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.bean;</div><div class="line"></div><div class="line">import java.util.Scanner;</div><div class="line"></div><div class="line">public class Demo_Scanner &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc=new Scanner(System.in);</div><div class="line">//		int i =sc.nextInt();</div><div class="line">//		System.out.println(i);</div><div class="line">		</div><div class="line">		if(sc.hasNextInt())&#123;</div><div class="line">			int i =sc.nextInt();</div><div class="line">			System.out.println(i);</div><div class="line">		&#125;else&#123;</div><div class="line">			System.out.println(&quot;输入类型错误&quot;);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Scanner获取数据出现的小问题及解决方案"><a href="#Scanner获取数据出现的小问题及解决方案" class="headerlink" title="Scanner获取数据出现的小问题及解决方案"></a>Scanner获取数据出现的小问题及解决方案</h3><ul>
+<li><p>两个常用的方法</p>
+<ul>
+<li>public int nextInt();获取一个int类型的值</li>
+<li>public int nextString();获取一个String类型的值</li>
+</ul>
+</li>
+<li>代码演示<ul>
+<li>获取多个int值,多个String值</li>
+<li>先获取int,然后获取string值出现问题</li>
+<li>解决问题办法<ul>
+<li>第一种:现获取一个数之后在创建一个新的键盘录入对象获取字符串</li>
+<li>第二种:把所有的数据都先按照字符串获取,然后要什么,你就对应的转换为什么</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.bean;</div><div class="line"></div><div class="line">import java.util.Scanner;</div><div class="line"></div><div class="line">public class Demo2_Scanner &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc=new Scanner(System.in);</div><div class="line">		</div><div class="line">//		System.out.println(&quot;请输入第一个数字&quot;);</div><div class="line">//		int i = sc.nextInt();</div><div class="line">//		System.out.println(&quot;请输入第二个数字&quot;);</div><div class="line">//		int j = sc.nextInt();</div><div class="line">		</div><div class="line">//		System.out.println(&quot;i=&quot;+i+&quot;,j=&quot;+j);</div><div class="line">		</div><div class="line">//		System.out.println(&quot;请输入第一个字符串&quot;);</div><div class="line">//		String x = sc.nextLine();</div><div class="line">//		System.out.println(&quot;请输入第二个字符串&quot;);</div><div class="line">//		String y = sc.nextLine();</div><div class="line">//		System.out.println(&quot;x=&quot;+x+&quot;,y=&quot;+y);</div><div class="line">		</div><div class="line">		/**</div><div class="line">		 * nextInt()是键盘录入整数的方法,当我们录入10的时候</div><div class="line">		 * 其实在键盘上录入的是10和\r\n,nextInt()方法只获取10就结束了</div><div class="line">		 * nextLine()是键盘录入字符串的方法,可以接受任意类型,但是他为什么能获取一行呢?</div><div class="line">		 * 通过\r\n,只要遇到\r\n就证明是一行结束</div><div class="line">		 */</div><div class="line">//		System.out.println(&quot;请输入第一个数字&quot;);</div><div class="line">//		int a = sc.nextInt();</div><div class="line">//		System.out.println(&quot;请输入第二个字符串&quot;);</div><div class="line">//		String b = sc.nextLine();</div><div class="line">//		System.out.println(&quot;a=&quot;+a+&quot;,b=&quot;+b);//输入10 敲回车只会输出10,为什么?</div><div class="line">		</div><div class="line">		/**</div><div class="line">		 * 解决方案</div><div class="line">		 * 1.创建两次对象,但是浪费空间</div><div class="line">		 * 2.键盘录入的都是字符串,都用nextLine方法</div><div class="line">		 */</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">基础知识</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JAVASE</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2013/07/27/2013-07-27-object-class-scanner/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
+    </nav>
+  
+
+
+          </div>
+        </div>
       </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Infinite Good
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
     </div>
   </div>
 </footer>
-
-
-    <!-- After Footer Scripts -->
-<script src="/js/highlight.pack.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
-    codeBlocks.forEach(function(block, index) {
-      hljs.highlightBlock(block);
-    });
-  });
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		isHome: true,
+		isPost: false,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true,
+		showTags: true
+	}
 </script>
 
-  </body>
-</html>
+<script>!function(t){function n(r){if(e[r])return e[r].exports;var o=e[r]={exports:{},id:r,loaded:!1};return t[r].call(o.exports,o,o.exports,n),o.loaded=!0,o.exports}var e={};return n.m=t,n.c=e,n.p="./",n(0)}([function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}function o(t,n){var e=/\/|index.html/g;return t.replace(e,"")===n.replace(e,"")}function i(){for(var t=document.querySelectorAll(".js-header-menu li a"),n=window.location.pathname,e=0,r=t.length;e<r;e++){var i=t[e];o(n,i.getAttribute("href"))&&(0,d.default)(i,"active")}}function u(t){for(var n=t.offsetLeft,e=t.offsetParent;null!==e;)n+=e.offsetLeft,e=e.offsetParent;return n}function f(t){for(var n=t.offsetTop,e=t.offsetParent;null!==e;)n+=e.offsetTop,e=e.offsetParent;return n}function c(t,n,e,r,o){var i=u(t),c=f(t)-n;if(c-e<=o){var a=t.$newDom;a||(a=t.cloneNode(!0),(0,h.default)(t,a),t.$newDom=a,a.style.position="fixed",a.style.top=(e||c)+"px",a.style.left=i+"px",a.style.zIndex=r||2,a.style.width="100%",a.style.color="#fff"),a.style.visibility="visible",t.style.visibility="hidden"}else{t.style.visibility="visible";var s=t.$newDom;s&&(s.style.visibility="hidden")}}function a(){var t=document.querySelector(".js-overlay"),n=document.querySelector(".js-header-menu");c(t,document.body.scrollTop,-63,2,0),c(n,document.body.scrollTop,1,3,0)}function s(){document.querySelector("#container").addEventListener("scroll",function(t){a()}),window.addEventListener("scroll",function(t){a()}),a()}function l(){x.default.versions.mobile&&window.screen.width<800&&(i(),s())}var p=e(71),d=r(p),v=e(72),y=(r(v),e(84)),h=r(y),b=e(69),x=r(b),g=e(75),m=r(g),w=e(70);l(),(0,w.addLoadEvent)(function(){m.default.init()}),t.exports={}},function(t,n){var e=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=e)},function(t,n){var e={}.hasOwnProperty;t.exports=function(t,n){return e.call(t,n)}},function(t,n,e){var r=e(49),o=e(15);t.exports=function(t){return r(o(t))}},function(t,n,e){t.exports=!e(8)(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},function(t,n,e){var r=e(6),o=e(12);t.exports=e(4)?function(t,n,e){return r.f(t,n,o(1,e))}:function(t,n,e){return t[n]=e,t}},function(t,n,e){var r=e(10),o=e(30),i=e(24),u=Object.defineProperty;n.f=e(4)?Object.defineProperty:function(t,n,e){if(r(t),n=i(n,!0),r(e),o)try{return u(t,n,e)}catch(t){}if("get"in e||"set"in e)throw TypeError("Accessors not supported!");return"value"in e&&(t[n]=e.value),t}},function(t,n,e){var r=e(22)("wks"),o=e(13),i=e(1).Symbol,u="function"==typeof i,f=t.exports=function(t){return r[t]||(r[t]=u&&i[t]||(u?i:o)("Symbol."+t))};f.store=r},function(t,n){t.exports=function(t){try{return!!t()}catch(t){return!0}}},function(t,n,e){var r=e(35),o=e(16);t.exports=Object.keys||function(t){return r(t,o)}},function(t,n,e){var r=e(11);t.exports=function(t){if(!r(t))throw TypeError(t+" is not an object!");return t}},function(t,n){t.exports=function(t){return"object"==typeof t?null!==t:"function"==typeof t}},function(t,n){t.exports=function(t,n){return{enumerable:!(1&t),configurable:!(2&t),writable:!(4&t),value:n}}},function(t,n){var e=0,r=Math.random();t.exports=function(t){return"Symbol(".concat(void 0===t?"":t,")_",(++e+r).toString(36))}},function(t,n){var e=t.exports={version:"2.4.0"};"number"==typeof __e&&(__e=e)},function(t,n){t.exports=function(t){if(void 0==t)throw TypeError("Can't call method on  "+t);return t}},function(t,n){t.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},function(t,n){t.exports={}},function(t,n){t.exports=!0},function(t,n){n.f={}.propertyIsEnumerable},function(t,n,e){var r=e(6).f,o=e(2),i=e(7)("toStringTag");t.exports=function(t,n,e){t&&!o(t=e?t:t.prototype,i)&&r(t,i,{configurable:!0,value:n})}},function(t,n,e){var r=e(22)("keys"),o=e(13);t.exports=function(t){return r[t]||(r[t]=o(t))}},function(t,n,e){var r=e(1),o="__core-js_shared__",i=r[o]||(r[o]={});t.exports=function(t){return i[t]||(i[t]={})}},function(t,n){var e=Math.ceil,r=Math.floor;t.exports=function(t){return isNaN(t=+t)?0:(t>0?r:e)(t)}},function(t,n,e){var r=e(11);t.exports=function(t,n){if(!r(t))return t;var e,o;if(n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;if("function"==typeof(e=t.valueOf)&&!r(o=e.call(t)))return o;if(!n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;throw TypeError("Can't convert object to primitive value")}},function(t,n,e){var r=e(1),o=e(14),i=e(18),u=e(26),f=e(6).f;t.exports=function(t){var n=o.Symbol||(o.Symbol=i?{}:r.Symbol||{});"_"==t.charAt(0)||t in n||f(n,t,{value:u.f(t)})}},function(t,n,e){n.f=e(7)},function(t,n,e){var r=e(1),o=e(14),i=e(46),u=e(5),f="prototype",c=function(t,n,e){var a,s,l,p=t&c.F,d=t&c.G,v=t&c.S,y=t&c.P,h=t&c.B,b=t&c.W,x=d?o:o[n]||(o[n]={}),g=x[f],m=d?r:v?r[n]:(r[n]||{})[f];d&&(e=n);for(a in e)s=!p&&m&&void 0!==m[a],s&&a in x||(l=s?m[a]:e[a],x[a]=d&&"function"!=typeof m[a]?e[a]:h&&s?i(l,r):b&&m[a]==l?function(t){var n=function(n,e,r){if(this instanceof t){switch(arguments.length){case 0:return new t;case 1:return new t(n);case 2:return new t(n,e)}return new t(n,e,r)}return t.apply(this,arguments)};return n[f]=t[f],n}(l):y&&"function"==typeof l?i(Function.call,l):l,y&&((x.virtual||(x.virtual={}))[a]=l,t&c.R&&g&&!g[a]&&u(g,a,l)))};c.F=1,c.G=2,c.S=4,c.P=8,c.B=16,c.W=32,c.U=64,c.R=128,t.exports=c},function(t,n){var e={}.toString;t.exports=function(t){return e.call(t).slice(8,-1)}},function(t,n,e){var r=e(11),o=e(1).document,i=r(o)&&r(o.createElement);t.exports=function(t){return i?o.createElement(t):{}}},function(t,n,e){t.exports=!e(4)&&!e(8)(function(){return 7!=Object.defineProperty(e(29)("div"),"a",{get:function(){return 7}}).a})},function(t,n,e){"use strict";var r=e(18),o=e(27),i=e(36),u=e(5),f=e(2),c=e(17),a=e(51),s=e(20),l=e(58),p=e(7)("iterator"),d=!([].keys&&"next"in[].keys()),v="@@iterator",y="keys",h="values",b=function(){return this};t.exports=function(t,n,e,x,g,m,w){a(e,n,x);var O,S,_,j=function(t){if(!d&&t in A)return A[t];switch(t){case y:return function(){return new e(this,t)};case h:return function(){return new e(this,t)}}return function(){return new e(this,t)}},P=n+" Iterator",E=g==h,M=!1,A=t.prototype,T=A[p]||A[v]||g&&A[g],L=T||j(g),N=g?E?j("entries"):L:void 0,C="Array"==n?A.entries||T:T;if(C&&(_=l(C.call(new t)),_!==Object.prototype&&(s(_,P,!0),r||f(_,p)||u(_,p,b))),E&&T&&T.name!==h&&(M=!0,L=function(){return T.call(this)}),r&&!w||!d&&!M&&A[p]||u(A,p,L),c[n]=L,c[P]=b,g)if(O={values:E?L:j(h),keys:m?L:j(y),entries:N},w)for(S in O)S in A||i(A,S,O[S]);else o(o.P+o.F*(d||M),n,O);return O}},function(t,n,e){var r=e(10),o=e(55),i=e(16),u=e(21)("IE_PROTO"),f=function(){},c="prototype",a=function(){var t,n=e(29)("iframe"),r=i.length,o="<",u=">";for(n.style.display="none",e(48).appendChild(n),n.src="javascript:",t=n.contentWindow.document,t.open(),t.write(o+"script"+u+"document.F=Object"+o+"/script"+u),t.close(),a=t.F;r--;)delete a[c][i[r]];return a()};t.exports=Object.create||function(t,n){var e;return null!==t?(f[c]=r(t),e=new f,f[c]=null,e[u]=t):e=a(),void 0===n?e:o(e,n)}},function(t,n,e){var r=e(35),o=e(16).concat("length","prototype");n.f=Object.getOwnPropertyNames||function(t){return r(t,o)}},function(t,n){n.f=Object.getOwnPropertySymbols},function(t,n,e){var r=e(2),o=e(3),i=e(45)(!1),u=e(21)("IE_PROTO");t.exports=function(t,n){var e,f=o(t),c=0,a=[];for(e in f)e!=u&&r(f,e)&&a.push(e);for(;n.length>c;)r(f,e=n[c++])&&(~i(a,e)||a.push(e));return a}},function(t,n,e){t.exports=e(5)},function(t,n,e){var r=e(15);t.exports=function(t){return Object(r(t))}},function(t,n,e){t.exports={default:e(41),__esModule:!0}},function(t,n,e){t.exports={default:e(42),__esModule:!0}},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}n.__esModule=!0;var o=e(39),i=r(o),u=e(38),f=r(u),c="function"==typeof f.default&&"symbol"==typeof i.default?function(t){return typeof t}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":typeof t};n.default="function"==typeof f.default&&"symbol"===c(i.default)?function(t){return"undefined"==typeof t?"undefined":c(t)}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":"undefined"==typeof t?"undefined":c(t)}},function(t,n,e){e(65),e(63),e(66),e(67),t.exports=e(14).Symbol},function(t,n,e){e(64),e(68),t.exports=e(26).f("iterator")},function(t,n){t.exports=function(t){if("function"!=typeof t)throw TypeError(t+" is not a function!");return t}},function(t,n){t.exports=function(){}},function(t,n,e){var r=e(3),o=e(61),i=e(60);t.exports=function(t){return function(n,e,u){var f,c=r(n),a=o(c.length),s=i(u,a);if(t&&e!=e){for(;a>s;)if(f=c[s++],f!=f)return!0}else for(;a>s;s++)if((t||s in c)&&c[s]===e)return t||s||0;return!t&&-1}}},function(t,n,e){var r=e(43);t.exports=function(t,n,e){if(r(t),void 0===n)return t;switch(e){case 1:return function(e){return t.call(n,e)};case 2:return function(e,r){return t.call(n,e,r)};case 3:return function(e,r,o){return t.call(n,e,r,o)}}return function(){return t.apply(n,arguments)}}},function(t,n,e){var r=e(9),o=e(34),i=e(19);t.exports=function(t){var n=r(t),e=o.f;if(e)for(var u,f=e(t),c=i.f,a=0;f.length>a;)c.call(t,u=f[a++])&&n.push(u);return n}},function(t,n,e){t.exports=e(1).document&&document.documentElement},function(t,n,e){var r=e(28);t.exports=Object("z").propertyIsEnumerable(0)?Object:function(t){return"String"==r(t)?t.split(""):Object(t)}},function(t,n,e){var r=e(28);t.exports=Array.isArray||function(t){return"Array"==r(t)}},function(t,n,e){"use strict";var r=e(32),o=e(12),i=e(20),u={};e(5)(u,e(7)("iterator"),function(){return this}),t.exports=function(t,n,e){t.prototype=r(u,{next:o(1,e)}),i(t,n+" Iterator")}},function(t,n){t.exports=function(t,n){return{value:n,done:!!t}}},function(t,n,e){var r=e(9),o=e(3);t.exports=function(t,n){for(var e,i=o(t),u=r(i),f=u.length,c=0;f>c;)if(i[e=u[c++]]===n)return e}},function(t,n,e){var r=e(13)("meta"),o=e(11),i=e(2),u=e(6).f,f=0,c=Object.isExtensible||function(){return!0},a=!e(8)(function(){return c(Object.preventExtensions({}))}),s=function(t){u(t,r,{value:{i:"O"+ ++f,w:{}}})},l=function(t,n){if(!o(t))return"symbol"==typeof t?t:("string"==typeof t?"S":"P")+t;if(!i(t,r)){if(!c(t))return"F";if(!n)return"E";s(t)}return t[r].i},p=function(t,n){if(!i(t,r)){if(!c(t))return!0;if(!n)return!1;s(t)}return t[r].w},d=function(t){return a&&v.NEED&&c(t)&&!i(t,r)&&s(t),t},v=t.exports={KEY:r,NEED:!1,fastKey:l,getWeak:p,onFreeze:d}},function(t,n,e){var r=e(6),o=e(10),i=e(9);t.exports=e(4)?Object.defineProperties:function(t,n){o(t);for(var e,u=i(n),f=u.length,c=0;f>c;)r.f(t,e=u[c++],n[e]);return t}},function(t,n,e){var r=e(19),o=e(12),i=e(3),u=e(24),f=e(2),c=e(30),a=Object.getOwnPropertyDescriptor;n.f=e(4)?a:function(t,n){if(t=i(t),n=u(n,!0),c)try{return a(t,n)}catch(t){}if(f(t,n))return o(!r.f.call(t,n),t[n])}},function(t,n,e){var r=e(3),o=e(33).f,i={}.toString,u="object"==typeof window&&window&&Object.getOwnPropertyNames?Object.getOwnPropertyNames(window):[],f=function(t){try{return o(t)}catch(t){return u.slice()}};t.exports.f=function(t){return u&&"[object Window]"==i.call(t)?f(t):o(r(t))}},function(t,n,e){var r=e(2),o=e(37),i=e(21)("IE_PROTO"),u=Object.prototype;t.exports=Object.getPrototypeOf||function(t){return t=o(t),r(t,i)?t[i]:"function"==typeof t.constructor&&t instanceof t.constructor?t.constructor.prototype:t instanceof Object?u:null}},function(t,n,e){var r=e(23),o=e(15);t.exports=function(t){return function(n,e){var i,u,f=String(o(n)),c=r(e),a=f.length;return c<0||c>=a?t?"":void 0:(i=f.charCodeAt(c),i<55296||i>56319||c+1===a||(u=f.charCodeAt(c+1))<56320||u>57343?t?f.charAt(c):i:t?f.slice(c,c+2):(i-55296<<10)+(u-56320)+65536)}}},function(t,n,e){var r=e(23),o=Math.max,i=Math.min;t.exports=function(t,n){return t=r(t),t<0?o(t+n,0):i(t,n)}},function(t,n,e){var r=e(23),o=Math.min;t.exports=function(t){return t>0?o(r(t),9007199254740991):0}},function(t,n,e){"use strict";var r=e(44),o=e(52),i=e(17),u=e(3);t.exports=e(31)(Array,"Array",function(t,n){this._t=u(t),this._i=0,this._k=n},function(){var t=this._t,n=this._k,e=this._i++;return!t||e>=t.length?(this._t=void 0,o(1)):"keys"==n?o(0,e):"values"==n?o(0,t[e]):o(0,[e,t[e]])},"values"),i.Arguments=i.Array,r("keys"),r("values"),r("entries")},function(t,n){},function(t,n,e){"use strict";var r=e(59)(!0);e(31)(String,"String",function(t){this._t=String(t),this._i=0},function(){var t,n=this._t,e=this._i;return e>=n.length?{value:void 0,done:!0}:(t=r(n,e),this._i+=t.length,{value:t,done:!1})})},function(t,n,e){"use strict";var r=e(1),o=e(2),i=e(4),u=e(27),f=e(36),c=e(54).KEY,a=e(8),s=e(22),l=e(20),p=e(13),d=e(7),v=e(26),y=e(25),h=e(53),b=e(47),x=e(50),g=e(10),m=e(3),w=e(24),O=e(12),S=e(32),_=e(57),j=e(56),P=e(6),E=e(9),M=j.f,A=P.f,T=_.f,L=r.Symbol,N=r.JSON,C=N&&N.stringify,k="prototype",F=d("_hidden"),q=d("toPrimitive"),I={}.propertyIsEnumerable,B=s("symbol-registry"),D=s("symbols"),W=s("op-symbols"),H=Object[k],K="function"==typeof L,R=r.QObject,J=!R||!R[k]||!R[k].findChild,U=i&&a(function(){return 7!=S(A({},"a",{get:function(){return A(this,"a",{value:7}).a}})).a})?function(t,n,e){var r=M(H,n);r&&delete H[n],A(t,n,e),r&&t!==H&&A(H,n,r)}:A,G=function(t){var n=D[t]=S(L[k]);return n._k=t,n},$=K&&"symbol"==typeof L.iterator?function(t){return"symbol"==typeof t}:function(t){return t instanceof L},z=function(t,n,e){return t===H&&z(W,n,e),g(t),n=w(n,!0),g(e),o(D,n)?(e.enumerable?(o(t,F)&&t[F][n]&&(t[F][n]=!1),e=S(e,{enumerable:O(0,!1)})):(o(t,F)||A(t,F,O(1,{})),t[F][n]=!0),U(t,n,e)):A(t,n,e)},Y=function(t,n){g(t);for(var e,r=b(n=m(n)),o=0,i=r.length;i>o;)z(t,e=r[o++],n[e]);return t},Q=function(t,n){return void 0===n?S(t):Y(S(t),n)},X=function(t){var n=I.call(this,t=w(t,!0));return!(this===H&&o(D,t)&&!o(W,t))&&(!(n||!o(this,t)||!o(D,t)||o(this,F)&&this[F][t])||n)},V=function(t,n){if(t=m(t),n=w(n,!0),t!==H||!o(D,n)||o(W,n)){var e=M(t,n);return!e||!o(D,n)||o(t,F)&&t[F][n]||(e.enumerable=!0),e}},Z=function(t){for(var n,e=T(m(t)),r=[],i=0;e.length>i;)o(D,n=e[i++])||n==F||n==c||r.push(n);return r},tt=function(t){for(var n,e=t===H,r=T(e?W:m(t)),i=[],u=0;r.length>u;)!o(D,n=r[u++])||e&&!o(H,n)||i.push(D[n]);return i};K||(L=function(){if(this instanceof L)throw TypeError("Symbol is not a constructor!");var t=p(arguments.length>0?arguments[0]:void 0),n=function(e){this===H&&n.call(W,e),o(this,F)&&o(this[F],t)&&(this[F][t]=!1),U(this,t,O(1,e))};return i&&J&&U(H,t,{configurable:!0,set:n}),G(t)},f(L[k],"toString",function(){return this._k}),j.f=V,P.f=z,e(33).f=_.f=Z,e(19).f=X,e(34).f=tt,i&&!e(18)&&f(H,"propertyIsEnumerable",X,!0),v.f=function(t){return G(d(t))}),u(u.G+u.W+u.F*!K,{Symbol:L});for(var nt="hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(","),et=0;nt.length>et;)d(nt[et++]);for(var nt=E(d.store),et=0;nt.length>et;)y(nt[et++]);u(u.S+u.F*!K,"Symbol",{for:function(t){return o(B,t+="")?B[t]:B[t]=L(t)},keyFor:function(t){if($(t))return h(B,t);throw TypeError(t+" is not a symbol!")},useSetter:function(){J=!0},useSimple:function(){J=!1}}),u(u.S+u.F*!K,"Object",{create:Q,defineProperty:z,defineProperties:Y,getOwnPropertyDescriptor:V,getOwnPropertyNames:Z,getOwnPropertySymbols:tt}),N&&u(u.S+u.F*(!K||a(function(){var t=L();return"[null]"!=C([t])||"{}"!=C({a:t})||"{}"!=C(Object(t))})),"JSON",{stringify:function(t){if(void 0!==t&&!$(t)){for(var n,e,r=[t],o=1;arguments.length>o;)r.push(arguments[o++]);return n=r[1],"function"==typeof n&&(e=n),!e&&x(n)||(n=function(t,n){if(e&&(n=e.call(this,t,n)),!$(n))return n}),r[1]=n,C.apply(N,r)}}}),L[k][q]||e(5)(L[k],q,L[k].valueOf),l(L,"Symbol"),l(Math,"Math",!0),l(r.JSON,"JSON",!0)},function(t,n,e){e(25)("asyncIterator")},function(t,n,e){e(25)("observable")},function(t,n,e){e(62);for(var r=e(1),o=e(5),i=e(17),u=e(7)("toStringTag"),f=["NodeList","DOMTokenList","MediaList","StyleSheetList","CSSRuleList"],c=0;c<5;c++){var a=f[c],s=r[a],l=s&&s.prototype;l&&!l[u]&&o(l,u,a),i[a]=i.Array}},function(t,n){"use strict";var e={versions:function(){var t=window.navigator.userAgent;return{trident:t.indexOf("Trident")>-1,presto:t.indexOf("Presto")>-1,webKit:t.indexOf("AppleWebKit")>-1,gecko:t.indexOf("Gecko")>-1&&t.indexOf("KHTML")==-1,mobile:!!t.match(/AppleWebKit.*Mobile.*/),ios:!!t.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),android:t.indexOf("Android")>-1||t.indexOf("Linux")>-1,iPhone:t.indexOf("iPhone")>-1||t.indexOf("Mac")>-1,iPad:t.indexOf("iPad")>-1,webApp:t.indexOf("Safari")==-1,weixin:t.indexOf("MicroMessenger")==-1}}()};t.exports=e},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}var o=e(40),i=r(o),u=function(){function t(t,n,e){return n||e?String.fromCharCode(n||e):o[t]||t}function n(t){return l[t]}var e=/&quot;|&lt;|&gt;|&amp;|&nbsp;|&apos;|&#(\d+);|&#(\d+)/g,r=/['<> "&]/g,o={"&quot;":'"',"&lt;":"<","&gt;":">","&amp;":"&","&nbsp;":" "},f=/\u00a0/g,c=/<br\s*\/?>/gi,a=/\r?\n/g,s=/\s/g,l={};for(var p in o)l[o[p]]=p;return o["&apos;"]="'",l["'"]="&#39;",{encode:function(t){return t?(""+t).replace(r,n).replace(a,"<br/>").replace(s,"&nbsp;"):""},decode:function(n){return n?(""+n).replace(c,"\n").replace(e,t).replace(f," "):""},encodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},encodeBase16forJSON:function(t){if(!t)return t;t=t.replace(/[\u4E00-\u9FBF]/gi,function(t){return escape(t).replace("%u","\\u")});for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},decodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e+=2)n.push(String.fromCharCode("0x"+t.slice(e,e+2)));return n.join("")},encodeObject:function(t){if(t instanceof Array)for(var n=0,e=t.length;e>n;n++)t[n]=u.encodeObject(t[n]);else if("object"==("undefined"==typeof t?"undefined":(0,i.default)(t)))for(var r in t)t[r]=u.encodeObject(t[r]);else if("string"==typeof t)return u.encode(t);return t},loadScript:function(t){var n=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(n),n.setAttribute("src",t)},addLoadEvent:function(t){var n=window.onload;"function"!=typeof window.onload?window.onload=t:window.onload=function(){n(),t()}}}}();t.exports=u},function(t,n){function e(t,n){t.classList?t.classList.add(n):t.className+=" "+n}t.exports=e},function(t,n){function e(t,n){if(t.classList)t.classList.remove(n);else{var e=new RegExp("(^|\\b)"+n.split(" ").join("|")+"(\\b|$)","gi");t.className=t.className.replace(e," ")}}t.exports=e},,,function(t,n){"use strict";function e(){var t=document.querySelector("#page-nav");if(t&&!document.querySelector("#page-nav .extend.prev")&&(t.innerHTML='<a class="extend prev disabled" rel="prev">&laquo; Prev</a>'+t.innerHTML),t&&!document.querySelector("#page-nav .extend.next")&&(t.innerHTML=t.innerHTML+'<a class="extend next disabled" rel="next">Next &raquo;</a>'),yiliaConfig&&yiliaConfig.open_in_new){var n=document.querySelectorAll(".article-entry a:not(.article-more-a)");n.forEach(function(t){var n=t.setAttribute("target");n&&""!==n||t.setAttribute("target","_blank")})}var e=document.querySelector("#js-aboutme");e&&0!==e.length&&(e.innerHTML=e.innerText)}t.exports={init:e}},,,,,,,,,function(t,n){function e(t,n){if("string"==typeof n)return t.insertAdjacentHTML("afterend",n);var e=t.nextSibling;return e?t.parentNode.insertBefore(n,e):t.parentNode.appendChild(n)}t.exports=e}])</script><script src="/./main.05aabf.js"></script><script>!function(){var e=function(e){var t=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(t),t.setAttribute("src",e)};e("/slider.885efe.js")}()</script>
 
+
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-nav header-menu">
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+      
+      
+      
+    
+    
+
+    <ul style="width: 70%">
+    
+    
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">博客索引</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      
+        
+    </ul>
+  </div>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">lift</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">基础知识</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">PC</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">JAVASE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">exception</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jekyll</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">tool</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="http://blog.wxhao2.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>吴嘉图的博客</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://blog4manager.duapp.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>帅比浩的图床管理</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">你好&lt;br&gt;&lt;br&gt;我好&lt;br&gt;大家好</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
