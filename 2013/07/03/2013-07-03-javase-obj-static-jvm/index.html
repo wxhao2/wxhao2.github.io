@@ -5,7 +5,7 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://blog.wxhaoo.com">
+  <link rel="dns-prefetch" href="http://b.wxhao2.com">
   <title>static详解 | 吴嘉图的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="static关键字及内存图
@@ -18,7 +18,7 @@ A:代码演示
 12345678910111213141516171819202122232425class Demo1_Static &amp;#123;	public static void main(String[] args) &amp;#123;		Person p1 = new Perso">
 <meta property="og:type" content="article">
 <meta property="og:title" content="static详解">
-<meta property="og:url" content="http://blog.wxhaoo.com/2013/07/03/2013-07-03-javase-obj-static-jvm/index.html">
+<meta property="og:url" content="http://b.wxhao2.com/2013/07/03/2013-07-03-javase-obj-static-jvm/index.html">
 <meta property="og:site_name" content="吴嘉图的博客">
 <meta property="og:description" content="static关键字及内存图
 A:代码演示
@@ -30,7 +30,7 @@ A:代码演示
 12345678910111213141516171819202122232425class Demo1_Static &amp;#123;	public static void main(String[] args) &amp;#123;		Person p1 = new Perso">
 <meta property="og:image" content="http://wxhao2.duapp.com/blog/post-in/20130703/cjdxnct.png">
 <meta property="og:image" content="http://wxhao2.duapp.com/blog/post-in/20130703/jtnct.png">
-<meta property="og:updated_time" content="2017-03-04T08:58:29.691Z">
+<meta property="og:updated_time" content="2017-04-24T09:28:47.697Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="static详解">
 <meta name="twitter:description" content="static关键字及内存图
@@ -84,9 +84,9 @@ A:代码演示
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/">随笔</a></li>
+				<li><a href="/2013/01/01/2013-01-01-wxhao-jl/">简历</a></li>
 	        
-				<li><a href="http://blog4manager.duapp.com/html/register1.html">图床</a></li>
+				<li><a href="http://bed.wxhao2.com/">图床</a></li>
 	        
 			</ul>
 		</nav>
@@ -114,7 +114,7 @@ A:代码演示
 		        
 					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
-					<a class="qq" target="_blank" href="/627760565" title="qq"><i class="icon-qq"></i></a>
+					<a class="qq" target="_blank" href="tencent://message/?uin=627760565&Site=http://vps.shuidazhe.com&Menu=yes" title="qq"><i class="icon-qq"></i></a>
 		        
 					<a class="mail" target="_blank" href="mailto:wxhao911@gmail.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -161,7 +161,7 @@ A:代码演示
 			        
 						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
-						<a class="qq" target="_blank" href="/627760565" title="qq"><i class="icon-qq"></i></a>
+						<a class="qq" target="_blank" href="tencent://message/?uin=627760565&Site=http://vps.shuidazhe.com&Menu=yes" title="qq"><i class="icon-qq"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto:wxhao911@gmail.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -174,9 +174,9 @@ A:代码演示
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/2013/01/01/2013-01-01-wxhao-jl/">简历</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="http://blog4manager.duapp.com/html/register1.html">图床</a></li>
+					<li style="width: 33.333333333333336%"><a href="http://bed.wxhao2.com/">图床</a></li>
 		        
 				</ul>
 			</nav>
@@ -219,6 +219,7 @@ A:代码演示
 </li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">class Demo1_Static &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Person p1 = new Person();	//创建对象</div><div class="line">		p1.name = &quot;苍老师&quot;;			//调用姓名属性并赋值</div><div class="line">		p1.country = &quot;日本&quot;;		//调用国籍属性并赋值</div><div class="line">		</div><div class="line"></div><div class="line">		Person p2 = new Person();</div><div class="line">		p2.name = &quot;小泽老师&quot;;		//调用姓名属性并赋值</div><div class="line">		//p2.country = &quot;日本&quot;;		//调用国籍属性并赋值</div><div class="line"></div><div class="line">		p1.speak();</div><div class="line">		p2.speak();</div><div class="line"></div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Person &#123;</div><div class="line">	String name;					//姓名</div><div class="line">	static String country;					//国籍</div><div class="line"></div><div class="line">	public void speak() &#123;			//说话的方法</div><div class="line">		System.out.println(name + &quot;...&quot; + country);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <ul>
 <li>B:画图演示<ul>
 <li>带有static的内存图</li>
@@ -379,9 +380,11 @@ A:代码演示
 <li>B:点击显示，找到索引，出现输入框</li>
 <li>C:你应该知道你找谁?举例：Scanner</li>
 <li>D:看这个类的结构(需不需要导包)<ul>
-<li>成员变量    字段</li>
-<li>构造方法    构造方法</li>
-<li>成员方法    方法</li>
+<li>成员变量    字段<ul>
+<li>构造方法构造方法</li>
+<li>成员方法方法</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -406,20 +409,15 @@ A:代码演示
 </ul>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">class Demo2_Math &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//double d = Math.random();</div><div class="line">		//System.out.println(d);</div><div class="line">		</div><div class="line">		//Math.random()会生成大于等于0.0并且小于1.0的伪随机数</div><div class="line">		for (int i = 0;i &lt; 10 ;i++ ) &#123;</div><div class="line">			System.out.println(Math.random());</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		//生成1-100的随机数</div><div class="line">		//Math.random()0.0000000 - 0.999999999</div><div class="line">		//Math.random() * 100 ====&gt; 0.00000 - 99.999999999</div><div class="line">		//(int)(Math.random() * 100) ====&gt; 0 - 99</div><div class="line">		//(int)(Math.random() * 100) + 1</div><div class="line"></div><div class="line">		for (int i = 0;i &lt; 10 ;i++ ) &#123;</div><div class="line">			System.out.println((int)(Math.random() * 100) + 1);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">```	</div><div class="line"></div><div class="line">### 猜数字小游戏案例</div><div class="line">* A:案例演示</div><div class="line">	* 需求：猜数字小游戏(数据在1-100之间)</div></pre></td></tr></table></figure>
-<p>import java.util.Scanner;<br>class Test_GuessNum {<br>    public static void main(String[] args) {<br>        Scanner sc = new Scanner(System.in);                //创建键盘录入对象<br>        System.out.println(“请输入一个整数,范围在1-100之间”);<br>        int guessNum = (int)(Math.random() * 100) + 1;        //心里想的随机数<br>        while (true) {                                        //因为需要猜很多次,所以用无限循环<br>            int result = sc.nextInt();                        //大家猜的数<br>            if (result &gt; guessNum) {                        //如果你们猜的数大于了我心里想的数<br>                System.out.println(“大了”);                    //提示大了<br>            } else if (result &lt; guessNum) {                    //如果你们猜的数小于了我心里想的数<br>                System.out.println(“小了”);                    //提示小了<br>            } else {                                        //如果既不大也不小<br>                System.out.println(“中了”);                    //中了<br>                break;<br>            }<br>        }<br>    }<br>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### static方法本类调用</div></pre></td></tr></table></figure>
-<p>class Demo_Static {<br>    public static void main(String[] args) {<br>        //method();                                //错误: 无法从静态上下文中引用非静态 方法 method()<br>        Demo3_Static.print();                    //在主方法中调用本类的静态方法,可以省略类名.,系统会默认加上<br>        Demo3_Static d = new Demo3_Static();    //非静态方法在调用的时候必须创建对象调用<br>        d.method();<br>    }</p>
-<pre><code>public void method() {                    
-    System.out.println(&quot;Hello World!&quot;);        
-}
-
-public static void print() {
-    System.out.println(&quot;Hello World!&quot;);
-}
-</code></pre><p>}</p>
-<p>```</p>
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">class Demo2_Math &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//double d = Math.random();</div><div class="line">		//System.out.println(d);</div><div class="line">		</div><div class="line">		//Math.random()会生成大于等于0.0并且小于1.0的伪随机数</div><div class="line">		for (int i = 0;i &lt; 10 ;i++ ) &#123;</div><div class="line">			System.out.println(Math.random());</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		//生成1-100的随机数</div><div class="line">		//Math.random()0.0000000 - 0.999999999</div><div class="line">		//Math.random() * 100 ====&gt; 0.00000 - 99.999999999</div><div class="line">		//(int)(Math.random() * 100) ====&gt; 0 - 99</div><div class="line">		//(int)(Math.random() * 100) + 1</div><div class="line"></div><div class="line">		for (int i = 0;i &lt; 10 ;i++ ) &#123;</div><div class="line">			System.out.println((int)(Math.random() * 100) + 1);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="猜数字小游戏案例"><a href="#猜数字小游戏案例" class="headerlink" title="猜数字小游戏案例"></a>猜数字小游戏案例</h3><ul>
+<li>A:案例演示<ul>
+<li>需求：猜数字小游戏(数据在1-100之间)</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">import java.util.Scanner;</div><div class="line">class Test_GuessNum &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);				//创建键盘录入对象</div><div class="line">		System.out.println(&quot;请输入一个整数,范围在1-100之间&quot;);</div><div class="line">		int guessNum = (int)(Math.random() * 100) + 1;		//心里想的随机数</div><div class="line">		while (true) &#123;										//因为需要猜很多次,所以用无限循环</div><div class="line">			int result = sc.nextInt();						//大家猜的数</div><div class="line">			if (result &gt; guessNum) &#123;						//如果你们猜的数大于了我心里想的数</div><div class="line">				System.out.println(&quot;大了&quot;);					//提示大了</div><div class="line">			&#125; else if (result &lt; guessNum) &#123;					//如果你们猜的数小于了我心里想的数</div><div class="line">				System.out.println(&quot;小了&quot;);					//提示小了</div><div class="line">			&#125; else &#123;										//如果既不大也不小</div><div class="line">				System.out.println(&quot;中了&quot;);					//中了</div><div class="line">				break;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="static方法本类调用"><a href="#static方法本类调用" class="headerlink" title="static方法本类调用"></a>static方法本类调用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">class Demo_Static &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//method();								//错误: 无法从静态上下文中引用非静态 方法 method()</div><div class="line">		Demo3_Static.print();					//在主方法中调用本类的静态方法,可以省略类名.,系统会默认加上</div><div class="line">		Demo3_Static d = new Demo3_Static();	//非静态方法在调用的时候必须创建对象调用</div><div class="line">		d.method();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public void method() &#123;					</div><div class="line">		System.out.println(&quot;Hello World!&quot;);		</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void print() &#123;</div><div class="line">		System.out.println(&quot;Hello World!&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
 
       
@@ -527,7 +525,7 @@ public static void print() {
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://blog.wxhaoo.com/2013/07/03/2013-07-03-javase-obj-static-jvm/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://b.wxhao2.com/2013/07/03/2013-07-03-javase-obj-static-jvm/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -566,7 +564,7 @@ public static void print() {
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2013-07-03-javase-obj-static-jvm" data-title="static详解" data-url="http://blog.wxhaoo.com/2013/07/03/2013-07-03-javase-obj-static-jvm/"></div>
+	<div class="ds-thread" data-thread-key="2013-07-03-javase-obj-static-jvm" data-title="static详解" data-url="http://b.wxhao2.com/2013/07/03/2013-07-03-javase-obj-static-jvm/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -708,6 +706,10 @@ public static void print() {
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">tool</a>
               </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">resume</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -762,7 +764,7 @@ public static void print() {
             </li>
           
             <li class="search-li">
-              <a href="http://blog4manager.duapp.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>帅比浩的图床管理</a>
+              <a href="http://bed.wxhao.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>帅比浩的图床管理</a>
             </li>
           
         </ul>

@@ -5,7 +5,7 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://blog.wxhaoo.com">
+  <link rel="dns-prefetch" href="http://b.wxhao2.com">
   <title>异常 | 吴嘉图的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="异常的概述和分类
@@ -34,7 +34,7 @@ RuntimeException
 123int[] arr = &amp;#123;11,22,33,44,55&amp;#12">
 <meta property="og:type" content="article">
 <meta property="og:title" content="异常">
-<meta property="og:url" content="http://blog.wxhaoo.com/2013/09/13/2013-09-13-exception/index.html">
+<meta property="og:url" content="http://b.wxhao2.com/2013/09/13/2013-09-13-exception/index.html">
 <meta property="og:site_name" content="吴嘉图的博客">
 <meta property="og:description" content="异常的概述和分类
 A:异常的概述
@@ -60,7 +60,7 @@ RuntimeException
 
 
 123int[] arr = &amp;#123;11,22,33,44,55&amp;#12">
-<meta property="og:updated_time" content="2017-03-04T08:58:29.812Z">
+<meta property="og:updated_time" content="2017-04-24T09:34:17.279Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="异常">
 <meta name="twitter:description" content="异常的概述和分类
@@ -129,9 +129,9 @@ RuntimeException
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/">随笔</a></li>
+				<li><a href="/2013/01/01/2013-01-01-wxhao-jl/">简历</a></li>
 	        
-				<li><a href="http://blog4manager.duapp.com/html/register1.html">图床</a></li>
+				<li><a href="http://bed.wxhao2.com/">图床</a></li>
 	        
 			</ul>
 		</nav>
@@ -159,7 +159,7 @@ RuntimeException
 		        
 					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
-					<a class="qq" target="_blank" href="/627760565" title="qq"><i class="icon-qq"></i></a>
+					<a class="qq" target="_blank" href="tencent://message/?uin=627760565&Site=http://vps.shuidazhe.com&Menu=yes" title="qq"><i class="icon-qq"></i></a>
 		        
 					<a class="mail" target="_blank" href="mailto:wxhao911@gmail.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -206,7 +206,7 @@ RuntimeException
 			        
 						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
-						<a class="qq" target="_blank" href="/627760565" title="qq"><i class="icon-qq"></i></a>
+						<a class="qq" target="_blank" href="tencent://message/?uin=627760565&Site=http://vps.shuidazhe.com&Menu=yes" title="qq"><i class="icon-qq"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto:wxhao911@gmail.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -219,9 +219,9 @@ RuntimeException
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/2013/01/01/2013-01-01-wxhao-jl/">简历</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="http://blog4manager.duapp.com/html/register1.html">图床</a></li>
+					<li style="width: 33.333333333333336%"><a href="http://bed.wxhao2.com/">图床</a></li>
 		        
 				</ul>
 			</nav>
@@ -280,6 +280,7 @@ RuntimeException
 </li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">int[] arr = &#123;11,22,33,44,55&#125;;</div><div class="line">		//arr = null;					//NullPointerException				空指针异常</div><div class="line">		System.out.println(arr[10]);	//ArrayIndexOutOfBoundsException	数组索引越界异常</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="JVM默认是如何处理异常的"><a href="#JVM默认是如何处理异常的" class="headerlink" title="JVM默认是如何处理异常的"></a>JVM默认是如何处理异常的</h3><ul>
 <li>A:JVM默认是如何处理异常的<ul>
 <li>main函数收到这个问题时,有两种处理方式:</li>
@@ -383,9 +384,7 @@ RuntimeException
 <h3 id="throw的概述以及和throws的区别"><a href="#throw的概述以及和throws的区别" class="headerlink" title="throw的概述以及和throws的区别"></a>throw的概述以及和throws的区别</h3><ul>
 <li>A:throw的概述<ul>
 <li>在功能方法内部出现某种情况，程序不能继续运行，需要进行跳转时，就用throw把异常对象抛出。</li>
-</ul>
-</li>
-<li>B:案例演示    <ul>
+<li>B:案例演示</li>
 <li>分别演示编译时异常对象和运行时异常对象的抛出</li>
 </ul>
 </li>
@@ -485,9 +484,11 @@ RuntimeException
 </ul>
 <h3 id="异常-练习"><a href="#异常-练习" class="headerlink" title="异常(练习)"></a>异常(练习)</h3><ul>
 <li>键盘录入一个int类型的整数,对其求二进制表现形式<ul>
-<li>如果录入的整数过大,给予提示,录入的整数过大请重新录入一个整数BigInteger</li>
+<li>如果录入的整数过大,给予提示,录入的整数过大请重新录入一个整数BigInteger<ul>
 <li>如果录入的是小数,给予提示,录入的是小数,请重新录入一个整数</li>
 <li>如果录入的是其他字符,给予提示,录入的是非法字符,请重新录入一个整数</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -729,7 +730,7 @@ RuntimeException
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://blog.wxhaoo.com/2013/09/13/2013-09-13-exception/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://b.wxhao2.com/2013/09/13/2013-09-13-exception/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -768,7 +769,7 @@ RuntimeException
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2013-09-13-exception" data-title="异常" data-url="http://blog.wxhaoo.com/2013/09/13/2013-09-13-exception/"></div>
+	<div class="ds-thread" data-thread-key="2013-09-13-exception" data-title="异常" data-url="http://b.wxhao2.com/2013/09/13/2013-09-13-exception/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -910,6 +911,10 @@ RuntimeException
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">tool</a>
               </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">resume</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -964,7 +969,7 @@ RuntimeException
             </li>
           
             <li class="search-li">
-              <a href="http://blog4manager.duapp.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>帅比浩的图床管理</a>
+              <a href="http://bed.wxhao.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>帅比浩的图床管理</a>
             </li>
           
         </ul>

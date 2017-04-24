@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://blog.wxhaoo.com">
+  <link rel="dns-prefetch" href="http://b.wxhao2.com">
   <title>吴嘉图的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="不知道怎么描述">
 <meta property="og:type" content="website">
 <meta property="og:title" content="吴嘉图的博客">
-<meta property="og:url" content="http://blog.wxhaoo.com/page/3/index.html">
+<meta property="og:url" content="http://b.wxhao2.com/page/3/index.html">
 <meta property="og:site_name" content="吴嘉图的博客">
 <meta property="og:description" content="不知道怎么描述">
 <meta name="twitter:card" content="summary">
@@ -59,9 +59,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/">随笔</a></li>
+				<li><a href="/2013/01/01/2013-01-01-wxhao-jl/">简历</a></li>
 	        
-				<li><a href="http://blog4manager.duapp.com/html/register1.html">图床</a></li>
+				<li><a href="http://bed.wxhao2.com/">图床</a></li>
 	        
 			</ul>
 		</nav>
@@ -89,7 +89,7 @@
 		        
 					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
-					<a class="qq" target="_blank" href="/627760565" title="qq"><i class="icon-qq"></i></a>
+					<a class="qq" target="_blank" href="tencent://message/?uin=627760565&Site=http://vps.shuidazhe.com&Menu=yes" title="qq"><i class="icon-qq"></i></a>
 		        
 					<a class="mail" target="_blank" href="mailto:wxhao911@gmail.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -136,7 +136,7 @@
 			        
 						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
-						<a class="qq" target="_blank" href="/627760565" title="qq"><i class="icon-qq"></i></a>
+						<a class="qq" target="_blank" href="tencent://message/?uin=627760565&Site=http://vps.shuidazhe.com&Menu=yes" title="qq"><i class="icon-qq"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto:wxhao911@gmail.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -149,9 +149,9 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/2013/01/01/2013-01-01-wxhao-jl/">简历</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="http://blog4manager.duapp.com/html/register1.html">图床</a></li>
+					<li style="width: 33.333333333333336%"><a href="http://bed.wxhao2.com/">图床</a></li>
 		        
 				</ul>
 			</nav>
@@ -195,264 +195,15 @@
 </li>
 <li>B:案例演示<ul>
 <li>HashSet存储字符串并遍历</li>
-<li></li>
+<li>​</li>
 </ul>
 </li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">HashSet&lt;String&gt; hs = new HashSet&lt;&gt;();//创建HashSet对象</div><div class="line">boolean b1 = hs.add(&quot;a&quot;);</div><div class="line">boolean b2 = hs.add(&quot;a&quot;);		//当向set集合中存储重复元素的时候返回为false</div><div class="line">hs.add(&quot;b&quot;);</div><div class="line">hs.add(&quot;c&quot;);</div><div class="line">hs.add(&quot;d&quot;);</div><div class="line">System.out.println(hs);			//HashSet的继承体系中有重写toString方法</div><div class="line">System.out.println(b1);</div><div class="line">System.out.println(b2);</div><div class="line"></div><div class="line">for (String string : hs) &#123;		//只要能用迭代器迭代的,就可以使用增强for循环遍历</div><div class="line">	System.out.println(string);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong>Set集合,无索引,不可以重复,无序(存取不一致)</strong></p>
-<h3 id="HashSet存储自定义对象保证元素唯一性"><a href="#HashSet存储自定义对象保证元素唯一性" class="headerlink" title="HashSet存储自定义对象保证元素唯一性"></a>HashSet存储自定义对象保证元素唯一性</h3><ul>
-<li>A:案例演示<ul>
-<li>存储自定义对象，并保证元素唯一性。</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">HashSet&lt;Person&gt; hs = new HashSet&lt;&gt;();</div><div class="line">hs.add(new Person(&quot;张三&quot;, 23));</div><div class="line">hs.add(new Person(&quot;张三&quot;, 23));</div><div class="line">hs.add(new Person(&quot;李四&quot;, 23));</div><div class="line">hs.add(new Person(&quot;李四&quot;, 23));</div><div class="line">hs.add(new Person(&quot;王五&quot;, 23));</div><div class="line">hs.add(new Person(&quot;赵六&quot;, 23));</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.bean;</div><div class="line"></div><div class="line">public class Person  &#123;</div><div class="line">	private String name;</div><div class="line">	private int age;</div><div class="line">	public Person() &#123;</div><div class="line">		super();</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	public Person(String name, int age) &#123;</div><div class="line">		super();</div><div class="line">		this.name = name;</div><div class="line">		this.age = age;</div><div class="line">	&#125;</div><div class="line">	public String getName() &#123;</div><div class="line">		return name;</div><div class="line">	&#125;</div><div class="line">	public void setName(String name) &#123;</div><div class="line">		this.name = name;</div><div class="line">	&#125;</div><div class="line">	public int getAge() &#123;</div><div class="line">		return age;</div><div class="line">	&#125;</div><div class="line">	public void setAge(int age) &#123;</div><div class="line">		this.age = age;</div><div class="line">	&#125;</div><div class="line">	@Override</div><div class="line">	public String toString() &#123;</div><div class="line">		return &quot;Person [name=&quot; + name + &quot;, age=&quot; + age + &quot;]&quot;;</div><div class="line">	&#125;</div><div class="line">	@Override</div><div class="line">	public boolean equals(Object obj) &#123;</div><div class="line">		System.out.println(&quot;执行了吗&quot;);</div><div class="line">		Person p = (Person)obj;</div><div class="line">		return this.name.equals(p.name) &amp;&amp; this.age == p.age;</div><div class="line">	&#125;</div><div class="line">	@Override</div><div class="line">	public int hashCode() &#123;</div><div class="line">		return 10;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>重写hashCode()和equals()方法</li>
-<li>先调用hashCode(),如果一样,就会调用<br>equals()进行比较 </li>
-</ul>
-<h3 id="HashSet存储自定义对象保证元素唯一性图解及代码优化"><a href="#HashSet存储自定义对象保证元素唯一性图解及代码优化" class="headerlink" title="HashSet存储自定义对象保证元素唯一性图解及代码优化"></a>HashSet存储自定义对象保证元素唯一性图解及代码优化</h3><ul>
-<li>A:画图演示<ul>
-<li>画图说明比较过程</li>
-</ul>
-</li>
-<li>B:代码优化<ul>
-<li>为了减少比较，优化hashCode()代码写法。</li>
-<li>最终版就是自动生成即可。</li>
-</ul>
-</li>
-</ul>
-<h3 id="HashSet如何保证元素唯一性的原理"><a href="#HashSet如何保证元素唯一性的原理" class="headerlink" title="HashSet如何保证元素唯一性的原理"></a>HashSet如何保证元素唯一性的原理</h3><ul>
-<li>1.HashSet原理<ul>
-<li>我们使用Set集合都是需要去掉重复元素的, 如果在存储的时候逐个equals()比较, 效率较低,哈希算法提高了去重复的效率, 降低了使用equals()方法的次数</li>
-<li>当HashSet调用add()方法存储对象的时候, 先调用对象的hashCode()方法得到一个哈希值, 然后在集合中查找是否有哈希值相同的对象<ul>
-<li>如果没有哈希值相同的对象就直接存入集合</li>
-<li>如果有哈希值相同的对象, 就和哈希值相同的对象逐个进行equals()比较,比较结果为false就存入, true则不存</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>2.将自定义类的对象存入HashSet去重复<ul>
-<li>类中必须重写hashCode()和equals()方法</li>
-<li>hashCode(): 属性相同的对象返回值必须相同, 属性不同的返回值尽量不同(提高效率)</li>
-<li>equals(): 属性相同返回true, 属性不同返回false,返回false的时候存储</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line"> * 为什么是31?</div><div class="line"> * 1. 31是一个质数,质数是能被1和自己本身整除的数</div><div class="line"> * 2. 31这个数既不大也不小</div><div class="line"> * 3. 31这个数好算,2的五次方-1,2向左移动5位</div><div class="line"> */</div><div class="line">@Override</div><div class="line">public int hashCode() &#123;</div><div class="line">    final int prime = 31;</div><div class="line">    int result = 1;</div><div class="line">    result = prime * result + age;</div><div class="line">    result = prime * result + ((name == null) ? 0 : name.hashCode());</div><div class="line">    return result;</div><div class="line">&#125;</div><div class="line">@Override</div><div class="line">public boolean equals(Object obj) &#123;</div><div class="line">    if (this == obj)						//调用的对象和传入的对象是同一个对象</div><div class="line">    	return true;						//直接返回true</div><div class="line">    if (obj == null)						//传入的对象为null</div><div class="line">    	return false;						//返回false</div><div class="line">    if (getClass() != obj.getClass())		//判断两个对象对应的字节码文件是否是同一个字节码</div><div class="line">    	return false;						//如果不是直接返回false</div><div class="line">    Person other = (Person) obj;			//向下转型</div><div class="line">    if (age != other.age)					//调用对象的年龄不等于传入对象的年龄</div><div class="line">    	return false;						//返回false</div><div class="line">    if (name == null) &#123;						//调用对象的姓名为null</div><div class="line">    	if (other.name != null)				//传入对象的姓名不为null</div><div class="line">    		return false;					//返回false</div><div class="line">    &#125; else if (!name.equals(other.name))	//调用对象的姓名不等于传入对象的姓名</div><div class="line">    	return false;						//返回false</div><div class="line">    return true;							//返回true</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="LinkedHashSet的概述和使用"><a href="#LinkedHashSet的概述和使用" class="headerlink" title="LinkedHashSet的概述和使用"></a>LinkedHashSet的概述和使用</h3><ul>
-<li>A:LinkedHashSet的特点</li>
-<li>B:案例演示<ul>
-<li>LinkedHashSet的特点<ul>
-<li>可以保证怎么存就怎么取 </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.set;</div><div class="line"></div><div class="line">import java.util.LinkedHashSet;</div><div class="line"></div><div class="line">public class Demo2_LinkedHashSet &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * @param args</div><div class="line">	 * LinkedHashSet</div><div class="line">	 * 底层是链表实现的,是set集合中唯一一个能保证怎么存就怎么取的集合对象</div><div class="line">	 * 因为是HashSet的子类,所以也是保证元素唯一的,与HashSet的原理一样</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		LinkedHashSet&lt;String&gt; lhs = new LinkedHashSet&lt;&gt;();</div><div class="line">		lhs.add(&quot;a&quot;);</div><div class="line">		lhs.add(&quot;a&quot;);</div><div class="line">		lhs.add(&quot;a&quot;);</div><div class="line">		lhs.add(&quot;a&quot;);</div><div class="line">		lhs.add(&quot;b&quot;);</div><div class="line">		lhs.add(&quot;c&quot;);</div><div class="line">		lhs.add(&quot;d&quot;);</div><div class="line">		</div><div class="line">		System.out.println(lhs);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="产生10个1-20之间的随机数要求随机数不能重复"><a href="#产生10个1-20之间的随机数要求随机数不能重复" class="headerlink" title="产生10个1-20之间的随机数要求随机数不能重复"></a>产生10个1-20之间的随机数要求随机数不能重复</h3><ul>
-<li>A:案例演示<ul>
-<li>需求：编写一个程序，获取10个1至20的随机数，要求随机数不能重复。并把最终的随机数输出到控制台。</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 分析:</div><div class="line"> * 1,有Random类创建随机数对象</div><div class="line"> * 2,需要存储10个随机数,而且不能重复,所以我们用HashSet集合</div><div class="line"> * 3,如果HashSet的size是小于10就可以不断的存储,如果大于等于10就停止存储</div><div class="line"> * 4,通过Random类中的nextInt(n)方法获取1到20之间的随机数,并将这些随机数存储在HashSet集合中</div><div class="line"> * 5,遍历HashSet</div><div class="line"> */</div><div class="line">public static void main(String[] args) &#123;</div><div class="line">	//1,有Random类创建随机数对象</div><div class="line">	Random r = new Random();</div><div class="line">	//2,需要存储10个随机数,而且不能重复,所以我们用HashSet集合</div><div class="line">	HashSet&lt;Integer&gt; hs = new HashSet&lt;&gt;();</div><div class="line">	//3,如果HashSet的size是小于10就可以不断的存储,如果大于等于10就停止存储</div><div class="line">	while(hs.size() &lt; 10) &#123;</div><div class="line">		//4,通过Random类中的nextInt(n)方法获取1到20之间的随机数,并将这些随机数存储在HashSet集合中</div><div class="line">		hs.add(r.nextInt(20) + 1);</div><div class="line">	&#125;</div><div class="line">	// 5,遍历HashSet</div><div class="line">	for (Integer integer : hs) &#123;</div><div class="line">		System.out.println(integer);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="17-07-集合框架-练习"><a href="#17-07-集合框架-练习" class="headerlink" title="17.07_集合框架(练习)"></a>17.07_集合框架(练习)</h3><ul>
-<li>使用Scanner从键盘读取一行输入,去掉其中重复字符, 打印出不同的那些字符<ul>
-<li>aaaabbbcccddd</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * 分析:</div><div class="line"> * 1,创建Scanner对象</div><div class="line"> * 2,创建HashSet对象,将字符存储,去掉重复</div><div class="line"> * 3,将字符串转换为字符数组,获取每一个字符存储在HashSet集合中,自动去除重复</div><div class="line"> * 4,遍历HashSet,打印每一个字符</div><div class="line"> */</div><div class="line">public static void main(String[] args) &#123;</div><div class="line">	//1,创建Scanner对象</div><div class="line">	Scanner sc = new Scanner(System.in);</div><div class="line">	System.out.println(&quot;请输入一行字符串:&quot;);</div><div class="line">	//2,创建HashSet对象,将字符存储,去掉重复</div><div class="line">	HashSet&lt;Character&gt; hs = new HashSet&lt;&gt;();</div><div class="line">	//3,将字符串转换为字符数组,获取每一个字符存储在HashSet集合中,自动去除重复</div><div class="line">	String line = sc.nextLine();</div><div class="line">	char[] arr = line.toCharArray();</div><div class="line">	</div><div class="line">	for (char c : arr) &#123;							//遍历字符数组</div><div class="line">		hs.add(c);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	//4,遍历HashSet,打印每一个字符</div><div class="line">	</div><div class="line">	for(Character ch : hs) &#123;</div><div class="line">		System.out.print(ch);</div><div class="line">	&#125;</div><div class="line">&#125;			</div><div class="line">```		</div><div class="line">			</div><div class="line">### 17.08_集合框架(练习)</div><div class="line">* 将集合中的重复元素去掉</div></pre></td></tr></table></figure>
-<p>/**</p>
-<ul>
-<li>分析:</li>
-<li>1,创建List集合存储若干个重复元素</li>
-<li>2,单独定义方法去除重复</li>
-<li><p>3,打印一下List集合<br>*/<br>public static void main(String[] args) {<br>//1,创建List集合存储若干个重复元素<br>ArrayList<string> list = new ArrayList&lt;&gt;();<br>list.add(“a”);<br>list.add(“a”);<br>list.add(“a”);<br>list.add(“b”);<br>list.add(“b”);<br>list.add(“b”);<br>list.add(“c”);<br>list.add(“c”);<br>list.add(“c”);<br>list.add(“c”);</string></p>
-<p>//2,单独定义方法去除重复<br>getSingle(list);</p>
-<p>//3,打印一下List集合<br>System.out.println(list);<br>}<br>/*</p>
-</li>
-<li>分析</li>
-<li>去除List集合中的重复元素</li>
-<li>1,创建一个LinkedHashSet集合</li>
-<li>2,将List集合中所有的元素添加到LinkedHashSet集合</li>
-<li>3,将list集合中的元素清除</li>
-<li>4,将LinkedHashSet集合中的元素添加回List集合中<br>*/<br>public static void getSingle(List<string> list) {<br> //1,创建一个LinkedHashSet集合<br> LinkedHashSet<string> lhs = new LinkedHashSet&lt;&gt;();<br> //2,将List集合中所有的元素添加到LinkedHashSet集合<br> lhs.addAll(list);<br> //3,将list集合中的元素清除<br> list.clear();<br> //4,将LinkedHashSet集合中的元素添加回List集合中<br> list.addAll(lhs);<br>}<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### TreeSet存储Integer类型的元素并遍历 </div><div class="line">* A:案例演示</div><div class="line">	* TreeSet存储Integer类型的元素并遍历</div><div class="line"></div><div class="line"> **TreeSet集合是用来对象元素进行排序的,同样他也可以保证元素的唯一**</div></pre></td></tr></table></figure>
-</string></string></li>
-</ul>
-<p>TreeSet<integer> ts = new TreeSet&lt;&gt;();<br>ts.add(3);<br>ts.add(1);<br>ts.add(1);<br>ts.add(2);<br>ts.add(2);<br>ts.add(3);<br>ts.add(3);</integer></p>
-<p>System.out.println(ts);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### TreeSet存储自定义对象 </div><div class="line">* A:案例演示</div><div class="line">	* 存储Person对象</div></pre></td></tr></table></figure></p>
-<p>TreeSet<person> ts = new TreeSet&lt;&gt;();<br>ts.add(new Person(“张三”, 23));<br>ts.add(new Person(“李四”, 13));<br>ts.add(new Person(“周七”, 13));<br>ts.add(new Person(“王五”, 43));<br>ts.add(new Person(“赵六”, 33));</person></p>
-<p>System.out.println(ts);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">需要比较元素大小所以Person类要实现comparable接口</div></pre></td></tr></table></figure></p>
-<p>public int compareTo(Person o) {<br>        return 0;<br>    }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">* 当compareTo方法返回0的时候集合中只有一个元素</div><div class="line">* 当compareTo方法返回正数的时候集合会怎么存就怎么取</div><div class="line">* 当compareTo方法返回负数的时候集合会倒序存储</div><div class="line"></div><div class="line">### TreeSet保证元素唯一和自然排序的原理和图解 </div><div class="line">* A:画图演示</div><div class="line">	* TreeSet保证元素唯一和自然排序的原理和图解</div><div class="line"></div><div class="line">![TreeSet自然排序](&#123;&#123; site.imgwall_url &#125;&#125;/post-in/20130830/treesetzrpx.png)</div></pre></td></tr></table></figure></p>
-<p>@Override<br>//按照年龄排序<br>public int compareTo(Person o) {<br>    int num = this.age - o.age;                //年龄是比较的主要条件<br>    return num == 0 ? this.name.compareTo(o.name) : num;//姓名是比较的次要条件<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### TreeSet存储自定义对象并遍历练习1</div><div class="line">* A:案例演示</div><div class="line">	* TreeSet存储自定义对象并遍历练习1(按照姓名排序)</div></pre></td></tr></table></figure></p>
-<p>@Override<br>//按照姓名排序<br>public int compareTo(Person o) {<br>    int num = this.name.compareTo(o.name);        //姓名是主要条件<br>    return num == 0 ? this.age - o.age : num;    //年龄是次要条件<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### TreeSet存储自定义对象并遍历练习2 </div><div class="line">* A:案例演示</div><div class="line">	* TreeSet存储自定义对象并遍历练习2(按照姓名的长度排序)</div></pre></td></tr></table></figure></p>
-<p>public int compareTo(Person o) {<br>    int length = this.name.length() - o.name.length();                //比较长度为主要条件<br>    int num = length == 0 ? this.name.compareTo(o.name) : length;    //比较内容为次要条件<br>    return num == 0 ? this.age - o.age : num;                        //比较年龄为次要条件<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### TreeSet保证元素唯一和比较器排序的原理及代码实现</div><div class="line">* A:案例演示</div><div class="line">	* TreeSet保证元素唯一和比较器排序的原理及代码实现</div></pre></td></tr></table></figure></p>
-<p>class CompareByLen /<em>extends Object</em>/ implements Comparator<string> {</string></p>
-<pre><code>@Override
-public int compare(String s1, String s2) {        //按照字符串的长度比较
-    int num = s1.length() - s2.length();        //长度为主要条件
-    return num == 0 ? s1.compareTo(s2) : num;    //内容为次要条件
-}
-</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
-<p>TreeSet<string> ts = new TreeSet&lt;&gt;(new CompareByLen());        //Comparator c = new CompareByLen();<br>        ts.add(“aaaaaaaa”);<br>        ts.add(“z”);<br>        ts.add(“wc”);<br>        ts.add(“nba”);<br>        ts.add(“cba”);</string></p>
-<pre><code>System.out.println(ts);
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">![TreeSet比较器排序](&#123;&#123; site.imgwall_url &#125;&#125;/post-in/20130830/treesetbjqpaixu.png)</div><div class="line"></div><div class="line">### TreeSet原理 </div><div class="line">* 1.特点</div><div class="line">	* TreeSet是用来排序的, 可以指定一个顺序, 对象存入之后会按照指定的顺序排列</div><div class="line">* 2.使用方式</div><div class="line">	* a.自然顺序(Comparable)</div><div class="line">		* TreeSet类的add()方法中会把存入的对象提升为Comparable类型</div><div class="line">		* 调用对象的compareTo()方法和集合中的对象比较</div><div class="line">		* 根据compareTo()方法返回的结果进行存储</div><div class="line">	* b.比较器顺序(Comparator)</div><div class="line">		* 创建TreeSet的时候可以制定 一个Comparator</div><div class="line">		* 如果传入了Comparator的子类对象, 那么TreeSet就会按照比较器中的顺序排序</div><div class="line">		* add()方法内部会自动调用Comparator接口中compare()方法排序</div><div class="line">		* 调用的对象是compare方法的第一个参数,集合中的对象是compare方法的第二个参数</div><div class="line">	* c.两种方式的区别</div><div class="line">		* TreeSet构造函数什么都不传, 默认按照类中Comparable的顺序(没有就报错ClassCastException)</div><div class="line">		* TreeSet如果传入Comparator, 就优先按照Comparator</div><div class="line"></div><div class="line">### 17.16_集合框架(练习)</div><div class="line">* 在一个集合中存储了无序并且重复的字符串,定义一个方法,让其有序(字典顺序),而且还不能去除重复</div></pre></td></tr></table></figure>
-<p>/**</p>
-<ul>
-<li>分析:</li>
-<li>1,定义一个List集合,并存储重复的无序的字符串</li>
-<li>2,定义方法对其排序保留重复</li>
-<li><p>3,打印List集合<br>*/<br>public static void main(String[] args) {<br> //1,定义一个List集合,并存储重复的无序的字符串<br> ArrayList<string> list = new ArrayList&lt;&gt;();<br> list.add(“aaa”);<br> list.add(“aaa”);<br> list.add(“ccc”);<br> list.add(“ddd”);<br> list.add(“fffffffffff”);<br> list.add(“wxhao”);<br> list.add(“itcast”);<br> list.add(“bbbb”);<br> list.add(“aaa”);<br> list.add(“aaa”);</string></p>
-<p> //2,定义方法对其排序保留重复<br> sort(list);</p>
-<p> //3,打印list<br> System.out.println(list);<br>}</p>
-</li>
-</ul>
-<p>/*</p>
-<ul>
-<li>定义方法,排序并保留重复</li>
-<li>分析:</li>
-<li>1,创建TreeSet集合对象,因为String本身就具备比较功能,但是重复不会保留,所以我们用比较器</li>
-<li>2,将list集合中所有的元素添加到TrreSet集合中,对其排序,保留重复</li>
-<li>3,清空list集合</li>
-<li><p>4,将TreeSet集合中排好序的元素添加到list中<br>*/<br>public static void sort(List<string> list) {<br> //1,创建TreeSet集合对象,因为String本身就具备比较功能,但是重复不会保留,所以我们用比较器<br> TreeSet<string> ts = new TreeSet&lt;&gt;(new Comparator<string>() {</string></string></string></p>
-<pre><code>@Override
-public int compare(String s1, String s2) {
-    int num = s1.compareTo(s2);                    //比较内容为主要条件
-    return num == 0 ? 1 : num;                    //保留重复
-}
-</code></pre><p> });<br> //2,将list集合中所有的元素添加到TrreSet集合中,对其排序,保留重复<br> ts.addAll(list);<br> //3,清空list集合<br> list.clear();<br> //4,将TreeSet集合中排好序的元素添加到list中<br> list.addAll(ts);<br>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 17.17_集合框架(练习)</div><div class="line">* 从键盘接收一个字符串, 程序对其中所有字符进行排序,例如键盘输入: helloitcast程序打印:acehillostt</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>/**</p>
-<ul>
-<li>分析:</li>
-<li>1,键盘录入字符串,Scanner</li>
-<li>2,将字符串转换为字符数组</li>
-<li>3,定义TreeSet集合,传入比较器对字符排序并保留重复</li>
-<li>4,遍历字符数组,将每一个字符存储在TreeSet集合中</li>
-<li><p>5,遍历TreeSet集合,打印每一个字符<br>*/<br>public static void main(String[] args) {<br> //1,键盘录入字符串,Scanner<br> Scanner sc = new Scanner(System.in);<br> System.out.println(“请输入一个字符串”);<br> String line = sc.nextLine();<br> //2,将字符串转换为字符数组<br> char[] arr = line.toCharArray();<br> //3,定义TreeSet集合,传入比较器对字符排序并保留重复<br> TreeSet<character> ts = new TreeSet&lt;&gt;(new Comparator<character>() {</character></character></p>
-<pre><code>@Override
-public int compare(Character c1, Character c2) {
-    //int num = c1 - c2;                //自动拆箱
-    int num = c1.compareTo(c2);
-    return num == 0 ? 1 : num;
-}
-</code></pre><p> });</p>
-<p> //4,遍历字符数组,将每一个字符存储在TreeSet集合中<br> for(char c : arr) {</p>
-<pre><code>ts.add(c);                            //自动装箱
-</code></pre><p> }</p>
-<p> //5,遍历TreeSet集合,打印每一个字符<br> for(Character c : ts) {</p>
-<pre><code>System.out.print(c);
-</code></pre><p> }<br>}        </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 17.18_集合框架(练习)</div><div class="line">* 程序启动后, 可以从键盘输入接收多个整数, 直到输入quit时结束输入. 把所有输入的整数倒序排列打印.</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>/**</p>
-<ul>
-<li>1,创建Scanner对象,键盘录入</li>
-<li>2,创建TreeSet集合对象,TreeSet集合中传入比较器</li>
-<li>3,无限循环不断接收整数,遇到quit退出,因为退出是quit,所以键盘录入的时候应该都以字符串的形式录入</li>
-<li>4,判断是quit就退出,不是将其转换为Integer,并添加到集合中</li>
-<li><p>5,遍历TreeSet集合并打印每一个元素<br>*/<br>public static void main(String[] args) {<br> //1,创建Scanner对象,键盘录入<br> Scanner sc = new Scanner(System.in);<br> //2,创建TreeSet集合对象,TreeSet集合中传入比较器<br> TreeSet<integer> ts = new TreeSet&lt;&gt;(new Comparator<integer>() {</integer></integer></p>
-<pre><code>@Override
-public int compare(Integer i1, Integer i2) {
-    //int num = i2 - i1;                    //自动拆箱
-    int num = i2.compareTo(i1);
-    return num == 0 ? 1 : num;
-}
-</code></pre><p> });<br> //3,无限循环不断接收整数,遇到quit退出,因为退出是quit,所以键盘录入的时候应该都以字符串的形式录入<br> while(true) {</p>
-<pre><code>String line = sc.nextLine();                //将键盘录入的字符串存储在line中
-if(&quot;quit&quot;.equals(line)) {
-    break;
-}
-//4,判断是quit就退出,不是将其转换为Integer,并添加到集合中
-Integer i = Integer.parseInt(line);
-ts.add(i);
-</code></pre><p> }</p>
-<p> // 5,遍历TreeSet集合并打印每一个元素<br> for (Integer integer : ts) {</p>
-<pre><code>System.out.println(integer);
-</code></pre><p> }<br>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">###  键盘录入学生信息按照总分排序后输出在控制台 </div><div class="line">* A:案例演示</div><div class="line">	* 需求：键盘录入5个学生信息(姓名,语文成绩,数学成绩,英语成绩),按照总分从高到低输出到控制台。</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>/**</p>
-<ul>
-<li>分析:</li>
-<li>1,定义一个学生类</li>
-<li>成员变量:姓名,语文成绩,数学成绩,英语成绩,总成绩</li>
-<li>成员方法:空参,有参构造,有参构造的参数分别是姓名,语文成绩,数学成绩,英语成绩</li>
-<li>toString方法,在遍历集合中的Student对象打印对象引用的时候会显示属性值</li>
-<li>2,键盘录入需要Scanner,创建键盘录入对象</li>
-<li>3,创建TreeSet集合对象,在TreeSet的构造函数中传入比较器,按照总分比较</li>
-<li>4,录入五个学生,所以以集合中的学生个数为判断条件,如果size是小于5就进行存储</li>
-<li>5,将录入的字符串切割,用逗号切割,会返回一个字符串数组,将字符串数组中从二个元素转换成int数,</li>
-<li>6,将转换后的结果封装成Student对象,将Student添加到TreeSet集合中</li>
-<li><p>7,遍历TreeSet集合打印每一个Student对象<br>*/<br>public static void main(String[] args) {<br> //2,键盘录入需要Scanner,创建键盘录入对象<br> Scanner sc = new Scanner(System.in);<br> System.out.println(“请输入学生成绩格式是:姓名,语文成绩,数学成绩,英语成绩”);<br> //3,创建TreeSet集合对象,在TreeSet的构造函数中传入比较器,按照总分比较<br> TreeSet<student> ts = new TreeSet&lt;&gt;(new Comparator<student>() {</student></student></p>
-<pre><code>@Override
-public int compare(Student s1, Student s2) {
-    int num = s2.getSum() - s1.getSum();
-    return num == 0 ? 1 : num;
-}
-</code></pre><p> });<br> //4,录入五个学生,所以以集合中的学生个数为判断条件,如果size是小于5就进行存储<br> while(ts.size() &lt; 5) {</p>
-<pre><code>//5,将录入的字符串切割,用逗号切割,会返回一个字符串数组,将字符串数组中从二个元素转换成int数,
-String line = sc.nextLine();
-String[] arr = line.split(&quot;,&quot;);
-int chinese = Integer.parseInt(arr[1]);
-int math = Integer.parseInt(arr[2]);
-int english = Integer.parseInt(arr[3]);
-//6,将转换后的结果封装成Student对象,将Student添加到TreeSet集合中
-ts.add(new Student(arr[0], chinese, math, english));
-</code></pre><p> }</p>
-<p> //7,遍历TreeSet集合打印每一个Student对象<br> System.out.println(“排序后的学生信息:”);<br> for (Student s : ts) {</p>
-<pre><code>System.out.println(s);
-</code></pre><p> }<br>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>package com.wxhao.bean;</p>
-<p>public class Student {<br>    private String name;<br>    private int chinese;<br>    private int math;<br>    private int english;<br>    private int sum;</p>
-<pre><code>public Student() {
-    super();
-
-}
-public Student(String name, int chinese, int math, int english) {
-    super();
-    this.name = name;
-    this.chinese = chinese;
-    this.math = math;
-    this.english = english;
-    this.sum = this.chinese + this.math + this.english;
-}
-public int getSum() {
-    return sum;
-}
-
-public String toString() {
-    return name + &quot;,&quot; + chinese + &quot;,&quot; + math + &quot;,&quot; + english + &quot;,&quot; + sum;
-}
-</code></pre><p>}<br>```</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
-<li>1.List<ul>
-<li>a.普通for循环, 使用get()逐个获取</li>
-<li>b.调用iterator()方法得到Iterator, 使用hasNext()和next()方法</li>
-<li>c.增强for循环, 只要可以使用Iterator的类都可以用</li>
-<li>d.Vector集合可以使用Enumeration的hasMoreElements()和nextElement()方法</li>
-</ul>
-</li>
-<li>2.Set<ul>
-<li>a.调用iterator()方法得到Iterator, 使用hasNext()和next()方法</li>
-<li>b.增强for循环, 只要可以使用Iterator的类都可以用</li>
-</ul>
-</li>
-<li>3.普通for循环,迭代器,增强for循环是否可以在遍历的过程中删除 </li>
-</ul>
-
+        
+          <a class="article-more-a" href="/2013/08/30/2013-08-30-collection-set/#more">more >></a>
+        
       
 
       
@@ -524,386 +275,14 @@ public String toString() {
         <h3 id="去除ArrayList中重复字符串元素方式"><a href="#去除ArrayList中重复字符串元素方式" class="headerlink" title="去除ArrayList中重复字符串元素方式"></a>去除ArrayList中重复字符串元素方式</h3><ul>
 <li>A:案例演示<ul>
 <li>需求：ArrayList去除集合中字符串的重复值(字符串的内容相同)</li>
-<li>思路：创建新集合方式<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">public static void main(String[] args) &#123;</div><div class="line">	ArrayList list = new ArrayList();</div><div class="line">	list.add(&quot;a&quot;);</div><div class="line">	list.add(&quot;a&quot;);</div><div class="line">	list.add(&quot;b&quot;);</div><div class="line">	list.add(&quot;b&quot;);</div><div class="line">	list.add(&quot;b&quot;);</div><div class="line">	list.add(&quot;c&quot;);</div><div class="line">	list.add(&quot;c&quot;);</div><div class="line">	list.add(&quot;c&quot;);</div><div class="line">	list.add(&quot;c&quot;);</div><div class="line">	</div><div class="line">	System.out.println(list);</div><div class="line">	ArrayList newList = getSingle(list);</div><div class="line">	System.out.println(newList);</div><div class="line">&#125;</div><div class="line"></div><div class="line">/*</div><div class="line"> * 去除重复</div><div class="line"> * 1,返回ArrayList</div><div class="line"> * 2,参数列表ArrayList</div><div class="line"> */</div><div class="line">public static ArrayList getSingle(ArrayList list) &#123;</div><div class="line">	ArrayList newList = new ArrayList();			//创建一个新集合</div><div class="line">	Iterator it = list.iterator();					//获取迭代器</div><div class="line">	while(it.hasNext()) &#123;							//判断老集合中是否有元素</div><div class="line">		String temp = (String)it.next();			//将每一个元素临时记录住</div><div class="line">		if(!newList.contains(temp)) &#123;				//如果新集合中不包含该元素</div><div class="line">			newList.add(temp);						//将该元素添加到新集合中</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return newList;									//将新集合返回</div><div class="line">&#125;</div><div class="line">```			</div><div class="line"></div><div class="line">### 去除ArrayList中重复自定义对象元素 </div><div class="line">* A:案例演示</div><div class="line">	* 需求：ArrayList去除集合中自定义对象元素的重复值(对象的成员变量值相同)</div><div class="line">* B:注意事项</div><div class="line">	* 重写equals()方法的</div></pre></td></tr></table></figure>
+<li>思路：创建新集合方式<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">public static void main(String[] args) &#123;</div><div class="line">	ArrayList list = new ArrayList();</div><div class="line">	list.add(&quot;a&quot;);</div><div class="line">	list.add(&quot;a&quot;);</div><div class="line">	list.add(&quot;b&quot;);</div><div class="line">	list.add(&quot;b&quot;);</div><div class="line">	list.add(&quot;b&quot;);</div><div class="line">	list.add(&quot;c&quot;);</div><div class="line">	list.add(&quot;c&quot;);</div><div class="line">	list.add(&quot;c&quot;);</div><div class="line">	list.add(&quot;c&quot;);</div><div class="line">	</div><div class="line">	System.out.println(list);</div><div class="line">	ArrayList newList = getSingle(list);</div><div class="line">	System.out.println(newList);</div><div class="line">&#125;</div><div class="line"></div><div class="line">/*</div><div class="line"> * 去除重复</div><div class="line"> * 1,返回ArrayList</div><div class="line"> * 2,参数列表ArrayList</div><div class="line"> */</div><div class="line">public static ArrayList getSingle(ArrayList list) &#123;</div><div class="line">	ArrayList newList = new ArrayList();			//创建一个新集合</div><div class="line">	Iterator it = list.iterator();					//获取迭代器</div><div class="line">	while(it.hasNext()) &#123;							//判断老集合中是否有元素</div><div class="line">		String temp = (String)it.next();			//将每一个元素临时记录住</div><div class="line">		if(!newList.contains(temp)) &#123;				//如果新集合中不包含该元素</div><div class="line">			newList.add(temp);						//将该元素添加到新集合中</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return newList;									//将新集合返回</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
-<p>package com.wxhao.list;</p>
-<p>import java.util.ArrayList;<br>import java.util.Iterator;</p>
-<p>import com.wxhao.bean.Person;</p>
-<p>@SuppressWarnings({ “rawtypes”, “unchecked” })<br>public class Demo2_ArrayList {</p>
-<pre><code>/**
- * * 
-    contains方法判断是否包含,底层依赖的是equals方法
-    remove方法判断是否删除,底层依赖的是equals方法
- */
-public static void main(String[] args) {
-    ArrayList list = new ArrayList();                //创建集合对象
-    list.add(new Person(&quot;张三&quot;, 23));
-    list.add(new Person(&quot;张三&quot;, 23));
-    list.add(new Person(&quot;李四&quot;, 24));
-    list.add(new Person(&quot;李四&quot;, 24));
-    list.add(new Person(&quot;李四&quot;, 24));
-    list.add(new Person(&quot;李四&quot;, 24));
-
-    //ArrayList newList = getSingle(list);            //调用方法去除重复
-    //System.out.println(newList);
-    list.remove(new Person(&quot;张三&quot;, 23));
-    System.out.println(list);
-}
-
-/*
- * 创建新集合将重复元素去掉
- * 1,明确返回值类型,返回ArrayList
- * 2,明确参数列表ArrayList
- * 
- * 分析:
- * 1,创建新集合
- * 2,根据传入的集合(老集合)获取迭代器
- * 3,遍历老集合
- * 4,通过新集合判断是否包含老集合中的元素,如果包含就不添加,如果不包含就添加
- */
-public static ArrayList getSingle(ArrayList list) {
-    ArrayList newList = new ArrayList&lt;&gt;();                    //1,创建新集合
-    Iterator it = list.iterator();                            //2,根据传入的集合(老集合)获取迭代器
-
-    while(it.hasNext()) {                                    //3,遍历老集合
-        Object obj = it.next();                                //记录住每一个元素
-        if(!newList.contains(obj)) {                        //如果新集合中不包含老集合中的元素
-            newList.add(obj);                                //将该元素添加
-        }
-    }
-
-    return newList;
-}
-</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
-<p>package com.wxhao.bean;</p>
-<p>public class Person {<br>    private String name;<br>    private int age;<br>    public Person() {<br>        super();</p>
-<pre><code>}
-public Person(String name, int age) {
-    super();
-    this.name = name;
-    this.age = age;
-}
-public String getName() {
-    return name;
-}
-public void setName(String name) {
-    this.name = name;
-}
-public int getAge() {
-    return age;
-}
-public void setAge(int age) {
-    this.age = age;
-}
-@Override
-public String toString() {
-    return &quot;Person [name=&quot; + name + &quot;, age=&quot; + age + &quot;]&quot;;
-}
-/*@Override
-public boolean equals(Object obj) {
-    Person p = (Person)obj;
-    return this.name.equals(p.name) &amp;&amp; this.age == p.age;
-}*/
-</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### LinkedList的特有功能 </div><div class="line">* A:LinkedList类概述</div><div class="line">* B:LinkedList类特有功能</div><div class="line">	* public void addFirst(E e)及addLast(E e)</div><div class="line">	* public E getFirst()及getLast()</div><div class="line">	* public E removeFirst()及public E removeLast()</div><div class="line">	* public E get(int index);</div></pre></td></tr></table></figure></p>
-<p>package com.wxhao.list;</p>
-<p>import java.util.LinkedList;</p>
-<p>public class Demo3_LinkedList {</p>
-<pre><code>public static void main(String[] args) {
-    LinkedList list = new LinkedList();
-    list.addFirst(&quot;a&quot;);
-    list.addFirst(&quot;b&quot;);
-    list.addFirst(&quot;c&quot;);
-    list.addFirst(&quot;d&quot;);
-    list.addLast(&quot;e&quot;);
-
-    //System.out.println(list.getFirst());//d
-    //System.out.println(list.getLast());//e
-    //System.out.println(list.removeFirst());//cbea
-    //System.out.println(list.removeLast());//dcba
-
-    System.out.println(list.get(1));//c
-    System.out.println(list);//dcbae
-}
-</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">	</div><div class="line">### 栈和队列数据结构 </div><div class="line">* 栈</div><div class="line">	* 先进后出 </div><div class="line">* 队列</div><div class="line">	* 先进先出</div><div class="line"></div><div class="line">### 用LinkedList模拟栈数据结构的集合并测试 </div><div class="line">* A:案例演示</div><div class="line">	* 需求：请用LinkedList模拟栈数据结构的集合，并测试</div><div class="line">	* 创建一个类将Linked中的方法封装</div><div class="line">	*</div></pre></td></tr></table></figure></p>
-<p>public class Stack {<br>private LinkedList list = new LinkedList();        //创建LinkedList对象</p>
-<p>public void in(Object obj) {<br>    list.addLast(obj);                            //封装addLast()方法<br>}</p>
-<p>public Object out() {<br>    return list.removeLast();                    //封装removeLast()方法<br>}</p>
-<p>public boolean isEmpty() {<br>    return list.isEmpty();                        //封装isEmpty()方法<br>}<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 泛型概述和基本使用 </div><div class="line">* A:泛型概述</div><div class="line">* B:泛型好处</div><div class="line">	* 提高安全性(将运行期的错误转换到编译期) </div><div class="line">	* 省去强转的麻烦</div><div class="line">* C:泛型基本使用</div><div class="line">	* &lt;&gt;中放的必须是引用数据类型 </div><div class="line">* D:泛型使用注意事项</div><div class="line">	* 前后的泛型必须一致,或者后面的泛型可以省略不写(1.7的新特性菱形泛型)</div></pre></td></tr></table></figure></p>
-<p>package com.wxhao.generic;</p>
-<p>import java.util.ArrayList;<br>import java.util.Iterator;</p>
-<p>import com.wxhao.bean.Person;</p>
-<p>public class Demo1_Generic {</p>
-<pre><code>public static void main(String[] args) {
-    //demo1();
-    //int[] arr = new byte[5];                            //数组要保证前后的数据类型一致
-    //ArrayList&lt;Object&gt; list = new ArrayList&lt;Person&gt;();    //集合的泛型要保证前后的数据类型一致
-    //ArrayList&lt;Object&gt; list = new ArrayList&lt;&gt;();        //1.7版本的新特性,菱形泛型
-    ArrayList&lt;Object&gt; list = new ArrayList&lt;&gt;();            //泛型最好不要定义成Object,没有意义
-    list.add(&quot;aaa&quot;);
-    list.add(true);
-}
-
-public static void demo1() {
-    ArrayList&lt;Person&gt; list = new ArrayList&lt;Person&gt;();
-//    list.add(110);
-//    list.add(true);
-    list.add(new Person(&quot;张三&quot;, 23));
-    list.add(new Person(&quot;李四&quot;, 24));
-
-    Iterator&lt;Person&gt; it = list.iterator();
-    while(it.hasNext()) {
-        //System.out.println(it.next());
-
-        //System.out.println(it.next().getName() + &quot;...&quot; + it.next().getAge());//next方法只能调用一次,如果调用多次会将指针向后移动多次
-        Person p = it.next();            
-        System.out.println(p.getName() + &quot;...&quot; + p.getAge());
-    }
-}
-</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### ArrayList存储字符串和自定义对象并遍历泛型版 </div><div class="line">* A:案例演示</div><div class="line">	* ArrayList存储字符串并遍历泛型版</div></pre></td></tr></table></figure></p>
-<p>package com.wxhao.generic;</p>
-<p>import java.util.ArrayList;<br>import java.util.Iterator;</p>
-<p>import com.wxhao.bean.Person;</p>
-<p>public class Demo2_Generic {<br>    public static void main(String[] args) {<br>        // demo1();<br>        ArrayList<person> list = new ArrayList&lt;&gt;();<br>        list.add(new Person(“张三”, 23));<br>        list.add(new Person(“李四”, 24));<br>        list.add(new Person(“王五”, 25));<br>        list.add(new Person(“赵六”, 26));</person></p>
-<pre><code>    Iterator&lt;Person&gt; it = list.iterator();
-    while (it.hasNext()) {
-        Person p = it.next(); // 将集合中的每一个元素用Person记录
-        System.out.println(p.getName() + &quot;...&quot; + p.getAge());
-    }
-}
-
-public static void demo1() {
-    ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;(); // 创建集合对象
-    list.add(&quot;a&quot;);
-    list.add(&quot;b&quot;);
-    list.add(&quot;c&quot;);
-    list.add(&quot;d&quot;);
-
-    Iterator&lt;String&gt; it = list.iterator();
-    while (it.hasNext()) {
-        System.out.println(it.next());
-    }
-}
-</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 泛型的由来 </div><div class="line">* A:案例演示</div><div class="line">	* 泛型的由来:通过Object转型问题引入</div><div class="line">	* 早期的Object类型可以接收任意的对象类型，但是在实际的使用中，会有类型转换的问题。也就存在这隐患，所以Java提供了泛型来解决这个安全问题。</div><div class="line"></div><div class="line">### 泛型类的概述及使用 </div><div class="line">* A:泛型类概述&lt;T&gt;</div><div class="line">	* 把泛型定义在类上</div><div class="line">* B:定义格式</div><div class="line">	* public class 类名&lt;泛型类型1,…&gt;</div><div class="line">* C:注意事项	</div><div class="line">	* 泛型类型必须是引用类型</div><div class="line">* D:案例演示</div><div class="line">	* 泛型类的使用</div></pre></td></tr></table></figure></p>
-<p>package com.wxhao.bean;</p>
-<p>public class Tool<q> {<br>    private Q q;</q></p>
-<pre><code>public Q getObj() {
-    return q;
-}
-
-public void setObj(Q q) {
-    this.q = q;
-}
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<p>package com.wxhao.bean;</p>
-<p>public class Student extends Person {</p>
-<pre><code>public Student() {
-}
-
-public Student(String name, int age) {
-    super(name, age);
-
-}
-</code></pre><p>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<p>package com.wxhao.bean;</p>
-<p>public class Worker extends Person {</p>
-<pre><code>public Worker() {
-}
-
-public Worker(String name, int age) {
-    super(name, age);
-
-}
-</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 泛型方法的概述和使用 </div><div class="line">* A:泛型方法概述</div><div class="line">	* 把泛型定义在方法上</div><div class="line">* B:定义格式	</div><div class="line">	* public &lt;泛型类型&gt; 返回类型 方法名(泛型类型 变量名)</div><div class="line">* C:案例演示</div><div class="line">	* 泛型方法的使用</div></pre></td></tr></table></figure></p>
-<p>package com.wxhao.bean;</p>
-<p>public class Tool<q> {<br>    private Q q;</q></p>
-<pre><code>public Q getObj() {
-    return q;
-}
-
-public void setObj(Q q) {
-    this.q = q;
-}
-
-public&lt;T&gt; void show(T t) {        //方法泛型最好与类的泛型一致
-    System.out.println(t);        //如果不一致,需要在方法上声明该泛型
-}
-
-public static&lt;W&gt; void print(W w) {    //静态方法必须声明自己的泛型
-    System.out.println(w);
-}
-</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
-<p>package com.wxhao.generic;</p>
-<p>import com.wxhao.bean.Student;<br>import com.wxhao.bean.Tool;</p>
-<p>public class Demo3_Generic {</p>
-<pre><code>public static void main(String[] args) {
-    //demo1();
-    Tool&lt;String&gt; t = new Tool&lt;&gt;();
-    //t.show(&quot;abc&quot;);
-    t.show(true);
-}
-
-public static void demo1() {
-    Tool&lt;Student&gt; t = new Tool&lt;&gt;();        //创建工具类对象
-    t.setObj(new Student(&quot;张三&quot;,23));
-
-    //Worker w = (Worker) t.getObj();    //向下转型
-    //System.out.println(w);
-}
-</code></pre><p>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 泛型接口的概述和使用 </div><div class="line">* A:泛型接口概述</div><div class="line">	* 把泛型定义在接口上</div><div class="line">* B:定义格式	</div><div class="line">	* public interface 接口名&lt;泛型类型&gt;</div><div class="line">* C:案例演示</div><div class="line">	* 泛型接口的使用</div></pre></td></tr></table></figure>
-<p>package com.wxhao.generic;</p>
-<p>public class Demo4_Generic {</p>
-<p>}</p>
-<p>interface Inter<t> {<br>    public void show(T t);<br>}</t></p>
-<p>/*class Demo implements Inter<string> {    //推荐用这种<br>    @Override<br>    public void show(String t) {<br>        System.out.println(t);<br>    }</string></p>
-<p>}*/</p>
-<p>class Demo<t> implements Inter<t> {            //没有必要在实现接口的时候给自己类加泛型</t></t></p>
-<pre><code>@Override
-public void show(T t) {
-    System.out.println(t);
-}
-</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 泛型高级之通配符 </div><div class="line">* A:泛型通配符&lt;?&gt;</div><div class="line">	* 任意类型，如果没有明确，那么就是Object以及任意的Java类了</div><div class="line">* B:? extends E</div><div class="line">	* 向下限定，E及其子类</div><div class="line">* C:? super E</div><div class="line">	* 向上限定，E及其父类</div></pre></td></tr></table></figure></p>
-<p>package com.wxhao.generic;</p>
-<p>import java.util.ArrayList;</p>
-<p>import com.wxhao.bean.Person;<br>import com.wxhao.bean.Student;</p>
-<p>public class Demo5_Generic {</p>
-<pre><code>public static void main(String[] args) {
-    //List&lt;?&gt; list = new ArrayList&lt;Integer&gt;();    //当右边的泛型是不确定时,左边可以指定为?
-    ArrayList&lt;Person&gt; list1 = new ArrayList&lt;&gt;();
-    list1.add(new Person(&quot;张三&quot;, 23));
-    list1.add(new Person(&quot;李四&quot;, 24));
-    list1.add(new Person(&quot;王五&quot;, 25));
-
-    ArrayList&lt;Student&gt; list2 = new ArrayList&lt;&gt;();
-    list2.add(new Student(&quot;赵六&quot;, 26));
-    list2.add(new Student(&quot;周七&quot;, 27));
-    //子类自动提升为父类 
-    list1.addAll(list2);// java.util.ArrayList.addAll(Collection&lt;? extends Person&gt; c)
-    System.out.println(list1);
-}
-</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 增强for的概述和使用 </div><div class="line">* A:增强for概述</div><div class="line">	* 简化数组和Collection集合的遍历</div><div class="line">* B:格式：</div><div class="line">* </div><div class="line">		for(元素数据类型 变量 : 数组或者Collection集合) &#123;</div><div class="line">			使用变量即可，该变量就是元素</div><div class="line">		&#125;</div><div class="line">* C:案例演示</div><div class="line">	* 数组，集合存储元素用增强for遍历</div><div class="line">* D:好处</div><div class="line">	* 简化遍历</div></pre></td></tr></table></figure></p>
-<p>int[] arr = {11,22,33,44,55};<br>        for (int i : arr) {<br>            System.out.println(i);<br>        }</p>
-<pre><code>ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
-list.add(&quot;a&quot;);
-list.add(&quot;b&quot;);
-list.add(&quot;c&quot;);
-list.add(&quot;d&quot;);
-
-for (String string : list) {
-    System.out.println(string);
-}
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">**增强for循环底层依赖的是迭代器(Iterator)**</div><div class="line"></div><div class="line">### ArrayList存储字符串和自定义对象并遍历增强for版 (JDK1.5)</div><div class="line">* A:案例演示</div><div class="line">	* ArrayList存储字符串并遍历增强for版</div><div class="line">	*</div></pre></td></tr></table></figure>
-<p>ArrayList<person> list = new ArrayList&lt;&gt;();<br>list.add(new Person(“张三”, 23));<br>list.add(new Person(“李四”, 24));<br>list.add(new Person(“王五”, 25));<br>list.add(new Person(“赵六”, 26));</person></p>
-<p>for (Person person : list) {<br>System.out.println(person);<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 三种迭代的能否删除 </div><div class="line">* 普通for循环,可以删除,但是索引要--</div><div class="line">* 迭代器,可以删除,但是必须使用迭代器自身的remove方法,否则会出现并发修改异常</div><div class="line">* 增强for循环不能删除</div></pre></td></tr></table></figure></p>
-<p>ArrayList<string> list = new ArrayList&lt;&gt;();<br>list.add(“a”);<br>list.add(“b”);<br>list.add(“b”);<br>list.add(“c”);<br>list.add(“d”);</string></p>
-<p>//1,普通for循环删除,索引要–<br>/<em>for(int i = 0; i &lt; list.size(); i++) {<br>    if(“b”.equals(list.get(i))) {<br>        list.remove(i–);                            //通过索引删除元素<br>    }<br>}</em>/</p>
-<p>//2,迭代器删除<br>/<em>Iterator<string> it = list.iterator();<br>while(it.hasNext()) {<br>    if(“b”.equals(it.next())) {<br>        //list.remove(“b”);                            //不能用集合的删除方法,因为迭代过程中如果集合修改会出现并发修改异常<br>        it.remove();<br>    }<br>}</string></em>/</p>
-<p>/<em>for(Iterator<string> it2 = list.iterator(); it2.hasNext();) {<br>    if(“b”.equals(it2.next())) {<br>        //list.remove(“b”);                            //不能用集合的删除方法,因为迭代过程中如果集合修改会出现并发修改异常<br>        it2.remove();<br>    }<br>}</string></em>/<br>//3,增强for循环,增强for循环不能删除,只能遍历<br>for (String string : list) {<br>    if(“b”.equals(string)) {<br>        list.remove(“b”);<br>    }<br>}<br>System.out.println(list);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 静态导入的概述和使用 (JDK1.5)</div><div class="line">* A:静态导入概述</div><div class="line">* B:格式：</div><div class="line">	* import static 包名….类名.方法名;</div><div class="line">	* 可以直接导入到方法的级别</div><div class="line">* C:注意事项</div><div class="line">	* 方法必须是静态的,如果有多个同名的静态方法，容易不知道使用谁?这个时候要使用，必须加前缀。由此可见，意义不大，所以一般不用，但是要能看懂。</div></pre></td></tr></table></figure></p>
-<p>package com.wxhao.jdk5;</p>
-<p>import static java.util.Arrays.sort;            //静态导入<br>import static java.util.Arrays.toString;            //静态导入</p>
-<p>public class Demo2_StaticImport {</p>
-<pre><code>public static void main(String[] args) {
-    int[] arr = {55,22,33,44,11};
-    sort(arr);                            //排序
-    //System.out.println(toString(arr));//toString冲突
-}
-</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 可变参数的概述和使用  (JDK1.5)</div><div class="line">* A:可变参数概述</div><div class="line">	* 定义方法的时候不知道该定义多少个参数</div><div class="line">* B:格式</div><div class="line">	* 修饰符 返回值类型 方法名(数据类型…  变量名)&#123;&#125;</div><div class="line">* C:注意事项：</div><div class="line">	* 这里的变量其实是一个数组</div><div class="line">	* 如果一个方法有可变参数，并且有多个参数，那么，可变参数肯定是最后一个</div></pre></td></tr></table></figure></p>
-<p>package com.wxhao.jdk5;</p>
-<p>public class Demo3_ChangeableArgs {</p>
-<pre><code>public static void main(String[] args) {
-    int[] arr = {11,22,33,44,55};
-    //print(arr);
-    print(11,22,33,44,55,66);
-    System.out.println(&quot;---------------&quot;);
-    //print();
-}
-
-/*public static void print(int[] arr) {
-    for (int i = 0; i &lt; arr.length; i++) {
-        System.out.println(arr[i]);
-    }
-}*/
-
-
-public static void print(int i ,int ... arr) {            //可变参数其实是一个数组
-    for (int i = 0; i &lt; arr.length; i++) {
-        System.out.println(arr[i]);
-    }
-}
-</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### Arrays工具类的asList()方法的使用 (JDK1.5)</div><div class="line">* A:案例演示</div><div class="line">	* Arrays工具类的asList()方法的使用</div><div class="line">	* Collection中toArray(T[] a)泛型版的集合转数组</div></pre></td></tr></table></figure></p>
-<p>package com.wxhao.jdk5;</p>
-<p>import java.util.ArrayList;<br>import java.util.Arrays;<br>import java.util.List;</p>
-<p>public class Demo4_AsList {</p>
-<pre><code>/**
- * 数组转换成集合
- * 数组转换成集合虽然不能增加或减少元素,但是可以用集合的思想操作数组,也就是说可以使用其他集合中的方法
- */
-public static void main(String[] args) {
-    //demo1();
-    //demo2();
-    //集合转数组,加泛型的
-    ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
-    list.add(&quot;a&quot;);
-    list.add(&quot;b&quot;);
-    list.add(&quot;c&quot;);
-    list.add(&quot;d&quot;);
-</code></pre><p>//        String[] arr = list.toArray(new String[1]);//当集合转换数组时,数组长度如果是小于等于集合的size时,转换后的数组长度等于集合的size<br>        String[] arr = list.toArray(new String[10]);//如果数组的长度大于了size,分配的数组长度就和你指定的长度一样<br>        for (String string : arr) {<br>            System.out.println(string);<br>        }<br>    }</p>
-<pre><code>public static void demo2() {
-    //int[] arr = {11,22,33,44,55};            
-    //List&lt;int[]&gt; list = Arrays.asList(arr);    基本数据类型的数组转换成集合,会将整个数组当作一个对象转换
-    //System.out.println(list);
-    Integer[] arr = {11,22,33,44,55};            //将数组转换成集合,数组必须是引用数据类型
-    List&lt;Integer&gt; list = Arrays.asList(arr);
-    System.out.println(list);
-}
-
-public static void demo1() {
-    String[] arr = {&quot;a&quot;,&quot;b&quot;,&quot;c&quot;};
-    List&lt;String&gt; list = Arrays.asList(arr);        //将数组转换成集合
-    //list.add(&quot;d&quot;);                            //不能添加
-    System.out.println(list);
-}
-</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 集合嵌套之ArrayList嵌套ArrayList </div><div class="line">* A:案例演示</div><div class="line">	* 集合嵌套之ArrayList嵌套ArrayList</div></pre></td></tr></table></figure></p>
-<p>package com.wxhao.list;</p>
-<p>import java.util.ArrayList;</p>
-<p>import com.wxhao.bean.Person;</p>
-<p>public class Demo5_ArrayListArrayList {</p>
-<pre><code>/**
- * 案例:
- * 我们学科,学科又分为若个班级
- * 整个学科一个大集合
- * 若干个班级分为每一个小集合
- */
-public static void main(String[] args) {
-    ArrayList&lt;ArrayList&lt;Person&gt;&gt; list = new ArrayList&lt;&gt;();
-
-    ArrayList&lt;Person&gt; first = new ArrayList&lt;&gt;();    //创建第一个班级
-    first.add(new Person(&quot;杨幂&quot;, 30));
-    first.add(new Person(&quot;李冰冰&quot;, 33));
-    first.add(new Person(&quot;范冰冰&quot;, 20));
-
-    ArrayList&lt;Person&gt; second = new ArrayList&lt;&gt;();
-    second.add(new Person(&quot;黄晓明&quot;, 31));
-    second.add(new Person(&quot;赵薇&quot;, 33));
-    second.add(new Person(&quot;陈坤&quot;, 32));
-
-    //将班级添加到学科集合中
-    list.add(first);
-    list.add(second);
-
-    //遍历学科集合
-    for(ArrayList&lt;Person&gt; a : list) {
-        for(Person p : a) {
-            System.out.println(p);
-        }
-    }
-}
-</code></pre><p>}<br>```</p>
-
+        
+          <a class="article-more-a" href="/2013/08/25/2013-08-25-collection-arraylist/#more">more >></a>
+        
       
 
       
@@ -973,12 +352,13 @@ public static void main(String[] args) {
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="对象数组的概述和使用"><a href="#对象数组的概述和使用" class="headerlink" title="对象数组的概述和使用"></a>对象数组的概述和使用</h3><ul>
-<li>A:案例演示<ul>
+<li><p>A:案例演示</p>
+<ul>
 <li>需求：我有5个学生，请把这个5个学生的信息存储到数组中，并遍历数组，获取得到每一个学生信息。</li>
 </ul>
 </li>
-<li><pre><code>Student[] arr = new Student[5];                    //存储学生对象
-arr[0] = new Student(&quot;张三&quot;, 23);
+<li><p> Student[] arr = new Student[5];                    //存储学生对象</p>
+<pre><code>arr[0] = new Student(&quot;张三&quot;, 23);
 arr[1] = new Student(&quot;李四&quot;, 24);
 arr[2] = new Student(&quot;王五&quot;, 25);
 arr[3] = new Student(&quot;赵六&quot;, 26);
@@ -988,261 +368,10 @@ for (int i = 0; i &lt; arr.length; i++) {
     System.out.println(arr[i]);
 }
 </code></pre></li>
-<li><p>B:画图演示</p>
-<ul>
-<li>把学生数组的案例画图讲解</li>
-<li>数组和集合存储引用数据类型,存的都是地址值</li>
 </ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.bean;</div><div class="line"></div><div class="line">public class Student &#123;</div><div class="line">	private String name;</div><div class="line">	private int age;</div><div class="line">	public Student() &#123;</div><div class="line">		super();</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	public Student(String name, int age) &#123;</div><div class="line">		super();</div><div class="line">		this.name = name;</div><div class="line">		this.age = age;</div><div class="line">	&#125;</div><div class="line">	public String getName() &#123;</div><div class="line">		return name;</div><div class="line">	&#125;</div><div class="line">	public void setName(String name) &#123;</div><div class="line">		this.name = name;</div><div class="line">	&#125;</div><div class="line">	public int getAge() &#123;</div><div class="line">		return age;</div><div class="line">	&#125;</div><div class="line">	public void setAge(int age) &#123;</div><div class="line">		this.age = age;</div><div class="line">	&#125;</div><div class="line">	@Override</div><div class="line">	public String toString() &#123;</div><div class="line">		return &quot;Student [name=&quot; + name + &quot;, age=&quot; + age + &quot;]&quot;;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.collection;</div><div class="line"></div><div class="line">import com.wxhao.bean.Student;</div><div class="line"></div><div class="line">public class Demo1_Array &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//int[] arr = new int[5];		//创建基本数据类型数组</div><div class="line">		Student[] arr = new Student[5];	//创建引用数据类型数组</div><div class="line">		arr[0] = new Student(&quot;张三&quot;, 23);	//创建一个学生对象,存储在数组的第一个位置</div><div class="line">		arr[1] = new Student(&quot;李四&quot;, 24);	//创建一个学生对象,存储在数组的第二个位置</div><div class="line">		arr[2] = new Student(&quot;王五&quot;, 25);	//创建一个学生对象,存储在数组的第三个位置</div><div class="line">		</div><div class="line">		for(int i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">			System.out.println(arr[i]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="!--￼17--&gt;/post-in/20130820/szccyyle.png" alt="数组存储引用数据类型"></p>
-<h3 id="集合的由来及集合继承体系图"><a href="#集合的由来及集合继承体系图" class="headerlink" title="集合的由来及集合继承体系图"></a>集合的由来及集合继承体系图</h3><ul>
-<li>A:集合的由来<ul>
-<li>数组长度是固定,当添加的元素超过了数组的长度时需要对数组重新定义,太麻烦,java内部给我们提供了集合类,能存储任意对象,长度是可以改变的,随着元素的增加而增加,随着元素的减少而减少 </li>
-</ul>
-</li>
-<li>B:数组和集合的区别<ul>
-<li>区别1 : <ul>
-<li>数组既可以存储基本数据类型,又可以存储引用数据类型,基本数据类型存储的是值,引用数据类型存储的是地址值</li>
-<li>集合只能存储引用数据类型(对象)集合中也可以存储基本数据类型,但是在存储的时候会自动装箱变成对象</li>
-</ul>
-</li>
-<li>区别2:<ul>
-<li>数组长度是固定的,不能自动增长</li>
-<li>集合的长度的是可变的,可以根据元素的增加而增长</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>C:数组和集合什么时候用<pre><code>* 1,如果元素个数是固定的推荐用数组
-* 2,如果元素个数不是固定的推荐用集合
-</code></pre></li>
-<li>D:集合继承体系图</li>
-</ul>
-<p><img src="http://wxhao2.duapp.com/blog/post-in/20130820/szccyysjlx.png" alt="数组存储引用数据类型"></p>
-<h3 id="Collection集合的基本功能测试"><a href="#Collection集合的基本功能测试" class="headerlink" title="Collection集合的基本功能测试"></a>Collection集合的基本功能测试</h3><ul>
-<li>A:案例演示    </li>
-<li><pre><code>基本功能演示
-
-boolean add(E e)
-boolean remove(Object o)
-void clear()
-boolean contains(Object o)
-boolean isEmpty()
-int size()
-</code></pre></li>
-<li><p>B:注意:</p>
-</li>
-<li>collectionXxx.java使用了未经检查或不安全的操作.</li>
-<li>注意:要了解详细信息,请使用 -Xlint:unchecked重新编译.</li>
-<li>java编译器认为该程序存在安全隐患</li>
-<li>温馨提示:这不是编译失败,所以先不用理会,等学了泛型你就知道了</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.collection;</div><div class="line"></div><div class="line">import java.util.ArrayList;</div><div class="line">import java.util.Collection;</div><div class="line"></div><div class="line">import com.wxhao.bean.Student;</div><div class="line"></div><div class="line">@SuppressWarnings(&#123; &quot;rawtypes&quot;, &quot;unchecked&quot; &#125;)</div><div class="line">public class Demo2_Collection &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">		add方法如果是List集合一直都返回true,因为List集合中是可以存储重复元素的</div><div class="line">		如果是Set集合当存储重复元素的时候,就会返回false</div><div class="line">		</div><div class="line">		ArrayList的父类的父类重写toString方法,所以在打印对象的引用的时候,输出的结果不是Object类中toString的结果</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		Collection c = new ArrayList();		</div><div class="line">		c.add(&quot;a&quot;);</div><div class="line">		c.add(&quot;b&quot;);</div><div class="line">		c.add(&quot;c&quot;);</div><div class="line">		c.add(&quot;d&quot;);</div><div class="line">		</div><div class="line">		//c.remove(&quot;b&quot;);										//删除指定元素</div><div class="line">		//c.clear();											//清空集合</div><div class="line">		//System.out.println(c.contains(&quot;b&quot;));					//判断是否包含</div><div class="line">		//System.out.println(c.isEmpty());</div><div class="line">		System.out.println(c.size()); 							//获取元素的个数</div><div class="line">		System.out.println(c);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo1() &#123;</div><div class="line">		Collection c = new ArrayList();						//父类引用指向子类对象</div><div class="line">		boolean b1 = c.add(&quot;abc&quot;);</div><div class="line">		boolean b2 = c.add(true);							//自动装箱new Boolean(true);</div><div class="line">		boolean b3 = c.add(100);</div><div class="line">		boolean b4 = c.add(new Student(&quot;张三&quot;,23));			</div><div class="line">		boolean b5 = c.add(&quot;abc&quot;);</div><div class="line">		</div><div class="line">		System.out.println(b1);</div><div class="line">		System.out.println(b2);</div><div class="line">		System.out.println(b3);</div><div class="line">		System.out.println(b4);</div><div class="line">		System.out.println(b5);</div><div class="line">		</div><div class="line">		System.out.println(c.toString());</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="集合的遍历之集合转数组遍历"><a href="#集合的遍历之集合转数组遍历" class="headerlink" title="集合的遍历之集合转数组遍历"></a>集合的遍历之集合转数组遍历</h3><ul>
-<li>A:集合的遍历<ul>
-<li>其实就是依次获取集合中的每一个元素。</li>
-</ul>
-</li>
-<li><p>B:案例演示</p>
-<ul>
-<li>把集合转成数组，可以实现集合的遍历</li>
-<li><p>toArray()<br>*</p>
-<pre><code>Collection coll = new ArrayList();
-coll.add(new Student(&quot;张三&quot;,23));        //Object obj = new Student(&quot;张三&quot;,23);
-coll.add(new Student(&quot;李四&quot;,24));
-coll.add(new Student(&quot;王五&quot;,25));
-coll.add(new Student(&quot;赵六&quot;,26));
-
-Object[] arr = coll.toArray();                //将集合转换成数组
-for (int i = 0; i &lt; arr.length; i++) {
-    Student s = (Student)arr[i];            //强转成Student
-    System.out.println(s.getName() + &quot;,&quot; + s.getAge());
-}
-</code></pre></li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.collection;</div><div class="line"></div><div class="line">import java.util.ArrayList;</div><div class="line">import java.util.Collection;</div><div class="line"></div><div class="line">import com.wxhao.bean.Student;</div><div class="line"></div><div class="line">@SuppressWarnings(&#123; &quot;rawtypes&quot;, &quot;unchecked&quot; &#125;)</div><div class="line">public class Demo3_Collection &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * * A:集合的遍历</div><div class="line">			* 其实就是依次获取集合中的每一个元素。</div><div class="line">		* B:案例演示</div><div class="line">			* 把集合转成数组，可以实现集合的遍历</div><div class="line">			* toArray()</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		Collection c = new ArrayList();</div><div class="line">		c.add(new Student(&quot;张三&quot;, 23));				//Object obj = new Student(&quot;张三&quot;,23);</div><div class="line">		c.add(new Student(&quot;李四&quot;, 24));</div><div class="line">		c.add(new Student(&quot;王五&quot;, 25));</div><div class="line">		c.add(new Student(&quot;赵六&quot;, 26));</div><div class="line">		</div><div class="line">		Object[] arr = c.toArray();					//将集合转换成数组</div><div class="line">		for (int i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">			//System.out.println(arr[i]);</div><div class="line">			Student s = (Student)arr[i];			//向下转型</div><div class="line">			System.out.println(s.getName() + &quot;...&quot; + s.getAge());</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo1() &#123;</div><div class="line">		Collection c = new ArrayList();</div><div class="line">		c.add(&quot;a&quot;);</div><div class="line">		c.add(&quot;b&quot;);</div><div class="line">		c.add(&quot;c&quot;);</div><div class="line">		c.add(&quot;d&quot;);</div><div class="line">		</div><div class="line">		Object[] arr = c.toArray();						//将集合转换成数组</div><div class="line">		for(int i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">			System.out.println(arr[i]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Collection集合的带All功能测试"><a href="#Collection集合的带All功能测试" class="headerlink" title="Collection集合的带All功能测试"></a>Collection集合的带All功能测试</h3><ul>
-<li>A:案例演示</li>
-<li>带All的功能演示  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">boolean addAll(Collection c)</div><div class="line">boolean removeAll(Collection c)</div><div class="line">boolean containsAll(Collection c)</div><div class="line">boolean retainAll(Collection c)</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.collection;</div><div class="line"></div><div class="line">import java.util.ArrayList;</div><div class="line">import java.util.Collection;</div><div class="line"></div><div class="line">@SuppressWarnings(&#123; &quot;rawtypes&quot;, &quot;unchecked&quot; &#125;)</div><div class="line">public class Demo4_CollectionAll &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		//demo2();</div><div class="line">		//demo3();</div><div class="line">		Collection c1 = new ArrayList();</div><div class="line">		c1.add(&quot;a&quot;);</div><div class="line">		c1.add(&quot;b&quot;);</div><div class="line">		c1.add(&quot;c&quot;);</div><div class="line">		c1.add(&quot;d&quot;);</div><div class="line">		</div><div class="line">		Collection c2 = new ArrayList();</div><div class="line">		c2.add(&quot;a&quot;);</div><div class="line">		c2.add(&quot;b&quot;);</div><div class="line">		c2.add(&quot;c&quot;);</div><div class="line">		c2.add(&quot;d&quot;);</div><div class="line">		c2.add(&quot;e&quot;);</div><div class="line">		c2.add(&quot;f&quot;);</div><div class="line">		</div><div class="line">		//取交集,如果调用的集合改变就返回true,如果调用的集合不变就返回false</div><div class="line">		boolean b = c1.retainAll(c2);	//取交集</div><div class="line">		System.out.println(b);</div><div class="line">		System.out.println(c1);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo3() &#123;</div><div class="line">		Collection c1 = new ArrayList();</div><div class="line">		c1.add(&quot;a&quot;);</div><div class="line">		c1.add(&quot;b&quot;);</div><div class="line">		c1.add(&quot;c&quot;);</div><div class="line">		c1.add(&quot;d&quot;);</div><div class="line">		</div><div class="line">		Collection c2 = new ArrayList();</div><div class="line">		c2.add(&quot;a&quot;);</div><div class="line">		c2.add(&quot;b&quot;);</div><div class="line">		c2.add(&quot;z&quot;);</div><div class="line">		</div><div class="line">		boolean b = c1.containsAll(c2);	//判断调用的集合是否包含传入的集合</div><div class="line">		System.out.println(b);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo2() &#123;</div><div class="line">		Collection c1 = new ArrayList();</div><div class="line">		c1.add(&quot;a&quot;);</div><div class="line">		c1.add(&quot;b&quot;);</div><div class="line">		c1.add(&quot;c&quot;);</div><div class="line">		c1.add(&quot;d&quot;);</div><div class="line">		</div><div class="line">		Collection c2 = new ArrayList();</div><div class="line">		c2.add(&quot;a&quot;);</div><div class="line">		c2.add(&quot;b&quot;);</div><div class="line">		c2.add(&quot;z&quot;);</div><div class="line">		</div><div class="line">		boolean b = c1.removeAll(c2);//删除的是交集</div><div class="line">		System.out.println(b);</div><div class="line">		System.out.println(c1);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo1() &#123;</div><div class="line">		Collection c1 = new ArrayList();</div><div class="line">		c1.add(&quot;a&quot;);</div><div class="line">		c1.add(&quot;b&quot;);</div><div class="line">		c1.add(&quot;c&quot;);</div><div class="line">		c1.add(&quot;d&quot;);</div><div class="line">		</div><div class="line">		Collection c2 = new ArrayList();//alt + shift + r改名</div><div class="line">		c2.add(&quot;a&quot;);</div><div class="line">		c2.add(&quot;b&quot;);</div><div class="line">		c2.add(&quot;c&quot;);</div><div class="line">		c2.add(&quot;d&quot;);</div><div class="line">		</div><div class="line">		//c1.addAll(c2);		//将c2中的每一个元素添加到c1中</div><div class="line">		c1.add(c2);				//将c2看成一个对象添加到c1中</div><div class="line">		System.out.println(c1);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="集合的遍历之迭代器遍历"><a href="#集合的遍历之迭代器遍历" class="headerlink" title="集合的遍历之迭代器遍历"></a>集合的遍历之迭代器遍历</h3><ul>
-<li>A:迭代器概述<ul>
-<li>集合是用来存储元素,存储的元素需要查看,那么就需要迭代(遍历) </li>
-</ul>
-</li>
-<li>B:案例演示<ul>
-<li>迭代器的使用  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">Collection c = new ArrayList();</div><div class="line">c.add(&quot;a&quot;);</div><div class="line">c.add(&quot;b&quot;);</div><div class="line">c.add(&quot;c&quot;);</div><div class="line">c.add(&quot;d&quot;);</div><div class="line"></div><div class="line">Iterator it = c.iterator();						//获取迭代器的引用</div><div class="line">while(it.hasNext()) &#123;							//集合中的迭代方法(遍历)</div><div class="line">	System.out.println(it.next());</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.collection;</div><div class="line"></div><div class="line">import java.util.ArrayList;</div><div class="line">import java.util.Collection;</div><div class="line"></div><div class="line">@SuppressWarnings(&#123; &quot;rawtypes&quot;, &quot;unchecked&quot; &#125;)</div><div class="line">public class Demo4_CollectionAll &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		//demo2();</div><div class="line">		//demo3();</div><div class="line">		Collection c1 = new ArrayList();</div><div class="line">		c1.add(&quot;a&quot;);</div><div class="line">		c1.add(&quot;b&quot;);</div><div class="line">		c1.add(&quot;c&quot;);</div><div class="line">		c1.add(&quot;d&quot;);</div><div class="line">		</div><div class="line">		Collection c2 = new ArrayList();</div><div class="line">		c2.add(&quot;a&quot;);</div><div class="line">		c2.add(&quot;b&quot;);</div><div class="line">		c2.add(&quot;c&quot;);</div><div class="line">		c2.add(&quot;d&quot;);</div><div class="line">		c2.add(&quot;e&quot;);</div><div class="line">		c2.add(&quot;f&quot;);</div><div class="line">		</div><div class="line">		//取交集,如果调用的集合改变就返回true,如果调用的集合不变就返回false</div><div class="line">		boolean b = c1.retainAll(c2);	//取交集</div><div class="line">		System.out.println(b);</div><div class="line">		System.out.println(c1);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo3() &#123;</div><div class="line">		Collection c1 = new ArrayList();</div><div class="line">		c1.add(&quot;a&quot;);</div><div class="line">		c1.add(&quot;b&quot;);</div><div class="line">		c1.add(&quot;c&quot;);</div><div class="line">		c1.add(&quot;d&quot;);</div><div class="line">		</div><div class="line">		Collection c2 = new ArrayList();</div><div class="line">		c2.add(&quot;a&quot;);</div><div class="line">		c2.add(&quot;b&quot;);</div><div class="line">		c2.add(&quot;z&quot;);</div><div class="line">		</div><div class="line">		boolean b = c1.containsAll(c2);	//判断调用的集合是否包含传入的集合</div><div class="line">		System.out.println(b);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo2() &#123;</div><div class="line">		Collection c1 = new ArrayList();</div><div class="line">		c1.add(&quot;a&quot;);</div><div class="line">		c1.add(&quot;b&quot;);</div><div class="line">		c1.add(&quot;c&quot;);</div><div class="line">		c1.add(&quot;d&quot;);</div><div class="line">		</div><div class="line">		Collection c2 = new ArrayList();</div><div class="line">		c2.add(&quot;a&quot;);</div><div class="line">		c2.add(&quot;b&quot;);</div><div class="line">		c2.add(&quot;z&quot;);</div><div class="line">		</div><div class="line">		boolean b = c1.removeAll(c2);//删除的是交集</div><div class="line">		System.out.println(b);</div><div class="line">		System.out.println(c1);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo1() &#123;</div><div class="line">		Collection c1 = new ArrayList();</div><div class="line">		c1.add(&quot;a&quot;);</div><div class="line">		c1.add(&quot;b&quot;);</div><div class="line">		c1.add(&quot;c&quot;);</div><div class="line">		c1.add(&quot;d&quot;);</div><div class="line">		</div><div class="line">		Collection c2 = new ArrayList();//alt + shift + r改名</div><div class="line">		c2.add(&quot;a&quot;);</div><div class="line">		c2.add(&quot;b&quot;);</div><div class="line">		c2.add(&quot;c&quot;);</div><div class="line">		c2.add(&quot;d&quot;);</div><div class="line">		</div><div class="line">		//c1.addAll(c2);		//将c2中的每一个元素添加到c1中</div><div class="line">		c1.add(c2);				//将c2看成一个对象添加到c1中</div><div class="line">		System.out.println(c1);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Collection存储自定义对象并遍历"><a href="#Collection存储自定义对象并遍历" class="headerlink" title="Collection存储自定义对象并遍历"></a>Collection存储自定义对象并遍历</h3><ul>
-<li>A:案例演示<ul>
-<li>Collection存储自定义对象并用迭代器遍历</li>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">Collection c = new ArrayList();</div><div class="line"></div><div class="line">c.add(new Student(&quot;张三&quot;,23));</div><div class="line">c.add(new Student(&quot;李四&quot;,24));</div><div class="line">c.add(new Student(&quot;王五&quot;,25));</div><div class="line">c.add(new Student(&quot;赵六&quot;,26));</div><div class="line">c.add(new Student(&quot;赵六&quot;,26));</div><div class="line"></div><div class="line">for(Iterator it = c.iterator();it.hasNext();) &#123;</div><div class="line">	Student s = (Student)it.next();						//向下转型</div><div class="line">	System.out.println(s.getName() + &quot;,&quot; + s.getAge());	//获取对象中的姓名和年龄</div><div class="line">&#125;</div><div class="line">System.out.println(&quot;------------------------------&quot;);</div><div class="line">Iterator it = c.iterator();								//获取迭代器</div><div class="line">while(it.hasNext()) &#123;									//判断集合中是否有元素</div><div class="line">	//System.out.println(((Student)(it.next())).getName() + &quot;,&quot; + ((Student)(it.next())).getAge());</div><div class="line">	Student s = (Student)it.next();						//向下转型</div><div class="line">	System.out.println(s.getName() + &quot;,&quot; + s.getAge());	//获取对象中的姓名和年龄</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.collection;</div><div class="line"></div><div class="line">import java.util.ArrayList;</div><div class="line">import java.util.Collection;</div><div class="line">import java.util.Iterator;</div><div class="line"></div><div class="line">import com.wxhao.bean.Student;</div><div class="line"></div><div class="line">public class Demo5_Iterator &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * 迭代</div><div class="line">	 * * A:迭代器概述</div><div class="line">	 * 集合是用来存储元素,存储的元素需要查看,那么就需要迭代(遍历) </div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		Collection c = new ArrayList();</div><div class="line">		c.add(new Student(&quot;张三&quot;, 23));	//Object obj = new Student(&quot;张三&quot;,23);</div><div class="line">		c.add(new Student(&quot;李四&quot;, 24));</div><div class="line">		c.add(new Student(&quot;王五&quot;, 25));</div><div class="line">		c.add(new Student(&quot;赵六&quot;, 26));</div><div class="line">		</div><div class="line">		//获取迭代器</div><div class="line">		Iterator it = c.iterator();</div><div class="line">		while(it.hasNext()) &#123;</div><div class="line">			//System.out.println(it.next());</div><div class="line">			Student s = (Student)it.next();	//向下转型</div><div class="line">			System.out.println(s.getName() + &quot;...&quot; + s.getAge());</div><div class="line">		&#125;</div><div class="line">	</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo1() &#123;</div><div class="line">		Collection c = new ArrayList();</div><div class="line">		c.add(&quot;a&quot;);</div><div class="line">		c.add(&quot;b&quot;);</div><div class="line">		c.add(&quot;c&quot;);</div><div class="line">		c.add(&quot;d&quot;);</div><div class="line">		</div><div class="line">		//对集合中的元素迭代(遍历)</div><div class="line">		Iterator it = c.iterator();	//获取迭代器</div><div class="line">		/*boolean b1 = it.hasNext();//判断集合中是否有元素,有就返回true</div><div class="line">		Object obj1 = it.next();</div><div class="line">		System.out.println(b1);</div><div class="line">		System.out.println(obj1);</div><div class="line">		</div><div class="line">		boolean b2 = it.hasNext();	//判断集合中是否有元素,有就返回true</div><div class="line">		Object obj2 = it.next();</div><div class="line">		System.out.println(b2);</div><div class="line">		System.out.println(obj2);*/</div><div class="line">		</div><div class="line">		while(it.hasNext()) &#123;</div><div class="line">			System.out.println(it.next());</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="迭代器的原理及源码解析"><a href="#迭代器的原理及源码解析" class="headerlink" title="迭代器的原理及源码解析"></a>迭代器的原理及源码解析</h3><ul>
-<li>A:迭代器原理<ul>
-<li>迭代器原理:迭代器是对集合进行遍历,而每一个集合内部的存储结构都是不同的,所以每一个集合存和取都是不一样,那么就需要在每一个类中定义hasNext()和next()方法,这样做是可以的,但是会让整个集合体系过于臃肿,迭代器是将这样的方法向上抽取出接口,然后在每个类的内部,定义自己迭代方式,这样做的好处有二,第一规定了整个集合体系的遍历方式都是hasNext()和next()方法,第二,代码有底层内部实现,使用者不用管怎么实现的,会用即可 </li>
-</ul>
-</li>
-<li>B:迭代器源码解析<ul>
-<li>1,在eclipse中ctrl + shift + t找到ArrayList类</li>
-<li>2,ctrl+o查找iterator()方法</li>
-<li>3,查看返回值类型是new Itr(),说明Itr这个类实现Iterator接口</li>
-<li>4,查找Itr这个内部类,发现重写了Iterator中的所有抽象方法 </li>
-</ul>
-</li>
-</ul>
-<h3 id="List集合的特有功能概述和测试"><a href="#List集合的特有功能概述和测试" class="headerlink" title="List集合的特有功能概述和测试"></a>List集合的特有功能概述和测试</h3><ul>
-<li>A:List集合的特有功能概述<ul>
-<li>void add(int index,E element)</li>
-<li>E remove(int index)</li>
-<li>E get(int index)</li>
-<li>E set(int index,E element)</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.list;</div><div class="line"></div><div class="line">import java.util.ArrayList;</div><div class="line">import java.util.List;</div><div class="line"></div><div class="line">public class Demo1_List &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * 	* void add(int index,E element)</div><div class="line">		* E remove(int index)</div><div class="line">		* E get(int index)</div><div class="line">		* E set(int index,E element)</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		//demo2();</div><div class="line">		//demo3();</div><div class="line">		//demo4();</div><div class="line">		List list = new ArrayList();</div><div class="line">		list.add(&quot;a&quot;);</div><div class="line">		list.add(&quot;b&quot;);</div><div class="line">		list.add(&quot;c&quot;);</div><div class="line">		list.add(&quot;d&quot;);</div><div class="line">		</div><div class="line">		list.set(1, &quot;z&quot;);		//将指定位置的元素修改</div><div class="line">		System.out.println(list);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo4() &#123;</div><div class="line">		List list = new ArrayList();</div><div class="line">		list.add(&quot;a&quot;);</div><div class="line">		list.add(&quot;b&quot;);</div><div class="line">		list.add(&quot;c&quot;);</div><div class="line">		list.add(&quot;d&quot;);</div><div class="line">		</div><div class="line">		//Object obj1 = list.get(2);</div><div class="line">		//System.out.println(obj1);</div><div class="line">		//通过索引遍历List集合</div><div class="line">		for(int i = 0;i &lt; list.size(); i++) &#123;</div><div class="line">			System.out.println(list.get(i));</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo3() &#123;</div><div class="line">		List list = new ArrayList();</div><div class="line">		list.add(111);</div><div class="line">		list.add(222);</div><div class="line">		list.add(333);</div><div class="line">		</div><div class="line">		list.remove(111);		//删除的时候不会自动装箱,把111当作索引</div><div class="line">		System.out.println(list);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo2() &#123;</div><div class="line">		List list = new ArrayList();</div><div class="line">		list.add(&quot;a&quot;);</div><div class="line">		list.add(&quot;b&quot;);</div><div class="line">		list.add(&quot;c&quot;);</div><div class="line">		list.add(&quot;d&quot;);</div><div class="line">		</div><div class="line">		Object obj = list.remove(1);//通过索引删除元素,将被删除的元素返回</div><div class="line">		System.out.println(obj);</div><div class="line">		System.out.println(list);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo1() &#123;</div><div class="line">		List list = new ArrayList();</div><div class="line">		list.add(&quot;a&quot;);</div><div class="line">		list.add(&quot;b&quot;);</div><div class="line">		list.add(&quot;c&quot;);</div><div class="line">		list.add(&quot;d&quot;);</div><div class="line">		list.add(4, &quot;f&quot;);		//index&lt;=size并且index&gt;=0都不会报异常</div><div class="line">		//list.add(1,&quot;e&quot;);</div><div class="line">		//list.add(10, &quot;z&quot;);	//java.lang.IndexOutOfBoundsException,当存储时使用不存在的索引时</div><div class="line">		System.out.println(list);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="List集合存储学生对象并遍历"><a href="#List集合存储学生对象并遍历" class="headerlink" title="List集合存储学生对象并遍历"></a>List集合存储学生对象并遍历</h3><ul>
-<li>A:案例演示<ul>
-<li>通过size()和get()方法结合使用遍历。  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">List list = new ArrayList();</div><div class="line">list.add(new Student(&quot;张三&quot;, 18));</div><div class="line">list.add(new Student(&quot;李四&quot;, 18));</div><div class="line">list.add(new Student(&quot;王五&quot;, 18));</div><div class="line">list.add(new Student(&quot;赵六&quot;, 18));</div><div class="line"></div><div class="line">for(int i = 0; i &lt; list.size(); i++) &#123;</div><div class="line">	Student s = (Student)list.get(i);</div><div class="line">	System.out.println(s.getName() + &quot;,&quot; + s.getAge());</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.list;</div><div class="line"></div><div class="line">import java.util.ArrayList;</div><div class="line">import java.util.List;</div><div class="line"></div><div class="line">import com.wxhao.bean.Student;</div><div class="line"></div><div class="line">public class Demo2_List &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * * A:案例演示</div><div class="line">	 * 向List集合中存储学生对象</div><div class="line">	 * 通过size()和get()方法结合使用遍历。</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		List list = new ArrayList();</div><div class="line">		list.add(new Student(&quot;张三&quot;, 23));					//Object obj = new Student(&quot;张三&quot;,23);</div><div class="line">		list.add(new Student(&quot;李四&quot;, 24));</div><div class="line">		list.add(new Student(&quot;王五&quot;, 25));</div><div class="line">		list.add(new Student(&quot;赵六&quot;, 26));</div><div class="line">		</div><div class="line">		for(int i = 0; i &lt; list.size(); i++) &#123;</div><div class="line">			//System.out.println(list.get(i));	 			//通过索引获取每一个元素</div><div class="line">			Student s = (Student)list.get(i);</div><div class="line">			System.out.println(s.getName() + &quot;...&quot; + s.getAge());</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="并发修改异常产生的原因及解决方案"><a href="#并发修改异常产生的原因及解决方案" class="headerlink" title="并发修改异常产生的原因及解决方案"></a>并发修改异常产生的原因及解决方案</h3><ul>
-<li>A:案例演示<ul>
-<li>需求：我有一个集合，请问，我想判断里面有没有”world”这个元素，如果有，我就添加一个”javaee”元素，请写代码实现。</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">List list = new ArrayList();</div><div class="line">list.add(&quot;a&quot;);</div><div class="line">list.add(&quot;b&quot;);</div><div class="line">list.add(&quot;world&quot;);</div><div class="line">list.add(&quot;d&quot;);</div><div class="line">list.add(&quot;e&quot;);</div><div class="line"></div><div class="line">/*Iterator it = list.iterator();</div><div class="line">while(it.hasNext()) &#123;</div><div class="line">	String str = (String)it.next();</div><div class="line">	if(str.equals(&quot;world&quot;)) &#123;</div><div class="line">		list.add(&quot;javaee&quot;);			//这里会抛出ConcurrentModificationException并发修改异常</div><div class="line">	&#125;</div><div class="line">&#125;*/</div><div class="line">```			</div><div class="line">			</div><div class="line">* B:ConcurrentModificationException出现</div><div class="line">	* 迭代器遍历，集合修改集合</div><div class="line">* C:解决方案</div><div class="line">	* a:迭代器迭代元素，迭代器修改元素(ListIterator的特有功能add)</div><div class="line">	* b:集合遍历元素，集合修改元素</div></pre></td></tr></table></figure>
-<pre><code>ListIterator lit = list.listIterator();        //如果想在遍历的过程中添加元素,可以用ListIterator中的add方法
-while(lit.hasNext()) {
-    String str = (String)lit.next();
-    if(str.equals(&quot;world&quot;)) {
-        lit.add(&quot;javaee&quot;);    
-        //list.add(&quot;javaee&quot;);
-    }
-}
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<p>package com.wxhao.list;</p>
-<p>import java.util.ArrayList;<br>import java.util.List;<br>import java.util.ListIterator;</p>
-<p>public class Demo3_List {</p>
-<pre><code>/**
- ** A:案例演示
- * 需求：我有一个集合，请问，我想判断里面有没有&quot;world&quot;这个元素，如果有，我就添加一个&quot;javaee&quot;元素，请写代码实现。
- */
-public static void main(String[] args) {
-    List list = new ArrayList();
-    list.add(&quot;a&quot;);                                    //Object obj = new String();
-    list.add(&quot;b&quot;);
-    list.add(&quot;world&quot;);
-    list.add(&quot;c&quot;);
-    list.add(&quot;d&quot;);
-    list.add(&quot;e&quot;);
-
-    /*Iterator it = list.iterator();                    //获取迭代器
-    while(it.hasNext()) {                            //判断集合中是否有元素
-        String str = (String)it.next();                //向下转型
-        if(&quot;world&quot;.equals(str)) {
-            list.add(&quot;javaee&quot;);                        //遍历的同时在增加元素,并发修改ConcurrentModificationException
-        }
-    }*/
-
-    ListIterator lit = list.listIterator();            //获取迭代器(List集合特有的)
-    while(lit.hasNext()) {
-        String str = (String)lit.next();            //向下转型
-        if(&quot;world&quot;.equals(str)) {
-            //list.add(&quot;javaee&quot;);                        //遍历的同时在增加元素,并发修改ConcurrentModificationException
-            lit.add(&quot;javaee&quot;);
-        }
-    }
-
-    System.out.println(list);
-}
-</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### ListIterator </div><div class="line">* boolean hasNext()是否有下一个</div><div class="line">* boolean hasPrevious()是否有前一个</div><div class="line">* Object next()返回下一个元素</div><div class="line">* Object previous();返回上一个元素</div></pre></td></tr></table></figure></p>
-<p>package com.wxhao.list;</p>
-<p>import java.util.ArrayList;<br>import java.util.List;<br>import java.util.ListIterator;</p>
-<p>public class Demo4_ListIterator {</p>
-<pre><code>public static void main(String[] args) {
-    List list = new ArrayList();
-    list.add(&quot;a&quot;);                                    //Object obj = new String();
-    list.add(&quot;b&quot;);
-    list.add(&quot;world&quot;);
-    list.add(&quot;c&quot;);
-    list.add(&quot;d&quot;);
-    list.add(&quot;e&quot;);
-
-    ListIterator lit = list.listIterator();            //获取迭代器
-    while(lit.hasNext()) {
-        System.out.println(lit.next());             //获取元素并将指针向后移动
-    }
-
-    System.out.println(&quot;-----------------&quot;);
-
-    while(lit.hasPrevious()) {
-        System.out.println(lit.previous());         //获取元素并将指针向前移动
-    }
-}
-</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### Vector的特有功能</div><div class="line">* A:Vector类概述</div><div class="line">* B:Vector类特有功能</div><div class="line">	* public void addElement(E obj)</div><div class="line">	* public E elementAt(int index)</div><div class="line">	* public Enumeration elements()</div><div class="line">* C:案例演示	</div><div class="line">	* Vector的迭代</div></pre></td></tr></table></figure></p>
-<p>Vector v = new Vector();//创建集合对象,List的子类<br>v.addElement(“a”);<br>v.addElement(“b”);<br>v.addElement(“c”);<br>v.addElement(“d”);</p>
-<p>//Vector迭代<br>Enumeration en = v.elements();//获取枚举<br>while(en.hasMoreElements()) {//判断集合中是否有元素<br>    System.out.println(en.nextElement());//获取集合中的元素<br>}<br>```</p>
-<h3 id="数据结构之数组和链表"><a href="#数据结构之数组和链表" class="headerlink" title="数据结构之数组和链表"></a>数据结构之数组和链表</h3><ul>
-<li>A:数组<ul>
-<li>查询快修改也快</li>
-<li>增删慢</li>
-</ul>
-</li>
-<li>B:链表<ul>
-<li>查询慢,修改也慢</li>
-<li>增删快</li>
-</ul>
-</li>
-</ul>
-<h3 id="List的三个子类的特点"><a href="#List的三个子类的特点" class="headerlink" title="List的三个子类的特点"></a>List的三个子类的特点</h3><ul>
-<li>A:List的三个子类的特点</li>
-<li><pre><code>ArrayList:
-    底层数据结构是数组，查询快，增删慢。
-    线程不安全，效率高。
-Vector:
-    底层数据结构是数组，查询快，增删慢。
-    线程安全，效率低。
-Vector相对ArrayList查询慢(线程安全的)
-Vector相对LinkedList增删慢(数组结构)
-LinkedList:
-    底层数据结构是链表，查询慢，增删快。
-    线程不安全，效率高。
-
-Vector和ArrayList的区别
-    Vector是线程安全的,效率低
-    ArrayList是线程不安全的,效率高
-共同点:都是数组实现的
-ArrayList和LinkedList的区别
-    ArrayList底层是数组结果,查询和修改快
-    LinkedList底层是链表结构的,增和删比较快,查询和修改比较慢
-共同点:都是线程不安全的
-</code></pre></li>
-<li>B:List有三个儿子，我们到底使用谁呢?<pre><code>查询多用ArrayList
-增删多用LinkedList
-如果都多ArrayList
-</code></pre></li>
-</ul>
-
+        
+          <a class="article-more-a" href="/2013/08/20/2013-08-20-collection-framework-object/#more">more >></a>
+        
       
 
       
@@ -1328,166 +457,9 @@ ArrayList和LinkedList的区别
 </ul>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.otherclass;</div><div class="line"></div><div class="line">public class Demo1_Math &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		System.out.println(Math.PI);</div><div class="line">		System.out.println(Math.abs(-10));  //取绝对值</div><div class="line">		</div><div class="line">		//ceil天花板</div><div class="line">		/*</div><div class="line">		 * 13.0</div><div class="line">		 * 12.3</div><div class="line">		 * 12.0</div><div class="line">		 */</div><div class="line">		System.out.println(Math.ceil(12.3));//向上取整,但是结果是一个double</div><div class="line">		System.out.println(Math.ceil(12.99));</div><div class="line">		</div><div class="line">		System.out.println(&quot;-----------&quot;);</div><div class="line">		//floor地板</div><div class="line">		/*</div><div class="line">		 * 13.0</div><div class="line">		 * 12.3</div><div class="line">		 * 12.0</div><div class="line">		 */</div><div class="line">		System.out.println(Math.floor(12.3));//向下取整,但是结果是一个double</div><div class="line">		System.out.println(Math.floor(12.99));</div><div class="line">		</div><div class="line">		//获取两个值中的最大值</div><div class="line">		System.out.println(Math.max(20, 30));</div><div class="line">		</div><div class="line">		//前面的数是底数,后面的数是指数</div><div class="line">		System.out.println(Math.pow(2, 3));	//2.0 ^ 3.0</div><div class="line">		</div><div class="line">		//生成0.0到1.0之间的所以小数,包括0.0,不包括1.0</div><div class="line">		System.out.println(Math.random());</div><div class="line">		</div><div class="line">		//四舍五入</div><div class="line">		System.out.println(Math.round(12.3f));</div><div class="line">		System.out.println(Math.round(12.9f));</div><div class="line">		</div><div class="line">		//开平方</div><div class="line">		System.out.println(Math.sqrt(4));</div><div class="line">		System.out.println(Math.sqrt(2));</div><div class="line">		System.out.println(Math.sqrt(3));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Random类的概述和方法使用"><a href="#Random类的概述和方法使用" class="headerlink" title="Random类的概述和方法使用"></a>Random类的概述和方法使用</h3><ul>
-<li>A:Random类的概述<ul>
-<li>此类用于产生随机数如果用相同的种子创建两个 Random 实例，</li>
-<li>则对每个实例进行相同的方法调用序列，它们将生成并返回相同的数字序列。</li>
-</ul>
-</li>
-<li>B:构造方法<ul>
-<li>public Random()</li>
-<li>public Random(long seed)</li>
-</ul>
-</li>
-<li>C:成员方法<ul>
-<li>public int nextInt()</li>
-<li>public int nextInt(int n)(重点掌握)<ul>
-<li>生成在0到n范围内的随机数,包含0不包含n<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.otherclass;</div><div class="line"></div><div class="line">import java.util.Random;</div><div class="line"></div><div class="line">public class Demo2_Random &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Random r = new Random();</div><div class="line">		/*int x = r.nextInt();</div><div class="line">		</div><div class="line">		System.out.println(x);*/</div><div class="line">		</div><div class="line">		for(int i = 0; i &lt; 10; i++) &#123;</div><div class="line">			//System.out.println(r.nextInt());</div><div class="line">			System.out.println(r.nextInt(100));			//要求掌握,生成在0到n范围内的随机数,包含0不包含n</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		/*</div><div class="line">		 * -1244746321</div><div class="line">			1060493871</div><div class="line">			</div><div class="line">			-1244746321</div><div class="line">			1060493871</div><div class="line"></div><div class="line">		 */</div><div class="line">		/*Random r2 = new Random(1001);</div><div class="line">		</div><div class="line">		int a = r2.nextInt();</div><div class="line">		int b = r2.nextInt();</div><div class="line">		</div><div class="line">		System.out.println(a);</div><div class="line">		System.out.println(b);*/</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="System类的概述和方法使用"><a href="#System类的概述和方法使用" class="headerlink" title="System类的概述和方法使用"></a>System类的概述和方法使用</h3><ul>
-<li>A:System类的概述<ul>
-<li>System 类包含一些有用的类字段和方法。它不能被实例化。 </li>
-</ul>
-</li>
-<li>B:成员方法<ul>
-<li>public static void gc()//清理垃圾</li>
-<li>public static void exit(int status)//退出虚拟机,非0表示异常退出JVM</li>
-<li>public static long currentTimeMillis()//当前时间毫秒值</li>
-<li>pubiic static void arraycopy(Object src, int srcPos, Object dest, int destPos, int length) </li>
-</ul>
-</li>
-<li>C:案例演示<ul>
-<li>System类的成员方法使用</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.otherclass;</div><div class="line"></div><div class="line">public class Demo3_System &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		//demo2();</div><div class="line">		//demo3();</div><div class="line">		</div><div class="line">		int[] src = &#123;11,22,33,44,55&#125;;</div><div class="line">		int[] dest = new int[8];</div><div class="line">		for (int i = 0; i &lt; dest.length; i++) &#123;</div><div class="line">			System.out.println(dest[i]);</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		System.out.println(&quot;--------------------------&quot;);</div><div class="line">		System.arraycopy(src, 0, dest, 0, src.length);//将数组内容拷贝</div><div class="line">		</div><div class="line">		for (int i = 0; i &lt; dest.length; i++) &#123;</div><div class="line">			System.out.println(dest[i]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo3() &#123;</div><div class="line">		long start = System.currentTimeMillis();//1秒等于1000毫秒</div><div class="line">		for(int i = 0; i &lt; 1000; i++) &#123;</div><div class="line">			System.out.println(&quot;*&quot;);</div><div class="line">		&#125;</div><div class="line">		long end = System.currentTimeMillis();	//获取当前时间的毫秒值</div><div class="line">		</div><div class="line">		System.out.println(end - start);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo2() &#123;</div><div class="line">		System.exit(1);	//非0状态是异常终止,退出jvm</div><div class="line">		System.out.println(&quot;11111111111&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo1() &#123;</div><div class="line">		for(int i = 0; i &lt; 100; i++) &#123;</div><div class="line">			new Demo();</div><div class="line">			System.gc();//运行垃圾回收器,相当于呼喊保洁阿姨</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Demo &#123;	//在一个源文件中不允许定义两个用public修饰的类</div><div class="line"></div><div class="line">	@Override</div><div class="line">	public void finalize() &#123;</div><div class="line">		System.out.println(&quot;垃圾被清扫了&quot;);</div><div class="line">	&#125;							</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="BigInteger类的概述和方法使用"><a href="#BigInteger类的概述和方法使用" class="headerlink" title="BigInteger类的概述和方法使用"></a>BigInteger类的概述和方法使用</h3><ul>
-<li>A:BigInteger的概述<ul>
-<li>可以让超过Integer范围内的数据进行运算</li>
-</ul>
-</li>
-<li>B:构造方法<ul>
-<li>public BigInteger(String val)</li>
-</ul>
-</li>
-<li>C:成员方法<ul>
-<li>public BigInteger add(BigInteger val)</li>
-<li>public BigInteger subtract(BigInteger val)</li>
-<li>public BigInteger multiply(BigInteger val)</li>
-<li>public BigInteger divide(BigInteger val)</li>
-<li>public BigInteger[] divideAndRemainder(BigInteger val)</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.otherclass;</div><div class="line"></div><div class="line">import java.math.BigInteger;</div><div class="line"></div><div class="line">public class Demo4_BigInteger &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//long num = 123456789098765432123L;</div><div class="line">		//String s = &quot;123456789098765432123&quot;;</div><div class="line">		</div><div class="line">		BigInteger bi1 = new BigInteger(&quot;100&quot;);</div><div class="line">		BigInteger bi2 = new BigInteger(&quot;2&quot;);</div><div class="line">		</div><div class="line">		System.out.println(bi1.add(bi2)); 				//+</div><div class="line">		System.out.println(bi1.subtract(bi2));			//-</div><div class="line">		System.out.println(bi1.multiply(bi2)); 			//*</div><div class="line">		System.out.println(bi1.divide(bi2));    		///(除)</div><div class="line">		</div><div class="line">		BigInteger[] arr = bi1.divideAndRemainder(bi2);	//取除数和余数</div><div class="line">		</div><div class="line">		for (int i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">			System.out.println(arr[i]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="BigDecimal类的概述和方法使用"><a href="#BigDecimal类的概述和方法使用" class="headerlink" title="BigDecimal类的概述和方法使用"></a>BigDecimal类的概述和方法使用</h3><ul>
-<li><p>A:BigDecimal的概述</p>
-<ul>
-<li>由于在运算的时候，float类型和double很容易丢失精度，演示案例。</li>
-<li><p>所以，为了能精确的表示、计算浮点数，Java提供了BigDecimal</p>
-</li>
-<li><p>不可变的、任意精度的有符号十进制数。</p>
-</li>
-</ul>
-</li>
-<li>B:构造方法<ul>
-<li>public BigDecimal(String val)</li>
-</ul>
-</li>
-<li>C:成员方法<ul>
-<li>public BigDecimal add(BigDecimal augend)</li>
-<li>public BigDecimal subtract(BigDecimal subtrahend)</li>
-<li>public BigDecimal multiply(BigDecimal multiplicand)</li>
-<li>public BigDecimal divide(BigDecimal divisor)</li>
-</ul>
-</li>
-<li>D:案例演示<ul>
-<li>BigDecimal类的构造方法和成员方法使用</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.otherclass;</div><div class="line"></div><div class="line">import java.math.BigDecimal;</div><div class="line"></div><div class="line">public class Demo5_BigDecimal &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">		十进制表示1/3</div><div class="line">		0.3333333333333333333333333333333333333333 </div><div class="line">			 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//System.out.println(2.0 - 1.1);</div><div class="line">		/*BigDecimal bd1 = new BigDecimal(2.0);		//这种方式在开发中不推荐,因为不够精确</div><div class="line">		BigDecimal bd2 = new BigDecimal(1.1);</div><div class="line">		</div><div class="line">		System.out.println(bd1.subtract(bd2));*/</div><div class="line">		</div><div class="line">		/*BigDecimal bd1 = new BigDecimal(&quot;2.0&quot;);		//通过构造中传入字符串的方式,开发时推荐</div><div class="line">		BigDecimal bd2 = new BigDecimal(&quot;1.1&quot;);</div><div class="line">		</div><div class="line">		System.out.println(bd1.subtract(bd2));*/</div><div class="line">		</div><div class="line">		BigDecimal bd1 = BigDecimal.valueOf(2.0);	//这种方式在开发中也是推荐的</div><div class="line">		BigDecimal bd2 = BigDecimal.valueOf(1.1);</div><div class="line">		</div><div class="line">		System.out.println(bd1.subtract(bd2));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Date类的概述和方法使用"><a href="#Date类的概述和方法使用" class="headerlink" title="Date类的概述和方法使用"></a>Date类的概述和方法使用</h3><ul>
-<li>A:Date类的概述<ul>
-<li>类 Date 表示特定的瞬间，精确到毫秒。 </li>
-</ul>
-</li>
-<li>B:构造方法<ul>
-<li>public Date()</li>
-<li>public Date(long date)</li>
-</ul>
-</li>
-<li>C:成员方法<ul>
-<li>public long getTime()</li>
-<li>public void setTime(long time)</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.otherclass;</div><div class="line"></div><div class="line">import java.util.Date;</div><div class="line"></div><div class="line">public class Demo6_Date &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		//demo2();</div><div class="line">		Date d1 = new Date();	</div><div class="line">		d1.setTime(1000);		//设置毫秒值,改变时间对象</div><div class="line">		System.out.println(d1);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo2() &#123;</div><div class="line">		Date d1 = new Date();	</div><div class="line">		System.out.println(d1.getTime());//通过时间对象获取毫秒值</div><div class="line">		System.out.println(System.currentTimeMillis());	//通过系统类的方法获取当前时间毫秒值</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo1() &#123;</div><div class="line">		Date d1 = new Date();//如果没有传参数代表的是当前时间</div><div class="line">		System.out.println(d1);</div><div class="line">		</div><div class="line">		Date d2 = new Date(0);//如果构造方法中参数传为0代表的是1970年1月1日</div><div class="line">		System.out.println(d2);//通过毫秒值创建时间对象</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="SimpleDateFormat类实现日期和字符串的相互转换"><a href="#SimpleDateFormat类实现日期和字符串的相互转换" class="headerlink" title="SimpleDateFormat类实现日期和字符串的相互转换"></a>SimpleDateFormat类实现日期和字符串的相互转换</h3><ul>
-<li>A:DateFormat类的概述<ul>
-<li>DateFormat 是日期/时间格式化子类的抽象类，它以与语言无关的方式格式化并解析日期或时间。是抽象类，所以使用其子类SimpleDateFormat</li>
-</ul>
-</li>
-<li>B:SimpleDateFormat构造方法<ul>
-<li>public SimpleDateFormat()</li>
-<li>public SimpleDateFormat(String pattern)</li>
-</ul>
-</li>
-<li>C:成员方法<ul>
-<li>public final String format(Date date)</li>
-<li>public Date parse(String source)</li>
-</ul>
-</li>
-</ul>
-<p><img src="http://wxhao2.duapp.com/blog/post-in/20130812/simpledateformat.png" alt="模式字母"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.otherclass;</div><div class="line"></div><div class="line">import java.text.DateFormat;</div><div class="line">import java.text.ParseException;</div><div class="line">import java.text.SimpleDateFormat;</div><div class="line">import java.util.Date;</div><div class="line"></div><div class="line">public class Demo7_SimpleDateFormat &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * @throws ParseException </div><div class="line">	 */</div><div class="line">	public static void main(String[] args) throws ParseException &#123;</div><div class="line">		//demo1();</div><div class="line">		//demo2();</div><div class="line">		//demo3();</div><div class="line">		</div><div class="line">		//将时间字符串转换成日期对象</div><div class="line">		String str = &quot;2000年08月08日 08:08:08&quot;;</div><div class="line">		SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy年MM月dd日 HH:mm:ss&quot;);</div><div class="line">		Date d = sdf.parse(str);		//将时间字符串转换成日期对象</div><div class="line">		System.out.println(d);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo3() &#123;</div><div class="line">		Date d = new Date();					//获取当前时间对象</div><div class="line">		SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy/MM/dd HH:mm:ss&quot;);//创建日期格式化类对象</div><div class="line">		System.out.println(sdf.format(d));		//将日期对象转换为字符串</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo2() &#123;</div><div class="line">		Date d = new Date();			//获取当前时间对象</div><div class="line">		SimpleDateFormat sdf = new SimpleDateFormat();//创建日期格式化类对象</div><div class="line">		System.out.println(sdf.format(d));	 	//88-6-6 下午9:31</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo1() &#123;</div><div class="line">		//DateFormat df = new DateFormat();		//DateFormat是抽象类,不允许实例化</div><div class="line">		//DateFormat df1 = new SimpleDateFormat();</div><div class="line">		DateFormat df1 = DateFormat.getDateInstance();//相当于父类引用指向子类对象,右边的方法返回一个子类对象</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="你来到这个世界多少天案例"><a href="#你来到这个世界多少天案例" class="headerlink" title="你来到这个世界多少天案例"></a>你来到这个世界多少天案例</h3><ul>
-<li>A:案例演示<ul>
-<li>需求：算一下你来到这个世界多少天?</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.test;</div><div class="line"></div><div class="line">import java.text.ParseException;</div><div class="line">import java.text.SimpleDateFormat;</div><div class="line">import java.util.Date;</div><div class="line"></div><div class="line">public class Test2 &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * 分析:</div><div class="line">	 * 1,将生日字符串和今天字符串存在String类型的变量中</div><div class="line">	 * 2,定义日期格式化对象</div><div class="line">	 * 3,将日期字符串转换成日期对象</div><div class="line">	 * 4,通过日期对象后期时间毫秒值</div><div class="line">	 * 5,将两个时间毫秒值相减除以1000,再除以60,再除以60,再除以24得到天</div><div class="line">	 * @throws ParseException </div><div class="line">	 */</div><div class="line">	public static void main(String[] args) throws ParseException &#123;</div><div class="line">		//1,将生日字符串和今天字符串存在String类型的变量中</div><div class="line">		String birthday = &quot;1993年09月11日&quot;;</div><div class="line">		String today = &quot;2013年7月30日&quot;;</div><div class="line">		//2,定义日期格式化对象</div><div class="line">		SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy年MM月dd日&quot;);</div><div class="line">		//3,将日期字符串转换成日期对象</div><div class="line">		Date d1 = sdf.parse(birthday);</div><div class="line">		Date d2 = sdf.parse(today);</div><div class="line">		//4,通过日期对象后期时间毫秒值</div><div class="line">		long time = d2.getTime() - d1.getTime();</div><div class="line">		//5,将两个时间毫秒值相减除以1000,再除以60,再除以60,再除以24得到天</div><div class="line">		System.out.println(time / 1000 / 60 / 60 / 24 );</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Calendar类的概述和获取日期的方法"><a href="#Calendar类的概述和获取日期的方法" class="headerlink" title="Calendar类的概述和获取日期的方法"></a>Calendar类的概述和获取日期的方法</h3><ul>
-<li>A:Calendar类的概述<ul>
-<li>Calendar 类是一个抽象类，它为特定瞬间与一组诸如 YEAR、MONTH、DAY_OF_MONTH、HOUR 等日历字段之间的转换提供了一些方法，并为操作日历字段（例如获得下星期的日期）提供了一些方法。</li>
-</ul>
-</li>
-<li>B:成员方法<ul>
-<li>public static Calendar getInstance()</li>
-<li>public int get(int field)</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.otherclass;</div><div class="line"></div><div class="line">import java.util.Calendar;</div><div class="line"></div><div class="line">public class Demo8_Calendar &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Calendar c = Calendar.getInstance();		//父类引用指向子类对象</div><div class="line">		//System.out.println(c);					//证明重写了toString方法打印了对象中所有的属性</div><div class="line">		System.out.println(c.get(Calendar.YEAR));  	//通过字段获取对应的值</div><div class="line">		System.out.println(c.get(Calendar.MONTH));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Calendar类的add-和set-方法"><a href="#Calendar类的add-和set-方法" class="headerlink" title="Calendar类的add()和set()方法"></a>Calendar类的add()和set()方法</h3><ul>
-<li>A:成员方法<ul>
-<li>public void add(int field,int amount)</li>
-<li>public final void set(int year,int month,int date)</li>
-</ul>
-</li>
-<li>B:案例演示<ul>
-<li>Calendar类的成员方法使用</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.otherclass;</div><div class="line"></div><div class="line">import java.util.Calendar;</div><div class="line"></div><div class="line">public class Demo9_Calendar &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * * A:Calendar类的概述</div><div class="line">			* Calendar 类是一个抽象类，它为特定瞬间与一组诸如 YEAR、MONTH、DAY_OF_MONTH、HOUR 等日历字段之间的转换提供了一些方法，并为操作日历字段（例如获得下星期的日期）提供了一些方法。</div><div class="line">		* B:成员方法</div><div class="line">			* public static Calendar getInstance()</div><div class="line">			* public int get(int field)</div><div class="line">		* C:成员方法</div><div class="line">			* public void add(int field,int amount)</div><div class="line">			* public final void set(int year,int month,int date)</div><div class="line">		* D:案例演示</div><div class="line">			* Calendar类的成员方法使用</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		Calendar c = Calendar.getInstance();			//父类引用指向子类对象</div><div class="line">		//c.add(Calendar.MONTH, -1);					//对指定的字段进行向前减或向后加</div><div class="line">		//c.set(Calendar.YEAR, 2000);					//修改指定字段</div><div class="line">		c.set(2000, 7, 8);</div><div class="line">		</div><div class="line">		System.out.println(c.get(Calendar.YEAR) + &quot;年&quot; + getNum((c.get(Calendar.MONTH)+1)) </div><div class="line">				+ &quot;月&quot; + getNum(c.get(Calendar.DAY_OF_MONTH)) + &quot;日&quot; + getWeek(c.get(Calendar.DAY_OF_WEEK)));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo1() &#123;</div><div class="line">		Calendar c = Calendar.getInstance();			//父类引用指向子类对象</div><div class="line">		//System.out.println(c);</div><div class="line">		System.out.println(c.get(Calendar.YEAR));		//通过字段获取年</div><div class="line">		System.out.println(c.get(Calendar.MONTH));		//通过字段后期月,但是月是从0开始编号的</div><div class="line">		System.out.println(c.get(Calendar.DAY_OF_MONTH));//月中的第几天</div><div class="line">		System.out.println(c.get(Calendar.DAY_OF_WEEK));//周日是第一天,周六是最后一天</div><div class="line">		</div><div class="line">		System.out.println(c.get(Calendar.YEAR) + &quot;年&quot; + getNum((c.get(Calendar.MONTH)+1)) </div><div class="line">				+ &quot;月&quot; + getNum(c.get(Calendar.DAY_OF_MONTH)) + &quot;日&quot; + getWeek(c.get(Calendar.DAY_OF_WEEK)));</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	/*</div><div class="line">	 * 将星期存储表中进行查表</div><div class="line">	 * 1,返回值类型String</div><div class="line">	 * 2,参数列表int week</div><div class="line">	 */</div><div class="line">	</div><div class="line">	public static String getWeek(int week) &#123;</div><div class="line">		String[] arr = &#123;&quot;&quot;,&quot;星期日&quot;,&quot;星期一&quot;,&quot;星期二&quot;,&quot;星期三&quot;,&quot;星期四&quot;,&quot;星期五&quot;,&quot;星期六&quot;&#125;;</div><div class="line">		</div><div class="line">		return arr[week];</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	/*</div><div class="line">	 * 如果是个数数字前面补0</div><div class="line">	 * 1,返回值类型String类型</div><div class="line">	 * 2,参数列表,int num</div><div class="line">	 */</div><div class="line">	public static String getNum(int num) &#123;</div><div class="line">		/*if(num &gt; 9) &#123;</div><div class="line">			return &quot;&quot; + num;</div><div class="line">		&#125;else &#123;</div><div class="line">			return &quot;0&quot; + num;</div><div class="line">		&#125;*/</div><div class="line">		return num &gt; 9 ? &quot;&quot; + num : &quot;0&quot; + num;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><a href="http://pan.baidu.com/s/1nvddxjF" target="_blank" rel="external">1970的由来</a></p>
-<h3 id="如何获取任意年份是平年还是闰年"><a href="#如何获取任意年份是平年还是闰年" class="headerlink" title="如何获取任意年份是平年还是闰年"></a>如何获取任意年份是平年还是闰年</h3><ul>
-<li>A:案例演示<ul>
-<li>需求：键盘录入任意一个年份，判断该年是闰年还是平年</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.test;</div><div class="line"></div><div class="line">import java.util.Calendar;</div><div class="line">import java.util.Scanner;</div><div class="line"></div><div class="line">public class Test3 &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * 分析:</div><div class="line">	 * 1,键盘录入年Scanner</div><div class="line">	 * 2,创建Calendar c = Calendar.getInstance();</div><div class="line">	 * 3,通过set方法设置为那一年的3月1日</div><div class="line">	 * 4,将日向前减去1</div><div class="line">	 * 5,判断日是多少天,如果是29天返回true否则返回false</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);</div><div class="line">		System.out.println(&quot;请输入年份,判断该年份是闰年还是平年:&quot;);</div><div class="line">		//int year = sc.nextInt();</div><div class="line">		</div><div class="line">		String line = sc.nextLine();				//录入数字字符串</div><div class="line">		int year = Integer.parseInt(line);			//将数字字符串转换成数字</div><div class="line">		boolean b = getYear(year);</div><div class="line">		System.out.println(b);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static boolean getYear(int year) &#123;</div><div class="line">		//2,创建Calendar c = Calendar.getInstance();</div><div class="line">		Calendar c = Calendar.getInstance();</div><div class="line">		//设置为那一年的3月1日</div><div class="line">		c.set(year, 2, 1);</div><div class="line">		//将日向前减去1</div><div class="line">		c.add(Calendar.DAY_OF_MONTH, -1);</div><div class="line">		//判断是否是29天</div><div class="line">		return c.get(Calendar.DAY_OF_MONTH) == 29;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2013/08/12/2013-08-12-object-class-util/#more">more >></a>
+        
       
 
       
@@ -1562,128 +534,21 @@ ArrayList和LinkedList的区别
 <li>作用:比如注册邮箱,邮箱有用户名和密码,一般会对其限制长度,这个限制长度的事情就是正则表达式做的</li>
 </ul>
 </li>
-<li><p>B:案例演示</p>
-<ul>
-<li><p>需求：校验qq号码.</p>
-<ul>
+<li>B:案例演示<ul>
+<li>需求：校验qq号码.<ul>
 <li>1:要求必须是5-15位数字</li>
 <li>2:0不能开头</li>
 <li>3:必须都是数字</li>
 </ul>
 </li>
-<li><p>a:非正则表达式实现</p>
-</li>
+<li>a:非正则表达式实现</li>
 <li>b:正则表达式实现</li>
 </ul>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.regex;</div><div class="line"></div><div class="line">public class Demo1_Regex &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		System.out.println(checkQQ(&quot;012345&quot;));</div><div class="line">		System.out.println(checkQQ(&quot;a1b345&quot;));</div><div class="line">		System.out.println(checkQQ(&quot;123456&quot;));</div><div class="line">		System.out.println(checkQQ(&quot;1234567890987654321&quot;));</div><div class="line">		</div><div class="line">		String regex = &quot;[1-9]\\d&#123;4,14&#125;&quot;;</div><div class="line">		System.out.println(&quot;2553868&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;012345&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;2553868abc&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	/*</div><div class="line">	 * 需求：校验qq号码.</div><div class="line">	 * 1:要求必须是5-15位数字</div><div class="line">	 * 2:0不能开头</div><div class="line">	 * 3:必须都是数字</div><div class="line">	 * 校验qq</div><div class="line">	 * 1,明确返回值类型boolean</div><div class="line">	 * 2,明确参数列表String qq</div><div class="line">	 */</div><div class="line">	public static boolean checkQQ(String qq) &#123;</div><div class="line">		boolean flag = true;					//如果校验qq不符合要求就把flag置为false,如果符合要求直接返回</div><div class="line">		</div><div class="line">		if(qq.length() &gt;= 5 &amp;&amp; qq.length() &lt;= 15) &#123;</div><div class="line">			if(!qq.startsWith(&quot;0&quot;)) &#123;</div><div class="line">				char[] arr = qq.toCharArray();	//将字符串转换成字符数组</div><div class="line">				for (int i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">					char ch = arr[i];			//记录每一个字符</div><div class="line">					if(!(ch &gt;= &apos;0&apos; &amp;&amp; ch &lt;= &apos;9&apos;)) &#123;</div><div class="line">						flag = false;			//不是数字</div><div class="line">						break;</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;else &#123;</div><div class="line">				flag = false;					//以0开头,不符合qq标准</div><div class="line">			&#125;</div><div class="line">		&#125;else &#123;</div><div class="line">			flag = false;						//长度不符合</div><div class="line">		&#125;</div><div class="line">		return flag;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="字符类演示"><a href="#字符类演示" class="headerlink" title="字符类演示"></a>字符类演示</h3><ul>
-<li>A:字符类<ul>
-<li>[]单个字符</li>
-<li>[abc] a、b 或 c（简单类） </li>
-<li>[^abc] 任何字符，除了 a、b 或 c（否定） </li>
-<li>[a-zA-Z] a到 z 或 A到 Z，两头的字母包括在内（范围） </li>
-<li>[0-9] 0到9的字符都包括</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.regex;</div><div class="line"></div><div class="line">public class Demo2_Regex &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * [abc] a、b 或 c（简单类） </div><div class="line">		[^abc] 任何字符，除了 a、b 或 c（否定） </div><div class="line">		[a-zA-Z] a 到 z 或 A 到 Z，两头的字母包括在内（范围） </div><div class="line">		[a-d[m-p]] a 到 d 或 m 到 p：[a-dm-p]（并集） </div><div class="line">		[a-z&amp;&amp;[def]] d、e 或 f（交集） </div><div class="line">		[a-z&amp;&amp;[^bc]] a 到 z，除了 b 和 c：[ad-z]（减去） </div><div class="line">		[a-z&amp;&amp;[^m-p]] a 到 z，而非 m 到 p：[a-lq-z]（减去） </div><div class="line"></div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		//demo2();</div><div class="line">		//demo3();</div><div class="line">		//demo4();</div><div class="line">		//demo5();</div><div class="line">		//demo6();</div><div class="line">		String regex = &quot;[a-z&amp;&amp;[^m-p]]&quot;;</div><div class="line">		System.out.println(&quot;m&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;z&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;n&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo6() &#123;</div><div class="line">		String regex = &quot;[a-z&amp;&amp;[^bc]]&quot;;</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;b&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;1&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo5() &#123;</div><div class="line">		String regex = &quot;[a-z&amp;&amp;[def]]&quot;;						//取交集</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;d&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo4() &#123;</div><div class="line">		String regex = &quot;[a-d[m-p]]&quot;;</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;m&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;n&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo3() &#123;</div><div class="line">		String regex = &quot;[a-zA-Z]&quot;;</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;A&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;z&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;Z&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;1&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;%&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo2() &#123;</div><div class="line">		String regex = &quot;[^abc]&quot;;</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;b&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;c&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;d&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;1&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;%&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;10&quot;.matches(regex));		//10代表1字符和0字符,不是单个字符</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo1() &#123;</div><div class="line">		String regex = &quot;[abc]&quot;;					//[]代表单个字符</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;b&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;c&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;d&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;1&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;%&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="预定义字符类演示"><a href="#预定义字符类演示" class="headerlink" title="预定义字符类演示"></a>预定义字符类演示</h3><ul>
-<li>A:预定义字符类<ul>
-<li>. 任何字符。</li>
-<li>\d 数字：[0-9]</li>
-<li>\w 单词字符：[a-zA-Z_0-9]</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.regex;</div><div class="line"></div><div class="line">public class Demo3_Regex &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * 	. 任何字符</div><div class="line">		\d 数字：[0-9] </div><div class="line">		\D 非数字： [^0-9] </div><div class="line">		\s 空白字符：[ \t\n\x0B\f\r] </div><div class="line">		\S 非空白字符：[^\s] </div><div class="line">		\w 单词字符：[a-zA-Z_0-9] </div><div class="line">		\W 非单词字符：[^\w] </div><div class="line"></div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		//demo2();</div><div class="line">		//demo3();</div><div class="line">		//demo4();</div><div class="line">		//demo5();</div><div class="line">		//demo6();</div><div class="line">		String regex = &quot;\\W&quot;;</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;z&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;_&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;%&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo6() &#123;</div><div class="line">		String regex = &quot;\\w&quot;;</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;z&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;_&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;%&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo5() &#123;</div><div class="line">		String regex = &quot;\\S&quot;;</div><div class="line">		System.out.println(&quot; &quot;.matches(regex));</div><div class="line">		System.out.println(&quot;	&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo4() &#123;</div><div class="line">		String regex = &quot;\\s&quot;;</div><div class="line">		System.out.println(&quot; &quot;.matches(regex));</div><div class="line">		System.out.println(&quot;	&quot;.matches(regex)); 				//一个tab键</div><div class="line">		System.out.println(&quot;    &quot;.matches(regex)); 				//四个空格</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo3() &#123;</div><div class="line">		String regex = &quot;\\D&quot;;</div><div class="line">		System.out.println(&quot;0&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;9&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo2() &#123;</div><div class="line">		String regex = &quot;\\d&quot;;					//\代表转义字符,如果想表示\d的话,需要\\d</div><div class="line">		System.out.println(&quot;0&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;9&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	private static void demo1() &#123;</div><div class="line">		String regex = &quot;..&quot;;</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;ab&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="数量词"><a href="#数量词" class="headerlink" title="数量词"></a>数量词</h3><ul>
-<li>A:Greedy 数量词 <ul>
-<li>X? X，一次或一次也没有</li>
-<li>X* X，零次或多次</li>
-<li>X+ X，一次或多次</li>
-<li>X{n} X，恰好 n 次 </li>
-<li>X{n,} X，至少 n 次 </li>
-<li>X{n,m} X，至少 n 次，但是不超过 m 次 </li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.regex;</div><div class="line"></div><div class="line">public class Demo4_Regex &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * Greedy 数量词 </div><div class="line">		X? X，一次或一次也没有 </div><div class="line">		X* X，零次或多次 </div><div class="line">		X+ X，一次或多次 </div><div class="line">		X&#123;n&#125; X，恰好 n 次 </div><div class="line">		X&#123;n,&#125; X，至少 n 次 </div><div class="line">		X&#123;n,m&#125; X，至少 n 次，但是不超过 m 次 </div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		//demo2();</div><div class="line">		//demo3();</div><div class="line">		//demo4();</div><div class="line">		//demo5();</div><div class="line">		String regex = &quot;[abc]&#123;5,15&#125;&quot;;</div><div class="line">		System.out.println(&quot;abcba&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;abcbaabcabbabab&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;abcb&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;abcbaabaabcbaaba&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo5() &#123;</div><div class="line">		String regex = &quot;[abc]&#123;5,&#125;&quot;;</div><div class="line">		System.out.println(&quot;abcba&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;abcbaabcabbabab&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;abcb&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;abcbaaba&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo4() &#123;</div><div class="line">		String regex = &quot;[abc]&#123;5&#125;&quot;;</div><div class="line">		System.out.println(&quot;abcba&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;abcbaabcabbabab&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;abcb&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;abcbaaba&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo3() &#123;</div><div class="line">		String regex = &quot;[abc]+&quot;;</div><div class="line">		System.out.println(&quot;&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;aaaaabbbbccccc&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo2() &#123;</div><div class="line">		String regex = &quot;[abc]*&quot;;</div><div class="line">		System.out.println(&quot;&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;abc&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo1() &#123;</div><div class="line">		String regex = &quot;[abc]?&quot;;</div><div class="line">		System.out.println(&quot;a&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;b&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;c&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;d&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;&quot;.matches(regex));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="正则表达式的分割功能"><a href="#正则表达式的分割功能" class="headerlink" title="正则表达式的分割功能"></a>正则表达式的分割功能</h3><ul>
-<li>A:正则表达式的分割功能<ul>
-<li>String类的功能：public String[] split(String regex)</li>
-</ul>
-</li>
-<li>B:案例演示<ul>
-<li>正则表达式的分割功能</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.regex;</div><div class="line"></div><div class="line">public class Demo5_Split &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		String s = &quot;金三胖.郭美美.李dayone&quot;;</div><div class="line">		String[] arr = s.split(&quot;\\.&quot;);				//通过正则表达式切割字符串</div><div class="line">		</div><div class="line">		for (int i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">			System.out.println(arr[i]);</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		System.out.println(&quot;11111111111111111&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="把给定字符串中的数字排序"><a href="#把给定字符串中的数字排序" class="headerlink" title="把给定字符串中的数字排序"></a>把给定字符串中的数字排序</h3><ul>
-<li>A:案例演示<ul>
-<li>需求：我有如下一个字符串:”91 27 46 38 50”，请写代码实现最终输出结果是：”27 38 46 50 91”</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.test;</div><div class="line"></div><div class="line">import java.util.Arrays;</div><div class="line"></div><div class="line">public class Test1 &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * 分析:</div><div class="line">	 * 1,将字符串切割成字符串数组</div><div class="line">	 * 2,将字符串转换成数字并将其存储在一个等长度的int数组中</div><div class="line">	 * 3,排序</div><div class="line">	 * 4,将排序后的结果遍历并拼接成一个字符串</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		String s = &quot;91 27 46 38 50&quot;;</div><div class="line">		//1,将字符串切割成字符串数组</div><div class="line">		String[] sArr = s.split(&quot; &quot;);</div><div class="line">		//2,将字符串转换成数字并将其存储在一个等长度的int数组中</div><div class="line">		int[] arr = new int[sArr.length];</div><div class="line">		for (int i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">			arr[i] = Integer.parseInt(sArr[i]); 	//将数字字符串转换成数字</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		//3,排序</div><div class="line">		Arrays.sort(arr);</div><div class="line">		</div><div class="line">		//4,将排序后的结果遍历并拼接成一个字符串27 38 46 50 91</div><div class="line">		/*String str = &quot;&quot;;</div><div class="line">		for (int i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">			if(i == arr.length - 1) &#123;</div><div class="line">				str = str + arr[i];				//27 38 46 50 91</div><div class="line">			&#125;else &#123;</div><div class="line">				str = str + arr[i] + &quot; &quot;;		//27 38 46 50 </div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		System.out.println(str);*/</div><div class="line">		</div><div class="line">		StringBuilder sb = new StringBuilder();</div><div class="line">		for (int i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">			if(i == arr.length - 1) &#123;</div><div class="line">				sb.append(arr[i]);</div><div class="line">			&#125;else &#123;</div><div class="line">				sb.append(arr[i] + &quot; &quot;);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		System.out.println(sb);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="正则表达式的替换功能"><a href="#正则表达式的替换功能" class="headerlink" title="正则表达式的替换功能"></a>正则表达式的替换功能</h3><ul>
-<li>A:正则表达式的替换功能<ul>
-<li>String类的功能：public String replaceAll(String regex,String replacement)</li>
-</ul>
-</li>
-<li>B:案例演示<ul>
-<li>正则表达式的替换功能</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.regex;</div><div class="line"></div><div class="line">public class Demo6_ReplaceAll &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * * A:正则表达式的替换功能</div><div class="line">	 * String类的功能：public String replaceAll(String regex,String replacement)</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		String s = &quot;wo111ai222wxhao&quot;;</div><div class="line">		String regex = &quot;\\d&quot;;			//\\d代表的是任意数字</div><div class="line">		</div><div class="line">		String s2 = s.replaceAll(regex, &quot;&quot;);</div><div class="line">		System.out.println(s2);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="正则表达式的分组功能"><a href="#正则表达式的分组功能" class="headerlink" title="正则表达式的分组功能"></a>正则表达式的分组功能</h3><ul>
-<li>A:正则表达式的分组功能<ul>
-<li>捕获组可以通过从左到右计算其开括号来编号。例如，在表达式 ((A)(B(C))) 中，存在四个这样的组： </li>
-</ul>
-</li>
-<li><pre><code>1     ((A)(B(C))) 
-2     (A 
-3     (B(C)) 
-4     (C) 
-
-组零始终代表整个表达式。
-</code></pre><p>B:案例演示<br>  a:切割</p>
-<pre><code>需求：请按照叠词切割： &quot;sdqqfgkkkhjppppkl&quot;;
-</code></pre><p>  b:替换</p>
-<pre><code>需求：我我....我...我.要...要要...要学....学学..学.编..编编.编.程.程.程..程
-将字符串还原成:“我要学编程”。
-</code></pre></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.regex;</div><div class="line"></div><div class="line">public class Demo7_Regex &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		//demo2();</div><div class="line">		</div><div class="line">		/*</div><div class="line">		 * 需求：我我....我...我.要...要要...要学....学学..学.编..编编.编.程.程.程..程</div><div class="line">				将字符串还原成:“我要学编程”。</div><div class="line">		 */</div><div class="line">		String s = &quot;我我....我...我.要...要要...要学....学学..学.编..编编.编.程.程.程..程&quot;;</div><div class="line">		String s2 = s.replaceAll(&quot;\\.+&quot;, &quot;&quot;);</div><div class="line">		String s3 = s2.replaceAll(&quot;(.)\\1+&quot;, &quot;$1&quot;);	//$1代表第一组中的内容</div><div class="line">		System.out.println(s3);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo2() &#123;</div><div class="line">		//需求：请按照叠词切割： &quot;sdqqfgkkkhjppppkl&quot;;</div><div class="line">		String s = &quot;sdqqfgkkkhjppppkl&quot;;</div><div class="line">		String regex = &quot;(.)\\1+&quot;;					//+代表第一组出现一次到多次</div><div class="line">		String[] arr = s.split(regex);</div><div class="line">		</div><div class="line">		for (int i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">			System.out.println(arr[i]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo1() &#123;</div><div class="line">		//叠词 快快乐乐,高高兴兴</div><div class="line">		/*String regex = &quot;(.)\\1(.)\\2&quot;;					//\\1代表第一组又出现一次	\\2代表第二组又出现一次</div><div class="line">		System.out.println(&quot;快快乐乐&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;快乐乐乐&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;高高兴兴&quot;.matches(regex));</div><div class="line">		System.out.println(&quot;死啦死啦&quot;.matches(regex));*/</div><div class="line">		</div><div class="line">		//叠词 死啦死啦,高兴高兴</div><div class="line">		String regex2 = &quot;(..)\\1&quot;;</div><div class="line">		System.out.println(&quot;死啦死啦&quot;.matches(regex2));</div><div class="line">		System.out.println(&quot;高兴高兴&quot;.matches(regex2));</div><div class="line">		System.out.println(&quot;快快乐乐&quot;.matches(regex2));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="Pattern和Matcher的概述"><a href="#Pattern和Matcher的概述" class="headerlink" title="Pattern和Matcher的概述"></a>Pattern和Matcher的概述</h3><ul>
-<li>A:Pattern和Matcher的概述</li>
-<li><p>B:模式和匹配器的典型调用顺序</p>
-<ul>
-<li><p>通过JDK提供的API，查看Pattern类的说明</p>
-</li>
-<li><p>典型的调用顺序是 </p>
-</li>
-<li>Pattern p = Pattern.compile(“a*b”);</li>
-<li>Matcher m = p.matcher(“aaaaab”);</li>
-<li>boolean b = m.matches();</li>
-</ul>
-</li>
-</ul>
-<h3 id="正则表达式的获取功能"><a href="#正则表达式的获取功能" class="headerlink" title="正则表达式的获取功能"></a>正则表达式的获取功能</h3><ul>
-<li>A:正则表达式的获取功能<ul>
-<li>Pattern和Matcher的结合使用</li>
-</ul>
-</li>
-<li>B:案例演示<ul>
-<li>需求：把一个字符串中的手机号码获取出来</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.regex;</div><div class="line"></div><div class="line">import java.util.regex.Matcher;</div><div class="line">import java.util.regex.Pattern;</div><div class="line"></div><div class="line">public class Demo8_Pattern &#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * Pattern p = Pattern.compile(&quot;a*b&quot;);</div><div class="line">		 Matcher m = p.matcher(&quot;aaaaab&quot;);</div><div class="line">		 boolean b = m.matches();</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		//demo1();</div><div class="line">		String s = &quot;我的手机是18988888888,我曾用过18987654321,还用过18812345678&quot;;</div><div class="line">		String regex = &quot;1[3578]\\d&#123;9&#125;&quot;;</div><div class="line">		</div><div class="line">		</div><div class="line">		Pattern p = Pattern.compile(regex);</div><div class="line">		Matcher m = p.matcher(s);</div><div class="line">		</div><div class="line">		/*boolean b1 = m.find();</div><div class="line">		System.out.println(b1);</div><div class="line">		System.out.println(m.group());</div><div class="line">		</div><div class="line">		boolean b2 = m.find();</div><div class="line">		System.out.println(b2);</div><div class="line">		System.out.println(m.group());*/</div><div class="line">		</div><div class="line">		while(m.find())</div><div class="line">			System.out.println(m.group());</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void demo1() &#123;</div><div class="line">		Pattern p = Pattern.compile(&quot;a*b&quot;);	//获取到正则表达式</div><div class="line">		Matcher m = p.matcher(&quot;aaaaab&quot;);	//获取匹配器</div><div class="line">		boolean b = m.matches();			//看是否能匹配,匹配就返回true</div><div class="line">		</div><div class="line">		System.out.println(b);</div><div class="line">		</div><div class="line">		System.out.println(&quot;aaaaab&quot;.matches(&quot;a*b&quot;)); //与上面的结果一样</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line">package com.wxhao.util;</div><div class="line"></div><div class="line">public class RegexUtil &#123;</div><div class="line">	/**</div><div class="line">	 * 条件字符</div><div class="line">	 * a-z A-Z 0-9</div><div class="line">	 * </div><div class="line">	 * </div><div class="line">	 * 预定义字符</div><div class="line">	 * . 任何字符</div><div class="line">	 * \d 数字：[0-9]</div><div class="line">	 * \D 数字：[0-9]</div><div class="line">	 * \s 空白字符: [ \t\n\x0B\f\r]</div><div class="line">	 * \S 非空白字符: [^\s]</div><div class="line">	 * \w 单词字符：[a-zA-Z_0-9]</div><div class="line">	 * \W 非单词字符：[^\w]</div><div class="line">	 * </div><div class="line">	 * 逻辑字符</div><div class="line">	 * []   &amp;&amp;   ||   ^</div><div class="line">	 */</div><div class="line">	</div><div class="line">	/**</div><div class="line">	 *  数量词    跟在 条件字符后面</div><div class="line">		条件字符 ? 一次或一次也没有  如:[abc]?</div><div class="line">		条件字符 * 零次或多次 </div><div class="line">		条件字符 + 一次或多次 </div><div class="line">		条件字符 &#123;n&#125; 恰好 n 次 </div><div class="line">		条件字符 &#123;n,&#125; 至少 n 次 </div><div class="line">		条件字符 &#123;n,m&#125; 至少 n 次，但是不超过 m 次 </div><div class="line">	 */</div><div class="line">	</div><div class="line">	/**分组</div><div class="line">	 * (.)\\1(.)\\2    	xxyy</div><div class="line">	 * (.)\\1+ 			.出现一次以上  1代表再来一次  +代表出现一次或多次</div><div class="line">	 * (..)\\1   		xyxy</div><div class="line">	 * </div><div class="line">	 * $1 第一组的东西</div><div class="line">	 * $2 第二组的东西</div><div class="line">	 */</div><div class="line">	</div><div class="line">	/**</div><div class="line">	 * 纯数字</div><div class="line">	 */</div><div class="line">	public static final String PURE_NUMBER=&quot;[1-9]&quot;;</div><div class="line">	/**</div><div class="line">	 * 纯字母</div><div class="line">	 */</div><div class="line">	public static final String PURE_LETTER=&quot;[a-z]&quot;;</div><div class="line">	</div><div class="line">	public static boolean check(String str , String regex)&#123;</div><div class="line">		boolean flag=true;</div><div class="line">		if(str!=null&amp;&amp;!str.isEmpty())&#123;</div><div class="line">			return str.matches(regex);</div><div class="line">		&#125;</div><div class="line">		return flag;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		String xx=&quot;oxs&quot;;</div><div class="line">		System.out.println(xx.matches(&quot;&quot;));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2013/08/09/2013-08-09-object-class-regex/#more">more >></a>
+        
       
 
       
@@ -1859,6 +724,10 @@ ArrayList和LinkedList的区别
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">tool</a>
               </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">resume</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -1913,7 +782,7 @@ ArrayList和LinkedList的区别
             </li>
           
             <li class="search-li">
-              <a href="http://blog4manager.duapp.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>帅比浩的图床管理</a>
+              <a href="http://bed.wxhao.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>帅比浩的图床管理</a>
             </li>
           
         </ul>

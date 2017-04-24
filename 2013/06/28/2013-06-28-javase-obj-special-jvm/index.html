@@ -5,7 +5,7 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://blog.wxhaoo.com">
+  <link rel="dns-prefetch" href="http://b.wxhao2.com">
   <title>面向对象的特点及其使用 | 吴嘉图的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="方法的形式参数是类名的时候如何调用
@@ -16,7 +16,7 @@ A:方法的参数是类名
 12345678910111213141516171819202122232425262728class Demo1_S">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面向对象的特点及其使用">
-<meta property="og:url" content="http://blog.wxhaoo.com/2013/06/28/2013-06-28-javase-obj-special-jvm/index.html">
+<meta property="og:url" content="http://b.wxhao2.com/2013/06/28/2013-06-28-javase-obj-special-jvm/index.html">
 <meta property="og:site_name" content="吴嘉图的博客">
 <meta property="og:description" content="方法的形式参数是类名的时候如何调用
 A:方法的参数是类名
@@ -25,7 +25,7 @@ A:方法的参数是类名
 * 如果你看到了一个方法的形式参数是一个类类型(引用类型)，这里其实需要的是该类的对象。
 12345678910111213141516171819202122232425262728class Demo1_S">
 <meta property="og:image" content="http://wxhao2.duapp.com/blog/post-in/20130628/nmdxnc.png">
-<meta property="og:updated_time" content="2017-03-04T08:58:29.682Z">
+<meta property="og:updated_time" content="2017-04-24T09:28:12.770Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面向对象的特点及其使用">
 <meta name="twitter:description" content="方法的形式参数是类名的时候如何调用
@@ -77,9 +77,9 @@ A:方法的参数是类名
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/">随笔</a></li>
+				<li><a href="/2013/01/01/2013-01-01-wxhao-jl/">简历</a></li>
 	        
-				<li><a href="http://blog4manager.duapp.com/html/register1.html">图床</a></li>
+				<li><a href="http://bed.wxhao2.com/">图床</a></li>
 	        
 			</ul>
 		</nav>
@@ -107,7 +107,7 @@ A:方法的参数是类名
 		        
 					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
-					<a class="qq" target="_blank" href="/627760565" title="qq"><i class="icon-qq"></i></a>
+					<a class="qq" target="_blank" href="tencent://message/?uin=627760565&Site=http://vps.shuidazhe.com&Menu=yes" title="qq"><i class="icon-qq"></i></a>
 		        
 					<a class="mail" target="_blank" href="mailto:wxhao911@gmail.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -154,7 +154,7 @@ A:方法的参数是类名
 			        
 						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
-						<a class="qq" target="_blank" href="/627760565" title="qq"><i class="icon-qq"></i></a>
+						<a class="qq" target="_blank" href="tencent://message/?uin=627760565&Site=http://vps.shuidazhe.com&Menu=yes" title="qq"><i class="icon-qq"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto:wxhao911@gmail.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -167,9 +167,9 @@ A:方法的参数是类名
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/2013/01/01/2013-01-01-wxhao-jl/">简历</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="http://blog4manager.duapp.com/html/register1.html">图床</a></li>
+					<li style="width: 33.333333333333336%"><a href="http://bed.wxhao2.com/">图床</a></li>
 		        
 				</ul>
 			</nav>
@@ -210,6 +210,7 @@ A:方法的参数是类名
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">public void print(Student s)&#123;&#125;//print(new Student());</div></pre></td></tr></table></figure>
 <pre><code>* 如果你看到了一个方法的形式参数是一个类类型(引用类型)，这里其实需要的是该类的对象。
 </code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">class Demo1_Student &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		print(10);</div><div class="line"></div><div class="line">		Student s = new Student();					//创建对象,并将对象的地址值赋值给s</div><div class="line">		print(s);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void print(int x) &#123;				//基本数据类型当作形式参数</div><div class="line">		System.out.println(x);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void print(Student stu) &#123;			//引用数据类型当作形式参数</div><div class="line">		stu.name = &quot;张三&quot;;</div><div class="line">		stu.age = 23;</div><div class="line">		stu.speak();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">class Student &#123;</div><div class="line">	String name;					//姓名</div><div class="line">	int age;						//年龄</div><div class="line"></div><div class="line">	public void speak() &#123;</div><div class="line">		System.out.println(name + &quot;...&quot; + age);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="匿名对象的概述和应用"><a href="#匿名对象的概述和应用" class="headerlink" title="匿名对象的概述和应用"></a>匿名对象的概述和应用</h3><ul>
 <li>A:什么是匿名对象<ul>
 <li>没有名字的对象 </li>
@@ -402,7 +403,7 @@ A:方法的参数是类名
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://blog.wxhaoo.com/2013/06/28/2013-06-28-javase-obj-special-jvm/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://b.wxhao2.com/2013/06/28/2013-06-28-javase-obj-special-jvm/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -441,7 +442,7 @@ A:方法的参数是类名
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2013-06-28-javase-obj-special-jvm" data-title="面向对象的特点及其使用" data-url="http://blog.wxhaoo.com/2013/06/28/2013-06-28-javase-obj-special-jvm/"></div>
+	<div class="ds-thread" data-thread-key="2013-06-28-javase-obj-special-jvm" data-title="面向对象的特点及其使用" data-url="http://b.wxhao2.com/2013/06/28/2013-06-28-javase-obj-special-jvm/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -583,6 +584,10 @@ A:方法的参数是类名
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">tool</a>
               </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">resume</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -637,7 +642,7 @@ A:方法的参数是类名
             </li>
           
             <li class="search-li">
-              <a href="http://blog4manager.duapp.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>帅比浩的图床管理</a>
+              <a href="http://bed.wxhao.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>帅比浩的图床管理</a>
             </li>
           
         </ul>

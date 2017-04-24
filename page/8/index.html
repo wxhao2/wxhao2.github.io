@@ -5,13 +5,13 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://blog.wxhaoo.com">
+  <link rel="dns-prefetch" href="http://b.wxhao2.com">
   <title>吴嘉图的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="不知道怎么描述">
 <meta property="og:type" content="website">
 <meta property="og:title" content="吴嘉图的博客">
-<meta property="og:url" content="http://blog.wxhaoo.com/page/8/index.html">
+<meta property="og:url" content="http://b.wxhao2.com/page/8/index.html">
 <meta property="og:site_name" content="吴嘉图的博客">
 <meta property="og:description" content="不知道怎么描述">
 <meta name="twitter:card" content="summary">
@@ -59,9 +59,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/">随笔</a></li>
+				<li><a href="/2013/01/01/2013-01-01-wxhao-jl/">简历</a></li>
 	        
-				<li><a href="http://blog4manager.duapp.com/html/register1.html">图床</a></li>
+				<li><a href="http://bed.wxhao2.com/">图床</a></li>
 	        
 			</ul>
 		</nav>
@@ -89,7 +89,7 @@
 		        
 					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 		        
-					<a class="qq" target="_blank" href="/627760565" title="qq"><i class="icon-qq"></i></a>
+					<a class="qq" target="_blank" href="tencent://message/?uin=627760565&Site=http://vps.shuidazhe.com&Menu=yes" title="qq"><i class="icon-qq"></i></a>
 		        
 					<a class="mail" target="_blank" href="mailto:wxhao911@gmail.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -136,7 +136,7 @@
 			        
 						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
 			        
-						<a class="qq" target="_blank" href="/627760565" title="qq"><i class="icon-qq"></i></a>
+						<a class="qq" target="_blank" href="tencent://message/?uin=627760565&Site=http://vps.shuidazhe.com&Menu=yes" title="qq"><i class="icon-qq"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto:wxhao911@gmail.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -149,9 +149,9 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/2013/01/01/2013-01-01-wxhao-jl/">简历</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="http://blog4manager.duapp.com/html/register1.html">图床</a></li>
+					<li style="width: 33.333333333333336%"><a href="http://bed.wxhao2.com/">图床</a></li>
 		        
 				</ul>
 			</nav>
@@ -199,177 +199,13 @@
 <li>数组既可以存储基本数据类型，也可以存储引用数据类型。</li>
 </ul>
 </li>
-<li><p>C:数组定义格式<br>  数据类型[] 数组名 = new 数据类型[数组的长度];</p>
+<li><p>C:数组定义格式<br>数据类型[] 数组名 = new 数据类型[数组的长度];</p>
 </li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">//数据类型[] 数组名 = new 数据类型[数组的长度];</div><div class="line">int[] arr = new int[5];				//可以存储五个int类型的数据</div><div class="line"></div><div class="line">/*</div><div class="line">左边:</div><div class="line">int:数据类型</div><div class="line">[]:代表的数组,几个中括号就代表几维数组</div><div class="line">arr:合法的标识符</div><div class="line"></div><div class="line">右边:</div><div class="line">new:创建新的实体或对象</div><div class="line">int:数据类型</div><div class="line">[]:代表的数组</div><div class="line">5:代表数组的长度</div></pre></td></tr></table></figure>
-<h3 id="数组的初始化动态初始化"><a href="#数组的初始化动态初始化" class="headerlink" title="数组的初始化动态初始化"></a>数组的初始化动态初始化</h3><ul>
-<li>A:什么是数组的初始化<ul>
-<li>就是为数组开辟连续的内存空间，并为每个数组元素赋予值 </li>
-</ul>
-</li>
-<li>B:如何对数组进行初始化<ul>
-<li>a:动态初始化 只指定长度，由系统给出初始化值<ul>
-<li>int[] arr = new int[5];     </li>
-</ul>
-</li>
-<li>b:静态初始化 给出初始化值，由系统决定长度    </li>
-</ul>
-</li>
-<li>C:动态初始化的格式：<ul>
-<li>数据类型[] 数组名 = new 数据类型[数组长度];</li>
-</ul>
-</li>
-<li>D:代码演示<ul>
-<li>输出数组名称和数组元素</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">int[] arr = new int[5];//动态初始化,在内存中开辟连续的5块空间</div><div class="line">System.out.println(arr[0]);//系统给出默认初始化值,整数类型的都是0</div><div class="line">arr[0] = 10;</div><div class="line"></div><div class="line">System.out.println(arr[0]);	</div><div class="line"></div><div class="line">System.out.println(arr);//[I@19bb25a</div></pre></td></tr></table></figure>
-<ul>
-<li>整数类型:byte,short,int,long默认初始化值都是0</li>
-<li>浮点类型:float,double默认初始化值都是0.0</li>
-<li>布尔类型:boolean默认初始化值false</li>
-<li><p>字符类型:char默认初始化值’\u0000’</p>
-<ul>
-<li>char在内存中占的两个字节,是16个二进制位</li>
-<li>\u0000,每一个0其实代表的是16进制的0,那么四个0就是代表16个二进制位</li>
-</ul>
-</li>
-<li><p>[I@19bb25a的意思</p>
-<ul>
-<li>[代表是数组,几个就代表几维</li>
-<li>I代表是int类型</li>
-<li>@是固定的</li>
-<li>19bb25a代表的是数组的地址值</li>
-</ul>
-</li>
-</ul>
-<h3 id="Java中的内存分配以及栈和堆的区别"><a href="#Java中的内存分配以及栈和堆的区别" class="headerlink" title="Java中的内存分配以及栈和堆的区别"></a>Java中的内存分配以及栈和堆的区别</h3><ul>
-<li>A:栈<ul>
-<li>存储局部变量 <ul>
-<li>局部变量:定义在方法声明上和方法中的变量</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>B:堆<ul>
-<li>存储new出来的数组或对象 </li>
-</ul>
-</li>
-<li>C:方法区<ul>
-<li>面向对象部分讲解 </li>
-</ul>
-</li>
-<li>D:本地方法区<ul>
-<li>和系统相关 </li>
-</ul>
-</li>
-<li>E:寄存器<ul>
-<li>给CPU使用</li>
-</ul>
-</li>
-</ul>
-<h3 id="数组的内存图解1一个数组"><a href="#数组的内存图解1一个数组" class="headerlink" title="数组的内存图解1一个数组"></a>数组的内存图解1一个数组</h3><ul>
-<li>A:画图演示<ul>
-<li>一个数组</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">int[] arr = new int[3];						//动态初始化,创建3块连续的空间</div><div class="line">System.out.println(arr);</div><div class="line">arr[0] = 10;</div><div class="line">arr[1] = 20;</div><div class="line"></div><div class="line">System.out.println(arr[0]);</div><div class="line">System.out.println(arr[1]);</div></pre></td></tr></table></figure>
-<p><img src="http://wxhao2.duapp.com/blog/post-in/20130622/sznct.png" alt="数组内存图"></p>
-<h3 id="数组的内存图解2二个数组"><a href="#数组的内存图解2二个数组" class="headerlink" title="数组的内存图解2二个数组"></a>数组的内存图解2二个数组</h3><ul>
-<li>A:画图演示<ul>
-<li>二个不同的数组</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">int[] arr1 = new int[3];//创建数组,长度为3</div><div class="line">int[] arr2 = new int[3];//创建数组,长度为3</div><div class="line"></div><div class="line">System.out.println(arr1);//打印数组的地址值</div><div class="line">System.out.println(arr2);</div><div class="line"></div><div class="line">arr1[0] = 10;//给第一个数组中第一个元素赋值</div><div class="line">arr2[1] = 20;//给第二个数组中第二个元素赋值</div><div class="line"></div><div class="line">System.out.println(arr1[0]);</div><div class="line">System.out.println(arr1[1]);</div><div class="line">System.out.println(arr1[2]);</div><div class="line"></div><div class="line">System.out.println(&quot;--------------------------------------&quot;);</div><div class="line"></div><div class="line">System.out.println(arr2[0]);</div><div class="line">System.out.println(arr2[1]);</div><div class="line">System.out.println(arr2[2]);</div></pre></td></tr></table></figure>
-<p><img src="http://wxhao2.duapp.com/blog/post-in/20130622/lgsznct.png" alt="两个数组内存图"></p>
-<h3 id="数组的内存图解3三个引用两个数组"><a href="#数组的内存图解3三个引用两个数组" class="headerlink" title="数组的内存图解3三个引用两个数组"></a>数组的内存图解3三个引用两个数组</h3><ul>
-<li>A:画图演示<ul>
-<li>三个引用，有两个数组的引用指向同一个地址</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">int[] arr1 = new int[3];</div><div class="line">int[] arr2 = new int[5];</div><div class="line">int[] arr3 = arr2;</div><div class="line"></div><div class="line">System.out.println(arr1);</div><div class="line">System.out.println(arr2);</div><div class="line">System.out.println(arr3);</div><div class="line"></div><div class="line">arr1[0] = 10;</div><div class="line">arr1[1] = 20;</div><div class="line"></div><div class="line">arr2[1] = 30;</div><div class="line">arr3[1] = 40;</div><div class="line">arr3[2] = 50;</div><div class="line"></div><div class="line">System.out.println(arr1[0]);</div><div class="line">System.out.println(arr1[1]);</div><div class="line">System.out.println(arr1[2]);</div><div class="line">System.out.println(&quot;-------------------------------&quot;);</div><div class="line">System.out.println(arr2[0]);</div><div class="line">System.out.println(arr2[1]);</div><div class="line">System.out.println(arr2[2]);</div><div class="line">System.out.println(arr2[3]);</div><div class="line">System.out.println(arr2[4]);</div><div class="line">System.out.println(&quot;-------------------------------&quot;);</div><div class="line">System.out.println(arr3[0]);</div><div class="line">System.out.println(arr3[1]);</div><div class="line">System.out.println(arr3[2]);</div><div class="line">System.out.println(arr3[3]);</div><div class="line">System.out.println(arr3[4]);</div></pre></td></tr></table></figure>
-<p><img src="http://wxhao2.duapp.com/blog/post-in/20130622/sgyylgsz.png" alt="三个引用两个数组"></p>
-<h3 id="数组的初始化静态初始化及内存图"><a href="#数组的初始化静态初始化及内存图" class="headerlink" title="数组的初始化静态初始化及内存图"></a>数组的初始化静态初始化及内存图</h3><ul>
-<li>A:静态初始化的格式：<ul>
-<li>格式：数据类型[] 数组名 = new 数据类型[]{元素1,元素2,…};</li>
-<li>简化格式：<ul>
-<li>数据类型[] 数组名 = {元素1,元素2,…};</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>B:案例演示<ul>
-<li>对数组的解释</li>
-<li>输出数组名称和数组元素</li>
-</ul>
-</li>
-<li>C:画图演示<ul>
-<li>一个数组</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//数据类型[] 数组名 = new 数据类型[]&#123;元素1,元素2,…&#125;;</div><div class="line">//int[] arr = new int[5]&#123;11,22,33,44,55&#125;;	//不允许动静结合</div><div class="line">int[] arr2 = &#123;11,22,33,44,55&#125;;			//静态初始化的简写形式</div><div class="line"></div><div class="line">//int[] arr;								//声明数组引用</div><div class="line">//arr = new int[]&#123;11,22,33,44,55&#125;;</div><div class="line"></div><div class="line">//int[] arr2;</div><div class="line">//arr2 = &#123;11,22,33,44,55&#125;;				//简写形式声明和赋值在同一行</div><div class="line"></div><div class="line">System.out.println(arr2);</div><div class="line">System.out.println(arr2[4]);</div></pre></td></tr></table></figure>
-<p><img src="http://wxhao2.duapp.com/blog/post-in/20130622/szjtcsh.png" alt="数组的静态初始化"></p>
-<p>都会默认初始化为0在赋值</p>
-<h3 id="数组操作的两个常见小问题越界和空指针"><a href="#数组操作的两个常见小问题越界和空指针" class="headerlink" title="数组操作的两个常见小问题越界和空指针"></a>数组操作的两个常见小问题越界和空指针</h3><ul>
-<li>A:案例演示<ul>
-<li>a:ArrayIndexOutOfBoundsException:数组索引越界异常<ul>
-<li>原因：你访问了不存在的索引。</li>
-</ul>
-</li>
-<li>b:NullPointerException:空指针异常<ul>
-<li>原因：数组已经不在指向堆内存了。而你还用数组名去访问元素。</li>
-<li>int[] arr = {1,2,3};</li>
-<li>arr = null;</li>
-<li>System.out.println(arr[0]);</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">int[] arr = new int[5];//0x0011</div><div class="line">//System.out.println(arr[-1]);//当访问数组中不存在的索引,会出现索引越界异常</div><div class="line"></div><div class="line">arr = null;</div><div class="line">System.out.println(arr[0]);	//当数组引用赋值为null,再去调用数组中的元素就会出现空指针异常</div></pre></td></tr></table></figure>
-<h3 id="数组的操作1遍历"><a href="#数组的操作1遍历" class="headerlink" title="数组的操作1遍历"></a>数组的操作1遍历</h3><ul>
-<li>A:案例演示<ul>
-<li>数组遍历：就是依次输出数组中的每一个元素。</li>
-<li>数组的属性:arr.length数组的长度</li>
-<li>数组的最大索引:arr.length - 1;</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">class Demo_Array &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] arr = &#123;11,22,33,44,55&#125;;</div><div class="line"></div><div class="line">		/*System.out.println(arr[0]);</div><div class="line">		System.out.println(arr[1]);</div><div class="line">		System.out.println(arr[2]);</div><div class="line">		System.out.println(arr[3]);</div><div class="line">		System.out.println(arr[4]);*/</div><div class="line">		</div><div class="line">		for (int i = 0;i &lt; 5 ;i++ ) &#123;</div><div class="line">			System.out.println(arr[i]);</div><div class="line">		&#125;</div><div class="line">		System.out.println(&quot;---------------&quot;);</div><div class="line">		//arr.length 代表的是数组的长度</div><div class="line">		System.out.println(arr.length);</div><div class="line">		for (int i = 0;i &lt; arr.length ;i++ ) &#123;</div><div class="line">			System.out.println(arr[i]);</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		int[] arr2 = &#123;3,4,5&#125;;</div><div class="line">		print(arr2);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	数组的遍历</div><div class="line">	1,返回值类型void</div><div class="line">	2,参数列表int[] arr</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static void print(int[] arr) &#123;</div><div class="line">		for (int i = 0;i &lt; arr.length ;i++ ) &#123;</div><div class="line">			System.out.print(arr[i] + &quot; &quot;);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="数组的操作2获取最值"><a href="#数组的操作2获取最值" class="headerlink" title="数组的操作2获取最值"></a>数组的操作2获取最值</h3><ul>
-<li>A:案例演示<ul>
-<li>数组获取最值(获取数组中的最大值最小值)</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">class Demo_Array &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] arr = &#123;33,77,22,44,55&#125;;</div><div class="line">		int max = getMax(arr);</div><div class="line">		System.out.println(max);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	获取数组中最大值</div><div class="line">	1,返回值类型int</div><div class="line">	2,参数列表int[] arr</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static int getMax(int[] arr) &#123;</div><div class="line">		int max = arr[0];</div><div class="line">		for (int i = 1;i &lt; arr.length ;i++ ) &#123;//从数组的第二个元素开始遍历</div><div class="line">			if (max &lt; arr[i]) &#123;//如果max记录的值小于的数组中的元素</div><div class="line">				max = arr[i];//max记录住较大的</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		return max;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="数组的操作3反转"><a href="#数组的操作3反转" class="headerlink" title="数组的操作3反转"></a>数组的操作3反转</h3><ul>
-<li>A:案例演示<ul>
-<li>数组元素反转(就是把元素对调)</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">class Demo_Array &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] arr = &#123;11,22,33,44,55&#125;;</div><div class="line">		reverseArray(arr);</div><div class="line">		print(arr);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	数组元素反转</div><div class="line">	1,明确返回值类型void</div><div class="line">	2,明确参数列表int[] arr</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static void reverseArray(int[] arr) &#123;</div><div class="line">		for (int i = 0;i &lt; arr.length / 2 ; i++) &#123;</div><div class="line">			//arr[0]和arr[arr.length-1-0]交换</div><div class="line">			//arr[1]和arr[arr.length-1-1]交换</div><div class="line">			//arr[2]和arr[arr.lentth-1-2]</div><div class="line">			//...</div><div class="line"></div><div class="line">			int temp = arr[i];</div><div class="line">			arr[i] = arr[arr.length-1-i];</div><div class="line">			arr[arr.length-1-i] = temp;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	数组遍历</div><div class="line">	1,明确返回值类型void</div><div class="line">	2,明确参数列表int[] arr</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static void print(int[] arr) &#123;</div><div class="line">		for (int i = 0;i &lt; arr.length ;i++ ) &#123;				//遍历数组中的每一个元素</div><div class="line">			System.out.print(arr[i] + &quot; &quot;);					//打印在控制台</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="数组的操作4查表法"><a href="#数组的操作4查表法" class="headerlink" title="数组的操作4查表法"></a>数组的操作4查表法</h3><ul>
-<li>A:案例演示<ul>
-<li>数组查表法(根据键盘录入索引,查找对应星期)</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">import java.util.Scanner;</div><div class="line">class Demo_Array &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);</div><div class="line">		System.out.println(&quot;请输入对应的星期范围在1-7&quot;);</div><div class="line">		int week = sc.nextInt();</div><div class="line"></div><div class="line">		System.out.println(&quot;星期&quot; + getWeek(week));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	根据索引返回对应的星期</div><div class="line">	1,返回值类型char</div><div class="line">	2,参数列表int week</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static char getWeek(int week) &#123;</div><div class="line">		char[] arr = &#123;&apos; &apos;,&apos;一&apos;,&apos;二&apos;,&apos;三&apos;,&apos;四&apos;,&apos;五&apos;,&apos;六&apos;,&apos;日&apos;&#125;;		//定义了一张星期表</div><div class="line">		return arr[week];											//通过索引获取表中的元素</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
-<h3 id="数组的操作5基本查找"><a href="#数组的操作5基本查找" class="headerlink" title="数组的操作5基本查找"></a>数组的操作5基本查找</h3><ul>
-<li>A:案例演示<ul>
-<li>数组元素查找(查找指定元素第一次在数组中出现的索引)</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">class Demo_Array &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] arr = &#123;11,22,33,44,55,66,77&#125;;</div><div class="line">		int index = getIndex(arr,88);</div><div class="line">		System.out.println(index);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	查找元素索引</div><div class="line">	1,返回值类型int</div><div class="line">	2,明确参数列表,int[] arr,int value</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static int getIndex(int[] arr,int value) &#123;</div><div class="line">		for (int i = 0;i &lt; arr.length ;i++ ) &#123;				//数组的遍历</div><div class="line">			if (arr[i] == value) &#123;							//如果数组中的元素与查找的元素匹配</div><div class="line">				return i;</div><div class="line">			&#125;</div><div class="line"></div><div class="line">		&#125;</div><div class="line">		return -1;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2013/06/22/2013-06-22-javase-method-array-jvm/#more">more >></a>
+        
       
 
       
@@ -439,124 +275,28 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="方法概述和格式说明"><a href="#方法概述和格式说明" class="headerlink" title="方法概述和格式说明"></a>方法概述和格式说明</h3><ul>
-<li>A:为什么要有方法<ul>
+<li><p>A:为什么要有方法</p>
+<ul>
 <li>提高代码的复用性 </li>
 </ul>
 </li>
-<li>B:什么是方法<ul>
+<li><p>B:什么是方法</p>
+<ul>
 <li>完成特定功能的代码块。 </li>
 </ul>
 </li>
-<li>C:方法的格式</li>
-<li><pre><code>修饰符 返回值类型 方法名(参数类型 参数名1,参数类型 参数名2...) {
-    方法体语句;
+<li><p>C:方法的格式</p>
+</li>
+<li><p> 修饰符 返回值类型 方法名(参数类型 参数名1,参数类型 参数名2…) {</p>
+<pre><code>    方法体语句;
     return 返回值; 
 } 
-</code></pre></li>
-<li>D:方法的格式说明<ul>
-<li>修饰符：目前就用 public static。后面我们再详细的讲解其他的修饰符。</li>
-<li>返回值类型：就是功能结果的数据类型。</li>
-<li>方法名：符合命名规则即可。方便我们的调用。</li>
-<li>参数：<ul>
-<li>实际参数：就是实际参与运算的。</li>
-<li>形式参数；就是方法定义上的，用于接收实际参数的。</li>
-</ul>
-</li>
-<li>参数类型：就是参数的数据类型</li>
-<li>参数名：就是变量名</li>
-<li>方法体语句：就是完成功能的代码。</li>
-<li>return：结束方法的。</li>
-<li>返回值：就是功能的结果，由return带给调用者。 </li>
-</ul>
+</code></pre><p> ​</p>
 </li>
 </ul>
-<h3 id="方法之求和案例及其调用"><a href="#方法之求和案例及其调用" class="headerlink" title="方法之求和案例及其调用"></a>方法之求和案例及其调用</h3><ul>
-<li>A:如何写一个方法<ul>
-<li>1,明确返回值类型</li>
-<li>2,明确参数列表 </li>
-</ul>
-</li>
-<li>B:代码演示<ul>
-<li>需求：求两个数据之和的案例</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		/*int a = 10;</div><div class="line">		int b = 20;</div><div class="line">		int sum = a + b;</div><div class="line">		System.out.println(sum);</div><div class="line"></div><div class="line">		int c = 30;</div><div class="line">		int d = 40;</div><div class="line">		int sum2 = c + d;</div><div class="line">		System.out.println(sum2);*/</div><div class="line"></div><div class="line">		int sum = add(10,20);</div><div class="line">		System.out.println(sum);</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	求两个整数的和</div><div class="line">	1,整数的和结果应该还是整数</div><div class="line">	2,有两个未知内容参与运算</div><div class="line"></div><div class="line">	如何写方法</div><div class="line">	1,明确返回值类型</div><div class="line">	2,明确参数列表</div><div class="line"></div><div class="line">	* 修饰符：目前就用 public static。后面我们再详细的讲解其他的修饰符。</div><div class="line">		* 返回值类型：就是功能结果的数据类型。</div><div class="line">		* 方法名：符合命名规则即可。方便我们的调用。</div><div class="line">		* 参数：</div><div class="line">			* 实际参数：就是实际参与运算的。</div><div class="line">			* 形式参数；就是方法定义上的，用于接收实际参数的。</div><div class="line">		* 参数类型：就是参数的数据类型</div><div class="line">		* 参数名：就是变量名</div><div class="line">		* 方法体语句：就是完成功能的代码。</div><div class="line">		* return：结束方法的。</div><div class="line">		* 返回值：就是功能的结果，由return带给调用者。</div><div class="line">	*/</div><div class="line">	public static int add(int a,int b) &#123;			//int a = 10,int b = 20</div><div class="line">		int sum = a + b;</div><div class="line">		return sum;									//如果有返回值必须用return语句带回</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>C:方法调用图解</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">	    int sum = add(10,20);//1.调用add,把 10和20分别传递给a和b</div><div class="line">	    //5.讲方法返回值返回给sum</div><div class="line">		System.out.println(sum);</div><div class="line">		</div><div class="line">		//盘子 = 炒菜(地沟油,苏丹红,镉大米,烂白菜);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public static int add(int a,int b) &#123;//2.赋值a=10,b=20			</div><div class="line">		int sum = a + b;//3.执行语句</div><div class="line">		return sum;//4.通过return 将sum结果返回</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">/* 厨师 有 炒菜功能</div><div class="line">	盘子 炒菜(油,调料,米,菜) &#123;</div><div class="line">		炒菜的动作</div><div class="line">		return 一盘菜;</div><div class="line">	&#125;</div><div class="line">	*/</div></pre></td></tr></table></figure>
-<h3 id="方法的注意事项"><a href="#方法的注意事项" class="headerlink" title="方法的注意事项"></a>方法的注意事项</h3><ul>
-<li>A:方法调用(有具体返回值)<ul>
-<li>a:单独调用,一般来说没有意义，所以不推荐。</li>
-<li>b:输出调用,但是不够好。因为我们可能需要针对结果进行进一步的操作。</li>
-<li>c:赋值调用,推荐方案。</li>
-</ul>
-</li>
-<li>B:注意事项<ul>
-<li>a:方法不调用不执行</li>
-<li>b:方法与方法是平级关系，不能<strong>嵌套定义</strong></li>
-<li>c:方法定义的时候参数之间用逗号隔开</li>
-<li>d:方法调用的时候不用在传递数据类型</li>
-<li>e:如果方法有明确的返回值，一定要有return带回一个值</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">add(30,40);//有返回值方法的单独调用,没有意义</div><div class="line">System.out.println(add(30,40));//这样调用是可以,but如果需要用这个结果不推荐这样调用</div></pre></td></tr></table></figure>
-<h3 id="方法的练习1"><a href="#方法的练习1" class="headerlink" title="方法的练习1"></a>方法的练习1</h3><ul>
-<li><p>需求A：键盘录入两个数据，返回两个数中的较大值</p>
-</li>
-<li><p>需求B：键盘录入两个数据，比较两个数是否相等     </p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">import java.util.Scanner;</div><div class="line">class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);				//创建键盘录入对象</div><div class="line">		System.out.println(&quot;请输入第一个整数:&quot;);</div><div class="line">		int x = sc.nextInt();								//将键盘录入的整数存储在x中</div><div class="line">		System.out.println(&quot;请输入第二个整数:&quot;);</div><div class="line">		int y = sc.nextInt();								//将键盘录入的整数存储在y中</div><div class="line"></div><div class="line">		int max = getMax(x,y);</div><div class="line">		System.out.println(max);</div><div class="line"></div><div class="line">		boolean b = isEquals(x,y);</div><div class="line">		System.out.println(b);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	返回连个整数的较大值</div><div class="line">	1,明确返回值类型 int</div><div class="line">	2,明确参数列表 int a,int b</div><div class="line">	*/</div><div class="line">	public static int getMax(int a,int b) &#123;</div><div class="line">		return a &gt; b ? a : b;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	判断两个整数是否相等</div><div class="line">	1,明确返回值类型 boolean</div><div class="line">	2,明确参数列表 int a,int b</div><div class="line">	*/</div><div class="line">	public static boolean isEquals(int a,int b) &#123;		//isEquals 是否相等</div><div class="line">		return a == b;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="方法之输出星形及其调用"><a href="#方法之输出星形及其调用" class="headerlink" title="方法之输出星形及其调用"></a>方法之输出星形及其调用</h3><ul>
-<li>A:代码演示<ul>
-<li>需求：根据键盘录入的行数和列数，在控制台输出星形</li>
-</ul>
-</li>
-<li>B:方法调用：(无返回值,void)<ul>
-<li>单独调用</li>
-<li>输出调用(错误)</li>
-<li>赋值调用(错误)</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">import java.util.Scanner;</div><div class="line">class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);			//创建键盘录入对象</div><div class="line">		System.out.println(&quot;请输入行数:&quot;);</div><div class="line">		int row = sc.nextInt();							//将键盘录入的行数存储在row中</div><div class="line">		System.out.println(&quot;请输入列数:&quot;);</div><div class="line">		int column = sc.nextInt();						//将键盘录入的列数存储在column中</div><div class="line">		</div><div class="line">		//System.out.println(print(row,column));		//错误: 此处不允许使用 &apos;空&apos; 类型,返回值是void的方法不能输出调用</div><div class="line">		//返回值是void的方法只能单独调用</div><div class="line">		print(row,column);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	在控制台输出矩形星形</div><div class="line">	1,明确返回值类型,经分析没有具体的返回值类型,void</div><div class="line">	2,明确参数列表int a,int b</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static void print(int a,int b) &#123;</div><div class="line">		for (int i = 1;i &lt;= a ;i++ ) &#123;					//行数</div><div class="line">			for (int j = 1;j &lt;= b ;j++ ) &#123;				//列数</div><div class="line">				System.out.print(&quot;*&quot;);</div><div class="line">			&#125;</div><div class="line">			System.out.println();</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		//return ;										//如果返回值类型是void,return可以省略,即使省略系统也会默认给加上,形式是return;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="方法的练习2"><a href="#方法的练习2" class="headerlink" title="方法的练习2"></a>方法的练习2</h3><ul>
-<li>需求：根据键盘录入的数据输出对应的乘法表</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">import java.util.Scanner;</div><div class="line">class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);		//创建键盘录入对象</div><div class="line">		System.out.println(&quot;请录入一个整数,范围在1-9之间&quot;);</div><div class="line">		int num = sc.nextInt();						//将键盘录入的整数存储在num中</div><div class="line">		print99(num);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	打印99乘法表</div><div class="line">	1,返回值类型void</div><div class="line">	2,参数列表,int a</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static void print99(int a) &#123;</div><div class="line">		for (int i = 1;i &lt;= a ;i++ ) &#123;					//行数</div><div class="line">			for (int j = 1;j &lt;= i ;j++ ) &#123;				//列数</div><div class="line">				System.out.print(j + &quot;*&quot; + i + &quot;=&quot; + (i * j) + &quot;\t&quot; );</div><div class="line">			&#125;</div><div class="line">			System.out.println();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="方法重载概述和基本使用"><a href="#方法重载概述和基本使用" class="headerlink" title="方法重载概述和基本使用"></a>方法重载概述和基本使用</h3><ul>
-<li>A:方法重载概述<ul>
-<li>求和案例<ul>
-<li>2个整数</li>
-<li>3个整数</li>
-<li>4个整数</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>B:方法重载：</p>
-<ul>
-<li><p>在同一个类中，方法名相同，参数列表不同。与返回值类型无关。</p>
-</li>
-<li><p>参数列表不同：</p>
-<ul>
-<li>A:参数个数不同</li>
-<li>B:参数类型不同</li>
-<li>C:参数的顺序不同(算重载,但是在开发中不用)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line">重载:方法名相同,参数列表不同,与返回值类型无关</div><div class="line">重载的分类</div><div class="line">1,参数个数不同</div><div class="line">2,参数类型不同</div><div class="line">	顺序不同</div><div class="line">*/</div><div class="line">class Demo4_Overload &#123;						//overload重载</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		double sum1 = add(10,20.1);</div><div class="line">		System.out.println(sum1);</div><div class="line"></div><div class="line">		int sum2 = add(10,20,30);</div><div class="line">		System.out.println(sum2);</div><div class="line"></div><div class="line">		double sum3 = add(12.3,13);</div><div class="line">		System.out.println(sum3);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	求两个整数的和</div><div class="line">	1,返回值类型int</div><div class="line">	2,参数列表 int a,int b</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static double add(int a,double b) &#123;</div><div class="line">		return a + b;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	求三个整数的和</div><div class="line">	1,返回值类型int</div><div class="line">	2,参数列表 int a,int b,int c</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static int add(int a,int b,int c) &#123;</div><div class="line">		return a + b + c;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	求两个小数的和</div><div class="line">	1,返回值类型double</div><div class="line">	2,参数列表 double a,double b</div><div class="line">	*/</div><div class="line"></div><div class="line">	public static double add(double a,int b) &#123;</div><div class="line">		return a + b;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="方法重载练习比较数据是否相等"><a href="#方法重载练习比较数据是否相等" class="headerlink" title="方法重载练习比较数据是否相等"></a>方法重载练习比较数据是否相等</h3><ul>
-<li>需求：比较两个数据是否相等。</li>
-<li>参数类型分别为两个int类型，两个double类型，并在main方法中进行测试</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">class Test_Overload &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		boolean b1 = isEquals(10,10);</div><div class="line">		System.out.println(b1);</div><div class="line"></div><div class="line">		boolean b2 = isEquals(10.5,10.5);</div><div class="line">		System.out.println(b2);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	比较两个数据是否相等</div><div class="line">	1,返回值类型boolean</div><div class="line">	2,参数列表int a,int b</div><div class="line">	*/</div><div class="line">	public static boolean isEquals(int a,int b) &#123;</div><div class="line">		return a == b;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	比较两个数据是否相等</div><div class="line">	1,返回值类型boolean</div><div class="line">	2,参数列表double a,double b</div><div class="line">	*/</div><div class="line">	public static boolean isEquals(double a,double b) &#123;</div><div class="line">		return a == b;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2013/06/19/2013-06-19-javase-method-structure/#more">more >></a>
+        
       
 
       
@@ -631,8 +371,7 @@
 </ul>
 </li>
 <li>B:循环结构for语句的格式：</li>
-<li><pre><code>for(初始化表达式;条件表达式;循环后的操作表达式) {
-    循环体;
+<li> for(初始化表达式;条件表达式;循环后的操作表达式) {<pre><code>    循环体;
 }
 </code></pre></li>
 <li>C执行流程：<ul>
@@ -647,200 +386,10 @@
 <li>e:回到B继续。</li>
 </ul>
 </li>
-<li>D:代码演示<ul>
-<li>在控制台输出10次”helloworld”</li>
 </ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">//在控制输出10次helloworld,这样做不推荐,因为复用性太差</div><div class="line">/*System.out.println(&quot;helloworld&quot;);</div><div class="line">System.out.println(&quot;helloworld&quot;);</div><div class="line">System.out.println(&quot;helloworld&quot;);</div><div class="line">System.out.println(&quot;helloworld&quot;);</div><div class="line">System.out.println(&quot;helloworld&quot;);</div><div class="line">System.out.println(&quot;helloworld&quot;);</div><div class="line">System.out.println(&quot;helloworld&quot;);</div><div class="line">System.out.println(&quot;helloworld&quot;);</div><div class="line">System.out.println(&quot;helloworld&quot;);</div><div class="line">System.out.println(&quot;helloworld&quot;);*/</div><div class="line"></div><div class="line">for (int i = 1;i &lt;= 10 ;i++ ) &#123;</div><div class="line">	System.out.println(&quot;helloworld&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="循环结构for语句的练习"><a href="#循环结构for语句的练习" class="headerlink" title="循环结构for语句的练习"></a>循环结构for语句的练习</h3><h6 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h6><ul>
-<li>A:代码演示<ul>
-<li>需求：请在控制台输出数据1-10</li>
-<li>需求：请在控制台输出数据10-1</li>
-</ul>
-</li>
-<li>B:注意事项<ul>
-<li>a:判断条件语句无论简单还是复杂结果是boolean类型。</li>
-<li>b:循环体语句如果是一条语句，大括号可以省略；如果是多条语句，大括号不能省略。建议永远不要省略。</li>
-<li>c:一般来说：有左大括号就没有分号，有分号就没有左大括号</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">for (int i = 1;i &lt;= 10 ;i++ )&#123;</div><div class="line">	System.out.println(&quot;i = &quot; + i);</div><div class="line">&#125;</div><div class="line">System.out.println(&quot;-----------------------&quot;);</div><div class="line"></div><div class="line">for (int i = 10;i &gt;= 1 ;i-- ) &#123;</div><div class="line">	System.out.println(&quot;i = &quot; + i);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h6 id="求和思想"><a href="#求和思想" class="headerlink" title="求和思想"></a>求和思想</h6><ul>
-<li>A:代码演示<ul>
-<li>需求：求出1-10之间数据之和</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//1-10的和</div><div class="line">int sum = 0;</div><div class="line">for (int i = 1;i &lt;= 10 ;i++ ) &#123;</div><div class="line">	sum = sum + i;</div><div class="line">&#125;</div><div class="line"></div><div class="line">System.out.println(&quot;sum = &quot; + sum);</div></pre></td></tr></table></figure>
-<ul>
-<li>B:练习<ul>
-<li>需求：求出1-100之间偶数和</li>
-<li>需求：求出1-100之间奇数和</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">//1-100的偶数和</div><div class="line">/*int sum = 0;</div><div class="line">for (int i = 1;i &lt;= 100 ;i++ ) &#123;</div><div class="line">	if (i % 2 == 0) &#123;</div><div class="line">		sum = sum + i;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">System.out.println(&quot;sum = &quot; + sum);*/</div><div class="line"></div><div class="line">//1-100的奇数和</div><div class="line">int sum = 0;</div><div class="line">for (int i = 1;i &lt;= 100 ;i+=2 ) &#123;</div><div class="line">	/*if (i % 2 != 0) &#123;</div><div class="line">		sum = sum + i;</div><div class="line">	&#125;*/</div><div class="line">	sum = sum + i;</div><div class="line">&#125;</div><div class="line"></div><div class="line">System.out.println(&quot;sum = &quot; + sum);</div></pre></td></tr></table></figure>
-<h6 id="水仙花"><a href="#水仙花" class="headerlink" title="水仙花"></a>水仙花</h6><ul>
-<li><p>A:代码演示</p>
-<ul>
-<li><p>需求：在控制台输出所有的”水仙花数”</p>
-</li>
-<li><p>所谓的水仙花数是指一个三位数，其各位数字的立方和等于该数本身。</p>
-</li>
-<li>举例：153就是一个水仙花数。</li>
-<li>153 = 1<em>1</em>1 + 5<em>5</em>5 + 3<em>3</em>3 = 1 + 125 + 27 = 153</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">//三位数是100到999之间</div><div class="line">for(int i = 100;i &lt; 1000 ;i++)&#123;</div><div class="line">    int ge = i % 10;//个位</div><div class="line">    int shi = i / 10 % 10;//十位</div><div class="line">    int bai = i / 100 ;//百位</div><div class="line">    if(ge * ge * ge + shi * shi * shi + bai * bai * bai == i)&#123;</div><div class="line">        System.out.println(i);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h6 id="统计思想"><a href="#统计思想" class="headerlink" title="统计思想"></a>统计思想</h6><ul>
-<li>A:代码演示<ul>
-<li>需求：统计”水仙花数”共有多少个</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">int count = 0;</div><div class="line">for(int i = 100;i &lt; 1000 ;i++)&#123;</div><div class="line">    int ge = i % 10;//个位</div><div class="line">    int shi = i / 10 % 10;//十位</div><div class="line">    int bai = i / 100 ;//百位</div><div class="line">    if(ge * ge * ge + shi * shi * shi + bai * bai * bai == i)&#123;</div><div class="line">        count++;//满足条件自增,计数器思想</div><div class="line">    &#125;</div><div class="line">    System.out.println(count);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="循环结构while语句"><a href="#循环结构while语句" class="headerlink" title="循环结构while语句"></a>循环结构while语句</h3><h6 id="格式和基本使用"><a href="#格式和基本使用" class="headerlink" title="格式和基本使用"></a>格式和基本使用</h6><ul>
-<li>A:循环结构while语句的格式：</li>
-<li><p>while循环的基本格式：<br>while(判断条件语句) {<br>  循环体语句;<br>}</p>
-<p>完整格式：</p>
-<p>初始化语句;<br>while(判断条件语句) {<br>   循环体语句;<br>   控制条件语句;<br>}</p>
-</li>
-<li>B:执行流程：<ul>
-<li>a:执行初始化语句</li>
-<li>b:执行判断条件语句,看其返回值是true还是false<ul>
-<li>如果是true，就继续执行</li>
-<li>如果是false，就结束循环</li>
-</ul>
-</li>
-<li>c:执行循环体语句;</li>
-<li>d:执行控制条件语句</li>
-<li>e:回到b继续。</li>
-</ul>
-</li>
-<li>C:代码演示<ul>
-<li>需求：请在控制台输出数据1-10</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">int x = 1;</div><div class="line">while (x &lt;= 10) &#123;</div><div class="line">	System.out.println(&quot;x = &quot; +  x);</div><div class="line">	x++;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h6 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h6><ul>
-<li>A:求和思想<ul>
-<li>求1-100之和</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">int sum = 0;</div><div class="line">int i = 1;</div><div class="line">while (i &lt;= 100) &#123;</div><div class="line">	sum += i;//sum = sum + i;</div><div class="line">	i++;//让变量i自增</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>B:统计思想<ul>
-<li>统计”水仙花数”共有多少个</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">int count = 0;//计数器</div><div class="line">int i = 100;</div><div class="line">while (i &lt;= 999) &#123;</div><div class="line">	int ge = i % 10;</div><div class="line">	int shi = i / 10 % 10;</div><div class="line">	int bai = i / 100;</div><div class="line"></div><div class="line">	if (i == ge * ge * ge + shi * shi * shi + bai * bai * bai) &#123;</div><div class="line">		count ++;</div><div class="line">	&#125;</div><div class="line">	i++;</div><div class="line">&#125;</div><div class="line"></div><div class="line">System.out.println(&quot;count =&quot; + count);</div></pre></td></tr></table></figure>
-<ul>
-<li>问题:某屌丝为了追求女神,写了一段代码示爱,但是女神也会java,改动一下把屌丝拒绝<ul>
-<li>while (j &lt;= 10000) ; //加分号<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">int j = 1;</div><div class="line">while (j &lt;= 10000) &#123;</div><div class="line">	System.out.println(&quot;I Love You!!!&quot;);</div><div class="line">	j++;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="循环结构do…while语句的格式和基本使用"><a href="#循环结构do…while语句的格式和基本使用" class="headerlink" title="循环结构do…while语句的格式和基本使用"></a>循环结构do…while语句的格式和基本使用</h3><ul>
-<li>A:循环结构do…while语句的格式：</li>
-<li><pre><code>do {
-    循环体语句;
-}while(判断条件语句);
-
-完整格式；
-初始化语句;
-do {
-    循环体语句;
-    控制条件语句;
-}while(判断条件语句);
-</code></pre></li>
-<li>B:执行流程：<ul>
-<li>a:执行初始化语句</li>
-<li>b:执行循环体语句;</li>
-<li>c:执行控制条件语句</li>
-<li>d:执行判断条件语句,看其返回值是true还是false<ul>
-<li>如果是true，就继续执行</li>
-<li>如果是false，就结束循环</li>
-</ul>
-</li>
-<li>e:回到b继续。</li>
-</ul>
-</li>
-<li>C:代码演示<ul>
-<li>需求：请在控制台输出数据1-10</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">int i = 11;</div><div class="line">do &#123;</div><div class="line">	System.out.println(&quot;i = &quot; + i);</div><div class="line">	i++;</div><div class="line">&#125;</div><div class="line">while (i &lt;= 10);</div></pre></td></tr></table></figure>
-<h3 id="循环结构三种循环语句的区别"><a href="#循环结构三种循环语句的区别" class="headerlink" title="循环结构三种循环语句的区别"></a>循环结构三种循环语句的区别</h3><ul>
-<li>A:代码演示<ul>
-<li>三种循环语句的区别:</li>
-<li>do…while循环至少执行一次循环体。</li>
-<li>而for,while循环必须先判断条件是否成立，然后决定是否执行循环体语句。</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">int i = 11;</div><div class="line">do &#123;</div><div class="line">	System.out.println(&quot;i = &quot; + i);</div><div class="line">	i++;</div><div class="line">&#125;</div><div class="line">while (i &lt;= 10);</div><div class="line">//↑dowhile---↓while</div><div class="line">int j = 11;</div><div class="line">while (j &lt;= 10) &#123;</div><div class="line">	System.out.println(&quot;j = &quot; + j);</div><div class="line">	j++;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>B:代码演示<ul>
-<li>for循环和while循环的区别：<ul>
-<li>A:如果你想在循环结束后，继续使用控制条件的那个变量，用while循环，否则用for循环。不知道用谁就用for循环。因为变量及早的从内存中消失，可以提高内存的使用效率。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">for (int i = 1;i &lt;= 10 ;i++ ) &#123;</div><div class="line">	System.out.println(&quot;i = &quot; + i);</div><div class="line">&#125;</div><div class="line">//for语句执行后变量会被释放,不能再使用</div><div class="line">//System.out.println(&quot;i = &quot; + i);			</div><div class="line">//-----------</div><div class="line">int i = 1;</div><div class="line">while (i &lt;= 10) &#123;</div><div class="line">	System.out.println(&quot;i = &quot; + i);</div><div class="line">	i++;</div><div class="line">&#125;</div><div class="line">//while语句执行后,初始化变量还可以继续使用</div><div class="line">System.out.println(&quot;i = &quot; + i);</div></pre></td></tr></table></figure>
-<h3 id="循环结构注意事项之死循环"><a href="#循环结构注意事项之死循环" class="headerlink" title="循环结构注意事项之死循环"></a>循环结构注意事项之死循环</h3><ul>
-<li>A:一定要注意控制条件语句控制的那个变量的问题，不要弄丢了，否则就容易死循环。</li>
-<li>B:两种最简单的死循环格式<ul>
-<li>while(true){…}</li>
-<li>for(;;){…}</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">//while语句的无限循环</div><div class="line">while (true) &#123;</div><div class="line">	System.out.println(&quot;hello world&quot;);</div><div class="line">	</div><div class="line">//for语句的无限循环</div><div class="line">for (; ; ) &#123;</div><div class="line">	System.out.println(&quot;hello world&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="循环结构循环嵌套"><a href="#循环结构循环嵌套" class="headerlink" title="循环结构循环嵌套"></a>循环结构循环嵌套</h3><h6 id="输出4行5列的星星"><a href="#输出4行5列的星星" class="headerlink" title="输出4行5列的星星"></a>输出4行5列的星星</h6><ul>
-<li>A:代码演示<ul>
-<li>需求：请输出一个4行5列的星星(*)图案。</li>
-<li>注意：System.out.println(“<em>“);和System.out.print(“</em>“);的区别</li>
-<li>如图：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">	*****</div><div class="line">	*****</div><div class="line">	*****</div><div class="line">	*****</div><div class="line">```			</div><div class="line"></div><div class="line">* B:结论：</div><div class="line">	* 外循环控制行数，内循环控制列数</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<p>for (int i = 1;i &lt;= 4 ;i++ ) {                    //外循环决定的是行数<br>    for (int j = 1;j &lt;= 5 ;j++ ) {                //内循环决定的是列数<br>        System.out.print(“*”);<br>    }<br>    System.out.println();<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">###### 正三角形</div><div class="line">* A:代码演示</div><div class="line">    * 需求：请输出下列的形状</div></pre></td></tr></table></figure></p>
-<pre><code>*
-**
-***
-****
-*****
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<p>for (int i = 1;i &lt;= 5 ; i++) {            //外循环决定行数<br>    for (int j = 1;j &lt;= i ;j++ ) {            //内循环决定列数<br>        System.out.print(“*”);<br>    }<br>    System.out.println();                //将光标换到下一行的行首<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 循环结构九九乘法表</div><div class="line">* A:代码演示</div><div class="line">	* 需求：在控制台输出九九乘法表。</div></pre></td></tr></table></figure></p>
-<p>for (int i = 1;i &lt;= 9 ;i++ ) {                    //行数<br>    for (int j = 1;j &lt;= i ;j++ ) {                //列数<br>        System.out.print(j + “<em>“ + i + “=” + (i </em> j) + “\t” );<br>    }<br>    System.out.println();<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">* B:代码优化</div><div class="line">* </div><div class="line">		注意：</div><div class="line">		&apos;\x&apos; x表示任意，\是转义符号,这种做法叫转移字符。</div><div class="line">		</div><div class="line">		&apos;\t&apos;	tab键的位置</div><div class="line">		&apos;\r&apos;	回车</div><div class="line">		&apos;\n&apos;	换行</div><div class="line">		&apos;\&quot;&apos;</div><div class="line">		&apos;\&apos;&apos;</div><div class="line"></div><div class="line">&gt; windows \r\n 回车换行</div><div class="line">  mac \r 回车换行</div><div class="line">  Linux \n 回车换行</div></pre></td></tr></table></figure></p>
-<p>System.out.println(“\””);//转义双引号<br>System.out.println(‘\’’);//转义单引号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">	</div><div class="line">### 控制跳转语句</div><div class="line">###### break语句</div><div class="line">* break的使用场景</div><div class="line">	* 只能在switch和循环中</div></pre></td></tr></table></figure></p>
-<p>for (int x = 1;x &lt;= 10 ;x++ ) {<br>    if (x == 4) {<br>        break;//跳出循环<br>    }<br>    System.out.println(“x = “ + x);<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">###### continue语句</div><div class="line">* continue的使用场景</div><div class="line">	* 只能在循环中</div></pre></td></tr></table></figure></p>
-<p>for (int x = 1;x &lt;= 10 ;x++ ) {<br>    if (x == 4) {<br>        continue;//终止本次循环,继续下次循环<br>    }</p>
-<pre><code>System.out.println(&quot;x = &quot; + x);
-</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">###### 标号</div><div class="line">* 标号:标记某个循环对其控制</div><div class="line">* 标号组成规则:其实就是合法的标识符</div></pre></td></tr></table></figure></p>
-<p>outer: for (int i = 1;i &lt;= 10 ;i++ ) {        //outer就是标号,只要是合法的标识符即可<br>    System.out.print(“i = “ + i);<br>    inner: for (int j = 1;j &lt;= 10 ;j++ ) {<br>        System.out.println(“j = “ + j);<br>        break outer;//标号一般用于跳出外层循环<br>    }</p>
-<pre><code>System.out.println();
-//以下代码是否会报错
-http://blog.wxhao2.com
-//不会,前面是标号,后面是注释
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">###### 练习</div><div class="line">* 练习题</div><div class="line">* </div><div class="line">		for(int x=1; x&lt;=10; x++) &#123;</div><div class="line">			if(x%3==0) &#123;</div><div class="line">				//在此处填写代码</div><div class="line">			&#125;</div><div class="line">			System.out.println(“Java基础班”);</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		我想在控制台输出2次:“Java基础班“</div><div class="line">		我想在控制台输出7次:“Java基础班“</div><div class="line">		我想在控制台输出13次:“Java基础班“</div></pre></td></tr></table></figure>
-<p>break;//2次</p>
-<p>continue;//7次</p>
-<p>System.out.println(“Java基础班”);//13次<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">###### return语句</div><div class="line">* A:return的作用</div><div class="line">	* 返回</div><div class="line">	* 其实它的作用不是结束循环的，而是结束方法的。</div><div class="line">* B:代码演示</div><div class="line">	* return和break以及continue的区别?</div><div class="line">	* return是结束方法</div><div class="line">	* break是跳出循环</div><div class="line">	* continue是终止本次循环继续下次循环</div></pre></td></tr></table></figure></p>
-<p>for (int i = 1;i &lt;= 10 ;i++ ) {<br>    if (i == 4) {<br>        //break;//停止循环<br>        return;//返回的意思,用来返回方法<br>    }<br>}</p>
-<p>System.out.println(“循环结束了”);<br>```</p>
-
+        
+          <a class="article-more-a" href="/2013/06/17/2013-06-17-javase-loop-structure/#more">more >></a>
+        
       
 
       
@@ -927,230 +476,9 @@ http://blog.wxhao2.com
 <li>D:代码演示</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">System.out.println(&quot;Hello World!11111&quot;);</div><div class="line">System.out.println(&quot;Hello World!3333&quot;);</div><div class="line">System.out.println(&quot;Hello World!22222&quot;);</div><div class="line">System.out.println(&quot;Hello World!44444&quot;);</div></pre></td></tr></table></figure>
-<h3 id="选择结构if语句格式1及其使用"><a href="#选择结构if语句格式1及其使用" class="headerlink" title="选择结构if语句格式1及其使用"></a>选择结构if语句格式1及其使用</h3><ul>
-<li>A:选择结构的分类<ul>
-<li>if语句</li>
-<li>switch语句</li>
-</ul>
-</li>
-<li>B:if语句有几种格式<ul>
-<li>格式1</li>
-<li>格式2</li>
-<li>格式3</li>
-</ul>
-</li>
-<li>C:if语句的格式1</li>
-<li><pre><code>if(比较表达式) {
-    语句体;
-}
-</code></pre></li>
-<li>D:执行流程：<ul>
-<li>先计算比较表达式的值，看其返回值是true还是false。</li>
-<li>如果是true，就执行语句体；</li>
-<li>如果是false，就不执行语句体；</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">int age = 17;</div><div class="line"></div><div class="line">if (age &gt;= 18) &#123;</div><div class="line">	System.out.println(&quot;可以浏览本网站&quot;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">System.out.println(&quot;完了&quot;);</div></pre></td></tr></table></figure>
-<h3 id="选择结构if语句注意事项"><a href="#选择结构if语句注意事项" class="headerlink" title="选择结构if语句注意事项"></a>选择结构if语句注意事项</h3><h6 id="注意事项1"><a href="#注意事项1" class="headerlink" title="注意事项1"></a>注意事项1</h6><ul>
-<li>A:代码演示<ul>
-<li>a:比较表达式无论简单还是复杂，结果必须是boolean类型</li>
-<li>b:if语句控制的语句体如果是一条语句，大括号可以省略；<ul>
-<li>如果是多条语句，就不能省略。建议永远不要省略。</li>
-</ul>
-</li>
-<li>c:一般来说：有左大括号就没有分号，有分号就没有左大括号</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">int age = 17;</div><div class="line"></div><div class="line">if (age &gt;= 18 &amp;&amp; age &lt;= 60) &#123;</div><div class="line">	System.out.println(&quot;可以浏览本网站&quot;);</div><div class="line">	//int x = 10;				是两句话,int x声明是一句,x = 10 赋值是一句</div><div class="line">&#125;</div><div class="line">System.out.println(&quot;完了&quot;);</div></pre></td></tr></table></figure>
-<h6 id="注意事项2"><a href="#注意事项2" class="headerlink" title="注意事项2"></a>注意事项2</h6><ul>
-<li>A:if语句的格式2</li>
-<li><pre><code>if(比较表达式) {
-    语句体1;
-}else {
-    语句体2;
-}
-</code></pre></li>
-<li>B:执行流程：<ul>
-<li>首先计算比较表达式的值，看其返回值是true还是false。</li>
-<li>如果是true，就执行语句体1；</li>
-<li>如果是false，就执行语句体2；</li>
-</ul>
-</li>
-<li><p>C:代码演示</p>
-<ul>
-<li>a:获取两个数据中较大的值</li>
-<li><p>b:判断一个数据是奇数还是偶数,并输出是奇数还是偶数</p>
-</li>
-<li><p>注意事项：else后面是没有比较表达式的，只有if后面有。</p>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">/*int x = 0;</div><div class="line">if (x == 1) &#123;</div><div class="line">	System.out.println(&quot;男厕所欢迎您&quot;);</div><div class="line">&#125;else &#123;</div><div class="line">	System.out.println(&quot;女厕所欢迎您&quot;);</div><div class="line">&#125;*/</div><div class="line"></div><div class="line">//a:获取两个数据中较大的值</div><div class="line">/*int x = 10;</div><div class="line">int y = 20;</div><div class="line">int z;</div><div class="line"></div><div class="line">if (x &gt; y) &#123;</div><div class="line">	z = x;</div><div class="line">&#125;else &#123;</div><div class="line">	z = y;</div><div class="line">&#125;</div><div class="line"></div><div class="line">System.out.println(z);*/</div><div class="line"></div><div class="line">//b:判断一个数据是奇数还是偶数,并输出是奇数还是偶数</div><div class="line">int num = 11;</div><div class="line">if (num % 2 == 0) &#123;</div><div class="line">	System.out.println(num + &quot;是一个偶数&quot;);</div><div class="line">&#125;else &#123;</div><div class="line">	System.out.println(num + &quot;是一个奇数&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="if语句的格式和三元的相互转换问题"><a href="#if语句的格式和三元的相互转换问题" class="headerlink" title="if语句的格式和三元的相互转换问题"></a>if语句的格式和三元的相互转换问题</h3><ul>
-<li>A:代码演示<ul>
-<li>if语句和三元运算符完成同一个效果</li>
-</ul>
-</li>
-<li><p>B:代码演示</p>
-<ul>
-<li><p>if语句和三元运算符的区别</p>
-</li>
-<li><p>三元运算符实现的，都可以采用if语句实现。反之不成立。</p>
-</li>
-<li><p>什么时候if语句实现不能用三元改进呢?</p>
-<ul>
-<li>当if语句控制的操作是一个输出语句的时候就不能。</li>
-<li>为什么呢?因为三元运算符是一个运算符，运算符操作完毕就应该有一个结果，而不是一个输出。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">int x = 10;</div><div class="line">int y = 20;</div><div class="line">int z;</div><div class="line"></div><div class="line">if (x &gt; y) &#123;</div><div class="line">	//z = x;</div><div class="line">	System.out.println(x + &quot;是最大值&quot;);</div><div class="line">&#125;else &#123;</div><div class="line">	//z = y;</div><div class="line">	System.out.println(y + &quot;是最大值&quot;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">//System.out.println(z);</div><div class="line"></div><div class="line">int a = 20;</div><div class="line">int b = 30;</div><div class="line"></div><div class="line">int c = (a &gt; b)? a : b;</div></pre></td></tr></table></figure>
-<h3 id="选择结构if使用"><a href="#选择结构if使用" class="headerlink" title="选择结构if使用"></a>选择结构if使用</h3><ul>
-<li>A:if语句的格式3：</li>
-<li><pre><code>if(比较表达式1) {
-    语句体1;
-}else if(比较表达式2) {
-    语句体2;
-}else if(比较表达式3) {
-    语句体3;
-}
-...
-else {
-    语句体n+1;
-}
-</code></pre></li>
-<li><p>B:执行流程：</p>
-<ul>
-<li>首先计算比较表达式1看其返回值是true还是false，</li>
-<li>如果是true，就执行语句体1，if语句结束。</li>
-<li><p>如果是false，接着计算比较表达式2看其返回值是true还是false，</p>
-</li>
-<li><p>如果是true，就执行语句体2，if语句结束。</p>
-</li>
-<li><p>如果是false，接着计算比较表达式3看其返回值是true还是false，</p>
-</li>
-<li><p>如果都是false，就执行语句体n+1。</p>
-</li>
-</ul>
-</li>
-<li>C:注意事项:最后一个else可以省略,但是建议不要省略,可以对范围外的错误值提示 </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">int x = 2;</div><div class="line">if (x == 1) &#123;</div><div class="line">	System.out.println(&quot;男厕所欢迎您&quot;);</div><div class="line">&#125;else if (x == 0) &#123;</div><div class="line">	System.out.println(&quot;女厕所欢迎您&quot;);</div><div class="line">&#125;else &#123;</div><div class="line">	System.out.println(&quot;无法识别您的性别&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="选择结构if语句练习"><a href="#选择结构if语句练习" class="headerlink" title="选择结构if语句练习"></a>选择结构if语句练习</h3><ul>
-<li>A:练习1<ul>
-<li>  需求：键盘录入一个成绩，判断并输出成绩的等级。<br>  90-100 优<br>  80-89  良<br>  70-79  中<br>  60-69  及<br>  0-59   差</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">import java.util.Scanner;</div><div class="line">class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);</div><div class="line"></div><div class="line">		//需求：键盘录入一个成绩，判断并输出成绩的等级。</div><div class="line">		System.out.println(&quot;请输入学生成绩范围在1到100之间&quot;);</div><div class="line">		int x = sc.nextInt();</div><div class="line"></div><div class="line">		if (x &gt;= 90 &amp;&amp; x &lt;= 100) &#123;</div><div class="line">			System.out.println(&quot;优&quot;);</div><div class="line">		&#125;else if (x &gt;= 80 &amp;&amp; x &lt;= 89 ) &#123;</div><div class="line">			System.out.println(&quot;良&quot;);</div><div class="line">		&#125;else if (x &gt;= 70 &amp;&amp; x &lt;= 79 ) &#123;</div><div class="line">			System.out.println(&quot;中&quot;);</div><div class="line">		&#125;else if (x &gt;= 60 &amp;&amp; x &lt;= 69 ) &#123;</div><div class="line">			System.out.println(&quot;及&quot;);</div><div class="line">		&#125;else if (x &gt;= 0 &amp;&amp; x &lt;= 59 ) &#123;</div><div class="line">			System.out.println(&quot;差&quot;);</div><div class="line">		&#125;else &#123;</div><div class="line">			System.out.println(&quot;成绩录入错误&quot;);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li><p>B:练习2</p>
-<ul>
-<li><p>需求：</p>
-<ul>
-<li><p>键盘录入x的值，计算出y的并输出。</p>
-</li>
-<li><p>x&gt;=3    y = 2 * x + 1;</p>
-</li>
-<li>-1&lt;x&lt;3    y = 2 * x;</li>
-<li>x&lt;=-1    y = 2 * x - 1;</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//需求： 键盘录入x的值，计算出y的并输出</div><div class="line">System.out.println(&quot;请输入一个整数:&quot;);</div><div class="line">int x = sc.nextInt();</div><div class="line">int y = 0;//不初始化,条件不满足时会报错</div><div class="line">if (x &gt;= 3) &#123;</div><div class="line">	y = 2 * x + 1;</div><div class="line">&#125;else if (x &gt; -1 &amp;&amp; x &lt; 3) &#123;</div><div class="line">	y = 2 * x;</div><div class="line">&#125;else if (x &lt;= -1) &#123;</div><div class="line">	y = 2 * x - 1;</div><div class="line">&#125;</div><div class="line">System.out.println(y);</div></pre></td></tr></table></figure>
-<h3 id="选择结构if语句的嵌套使用"><a href="#选择结构if语句的嵌套使用" class="headerlink" title="选择结构if语句的嵌套使用"></a>选择结构if语句的嵌套使用</h3><ul>
-<li>代码演示<ul>
-<li>需求：获取三个数据中的最大值</li>
-<li>if语句的嵌套使用。</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">int a = 40;</div><div class="line">int b = 50;</div><div class="line">int c = 30;</div><div class="line"></div><div class="line">if (a &gt; b) &#123;</div><div class="line">	if (a &gt; c) &#123;</div><div class="line">		System.out.println(a + &quot;是最大值&quot;);</div><div class="line">	&#125;else &#123;</div><div class="line">		System.out.println(c + &quot;是最大值&quot;);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;else &#123;	//b &gt;= a</div><div class="line">	if (b &gt; c) &#123;</div><div class="line">		System.out.println(b + &quot;是最大值&quot;);</div><div class="line">	&#125;else &#123;</div><div class="line">		System.out.println(c + &quot;是最大值&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="选择结构switch语句的格式及其解释"><a href="#选择结构switch语句的格式及其解释" class="headerlink" title="选择结构switch语句的格式及其解释"></a>选择结构switch语句的格式及其解释</h3><ul>
-<li>A:switch语句的格式</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">switch(表达式) &#123;		</div><div class="line">    case 值1：		</div><div class="line">    语句体1;</div><div class="line">    break;</div><div class="line">    case 值2：</div><div class="line">    语句体2;</div><div class="line">    break;</div><div class="line">   // …</div><div class="line">    default：	</div><div class="line">    语句体n+1;</div><div class="line">    break;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>B:面试题<ul>
-<li>byte可以作为switch的表达式吗?<ul>
-<li>基本数据类型可以接收byte,short,char,int</li>
-</ul>
-</li>
-<li>long可以作为switch的表达式吗?<ul>
-<li>不可以</li>
-</ul>
-</li>
-<li>String可以作为switch的表达式吗?<ul>
-<li>引用数据类型可以接收枚举(JDK1.5)String字符串(JDK1.7)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>C:执行流程<ul>
-<li>先计算表达式的值</li>
-<li>然后和case后面的匹配，如果有就执行对应的语句，否则执行default控制的语句</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">String name = &quot;rose&quot;;</div><div class="line">String gender = &quot;妖&quot;;</div><div class="line">switch (gender) &#123;</div><div class="line">case &quot;男士&quot;:</div><div class="line">	System.out.println(name + &quot;是一位&quot; + gender + &quot;喜欢吃饭睡觉打dota&quot;);</div><div class="line">	break;</div><div class="line">case &quot;女士&quot;:</div><div class="line">	System.out.println(name + &quot;是一位&quot; + gender + &quot;喜欢逛街购物美容&quot;);</div><div class="line">	break;</div><div class="line">default:</div><div class="line">	System.out.println(name + &quot;是一位&quot; + gender + &quot;打雌性激素维持美貌容颜&quot;);</div><div class="line">	break;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="选择结构switch语句的练习"><a href="#选择结构switch语句的练习" class="headerlink" title="选择结构switch语句的练习"></a>选择结构switch语句的练习</h3><ul>
-<li>A:整数(给定一个值,输出对应星期几)</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">int week = 1;</div><div class="line">switch (week) &#123;</div><div class="line">case 1:</div><div class="line">	System.out.println(&quot;星期一&quot;);</div><div class="line">	break;</div><div class="line">case 2:</div><div class="line">	System.out.println(&quot;星期二&quot;);</div><div class="line">	break;</div><div class="line">case 3:</div><div class="line">	System.out.println(&quot;星期三&quot;);</div><div class="line">	break;</div><div class="line">case 4:</div><div class="line">	System.out.println(&quot;星期四&quot;);</div><div class="line">	break;</div><div class="line">case 5:</div><div class="line">	System.out.println(&quot;星期五&quot;);</div><div class="line">	break;</div><div class="line">case 6:</div><div class="line">	System.out.println(&quot;星期六&quot;);</div><div class="line">	break;</div><div class="line">case 7:</div><div class="line">	System.out.println(&quot;星期日&quot;);</div><div class="line">	break;</div><div class="line">default:</div><div class="line">	System.out.println(&quot;对不起没有对应的星期&quot;);</div><div class="line">	break;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="选择结构switch语句的注意事项"><a href="#选择结构switch语句的注意事项" class="headerlink" title="选择结构switch语句的注意事项"></a>选择结构switch语句的注意事项</h3><ul>
-<li>A:case后面只能是常量，不能是变量，而且，多个case后面的值不能出现相同的</li>
-<li>B:default可以省略吗?<ul>
-<li>可以省略，但是不建议，因为它的作用是对不正确的情况给出提示。</li>
-<li>特殊情况：<ul>
-<li>case就可以把值固定。</li>
-<li>比如:A,B,C,D</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>C:break可以省略吗?<ul>
-<li>最后一个可以省略,其他最好不要省略</li>
-<li>会出现一个现象：case穿透。</li>
-<li>最终建议不要省略</li>
-</ul>
-</li>
-<li>D:default一定要在最后吗?<ul>
-<li>不是，可以在任意位置。但是建议在最后。</li>
-</ul>
-</li>
-<li>E:switch语句的结束条件<pre><code>* a:遇到break就结束了
-* b:执行到switch的右大括号就结束了
-</code></pre></li>
-</ul>
-<h3 id="选择结构switch语句练习"><a href="#选择结构switch语句练习" class="headerlink" title="选择结构switch语句练习"></a>选择结构switch语句练习</h3><ul>
-<li>A:看程序写结果：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">int x = 2;</div><div class="line">int y = 3;</div><div class="line">switch(x)&#123;</div><div class="line">	default:</div><div class="line">		y++;</div><div class="line">		break;</div><div class="line">	case 3:</div><div class="line">		y++;</div><div class="line">	case 4:</div><div class="line">		y++;</div><div class="line">&#125;</div><div class="line">System.out.println(&quot;y=&quot;+y);//4</div><div class="line">```	</div><div class="line">* B:看程序写结果：</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>int x = 2;<br>int y = 3;<br>switch(x){<br>    default:<br>        y++;<br>    case 3:<br>        y++;<br>    case 4:<br>        y++;<br>}<br>System.out.println(“y=”+y);//6<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 选择结构if语句和switch语句的区别</div><div class="line">* A:总结switch语句和if语句的各自使用场景</div><div class="line">    * 	switch建议判断固定值的时候用</div><div class="line">    * 	if建议判断区间或范围的时候用</div><div class="line">* B:代码演示演示</div><div class="line">	* 分别用switch语句和if语句实现下列需求：</div><div class="line">		* 键盘录入月份，输出对应的季节</div><div class="line">    &gt; 一年有四季</div><div class="line">    3,4,5春季</div><div class="line">	6,7,8夏季</div><div class="line">	9,10,11秋季</div><div class="line">	12,1,2冬季</div></pre></td></tr></table></figure></p>
-<p>import java.util.Scanner;<br>class Test {<br>    public static void main(String[] args) {<br>        Scanner sc = new Scanner(System.in);    //创建键盘录入对象<br>        System.out.println(“请输入月份”);<br>        int month = sc.nextInt();                //将键盘录入的结果存储在month<br>        /<em>switch (month) {<br>        case 3:<br>        case 4:<br>        case 5:<br>            System.out.println(month + “月是春季”);<br>            break;<br>        case 6:<br>        case 7:<br>        case 8:<br>            System.out.println(month + “月是夏季”);<br>            break;<br>        case 9:<br>        case 10:<br>        case 11:<br>            System.out.println(month + “月是秋季”);<br>            break;<br>        case 12:<br>        case 1:<br>        case 2:<br>            System.out.println(month + “月是冬季”);<br>            break;<br>        default:<br>            System.out.println(“对不起没有对应的季节”);<br>        break;<br>        }</em>/</p>
-<pre><code>    //用if语句来完成月份对应季节
-    if (month &gt; 12 || month &lt; 1) {
-        System.out.println(&quot;对不起没有对应的季节&quot;);
-    }else if (month &gt;= 3 &amp;&amp; month &lt;= 5) {
-        System.out.println(month + &quot;月是春季&quot;);
-    }else if (month &gt;= 6 &amp;&amp; month &lt;= 8) {
-        System.out.println(month + &quot;月是夏季&quot;);
-    }else if (month &gt;= 9 &amp;&amp; month &lt;= 11) {
-        System.out.println(month + &quot;月是秋季&quot;);
-    }else {
-        System.out.println(month + &quot;月是冬季&quot;);
-    }
-}
-</code></pre><p>}</p>
-<p>```</p>
-
+        
+          <a class="article-more-a" href="/2013/06/15/2013-06-15-javase-sequence-choice-structure/#more">more >></a>
+        
       
 
       
@@ -1225,58 +553,10 @@ else {
 <li>b:让程序更灵活一下</li>
 </ul>
 </li>
-<li>B:如何实现键盘录入呢?<ul>
-<li>先照格式来。</li>
-<li>a:导包<ul>
-<li>格式：<ul>
-<li>import java.util.Scanner; </li>
 </ul>
-</li>
-<li>位置：<ul>
-<li>在class上面。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>b:创建键盘录入对象<ul>
-<li>格式：<ul>
-<li>Scanner sc = new Scanner(System.in);</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>c:通过对象获取数据    <ul>
-<li>格式：<ul>
-<li>int x = sc.nextInt();</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>C:代码演示<ul>
-<li>键盘录入1个整数，并输出到控制台。</li>
-<li>键盘录入2个整数，并输出到控制台。</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">import java.util.Scanner;</div><div class="line">class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		/*Scanner sc = new Scanner(System.in);//创建键盘录入对象</div><div class="line">		System.out.println(&quot;请输入一个整数:&quot;);</div><div class="line">		int x = sc.nextInt();//将键盘录入的数据存储在x中</div><div class="line">		System.out.println(x);*/</div><div class="line"></div><div class="line">		//录入两个整数</div><div class="line">		Scanner sc = new Scanner(System.in);//创建键盘录入对象</div><div class="line">		System.out.println(&quot;请输入第一个整数:&quot;);</div><div class="line">		int x = sc.nextInt();//将键盘录入的数据存储在x中</div><div class="line">		System.out.println(x);</div><div class="line"></div><div class="line">		System.out.println(&quot;请输入第二个整数:&quot;);</div><div class="line">		int y = sc.nextInt();//将键盘录入的数据存储在y中</div><div class="line">		System.out.println(y);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="键盘录入的练习"><a href="#键盘录入的练习" class="headerlink" title="键盘录入的练习"></a>键盘录入的练习</h3><h6 id="练习1"><a href="#练习1" class="headerlink" title="练习1"></a>练习1</h6><ul>
-<li>A:代码演示<ul>
-<li>键盘录入练习：键盘录入两个数据，并对这两个数据求和，输出其结果</li>
-</ul>
-</li>
-<li>B:代码演示<ul>
-<li>键盘录入练习：键盘录入两个数据，获取这两个数据中的最大值</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">import java.util.Scanner;//导入包中的类Scanner</div><div class="line">class Test &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);//创建键盘录入对象</div><div class="line">		</div><div class="line">		//键盘录入练习：键盘录入两个数据，并对这两个数据求和，输出其结果</div><div class="line">		/*System.out.println(&quot;请输入第一个整数:&quot;);</div><div class="line">		int x = sc.nextInt();//将键盘录入的数据存储在x中</div><div class="line">		System.out.println(&quot;请输入第二个整数:&quot;);</div><div class="line">		int y = sc.nextInt();//将键盘录入的数据存储在y中</div><div class="line">		int sum = x + y;</div><div class="line">		System.out.println(sum);*/</div><div class="line"></div><div class="line">		//键盘录入练习：键盘录入两个数据，获取这两个数据中的最大值</div><div class="line">		System.out.println(&quot;请输入第一个整数:&quot;);</div><div class="line">		int x = sc.nextInt();//将键盘录入的数据存储在x中</div><div class="line">		System.out.println(&quot;请输入第二个整数:&quot;);</div><div class="line">		int y = sc.nextInt();//将键盘录入的数据存储在y中</div><div class="line"></div><div class="line">		int max = (x &gt; y) ? x : y;//获取x和y中的最大值</div><div class="line">		System.out.println(&quot;max = &quot; + max);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h6 id="练习2"><a href="#练习2" class="headerlink" title="练习2"></a>练习2</h6><ul>
-<li>键盘录入练习：键盘录入两个数据，比较这两个数据是否相等</li>
-<li>键盘录入练习：键盘录入三个数据，获取这三个数据中的最大值</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">import java.util.Scanner;//导包</div><div class="line">class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);//创建键盘录入对象</div><div class="line"></div><div class="line">		//键盘录入练习：键盘录入两个数据，比较这两个数据是否相等</div><div class="line">		/*System.out.println(&quot;请输入第一个整数:&quot;);</div><div class="line">		int x = sc.nextInt();//将键盘录入的数据存储在x中</div><div class="line">		System.out.println(&quot;请输入第二个整数:&quot;);</div><div class="line">		int y = sc.nextInt();//将键盘录入的数据存储在y中</div><div class="line"></div><div class="line">		//boolean b = (x == y)? true : false;</div><div class="line">		boolean b = (x == y);</div><div class="line">		System.out.println(b);*/</div><div class="line"></div><div class="line">		//键盘录入练习：键盘录入三个数据，获取这三个数据中的最大值</div><div class="line">		System.out.println(&quot;请输入第一个整数:&quot;);</div><div class="line">		int x = sc.nextInt();//将键盘录入的数据存储在x中</div><div class="line">		System.out.println(&quot;请输入第二个整数:&quot;);</div><div class="line">		int y = sc.nextInt();//将键盘录入的数据存储在y中</div><div class="line">		System.out.println(&quot;请输入第三个整数:&quot;);</div><div class="line">		int z = sc.nextInt();//将键盘录入的数据存储在y中</div><div class="line"></div><div class="line">		//定义临时变量记录住比较出前两个变量中的最大值</div><div class="line">		int temp = (x &gt; y) ? x : y;</div><div class="line">		//将比较后的结果与第三个变量中的值比较,比较出三个数中的最大值</div><div class="line">		int max = (temp &gt; z) ? temp : z;</div><div class="line">		System.out.println(max);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2013/06/14/2013-06-14-javase-scanner/#more">more >></a>
+        
       
 
       
@@ -1452,6 +732,10 @@ else {
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">tool</a>
               </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">resume</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -1506,7 +790,7 @@ else {
             </li>
           
             <li class="search-li">
-              <a href="http://blog4manager.duapp.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>帅比浩的图床管理</a>
+              <a href="http://bed.wxhao.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>帅比浩的图床管理</a>
             </li>
           
         </ul>
